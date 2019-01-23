@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+# Tripper
+### By DGN
+
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -23,7 +25,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-=======
-# Tripper
-### By DGN
->>>>>>> 2bb46472f3e8eb1b7b652076ef7b096832e38115
