@@ -9,6 +9,7 @@
   * PostgreSQL
   * Webpacker
   * React-Rails
+  * Faker
 
 ### NodeJS
   * Yarn
