@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address: MyString
+  city: MyString
+  postcode: MyString
+  website: MyString
+  facebook: MyString
+  instagram: MyString
+  twitter: MyString
+  description: MyText
+  monday_hours: MyString
+  tuesday_hours: MyString
+  wednesday_hours: MyString
+  thursday_hours: MyString
+  friday_hours: MyString
+  saturday_hours: MyString
+  sunday_hours: MyString
+  image: MyString
+  categories: MyString
+  google_place: MyString
+  city: one
+  public: false
+  featured: false
+
+two:
+  name: MyString
+  address: MyString
+  city: MyString
+  postcode: MyString
+  website: MyString
+  facebook: MyString
+  instagram: MyString
+  twitter: MyString
+  description: MyText
+  monday_hours: MyString
+  tuesday_hours: MyString
+  wednesday_hours: MyString
+  thursday_hours: MyString
+  friday_hours: MyString
+  saturday_hours: MyString
+  sunday_hours: MyString
+  image: MyString
+  categories: MyString
+  google_place: MyString
+  city: two
+  public: false
+  featured: false

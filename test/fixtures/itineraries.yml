@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  date: 2019-01-25
+  notes: MyString
+  public: false
+  featured: false
+  trip: one
+
+two:
+  name: MyString
+  date: 2019-01-25
+  notes: MyString
+  public: false
+  featured: false
+  trip: two
