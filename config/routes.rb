@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
   resources :reviews, only: [:destroy]
 
+  resources :invites, only: [:create, :new, :show]
+
   namespace :admin do
     resources :attractions, except: [:show]
     resources :cities, except: [:show]
