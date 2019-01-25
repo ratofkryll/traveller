@@ -1,4 +1,4 @@
-<% = form_for User.new, url: '/signup' do |f| %>
+<%= form_for User.new, url: '/signup' do |f| %>
 
   Profile Picture: <%= f.image_tag :profile_pic%>
   First Name: <%= f.text_field :first_name %>
