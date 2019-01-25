@@ -13,5 +13,5 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require now-ui-kit
+//= require_tree ./now-ui-kit
 //= require_tree .
