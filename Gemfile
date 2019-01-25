@@ -40,6 +40,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'webpacker'
 gem 'react-rails'
 
+# Devise user auth
+gem 'devise'
+
 # Db seed helpers
 gem 'faker'
 
