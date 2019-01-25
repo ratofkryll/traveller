@@ -14,12 +14,17 @@ Rails.application.routes.draw do
 
   resources :cities, only: [:show, :index]
 
-  resources :attractions, only: [:create, :edit, :update, :show] do
+  resources :attractions, only: [:show] do
     resources :reviews, only: [:create]
   end
 
   resources :itineraryitems, only: [:create, :edit, :update, :show, :destroy]
 
   resources :reviews, only: [:destroy]
+
+  namespace :admin do
+    resources :attractions, except: [:show]
+    resources :cities, except: [:show]
+  end
 
 end
