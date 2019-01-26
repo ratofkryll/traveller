@@ -12,6 +12,8 @@ puts "Seeding data..."
 
 # Delete existing data
 
+User.destroy_all
+
 Attraction.destroy_all
 City.destroy_all
 
@@ -131,3 +133,13 @@ city2.attractions.create!({
   public: true,
   featured: true
 })
+
+10.times do |i|
+  User.create({
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email,
+    password: 'password',
+    password_confirmation: 'password'
+  })
+end
