@@ -13,26 +13,54 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     <!-- CSS Files -->
-    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="./assets/css/now-ui-kit.css?v=1.2.0" rel="stylesheet" />
-
+    <link href="./assets/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/stylesheets/now-ui-kit.css?v=1.2.0" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-transparent bg-primary navbar-absolute">
-  </nav>
-
-  <div class="page-header header-filter">
-    ::before
-      <div class="page-header-image" style="background-image: url('assets/img/bg14.jpg');">
+  <div class="header-2" style="background-image: url('<%=image_path('img/bg11.jpg')%>')">
+    <nav class="navbar navbar-expand-lg navbar-transparent bg-primary navbar-absolute">
+      <div class="container">
+          <div class="navbar-translate">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#example-navbar-primary" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-bar bar1"></span>
+                  <span class="navbar-toggler-bar bar2"></span>
+                  <span class="navbar-toggler-bar bar3"></span>
+              </button>
+              <a class="navbar-brand" href="#pablo">Tripper</a>
+          </div>
+          <div class="collapse navbar-collapse" id="example-navbar-primary" data-nav-image="./assets/img/blurred-image-1.jpg">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#pablo">
+                          Home
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#pablo">
+                          About Us
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#pablo">
+                          Contact Us
+                      </a>
+                  </li>
+              </ul>
+          </div>
       </div>
+    </nav>
+
+    <div class="page-header header-filter">
+      <%# <div class="page-header-image" style="background-image: url('<%=image_path('img/bg11.jpg')%>')"> %>
+      <%# </div> %>
       
       <div class="content-center">
         <div class="container">
           <div class="row">
             <div class="col-md-8 ml-auto mr-auto text-center">
               <h1 class="title">Welcome to Tripper!</h1>
-                <h5 class="description">"Join our community blh blah blah blah blah blah blahb blh blah blah blah blah blah blahb blh blah blah blah blah blah blahb "</h5>
+                <h5 class="description">"Join our community blh blah blah blah blah blh blah blah blah blahblh blah blah blah blahblh blah blah blah blahblh blah blah blah blahblh blah blah blah blah blah blahb blh blah blah blah blah blah blahb blh blah blah blah blah blah blahb "</h5>
             </div>
           <div class="col-md-10 ml-auto mr-auto">
           <div class="card card-raised card-form-horizontal card-plain" data-background-color>
@@ -65,10 +93,14 @@
           </div>
         </div>
       </div>
-      ::after
     </div>
+  </div>
 
-    <footer class="footer ">
+    <br >
+    <br >
+    <br >
+    
+    <footer class="fixed-bottom">
       <div class="container">
         <nav>
           <div class="copyright">
@@ -81,7 +113,6 @@
       </div>
     </footer>
 
-  </div>
 </body>
 
 
