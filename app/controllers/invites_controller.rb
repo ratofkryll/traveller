@@ -9,25 +9,12 @@ class InvitesController < ApplicationController
   # end
 
   def create
-    # @invite = Invite.new(invite_params)
-    
-    # if @invite.save
-
-    #   # Check if user already exists
-    #   if @invite.recipient != nil
-    #     InviteMailer.join_trip(@invite).deliver
-
-    #     #Add user to user_trip table
-    #     tripId = @user_trip.find_by(id: @invite.user_trip_id)
-    #     @user_trip.create(user_id: @invite.recipient, trip_id: tripId.trip_id)
-
-    #   else
-    #     InviteMailer.register_invite(@invite, new_user_path)
-    #   end
-    # else
-    #   puts "Oops something went wrong with sending your invite."
-    # end
-
+    @invite = Invite.new(invite_params)
+    if @invite.save
+       InviteMailer.register_invite(@invite, new_user_registration_path).deliver
+    else
+       # oh no, creating an new invitation failed
+    end
   end
 
   def new

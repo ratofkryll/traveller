@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   root to: 'cities#index'
 
   get '/login' => 'sessions#new'
@@ -8,7 +9,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :edit]
 
-  resources :trips, except: [:index]
+  resources :trips, except: [:index] do
+    resources :invites, only: [:create, :new, :show]
+  end
 
   resources :itineraries, except: [:index]
 
@@ -21,8 +24,6 @@ Rails.application.routes.draw do
   resources :itineraryitems, only: [:create, :edit, :update, :show, :destroy]
 
   resources :reviews, only: [:destroy]
-
-  resources :invites, only: [:create, :new, :show]
 
   namespace :admin do
     resources :attractions, except: [:show]
