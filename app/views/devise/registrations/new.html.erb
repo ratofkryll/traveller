@@ -20,25 +20,32 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.text_field :first_name, autofocus: true, placeholder: "First Name", autocomplete: "first-name", class: "form-control bg-transparent" %>
   </div>
+  <br />
 
   <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.text_field :last_name, autofocus: true, placeholder: "Last Name", autocomplete: "last-name", class: "form-control bg-transparent" %>
   </div>
+  <br />
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.email_field :email, placeholder: "Email", autocomplete: "email", class: "form-control bg-transparent" %>
   </div>
+  <br />
+
+  <div class="field">
+    <%= f.password_field :password, placeholder: "Password #{"(#{@minimum_password_length} characters minimum)" if @minimum_password_length}", autocomplete: "new-password", class: "form-control bg-transparent" %>
+  </div>
+  <br />
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, placeholder: "Confirm Password", autocomplete: "new-password", class: "form-control bg-transparent" %>
+  </div>
+  <br />
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: "btn btn-primary btn-round" %>
   </div>
 <% end %>
 
