@@ -1,3 +1,4 @@
+//= require now-ui-kit/core/jquery.3.2.1.min
 //= require now-ui-kit/core/popper.min
 //= require now-ui-kit/core/bootstrap.min
 //= require now-ui-kit/plugins/moment.min
