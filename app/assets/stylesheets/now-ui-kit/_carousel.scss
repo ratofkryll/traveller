@@ -1,4 +1,7 @@
 // display flex was causing errors
+@import 'variables';
+@import 'mixins';
+
 .carousel-item-next,
 .carousel-item-prev,
 .carousel-item.active{

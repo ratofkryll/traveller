@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_trip: one
+  email: MyString
+  message: MyText
+  token: MyString
+
+two:
+  user_trip: two
+  email: MyString
+  message: MyText
+  token: MyString
