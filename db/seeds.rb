@@ -8,14 +8,24 @@
 
 require "faker"
 
-puts "Seeding data..."
+puts "Starting seed..."
 
 # Delete existing data
 
-User.destroy_all
+puts "Deleting existing data..."
 
+Review.destroy_all
+User.destroy_all
 Attraction.destroy_all
 City.destroy_all
+
+# Reset primary key sequences
+
+puts "Resetting keys..."
+
+ActiveRecord::Base.connection.tables.each do |t|
+  ActiveRecord::Base.connection.reset_pk_sequence!(t)
+end
 
 # CITIES
 
@@ -134,7 +144,11 @@ city2.attractions.create!({
   featured: true
 })
 
-10.times do |i|
+# USERS
+
+puts "Creating users..."
+
+20.times do |i|
   User.create({
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -143,3 +157,55 @@ city2.attractions.create!({
     password_confirmation: 'password'
   })
 end
+
+# REVIEWS
+
+puts "Creating reviews..."
+
+50.times do |i|
+  Review.create({
+    user_id: rand(1..20),
+    attraction_id: rand(1..3),
+    review: Faker::VentureBros.quote,
+    rating: rand(1..5)
+  })
+end
+
+#
+# # TRIPS
+#
+# puts "Creating trips..."
+#
+# 10.times do |i|
+#   Trip.create({
+#     name: Faker::VentureBros.organization,
+#     start_date: Faker::Date.between(60.days.ago, 30.days.ago),
+#     end_date: Faker::Date.between(29.days.ago, Date.today),
+#     public: true,
+#     featured: true
+#   })
+#
+#   Trip.create({
+#     name: Faker::VentureBros.organization,
+#     start_date: Faker::Date.between(30.days.ago, Date.today),
+#     end_date: nil,
+#     public: true,
+#     featured: false
+#   })
+# end
+#
+# # USER_TRIPS
+#
+# puts "Linking trips to users..."
+#
+# 20.times do |i|
+#   UserTrip.create({
+#     user_id: rand(1..5),
+#     trip_id: rand(1..20),
+#     role: 'creator'
+#   })
+# end
+#
+#
+
+puts "Seed complete."
