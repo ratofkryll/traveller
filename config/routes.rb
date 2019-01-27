@@ -13,15 +13,17 @@ Rails.application.routes.draw do
     resources :invites, only: [:create, :new, :show]
   end
 
-  resources :itineraries, except: [:index]
+  resources :itineraries, except: [:index] do
+    resources :itineraryitems, except: [:index, :destroy]
+  end
+
+  resources :itineraryitems, only: [:destroy]
 
   resources :cities, only: [:show, :index]
 
   resources :attractions, only: [:show] do
     resources :reviews, only: [:create]
   end
-
-  resources :itineraryitems, only: [:create, :edit, :update, :show, :destroy]
 
   resources :reviews, only: [:destroy]
 
