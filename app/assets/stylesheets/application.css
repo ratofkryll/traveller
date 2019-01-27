@@ -11,6 +11,8 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap.min
+ *= require now-ui-kit
  *= require attractions
  *= require cities
  *= require itineraries
@@ -18,6 +20,5 @@
  *= require reviews
  *= require trips
  *= require users
- *= require bootstrap.min
- *= require now-ui-kit
+
  */
