@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :edit]
 
-  resources :trips, except: [:index]
+  resources :trips, except: [:index] do
+    resources :invites, only: [:create, :new, :show]
+  end
 
   resources :itineraries, except: [:index]
 

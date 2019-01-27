@@ -1,0 +1,10 @@
+<%= form_for @invite do |f| %>
+  <%= f.hidden_field :user_trip_id, value: @invite.user_trip_id %>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+
+    <%= f.label :message %>
+    <%= f.email_field :message %>
+    
+    <%= f.submit 'Send invite' %>
+<% end %>

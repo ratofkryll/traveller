@@ -58,6 +58,17 @@ ActiveRecord::Schema.define(version: 2019_01_25_214834) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "invites", force: :cascade do |t|
+    t.bigint "user_trip_id"
+    t.integer "recipient"
+    t.string "email"
+    t.text "message"
+    t.string "token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_trip_id"], name: "index_invites_on_user_trip_id"
+  end
+
   create_table "itineraries", force: :cascade do |t|
     t.string "name"
     t.date "date"
@@ -131,6 +142,7 @@ ActiveRecord::Schema.define(version: 2019_01_25_214834) do
   end
 
   add_foreign_key "attractions", "cities"
+  add_foreign_key "invites", "user_trips"
   add_foreign_key "itineraries", "trips"
   add_foreign_key "itinerary_items", "attractions"
   add_foreign_key "itinerary_items", "itineraries"
