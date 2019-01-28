@@ -11,7 +11,7 @@ class TripsController < ApplicationController
     @trip = Trip.new(trip_params)
 
     if @trip.save
-      user_trip.create({user_id: current_user, trip_id: @trip.id, role: 'creator'})
+      @trip.users << current_user
       render trip_path(@trip.id)
     else
       render new_trip_path
