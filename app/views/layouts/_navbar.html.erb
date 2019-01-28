@@ -8,6 +8,7 @@
           </button>
           <a class="navbar-brand" href="#pablo">Tripper</a>
       </div>
+      <!-- TODO: Fix collapsed navbar -->
       <div class="collapse navbar-collapse" id="example-navbar-primary" data-nav-image="./assets/img/blurred-image-1.jpg">
           <ul class="navbar-nav ml-auto">
               <li class="nav-item">
@@ -16,19 +17,18 @@
                   </a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#pablo">
-                      Your Itineraries
-                  </a>
+                <% if current_user %>
+                  <%= link_to "Your Trips", edit_user_registration_path, class: "nav-link" %>
+                <% else %>
+                  <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
+                <% end %>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#pablo">
-                      Profile
-                  </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#pablo">
-                  Sign Out
-                </a>
+                <% if current_user %>
+                  <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+                <% else %>
+                  <%= link_to "Register", new_user_registration_path, class: "nav-link" %>
+                <% end %>
               </li>
           </ul>
       </div>
