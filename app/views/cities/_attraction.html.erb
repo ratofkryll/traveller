@@ -2,17 +2,23 @@
 <% @attractions.each do |attraction| %>
 
 <div class="attraction-card">
-  <%= image_tag(image_path(attraction.image)) %>
-  <h5><%= attraction.name %></h5>
-  <p><%= attraction.description %></p>
-  <div class="button-wrapper">
-    <%= link_to attraction_path(attraction.id) do %>
-      <button class="btn btn-sm attraction-btn">Find out more</button>
-    <% end %>
+  <div class="card">
+    <div class="card-img">
+      <img class="card-img-top" src=<%= image_path(attraction.image) %> >
+    </div>
+    <div class="card-body">
+      <h5><%= attraction.name %></h5>
+      <p><%= attraction.description %></p>
+      <div class="button-wrapper">
+        <%= link_to attraction_path(attraction.id) do %>
+          <button class="btn btn-sm attraction-btn">Find out more</button>
+        <% end %>
 
-    <%= link_to attraction_path(attraction.id) do %>
-      <button class="btn btn-sm attraction-btn">Add to itinerary</button>
-    <% end %>
+        <%= link_to attraction_path(attraction.id) do %>
+          <button class="btn btn-sm attraction-btn">Add to itinerary</button>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
 
