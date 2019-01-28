@@ -1,33 +1,61 @@
-<h2>Sign up</h2>
+<div class="header-2" style="background-image: url('<%=image_path('img/bg11.jpg')%>')">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <div class="page-header header-filter">
+    <div class="content-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto text-center">
+            <h1 class="title">Welcome to Tripper!</h1>
+              <h5 class="description">"Join our community blh blah blah blah blah blh blah blah blah blahblh blah blah blah blahblh blah blah blah blahblh blah blah blah blahblh blah blah blah blah blah blahb blh blah blah blah blah blah blahb blh blah blah blah blah blah blahb "</h5>
+          </div>
+          <div class="col-md-10 ml-auto mr-auto">
+            <div class="card card-raised card-form card-plain" data-background-color="">
+              <div class="card-body">
+                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                  <%= devise_error_messages! %>
 
-  <% if @token != nil %>
-    <%= hidden_field_tag :invite_token, @token %>
-  <% end %>
+                  <% if @token != nil %>
+                    <%= hidden_field_tag :invite_token, @token %>
+                  <% end %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+                  <div class="row d-flex justify-content-center">
+                    <div class="form-group">
+                      <%= f.text_field :first_name, autofocus: true, placeholder: "First Name", autocomplete: "first-name", class: "form-control" %>
+                    </div>
+                    &nbsp;
+                    <div class="form-group">
+                      <%= f.text_field :last_name, placeholder: "Last Name", autocomplete: "last-name", class: "form-control" %>
+                    </div>
+                    &nbsp;
+                    <div class="form-group">
+                      <%= f.email_field :email, placeholder: "Email", autocomplete: "email", class: "form-control" %>
+                    </div>
+                    &nbsp;
+                    <div class="form-group">
+                      <%= f.password_field :password, placeholder: "Password", autocomplete: "new-password", class: "form-control" %>
+                    </div>
+                    &nbsp;
+                    <div class="form-group">
+                      <%= f.password_field :password_confirmation, placeholder: "Confirm Password", autocomplete: "new-password", class: "form-control" %>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="d-flex justify-content-center">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <%= f.submit "Sign up", class: "btn btn-primary btn-round btn-block" %>
+                          <br />
+                        </div>
+                <% end %>
+                <%= render "devise/shared/links" %>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

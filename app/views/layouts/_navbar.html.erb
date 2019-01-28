@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-primary bg-primary fixed-top navbar-transparent" color-on-scroll="200">
+  <div class="container">
+    <div class="navbar-translate">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#example-navbar-primary" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-bar bar1"></span>
+        <span class="navbar-toggler-bar bar2"></span>
+        <span class="navbar-toggler-bar bar3"></span>
+      </button>
+      <a class="navbar-brand" href="#pablo">Tripper</a>
+    </div>
+    <!-- TODO: Fix collapsed navbar -->
+    <div class="collapse navbar-collapse" id="example-navbar-primary" data-nav-image="./assets/img/blurred-image-1.jpg">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <%= link_to "Home", root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <% if current_user %>
+            <%= link_to "Your Trips", edit_user_registration_path, class: "nav-link" %>
+          <% else %>
+            <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <% if current_user %>
+            <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          <% else %>
+            <%= link_to "Register", new_user_registration_path, class: "nav-link" %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
