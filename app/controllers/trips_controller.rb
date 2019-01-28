@@ -13,10 +13,9 @@ class TripsController < ApplicationController
       user_trip.create({user_id: current_user, trip_id: @trip.id, role: 'creator'})
       render trip_path(@trip.id)
     else
-      notice: `Woops. We've had some problems with saving your trip.`
+      notice `Woops. We've had some problems with saving your trip.`
     end
   end
-
 
   def destroy
     tripId = params[:id]
@@ -27,9 +26,12 @@ class TripsController < ApplicationController
       @user_trip = UserTrip.find_by(trip_id: tripId)
       @user_trip.destroy!
     else
-      notice: `Woops. Looks like we couldn't delete your trip.`
+      notice `Woops. Looks like we couldn't delete your trip.`
     end
 
+  end
+
+  def index
   end
 
   def show
