@@ -1,5 +1,5 @@
 <div class="page-header page-header-small">
-  <div class="page-header-image" data-parallax="true" style="background-image: url(<%= @city.image %>); transform: translate3d(0px, 0px, 0px);"></div>
+  <div class="page-header-image" data-parallax="true" style="background-image: url('<%= image_path("#{@city.image}") %>'); transform: translate3d(0px, 0px, 0px)"></div>
   <div class="content-center">
     <div class="container">
       <h1 class="title"><%= @city.name %></h1>
