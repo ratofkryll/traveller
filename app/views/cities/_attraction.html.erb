@@ -1,8 +1,8 @@
-<div class="attractions">
+<div class="attractions-all-cards">
 <% @attractions.each do |attraction| %>
 
 <div class="attraction-card">
-  <img src=<%= attraction.image %> alt=<%= attraction.name %>>
+  <%= image_tag(image_path(attraction.image)) %>
   <h5><%= attraction.name %></h5>
   <p><%= attraction.description %></p>
   <div class="button-wrapper">

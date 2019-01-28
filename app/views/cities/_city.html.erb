@@ -1,7 +1,7 @@
 <div class="card card-plain card-blog city-card">
   <%= link_to city do %>
   <div class="card-image">
-    <%= image_tag city.image, alt: city.name, class: 'img img-raised rounded' %>
+    <%= image_tag image_path(city.image, alt: city.name, class: 'img img-raised rounded') %>
   </div>
   <div class="card-body">
     <h5 class="card-title"><%= city.name %></a></h5>

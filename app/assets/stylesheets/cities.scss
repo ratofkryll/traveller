@@ -12,6 +12,7 @@
 
 main {
   display: flex;
+  width: 100%;
 }
 
 .city-info {
@@ -29,7 +30,11 @@ main {
   color: $primary-color;
 }
 
-.attractions {
+.attractions-container {
+  width: 100%;
+}
+
+.attractions-all-cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -38,7 +43,6 @@ main {
 
 .attraction-hdr {
   display: flex;
-  width: 100%;
   font-size: 3em;
   background-color: $primary-color;
   color: $white-color;
