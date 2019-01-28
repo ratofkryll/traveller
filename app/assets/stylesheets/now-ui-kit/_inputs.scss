@@ -1,4 +1,4 @@
-@include form-control-placeholder($medium-gray, 1);
+// @include form-control-placeholder($medium-gray, 1);
 @import 'variables';
 
 .form-control {
@@ -128,7 +128,7 @@
     .form-control{
         &:focus{
             & + .input-group-text{
-                background-color: $opacity-gray-5;
+                background-color: black;
             }
         }
     }
