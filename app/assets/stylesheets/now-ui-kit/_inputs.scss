@@ -2,6 +2,7 @@
 @import 'variables';
 
 .form-control {
+    width: 300px;
     background-color: $transparent-bg;
     border: 1px solid $light-gray;
     border-radius: $btn-round-radius;
