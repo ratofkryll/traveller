@@ -15,9 +15,9 @@ class TripsController < ApplicationController
       render trip_path(@trip.id)
     else
       render new_trip_path
+      flash[:notice] `Woops. We've had some problems with saving your trip.`
     end
   end
-
 
   def destroy
     tripId = params[:id]
@@ -31,6 +31,12 @@ class TripsController < ApplicationController
       flash[:notice] = `Woops. Looks like we couldn't delete your trip.`
     end
 
+  end
+
+  def index
+    @user = User.find params[:user_id]
+    @user_trips = UserTrip.where(user_id: @user.id)
+    puts "#{@user_trips}"
   end
 
   def show

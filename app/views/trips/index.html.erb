@@ -1,0 +1,6 @@
+<%= render "layouts/user_header" %>
+<ul>
+<% @user_trips.each do |user_trip| %>
+  <li><%= user_trip.trip.name %></li>
+<% end %>
+</ul>
