@@ -1,5 +1,17 @@
-<h1>Cities#show</h1>
-<p>Find me in app/views/cities/show.html.erb</p>
+<div class="header-3">
+  <%= render 'citycarousel' %>
+</div>
+
 <article class="all-attractions">
-  <%= @city.name %>
+  <div class="column">
+    <h5 class="city-label">Country</h5> <%= @city.country %>
+    <h5 class="city-label">Language</h5> <%= @city.language %>
+    <h5 class="city-label">Curency</h5> <%= @city.currency %>
+    <h5 class="city-label">Emergency phone</h5> <%= @city.emergency_phone %>
+    <h5 class="city-label">Time zone</h5> <%= @city.time_zone %>
+    <h5 class="city-label">Tipping custom</h5> <%= @city.tipping_custom %>
+    <%= link_to @city.transit do %>
+      <button class="btn btn-primary btn-sm">How to get around</button>
+    <% end %>
+  </div>
 </article>
