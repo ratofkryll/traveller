@@ -216,6 +216,4 @@ puts "Linking trips to test user..."
   })
 end
 
-
-
 puts "Seed complete."
