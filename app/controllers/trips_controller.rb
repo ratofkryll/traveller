@@ -1,6 +1,7 @@
 class TripsController < ApplicationController
 
   def new
+    @trip = Trip.new
   end
 
   def edit
@@ -13,7 +14,7 @@ class TripsController < ApplicationController
       user_trip.create({user_id: current_user, trip_id: @trip.id, role: 'creator'})
       render trip_path(@trip.id)
     else
-      notice: `Woops. We've had some problems with saving your trip.`
+      render new_trip_path
     end
   end
 
@@ -27,7 +28,7 @@ class TripsController < ApplicationController
       @user_trip = UserTrip.find_by(trip_id: tripId)
       @user_trip.destroy!
     else
-      notice: `Woops. Looks like we couldn't delete your trip.`
+      flash[:notice] = `Woops. Looks like we couldn't delete your trip.`
     end
 
   end
@@ -44,8 +45,7 @@ class TripsController < ApplicationController
       :name,
       :start_date,
       :end_date,
-      :public,
-      :featured
+      :public
     )
   end
 
