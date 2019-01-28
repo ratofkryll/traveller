@@ -1,5 +1,19 @@
-<h1>Cities#show</h1>
-<p>Find me in app/views/cities/show.html.erb</p>
-<article class="all-attractions">
-<%= @city.name %>
-</article>
+<div class="header-3">
+  <%= render 'citycarousel' %>
+</div>
+
+<main>
+  <article class="city-info">
+    <%= render 'cityinfo' %>
+  </article>
+
+  <article class="attractions">
+    <%= render 'attraction' %>
+  </article>
+</main>
+
+<br />
+<br />
+<br />
+<br />
+<br />
