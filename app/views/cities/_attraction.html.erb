@@ -1,0 +1,18 @@
+<% @attractions.each do |attraction| %>
+
+<div class="attraction-card">
+  <img src=<%= attraction.image %> alt=<%= attraction.name %>>
+  <h5><%= attraction.name %></h5>
+  <p><%= attraction.description %></p>
+  <div class="button-wrapper">
+    <%= link_to attraction_path(attraction) do %>
+      <button class="btn btn-primary">Find out more</a>
+    <% end %>
+
+    <%= link_to attraction_path(attraction) do %>
+      <button class="btn btn-primary">Add to itinerary</a>
+    <% end %>
+  </div>
+</div>
+
+<% end %>
