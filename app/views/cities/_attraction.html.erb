@@ -1,3 +1,4 @@
+<div class="attractions">
 <% @attractions.each do |attraction| %>
 
 <div class="attraction-card">
@@ -5,14 +6,15 @@
   <h5><%= attraction.name %></h5>
   <p><%= attraction.description %></p>
   <div class="button-wrapper">
-    <%= link_to attraction_path(attraction) do %>
-      <button class="btn btn-primary">Find out more</a>
+    <%= link_to attraction_path(attraction.id) do %>
+      <button class="btn btn-sm attraction-btn">Find out more</button>
     <% end %>
 
-    <%= link_to attraction_path(attraction) do %>
-      <button class="btn btn-primary">Add to itinerary</a>
+    <%= link_to attraction_path(attraction.id) do %>
+      <button class="btn btn-sm attraction-btn">Add to itinerary</button>
     <% end %>
   </div>
 </div>
 
 <% end %>
+</div>

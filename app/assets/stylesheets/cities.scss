@@ -33,15 +33,34 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 3em;
   justify-content: flex-start;
+}
+
+.attraction-hdr {
+  display: flex;
+  width: 100%;
+  font-size: 3em;
+  background-color: $primary-color;
+  color: $white-color;
+  padding: 0.3em 0 0.3em 2em;
+  margin-bottom: 0.5em;
 }
 
 .attraction-card {
   display: flex;
   flex-direction: column;
-  max-width: 30em;
-  margin: 3em;
+  max-width: 25em;
+  margin: 2em 3em 2em 6em;
   align-items: flex-start;
 }
 
+.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.attraction-btn {
+  background-color: $primary-color;
+  color: $white-color;
+  margin-right: 1em;
+}
