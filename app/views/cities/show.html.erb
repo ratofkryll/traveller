@@ -2,16 +2,18 @@
   <%= render 'citycarousel' %>
 </div>
 
-<article class="all-attractions">
-  <div class="column">
-    <h5 class="city-label">Country</h5> <%= @city.country %>
-    <h5 class="city-label">Language</h5> <%= @city.language %>
-    <h5 class="city-label">Curency</h5> <%= @city.currency %>
-    <h5 class="city-label">Emergency phone</h5> <%= @city.emergency_phone %>
-    <h5 class="city-label">Time zone</h5> <%= @city.time_zone %>
-    <h5 class="city-label">Tipping custom</h5> <%= @city.tipping_custom %>
-    <%= link_to @city.transit do %>
-      <button class="btn btn-primary btn-sm">How to get around</button>
-    <% end %>
-  </div>
-</article>
+<main>
+  <article class="city-info">
+    <%= render 'cityinfo' %>
+  </article>
+
+  <article class="attractions">
+    <%= render 'attraction' %>
+  </article>
+</main>
+
+<br />
+<br />
+<br />
+<br />
+<br />
