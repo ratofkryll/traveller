@@ -1,0 +1,18 @@
+<% @attraction.reviews.order('reviews.created_at DESC').each do |item| %>
+  <div class="panel panel-default p">
+
+    <div class="panel-heading">Name: <%= item.user.first_name %></div>
+
+    <div class="card-text">Rating: <%= item.rating %></div>
+
+    <div class="card-text">Post date: <%= (item.created_at).to_formatted_s(:long)  %></div>
+    <div class="card-text">Review: <%= item.review %></div>
+
+    <% if item.user == current_user %>
+    <div class="card-text">
+    <%= link_to 'Delete', review_path(item.id), class: 'btn btn-primary', method: :delete, :data => {:confirm => 'Are you sure?'} %>
+    </div>
+      
+  </div>
+<% end %>
+<% end %>

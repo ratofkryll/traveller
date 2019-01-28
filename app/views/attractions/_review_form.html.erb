@@ -1,0 +1,13 @@
+<h3> Have you visited? Let us know what you thought. </h3>
+<%= form_for [@attraction, @review] do |f| %>
+
+    <%= f.label :rating %>
+    <%= f.select :rating, options_for_select([["Select One", ""], 1, 2, 3, 4, 5]), class: 'genForm_dropBox' %>
+
+    <%= f.label 'Write a review' %>
+    <br>
+    <%= f.text_area :review %>
+
+  <%= f.submit 'Review attraction', class: 'btn btn-primary' %>
+  
+<% end %>
