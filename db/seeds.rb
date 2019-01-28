@@ -14,6 +14,8 @@ puts "Starting seed..."
 
 puts "Deleting existing data..."
 
+UserTrip.destroy_all
+Trip.destroy_all
 Review.destroy_all
 User.destroy_all
 Attraction.destroy_all
@@ -158,6 +160,14 @@ puts "Creating users..."
   })
 end
 
+User.create({
+  first_name: 'Gio',
+  last_name: 'R',
+  email: 'email@email.com',
+  password: 'password',
+  password_confirmation: 'password'
+  })
+
 # REVIEWS
 
 puts "Creating reviews..."
@@ -171,41 +181,41 @@ puts "Creating reviews..."
   })
 end
 
-#
-# # TRIPS
-#
-# puts "Creating trips..."
-#
-# 10.times do |i|
-#   Trip.create({
-#     name: Faker::VentureBros.organization,
-#     start_date: Faker::Date.between(60.days.ago, 30.days.ago),
-#     end_date: Faker::Date.between(29.days.ago, Date.today),
-#     public: true,
-#     featured: true
-#   })
-#
-#   Trip.create({
-#     name: Faker::VentureBros.organization,
-#     start_date: Faker::Date.between(30.days.ago, Date.today),
-#     end_date: nil,
-#     public: true,
-#     featured: false
-#   })
-# end
-#
-# # USER_TRIPS
-#
-# puts "Linking trips to users..."
-#
-# 20.times do |i|
-#   UserTrip.create({
-#     user_id: rand(1..5),
-#     trip_id: rand(1..20),
-#     role: 'creator'
-#   })
-# end
-#
-#
+
+# TRIPS
+
+puts "Creating trips..."
+
+10.times do |i|
+  Trip.create({
+    name: Faker::VentureBros.organization,
+    start_date: Faker::Date.between(60.days.ago, 30.days.ago),
+    end_date: Faker::Date.between(29.days.ago, Date.today),
+    public: true,
+    featured: true
+  })
+
+  Trip.create({
+    name: Faker::VentureBros.organization,
+    start_date: Faker::Date.between(30.days.ago, Date.today),
+    end_date: nil,
+    public: true,
+    featured: false
+  })
+end
+
+# USER_TRIPS
+
+puts "Linking trips to test user..."
+
+5.times do |i|
+  UserTrip.create({
+    user_id: 21,
+    trip_id: rand(1..20),
+    role: 'creator'
+  })
+end
+
+
 
 puts "Seed complete."
