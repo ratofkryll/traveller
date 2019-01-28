@@ -41,7 +41,7 @@ city1 = City.create!({
   emergency_phone: "911",
   time_zone: "PST (UTC-8h)",
   tipping_custom: "15-18%",
-  image: "/cities/city_vancouver.jpg"
+  image: "cities/city_vancouver.jpg"
 })
 city2 = City.create!({
   name: "Montreal",
@@ -53,7 +53,7 @@ city2 = City.create!({
   emergency_phone: "911",
   time_zone: "EST (UTC-5h)",
   tipping_custom: "15-18%",
-  image: "/cities/city_montreal.jpg"
+  image: "cities/city_montreal.jpg"
 })
 city3 = City.create!({
   name: "London",
@@ -65,7 +65,7 @@ city3 = City.create!({
   emergency_phone: "999",
   time_zone: "GMT (UTC+0h)",
   tipping_custom: "Usually 12.75% added to your bill.",
-  image: "/cities/city_london.jpg"
+  image: "cities/city_london.jpg"
 })
 
 # ATTRACTIONS
@@ -89,7 +89,7 @@ city2.attractions.create!({
   friday_hours: "N/A",
   saturday_hours: "N/A",
   sunday_hours: "N/A",
-  image: "/attractions/montreal_notre_dame.jpg",
+  image: "attractions/montreal_notre_dame.jpg",
   categories: ["historical", "museum"],
   google_place: "ChIJPXGXWFcayUwRqpYNHZ_v_B8",
   public: true,
@@ -113,7 +113,7 @@ city2.attractions.create!({
   friday_hours: "9am - 5pm",
   saturday_hours: "9am - 5pm",
   sunday_hours: "9am - 5pm",
-  image: "/attractions/montreal_botanical_garden.jpg",
+  image: "attractions/montreal_botanical_garden.jpg",
   categories: ["garden"],
   google_place: "ChIJx4O-WgkcyUwRc3W0WQK-oUI",
   public: true,
@@ -137,7 +137,7 @@ city2.attractions.create!({
   friday_hours: "10am - 5pm",
   saturday_hours: "10am - 5pm",
   sunday_hours: "10am - 5pm",
-  image: "/attractions/montreal_museum_of_fine_arts.jpg",
+  image: "attractions/montreal_museum_of_fine_arts.jpg",
   categories: ["museum"],
   google_place: "ChIJZcCSF0AayUwRsDVrEHZsydY",
   public: true,
