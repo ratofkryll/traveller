@@ -11,11 +11,17 @@
   </head>
 
   <body>
+    <!-- <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p> -->
 
-  <%= yield %>
+    <!-- Navbar -->
+    <%= render 'layouts/navbar' %>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+    <!-- Main content -->
+    <%= yield %>
+
+    <!-- Copyright Footer -->
+    <%= render 'layouts/footer' %>
 
     <!-- Plugins -->
 
