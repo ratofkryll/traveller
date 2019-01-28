@@ -1,71 +1,42 @@
+<div class="header-2" style="background-image: url('<%= image_path('img/login.jpg') %>')">
+  <div class="page-header header-filter" filter-color="blue">
+    <div class="content-center">
+      <div class="container">
 
+        <div class="col-md-8 ml-auto mr-auto text-center">
+          <h1 class="title">Welcome back!</h1>
+        </div>
+        <div class="col-md-10 ml-auto mr-auto">
+          <div class="card card-login card-plain" data-background-color="">
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <div class="d-flex flex-column align-items-center">
+              <div class="col-md-3 ml-auto mr-auto">
+                <%= f.email_field :email, autofocus: true, placeholder: "Email", autocomplete: "email", class: "form-control form-opacity" %>
+              </div>
+              <br />
 
-<body class="login-page">
+              <div class="col-md-3 ml-auto mr-auto">
+                <%= f.password_field :password, placeholder: "Password", autocomplete: "current-password", class: "form-control form-opacity" %>
+              </div>
+              <br />
 
-  <div class="page-header" filter-color="blue">
-    <div class="page-header-image" style="background-image:url(../assets/img/login.jpg)"></div>
-      <div class="content">
-        <div class="container">
-          <div class="col-md-10 ml-auto mr-auto">
-            <div class="card card-login card-plain">
-
-              <form class="form" method="" action="">
-                <div class="card-header text-center">
-                  <div class="logo-container">
-                    <img src="../assets/img/now-logo.png" alt="">
-                  </div>
+              <% if devise_mapping.rememberable? -%>
+                <div class="field">
+                  <%= f.check_box :remember_me %>
+                  <%= f.label :remember_me %>
                 </div>
+              <% end -%>
 
-                <div class="card-body">
-                  <div class="input-group form-group-no-border input-lg d-flex justify-content-center">
-                    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                      <div class="input-group-prepend">
-
-                        <!--Email Address -->
-                        <div class="field">
-                          <%= f.label :email %>
-                          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
-                        </div>
-                      </div>
-                    
-                      <div class="input-group-prepend">
-                      <div class="field">
-                        <%= f.label :password %><br />
-                        <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card-footer text-center">
-                    <a href="#pablo" class="btn btn-primary btn-round btn-lg btn-block">Get Started</a>
-                  </div>
-                <% end %>
-  
-                <div class="pull-left">
-                  <h6>
-                  <a href="#pablo" class="link footer-link">Create Account</a>
-                  </h6>
-                </div>
-                <div class="pull-right">
-                  <h6>
-                    <a href="#pablo" class="link footer-link">Need Help?</a>
-                  </h6>
-                </div>
-              </form>
+              <div class="actions">
+                <%= f.submit "Log in", class: "btn btn-primary btn-round btn-lg btn-block" %>
+              </div>
             </div>
+            <% end %>
+
+            <%= render "devise/shared/links" %>
           </div>
         </div>
       </div>
-    <div class="copyright">
-      ©
-        <script>
-          document.write(new Date().getFullYear())
-        </script>2019, Designed by
-        <a href="http://www.invisionapp.com" target="_blank">DGN</a>.
-      </div>
     </div>
-  </footer>
+  </div>
 </div>
-
-
-</body>
