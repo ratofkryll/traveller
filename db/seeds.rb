@@ -14,6 +14,7 @@ puts "Starting seed..."
 
 puts "Deleting existing data..."
 
+Itinerary.destroy_all
 UserTrip.destroy_all
 Trip.destroy_all
 Review.destroy_all
@@ -216,6 +217,19 @@ puts "Linking trips to test user..."
   })
 end
 
+# ITINERARIES
 
+puts "Creating itineraries..."
+
+5.times do |i|
+  Itinerary.create({
+    name: Faker::HeyArnold.location,
+    date: Faker::Date.between(60.days.ago, 30.days.ago),
+    notes: Faker::HeyArnold.quote,
+    public: true,
+    featured: false,
+    trip_id: 2
+    })
+end
 
 puts "Seed complete."

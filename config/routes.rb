@@ -13,7 +13,11 @@ Rails.application.routes.draw do
 
   resources :trips, except: [:index] do
     resources :invites, only: [:create, :new, :show]
+<<<<<<< HEAD
     resources :user_trips, only: [:create, :new]
+=======
+    resources :itineraries, only: [:create, :destroy]
+>>>>>>> feature/user-profile-data
   end
 
   resources :itineraries, except: [:index] do

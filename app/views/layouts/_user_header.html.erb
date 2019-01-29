@@ -8,11 +8,10 @@
           <%= image_tag("img/ryan.jpg") %>
           <!-- <img src="../assets/img/ryan.jpg" alt=""> -->
         </div>
-        <h3 class="title">Ryan Goff</h3>
-        <p class="category">Los Angeles, California</p>
+        <h3 class="title"><%= current_user.first_name %> <%= current_user.last_name %></h3>
         <div class="content">
           <div class="social-description">
-            <h2>16</h2>
+            <h2><%= current_user.trips.count %></h2>
             <p>Trips</p>
           </div>
           <div class="social-description">
