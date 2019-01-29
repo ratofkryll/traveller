@@ -12,7 +12,7 @@ class TripsController < ApplicationController
 
     if @trip.save
       @trip.users << current_user
-      render trips_path(@trip.id)
+      redirect_to trip_url(@trip.id)
     else
       render new_trip_path
       flash[:notice] = 'Woops. We\'ve had some problems with saving your trip.'
