@@ -12,7 +12,7 @@ class TripsController < ApplicationController
 
     if @trip.save
       @trip.users << current_user
-      render trip_path(@trip.id)
+      render trips_path(@trip.id)
     else
       render new_trip_path
       flash[:notice] = 'Woops. We\'ve had some problems with saving your trip.'
@@ -40,7 +40,8 @@ class TripsController < ApplicationController
 
   def show
     @trip = Trip.find params[:id]
-    @itinerary = @trip.itineraries
+    @itinerary = Itinerary.find_by(trip_id: @trip)
+    @users = @trip.users
   end
 
   private

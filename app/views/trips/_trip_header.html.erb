@@ -4,6 +4,7 @@
   <div class="content-center">
     <div class="container">
       <h1 class="title"><%= @trip.name %></h1>
+      <p><%= @trip.start_date.to_formatted_s(:long) %> - <%= @trip.end_date.to_formatted_s(:long) %></p>
     </div>
   </div>
 </div>

@@ -3,10 +3,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-main {
+main.new-trip-container {
   display: flex;
   justify-content: center;
   padding: 2em;
+}
+
+nav.trip-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.trip-nav {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.trip-days {
+  display: flex;
+  justify-content: left;
+}
+
+.trip-more {
+  display: flex;
+  justify-content: right;
 }
 
 .trip-field {
@@ -27,4 +49,8 @@ form.text-field {
 
 .form-group {
   margin-bottom: 1.5em;
+}
+
+body {
+  margin-left: 3em;
 }
