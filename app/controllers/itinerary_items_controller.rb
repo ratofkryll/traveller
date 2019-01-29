@@ -7,7 +7,7 @@ class ItineraryItemsController < ApplicationController
       flash[:notice] = 'Added to itinerary'
     else
       flash[:notice] = 'Woops something went wrong with adding your itinerary item.'
-    end 
+    end
 
     redirect_to itinerary_path(@itinerary_item.trip)
 
@@ -20,7 +20,7 @@ class ItineraryItemsController < ApplicationController
   end
 
   def show
-    @itinerary_items = ItineraryItem.find_by (itinerary_id: params[:id])
+    @itinerary_items = ItineraryItem.find_by(itinerary_id: params[:id])
   end
 
   def destroy
