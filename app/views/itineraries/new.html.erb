@@ -1,2 +1,40 @@
-<h1>Itineraries#new</h1>
-<p>Find me in app/views/itineraries/new.html.erb</p>
+<main class="new-trip-container">
+  <%= form_for @itinerary do |form| %>
+
+    <% if form.object.errors.any? %>
+      <div class="alert alert-danger">
+        <strong>The following errors prevented saving:</strong>
+        <ul>
+          <% form.object.errors.full_messages.each do |error| %>
+            <li><%= error %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: 'form-control', placeholder: 'Day 1 - Aloha!' %>
+    </div>
+
+    <div class="datepicker-container">
+    <div class="form-group">
+      <%= form.label 'Date' %>
+      <%= form.text_field :date, class: 'form-control datepicker' %>
+    </div>
+    </div>
+
+    <div class="form-group">
+      <%= form.label 'Notes' %>
+      <%= form.text_field :notes, class: 'form-control', placeholder:'Arrive and relax' %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label 'Public?' %>
+      <%= form.check_box :public %>
+    </div>
+    
+    <%= form.submit 'Add itinerary', class: 'btn btn-primary' %>
+
+  <% end %>
+</main>
