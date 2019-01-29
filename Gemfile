@@ -30,6 +30,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Font Awesome for icons
 gem "font-awesome-rails"
 
+# Bootstrap datepicker from calendar
+gem 'bootstrap-datepicker-rails'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

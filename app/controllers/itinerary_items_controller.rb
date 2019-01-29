@@ -6,7 +6,7 @@ class ItineraryItemsController < ApplicationController
     if @itinerary_item.save
       flash[:notice] = 'Added to itinerary'
     else
-      flash[:notice] =  'Woops something went wrong with adding your itinerary item.'
+      flash[:notice] = 'Woops something went wrong with adding your itinerary item.'
     end 
 
     redirect_to itinerary_path(@itinerary_item.trip)

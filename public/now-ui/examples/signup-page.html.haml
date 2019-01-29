@@ -1,0 +1,236 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{charset: "utf-8"}/
+    %link{href: "../assets/img/apple-icon.png", rel: "apple-touch-icon", sizes: "76x76"}/
+    %link{href: "../assets/img/favicon.png", rel: "icon", type: "image/png"}/
+    %meta{content: "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %title Sign Up Page - Now UI Kit Pro by Creative Tim
+    %meta{content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no", name: "viewport"}/
+    / Fonts and icons
+    %link{href: "https://fonts.googleapis.com/css?family=Montserrat:400,700,200", rel: "stylesheet"}/
+    %link{href: "https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css", rel: "stylesheet"}/
+    / CSS Files
+    %link{href: "../assets/css/bootstrap.min.css", rel: "stylesheet"}/
+    %link{href: "../assets/css/now-ui-kit.css?v=1.2.0", rel: "stylesheet"}/
+    / CSS Just for demo purpose, don't include it in your project
+    %link{href: "../assets/css/demo.css", rel: "stylesheet"}/
+  %body.signup-page
+    / Navbar
+    %nav.navbar.navbar-expand-lg.bg-white.navbar-absolute.navbar-transparent
+      .container
+        .navbar-translate
+          %a.navbar-brand{"data-placement" => "bottom", href: "http://demos.creative-tim.com/now-ui-kit-pro/presentation.html", rel: "tooltip", target: "_blank", title: "Designed by Invision. Coded by Creative Tim"}
+            Now Ui Kit Pro
+          %button.navbar-toggler{"aria-controls" => "navigation-index", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navigation", "data-toggle" => "collapse", type: "button"}
+            %span.navbar-toggler-bar.bar1
+            %span.navbar-toggler-bar.bar2
+            %span.navbar-toggler-bar.bar3
+        .collapse.navbar-collapse{"data-color" => "orange", "data-nav-image" => "../assets/img/blurred-image-1.jpg"}
+          %ul.navbar-nav.ml-auto
+            %li.nav-item
+              %a.nav-link{href: "../index.html", target: "_blank"}
+                %i.now-ui-icons.design_app
+                %p Components
+            %li.nav-item.dropdown
+              %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+                %i.now-ui-icons.files_paper{"aria-hidden" => "true"}
+                %p Sections
+              .dropdown-menu.dropdown-menu-right{"aria-labelledby" => "navbarDropdownMenuLink"}
+                %a.dropdown-item{href: "../sections.html#headers"}
+                  %i.now-ui-icons.shopping_box
+                  Headers
+                %a.dropdown-item{href: "../sections.html#features"}
+                  %i.now-ui-icons.ui-2_settings-90
+                  Features
+                %a.dropdown-item{href: "../sections.html#blogs"}
+                  %i.now-ui-icons.text_align-left
+                  Blogs
+                %a.dropdown-item{href: "../sections.html#teams"}
+                  %i.now-ui-icons.sport_user-run
+                  Teams
+                %a.dropdown-item{href: "../sections.html#projects"}
+                  %i.now-ui-icons.education_paper
+                  Projects
+                %a.dropdown-item{href: "../sections.html#pricing"}
+                  %i.now-ui-icons.business_money-coins
+                  Pricing
+                %a.dropdown-item{href: "../sections.html#testimonials"}
+                  %i.now-ui-icons.ui-2_chat-round
+                  Testimonials
+                %a.dropdown-item{href: "../sections.html#contactus"}
+                  %i.now-ui-icons.tech_mobile
+                  Contact Us
+            %li.nav-item.dropdown
+              %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+                %i.now-ui-icons.design_image{"aria-hidden" => "true"}
+                %p Examples
+              .dropdown-menu.dropdown-menu-right{"aria-labelledby" => "navbarDropdownMenuLink"}
+                %a.dropdown-item{href: "../examples/about-us.html"}
+                  %i.now-ui-icons.business_bulb-63
+                  About-us
+                %a.dropdown-item{href: "../examples/blog-post.html"}
+                  %i.now-ui-icons.text_align-left
+                  Blog Post
+                %a.dropdown-item{href: "../examples/blog-posts.html"}
+                  %i.now-ui-icons.design_bullet-list-67
+                  Blog Posts
+                %a.dropdown-item{href: "../examples/contact-us.html"}
+                  %i.now-ui-icons.location_pin
+                  Contact Us
+                %a.dropdown-item{href: "../examples/landing-page.html"}
+                  %i.now-ui-icons.education_paper
+                  Landing Page
+                %a.dropdown-item{href: "../examples/login-page.html"}
+                  %i.now-ui-icons.users_circle-08
+                  Login Page
+                %a.dropdown-item{href: "../examples/pricing.html"}
+                  %i.now-ui-icons.business_money-coins
+                  Pricing
+                %a.dropdown-item{href: "../examples/ecommerce.html"}
+                  %i.now-ui-icons.shopping_shop
+                  Ecommerce Page
+                %a.dropdown-item{href: "../examples/product-page.html"}
+                  %i.now-ui-icons.shopping_bag-16
+                  Product Page
+                %a.dropdown-item{href: "../examples/profile-page.html"}
+                  %i.now-ui-icons.users_single-02
+                  Profile Page
+                %a.dropdown-item{href: "../examples/signup-page.html"}
+                  %i.now-ui-icons.tech_mobile
+                  Signup Page
+            %li.nav-item
+              %a.nav-link.btn.btn-primary{href: "https://www.creative-tim.com/product/now-ui-kit-pro", target: "_blank"}
+                %p Buy Now
+            /
+              <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
+              <i class="fa fa-twitter"></i>
+              <p class="hidden-lg-up">Twitter</p>
+              </a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
+              <i class="fa fa-facebook-square"></i>
+              <p class="hidden-lg-up">Facebook</p>
+              </a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
+              <i class="fa fa-instagram"></i>
+              <p class="hidden-lg-up">Instagram</p>
+              </a>
+              </li>
+    / End Navbar
+    .page-header.section-image
+      .page-header-image{style: "background-image:url(../assets/img/bg18.jpg)"}
+      .content
+        .container
+          .row
+            .col-md-4.ml-auto.mr-auto
+              .info.info-horizontal
+                .icon.icon-primary
+                  %i.now-ui-icons.media-2_sound-wave
+                .description
+                  %h5.info-title Marketing
+                  %p.description
+                    We've created the marketing campaign of the website. It was a very interesting collaboration.
+              .info.info-horizontal
+                .icon.icon-primary
+                  %i.now-ui-icons.media-1_button-pause
+                .description
+                  %h5.info-title Fully Coded in HTML5
+                  %p.description
+                    We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub.
+              .info.info-horizontal
+                .icon.icon-info
+                  %i.now-ui-icons.users_single-02
+                .description
+                  %h5.info-title Built Audience
+                  %p.description
+                    There is also a Fully Customizable CMS Admin Dashboard for this product.
+            .col-md-4.mr-auto
+              .card.card-signup
+                .card-body
+                  %h4.card-title.text-center Register
+                  .social.text-center
+                    %button.btn.btn-icon.btn-round.btn-twitter
+                      %i.fa.fa-twitter
+                    %button.btn.btn-icon.btn-round.btn-dribbble
+                      %i.fa.fa-dribbble
+                    %button.btn.btn-icon.btn-round.btn-facebook
+                      %i.fa.fa-facebook
+                    %h5.card-description or be classical
+                  %form.form{action: "", method: ""}
+                    .input-group
+                      .input-group-prepend
+                        %span.input-group-text
+                          %i.now-ui-icons.users_circle-08
+                      %input.form-control{placeholder: "First Name...", type: "text"}/
+                    .input-group
+                      .input-group-prepend
+                        %span.input-group-text
+                          %i.now-ui-icons.text_caps-small
+                      %input.form-control{placeholder: "Last Name...", type: "text"}/
+                    .input-group
+                      .input-group-prepend
+                        %span.input-group-text
+                          %i.now-ui-icons.ui-1_email-85
+                      %input.form-control{placeholder: "Your Email...", type: "text"}/
+                    / If you want to add a checkbox to this form, uncomment this code
+                    .form-check
+                      %label.form-check-label
+                        %input.form-check-input{type: "checkbox"}/
+                        %span.form-check-sign
+                        I agree to the terms and
+                        = succeed "." do
+                          %a{href: "#something"} conditions
+                    .card-footer.text-center
+                      %a.btn.btn-primary.btn-round.btn-lg{href: "#pablo"} Get Started
+      %footer.footer
+        .container
+          %nav
+            %ul
+              %li
+                %a{href: "https://www.creative-tim.com"}
+                  Creative Tim
+              %li
+                %a{href: "http://presentation.creative-tim.com"}
+                  About Us
+              %li
+                %a{href: "http://blog.creative-tim.com"}
+                  Blog
+              %li
+                %a{href: "https://www.creative-tim.com/license"}
+                  License
+          .copyright
+            ©
+            :javascript
+              document.write(new Date().getFullYear())
+            , Designed by
+            = succeed "." do
+              %a{href: "http://www.invisionapp.com", target: "_blank"} Invision
+            = succeed "." do
+              %a{href: "https://www.creative-tim.com", target: "_blank"} Creative Tim
+  / Core JS Files
+  %script{src: "../assets/js/core/jquery.3.2.1.min.js", type: "text/javascript"}
+  %script{src: "../assets/js/core/popper.min.js", type: "text/javascript"}
+  %script{src: "../assets/js/core/bootstrap.min.js", type: "text/javascript"}
+  %script{src: "../assets/js/plugins/moment.min.js"}
+  / Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/
+  %script{src: "../assets/js/plugins/bootstrap-switch.js"}
+  / Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs
+  %script{src: "../assets/js/plugins/bootstrap-tagsinput.js"}
+  / Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select
+  %script{src: "../assets/js/plugins/bootstrap-selectpicker.js", type: "text/javascript"}
+  / Google Maps Plugin
+  %script{src: "https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE", type: "text/javascript"}
+  / Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput
+  %script{src: "../assets/js/plugins/jasny-bootstrap.min.js"}
+  / Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/
+  %script{src: "../assets/js/plugins/nouislider.min.js", type: "text/javascript"}
+  / Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker
+  %script{src: "../assets/js/plugins/bootstrap-datetimepicker.min.js", type: "text/javascript"}
+  / Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc
+  %script{src: "../assets/js/now-ui-kit.js?v=1.2.0", type: "text/javascript"}

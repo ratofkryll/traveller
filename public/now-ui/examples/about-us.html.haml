@@ -1,0 +1,428 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{charset: "utf-8"}/
+    %link{href: "../assets/img/apple-icon.png", rel: "apple-touch-icon", sizes: "76x76"}/
+    %link{href: "../assets/img/favicon.png", rel: "icon", type: "image/png"}/
+    %meta{content: "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %title About Us - Now UI Kit Pro by Creative Tim
+    %meta{content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no", name: "viewport"}/
+    / Fonts and icons
+    %link{href: "https://fonts.googleapis.com/css?family=Montserrat:400,700,200", rel: "stylesheet"}/
+    %link{href: "https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css", rel: "stylesheet"}/
+    / CSS Files
+    %link{href: "../assets/css/bootstrap.min.css", rel: "stylesheet"}/
+    %link{href: "../assets/css/now-ui-kit.css?v=1.2.0", rel: "stylesheet"}/
+    / CSS Just for demo purpose, don't include it in your project
+    %link{href: "../assets/css/demo.css", rel: "stylesheet"}/
+  %body.about-us
+    / Navbar
+    %nav.navbar.navbar-expand-lg.navbar-absolute.navbar-transparent
+      .container
+        .dropdown.button-dropdown
+          %a#navbarDropdown.dropdown-toggle{"data-toggle" => "dropdown", href: "#pablo"}
+            %span.button-bar
+            %span.button-bar
+            %span.button-bar
+          .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+            %a.dropdown-header Dropdown header
+            %a.dropdown-item{href: "#"} Action
+            %a.dropdown-item{href: "#"} Another action
+            %a.dropdown-item{href: "#"} Something else here
+            .dropdown-divider
+            %a.dropdown-item{href: "#"} Separated link
+            .dropdown-divider
+            %a.dropdown-item{href: "#"} One more separated link
+        .navbar-translate
+          %a.navbar-brand{"data-placement" => "bottom", href: "http://demos.creative-tim.com/now-ui-kit-pro/presentation.html", rel: "tooltip", target: "_blank", title: "Designed by Invision. Coded by Creative Tim"}
+            Now Ui Kit Pro
+          %button.navbar-toggler{"aria-controls" => "navigation-index", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navigation", "data-toggle" => "collapse", type: "button"}
+            %span.navbar-toggler-bar.bar1
+            %span.navbar-toggler-bar.bar2
+            %span.navbar-toggler-bar.bar3
+        .collapse.navbar-collapse{"data-color" => "orange", "data-nav-image" => "../assets/img/blurred-image-1.jpg"}
+          %ul.navbar-nav.ml-auto
+            %li.nav-item
+              %a.nav-link{href: "../index.html", target: "_blank"}
+                %i.now-ui-icons.design_app
+                %p Components
+            %li.nav-item.dropdown
+              %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+                %i.now-ui-icons.files_paper{"aria-hidden" => "true"}
+                %p Sections
+              .dropdown-menu.dropdown-menu-right{"aria-labelledby" => "navbarDropdownMenuLink"}
+                %a.dropdown-item{href: "../sections.html#headers"}
+                  %i.now-ui-icons.shopping_box
+                  Headers
+                %a.dropdown-item{href: "../sections.html#features"}
+                  %i.now-ui-icons.ui-2_settings-90
+                  Features
+                %a.dropdown-item{href: "../sections.html#blogs"}
+                  %i.now-ui-icons.text_align-left
+                  Blogs
+                %a.dropdown-item{href: "../sections.html#teams"}
+                  %i.now-ui-icons.sport_user-run
+                  Teams
+                %a.dropdown-item{href: "../sections.html#projects"}
+                  %i.now-ui-icons.education_paper
+                  Projects
+                %a.dropdown-item{href: "../sections.html#pricing"}
+                  %i.now-ui-icons.business_money-coins
+                  Pricing
+                %a.dropdown-item{href: "../sections.html#testimonials"}
+                  %i.now-ui-icons.ui-2_chat-round
+                  Testimonials
+                %a.dropdown-item{href: "../sections.html#contactus"}
+                  %i.now-ui-icons.tech_mobile
+                  Contact Us
+            %li.nav-item.dropdown
+              %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+                %i.now-ui-icons.design_image{"aria-hidden" => "true"}
+                %p Examples
+              .dropdown-menu.dropdown-menu-right{"aria-labelledby" => "navbarDropdownMenuLink"}
+                %a.dropdown-item{href: "../examples/about-us.html"}
+                  %i.now-ui-icons.business_bulb-63
+                  About-us
+                %a.dropdown-item{href: "../examples/blog-post.html"}
+                  %i.now-ui-icons.text_align-left
+                  Blog Post
+                %a.dropdown-item{href: "../examples/blog-posts.html"}
+                  %i.now-ui-icons.design_bullet-list-67
+                  Blog Posts
+                %a.dropdown-item{href: "../examples/contact-us.html"}
+                  %i.now-ui-icons.location_pin
+                  Contact Us
+                %a.dropdown-item{href: "../examples/landing-page.html"}
+                  %i.now-ui-icons.education_paper
+                  Landing Page
+                %a.dropdown-item{href: "../examples/login-page.html"}
+                  %i.now-ui-icons.users_circle-08
+                  Login Page
+                %a.dropdown-item{href: "../examples/pricing.html"}
+                  %i.now-ui-icons.business_money-coins
+                  Pricing
+                %a.dropdown-item{href: "../examples/ecommerce.html"}
+                  %i.now-ui-icons.shopping_shop
+                  Ecommerce Page
+                %a.dropdown-item{href: "../examples/product-page.html"}
+                  %i.now-ui-icons.shopping_bag-16
+                  Product Page
+                %a.dropdown-item{href: "../examples/profile-page.html"}
+                  %i.now-ui-icons.users_single-02
+                  Profile Page
+                %a.dropdown-item{href: "../examples/signup-page.html"}
+                  %i.now-ui-icons.tech_mobile
+                  Signup Page
+            %li.nav-item
+              %a.nav-link.btn.btn-primary{href: "https://www.creative-tim.com/product/now-ui-kit-pro", target: "_blank"}
+                %p Buy Now
+            /
+              <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
+              <i class="fa fa-twitter"></i>
+              <p class="hidden-lg-up">Twitter</p>
+              </a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
+              <i class="fa fa-facebook-square"></i>
+              <p class="hidden-lg-up">Facebook</p>
+              </a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
+              <i class="fa fa-instagram"></i>
+              <p class="hidden-lg-up">Instagram</p>
+              </a>
+              </li>
+    / End Navbar
+    .wrapper
+      .page-header.page-header-small
+        .page-header-image{"data-parallax" => "true", style: "background-image: url('../assets/img/bg32.jpg');"}
+        .content-center
+          .row
+            .col-md-8.ml-auto.mr-auto
+              %h1.title About Us
+              %h4 Meet the amazing team behind this project and find out more about how we work.
+      .section
+        .about-description.text-center
+          .features-3
+            .container
+              .row
+                .col-md-8.mr-auto.ml-auto
+                  %h2.title Simpler. Smarter. Faster.
+                  %h4.description The CloudCheckr Cloud Management Platform (CMP) provides full visibility and control to reduce costs, improve cybersecurity posture, and automate critical tasks.
+              .row
+                .col-md-4
+                  .info.info-hover
+                    .icon.icon-success.icon-circle
+                      %i.now-ui-icons.objects_globe
+                    %h4.info-title Asset Management
+                    %p.description Cross-account dashboards provide sophisticated reporting for enterprise.
+                .col-md-4
+                  .info.info-hover
+                    .icon.icon-info.icon-circle
+                      %i.now-ui-icons.education_atom
+                    %h4.info-title Resource Utilization
+                    %p.description CloudCheckr provides summary and detailed usage statistics for resources.
+                .col-md-4
+                  .info.info-hover
+                    .icon.icon-primary.icon-circle
+                      %i.now-ui-icons.tech_watch-time
+                    %h4.info-title Self-Healing
+                    %p.description CloudCheckr enables users to save money, time, and effort.
+        .separator-line.separator-primary
+        .projects-5
+          .container
+            .row
+              .col-md-8.ml-auto.mr-auto.text-center
+                %h2.title We have many advantages
+                %h4.description This is the paragraph where you can write more details about your projects. Keep you user engaged by providing meaningful information.
+                .section-space
+            .row
+              .col-md-5.ml-auto
+                .card.card-background.card-background-product.card-raised{style: "background-image: url('../assets/img/project8.jpg')"}
+                  .card-body
+                    %h2.card-title Social Analytics
+                    %p.card-description
+                      Insight to help you create, connect, and convert. Understand Your Audience's Interests, Influence, Interactions, and Intent. Discover emerging topics and influencers to reach new audiences.
+                    %label.badge.badge-neutral Analytics
+              .col-md-5.mr-auto
+                .info.info-horizontal
+                  .icon.icon-danger
+                    %i.now-ui-icons.ui-2_chat-round
+                  .description
+                    %h4.info-title Listen to Social Conversations
+                    %p.description
+                      Gain access to the demographics, psychographics, and location of unique people who talk about your brand.
+                .info.info-horizontal
+                  .icon.icon-danger
+                    %i.now-ui-icons.business_chart-pie-36
+                  .description
+                    %h4.info-title Performance Analyze
+                    %p.description
+                      Unify data from Facebook, Instagram, Twitter, LinkedIn, and Youtube to gain rich insights from easy-to-use reports.
+                .info.info-horizontal
+                  .icon.icon-danger
+                    %i.now-ui-icons.design-2_ruler-pencil
+                  .description
+                    %h4.info-title Social Conversions
+                    %p.description
+                      Track actions taken on your website that originated from social, and understand the impact on your bottom line.
+            %hr/
+            .row
+              .col-md-5.ml-auto.mt-5
+                .info.info-horizontal
+                  .icon.icon-warning
+                    %i.now-ui-icons.users_single-02
+                  .description
+                    %h4.info-title Work With Any Team
+                    %p.description
+                      Whether it’s for work or even the next family vacation, Trello helps your team.
+                .info.info-horizontal
+                  .icon.icon-warning
+                    %i.now-ui-icons.business_chart-bar-32
+                  .description
+                    %h4.info-title A Productivity Platform
+                    %p.description
+                      Integrate the apps your team already uses directly into your workflow.
+                .info.info-horizontal
+                  .icon.icon-warning
+                    %i.now-ui-icons.arrows-1_refresh-69
+                  .description
+                    %h4.info-title Always In Sync
+                    %p.description
+                      No matter where you are, Trello stays in sync across all of your devices.
+              .col-md-5.mr-auto
+                .card.card-background.card-background-product.card-raised{style: "background-image: url('../assets/img/project9.jpg')"}
+                  .card-body
+                    %h2.card-title Trello lets you work.
+                    %p.card-description.text-white
+                      Trello’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible and rewarding way.
+                    %label.badge.badge-neutral Trello
+        .about-team.team-4
+          .container
+            .row
+              .col-md-8.ml-auto.mr-auto.text-center
+                %h2.title We are nerd rockstars
+                %h4.description This is the paragraph where you can write more details about your team. Keep you user engaged by providing meaningful information.
+            .row
+              .col-xl-6.col-lg-7.ml-auto.mr-auto
+                .card.card-profile.card-plain
+                  .row
+                    .col-md-5
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img.img-raised.rounded{src: "../assets/img/olivia.jpg"}/
+                    .col-md-7
+                      .card-body
+                        %h4.card-title Ella Evelyn
+                        %h6.category Air Crew Member
+                        %p.card-description
+                          Think in the morning. Act in the noon. Eat in the evening. Sleep in the night......
+                        .card-footer
+                          %a.btn.btn-icon.btn-neutral.btn-twitter{href: "#pablo"}
+                            %i.fa.fa-twitter
+                          %a.btn.btn-icon.btn-neutral.btn-facebook{href: "#pablo"}
+                            %i.fa.fa-facebook-square
+                          %a.btn.btn-icon.btn-neutral.btn-google{href: "#pablo"}
+                            %i.fa.fa-google
+              .col-xl-6.col-lg-7.ml-auto.mr-auto
+                .card.card-profile.card-plain
+                  .row
+                    .col-md-5
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img.img-raised.rounded{src: "../assets/img/emily.jpg"}/
+                    .col-md-7
+                      .card-body
+                        %h4.card-title Mila Skylar
+                        %h6.category Architect
+                        %p.card-description
+                          Love cures people - both the ones who give it and the ones who receive it...
+                        .card-footer
+                          %a.btn.btn-icon.btn-neutral.btn-linkedin{href: "#pablo"}
+                            %i.fa.fa-linkedin
+                          %a.btn.btn-icon.btn-neutral.btn-facebook{href: "#pablo"}
+                            %i.fa.fa-facebook-square
+                          %a.btn.btn-icon.btn-neutral.btn-dribbble{href: "#pablo"}
+                            %i.fa.fa-dribbble
+                          %a.btn.btn-icon.btn-neutral.btn-google{href: "#pablo"}
+                            %i.fa.fa-google
+              .col-xl-6.col-lg-7.ml-auto.mr-auto
+                .card.card-profile.card-plain
+                  .row
+                    .col-md-5
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img.img-raised.rounded{src: "../assets/img/james.jpg"}/
+                    .col-md-7
+                      .card-body
+                        %h4.card-title Daniel Carter
+                        %h6.category Aviation Inspector
+                        %p.card-description
+                          Keep your face always toward the sunshine - and shadows will fall behind you...
+                        .card-footer
+                          %a.btn.btn-icon.btn-neutral.btn-youtube{href: "#pablo"}
+                            %i.fa.fa-youtube-play
+                          %a.btn.btn-icon.btn-neutral.btn-twitter{href: "#pablo"}
+                            %i.fa.fa-twitter
+                          %a.btn.btn-icon.btn-neutral.btn-instagram{href: "#pablo"}
+                            %i.fa.fa-instagram
+              .col-xl-6.col-lg-7.ml-auto.mr-auto
+                .card.card-profile.card-plain
+                  .row
+                    .col-md-5
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img.img-raised.rounded{src: "../assets/img/michael.jpg"}/
+                    .col-md-7
+                      .card-body
+                        %h4.card-title Dylan Wyatt
+                        %h6.category Conservation Scientist
+                        %p.card-description
+                          There is only one corner of the universe you can be certain of improving, and that's your own self...
+                        .card-footer
+                          %a.btn.btn-icon.btn-neutral.btn-linkedin{href: "#pablo"}
+                            %i.fa.fa-linkedin
+                          %a.btn.btn-icon.btn-neutral.btn-facebook{href: "#pablo"}
+                            %i.fa.fa-facebook-square
+                          %a.btn.btn-icon.btn-neutral.btn-google{href: "#pablo"}
+                            %i.fa.fa-google
+        .about-office
+          .container
+            .row.text-center
+              .col-md-8.ml-auto.mr-auto
+                %h2.title Our office is our second home
+                %h4.description Here are some pictures from our office. You can see the place looks like a palace and is fully equiped with everything you need to get the job done.
+            .row
+              .col-md-4
+                %img.rounded.img-raised{alt: "Raised Image", src: "../assets/img/bg27.jpg"}/
+              .col-md-4
+                %img.rounded.img-raised{alt: "Raised Image", src: "../assets/img/bg24.jpg"}/
+              .col-md-4
+                %img.rounded.img-raised{alt: "Raised Image", src: "../assets/img/bg28.jpg"}/
+              .col-md-6
+                %img.rounded.img-raised{alt: "Raised Image", src: "../assets/img/project6.jpg"}/
+              .col-md-6
+                %img.rounded.img-raised{alt: "Raised Image", src: "../assets/img/project14.jpg"}/
+        .about-contact
+          .container
+            .row
+              .col-md-8.mr-auto.ml-auto
+                %h2.text-center.title Want to work with us?
+                %h4.text-center.description Divide details about your product or agency work into parts. Write a few lines about each one and contact us about any further collaboration. We will get back to you in a couple of hours.
+                %form.contact-form
+                  .row
+                    .col-md-4
+                      %label First name
+                      .input-group
+                        .input-group-prepend
+                          %span.input-group-text
+                            %i.now-ui-icons.users_circle-08
+                        %input.form-control{placeholder: "First Name...", type: "text"}/
+                    .col-md-4
+                      %label Your email
+                      .input-group
+                        .input-group-prepend
+                          %span.input-group-text
+                            %i.now-ui-icons.ui-1_email-85
+                        %input.form-control{placeholder: "Email Name...", type: "text"}/
+                    .col-md-4
+                      .form-group
+                        %label.control-label Speciality
+                        %select.selectpicker{"data-size" => "7", "data-style" => "btn btn-default btn-round mt-0", title: "Speciality"}
+                          %option{value: "1"} I'm a Designer
+                          %option{value: "2"} I'm a Developer
+                          %option{value: "3"} I'm a Hero
+                  .row
+                    .col-md-4.ml-auto.mr-auto.text-center
+                      %button.btn.btn-primary.btn-round.mt-4.btn-lg
+                        Let's talk
+      %footer.footer
+        .container
+          %nav
+            %ul
+              %li
+                %a{href: "https://www.creative-tim.com"}
+                  Creative Tim
+              %li
+                %a{href: "http://presentation.creative-tim.com"}
+                  About Us
+              %li
+                %a{href: "http://blog.creative-tim.com"}
+                  Blog
+              %li
+                %a{href: "https://www.creative-tim.com/license"}
+                  License
+          .copyright
+            ©
+            :javascript
+              document.write(new Date().getFullYear())
+            , Designed by
+            = succeed "." do
+              %a{href: "http://www.invisionapp.com", target: "_blank"} Invision
+            = succeed "." do
+              %a{href: "https://www.creative-tim.com", target: "_blank"} Creative Tim
+  / Core JS Files
+  %script{src: "../assets/js/core/jquery.3.2.1.min.js", type: "text/javascript"}
+  %script{src: "../assets/js/core/popper.min.js", type: "text/javascript"}
+  %script{src: "../assets/js/core/bootstrap.min.js", type: "text/javascript"}
+  %script{src: "../assets/js/plugins/moment.min.js"}
+  / Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/
+  %script{src: "../assets/js/plugins/bootstrap-switch.js"}
+  / Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs
+  %script{src: "../assets/js/plugins/bootstrap-tagsinput.js"}
+  / Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select
+  %script{src: "../assets/js/plugins/bootstrap-selectpicker.js", type: "text/javascript"}
+  / Google Maps Plugin
+  %script{src: "https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE", type: "text/javascript"}
+  / Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput
+  %script{src: "../assets/js/plugins/jasny-bootstrap.min.js"}
+  / Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/
+  %script{src: "../assets/js/plugins/nouislider.min.js", type: "text/javascript"}
+  / Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker
+  %script{src: "../assets/js/plugins/bootstrap-datetimepicker.min.js", type: "text/javascript"}
+  / Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc
+  %script{src: "../assets/js/now-ui-kit.js?v=1.2.0", type: "text/javascript"}

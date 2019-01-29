@@ -1,0 +1,2089 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{charset: "utf-8"}/
+    %link{href: "./assets/img/apple-icon.png", rel: "apple-touch-icon", sizes: "76x76"}/
+    %link{href: "./assets/img/favicon.png", rel: "icon", type: "image/png"}/
+    %meta{content: "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %title Sections - Now UI Kit Pro by Creative Tim
+    %meta{content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no", name: "viewport"}/
+    / Fonts and icons
+    %link{href: "https://fonts.googleapis.com/css?family=Montserrat:400,700,200", rel: "stylesheet"}/
+    %link{href: "https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css", rel: "stylesheet"}/
+    / CSS Files
+    %link{href: "./assets/css/bootstrap.min.css", rel: "stylesheet"}/
+    %link{href: "./assets/css/now-ui-kit.css?v=1.2.0", rel: "stylesheet"}/
+    / CSS Just for demo purpose, don't include it in your project
+    %link{href: "./assets/css/demo.css", rel: "stylesheet"}/
+  %body.sections-page
+    / Navbar
+    %nav.navbar.navbar-expand-lg.bg-white.fixed-top
+      .container
+        .navbar-translate
+          %a.navbar-brand{"data-placement" => "bottom", href: "http://demos.creative-tim.com/now-ui-kit-pro/presentation.html", rel: "tooltip", target: "_blank", title: "Designed by Invision. Coded by Creative Tim"}
+            Now Ui Kit Pro
+          %button.navbar-toggler{"aria-controls" => "navigation-index", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navigation", "data-toggle" => "collapse", type: "button"}
+            %span.navbar-toggler-bar.bar1
+            %span.navbar-toggler-bar.bar2
+            %span.navbar-toggler-bar.bar3
+        .collapse.navbar-collapse{"data-color" => "orange", "data-nav-image" => "./assets/img/blurred-image-1.jpg"}
+          %ul.navbar-nav.ml-auto
+            %li.nav-item
+              %a.nav-link{href: "./index.html", target: "_blank"}
+                %i.now-ui-icons.design_app
+                %p Components
+            %li.nav-item.dropdown
+              %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+                %i.now-ui-icons.files_paper{"aria-hidden" => "true"}
+                %p Sections
+              .dropdown-menu.dropdown-menu-right{"aria-labelledby" => "navbarDropdownMenuLink"}
+                %a.dropdown-item{href: "./sections.html#headers"}
+                  %i.now-ui-icons.shopping_box
+                  Headers
+                %a.dropdown-item{href: "./sections.html#features"}
+                  %i.now-ui-icons.ui-2_settings-90
+                  Features
+                %a.dropdown-item{href: "./sections.html#blogs"}
+                  %i.now-ui-icons.text_align-left
+                  Blogs
+                %a.dropdown-item{href: "./sections.html#teams"}
+                  %i.now-ui-icons.sport_user-run
+                  Teams
+                %a.dropdown-item{href: "./sections.html#projects"}
+                  %i.now-ui-icons.education_paper
+                  Projects
+                %a.dropdown-item{href: "./sections.html#pricing"}
+                  %i.now-ui-icons.business_money-coins
+                  Pricing
+                %a.dropdown-item{href: "./sections.html#testimonials"}
+                  %i.now-ui-icons.ui-2_chat-round
+                  Testimonials
+                %a.dropdown-item{href: "./sections.html#contactus"}
+                  %i.now-ui-icons.tech_mobile
+                  Contact Us
+            %li.nav-item.dropdown
+              %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+                %i.now-ui-icons.design_image{"aria-hidden" => "true"}
+                %p Examples
+              .dropdown-menu.dropdown-menu-right{"aria-labelledby" => "navbarDropdownMenuLink"}
+                %a.dropdown-item{href: "./examples/about-us.html"}
+                  %i.now-ui-icons.business_bulb-63
+                  About-us
+                %a.dropdown-item{href: "./examples/blog-post.html"}
+                  %i.now-ui-icons.text_align-left
+                  Blog Post
+                %a.dropdown-item{href: "./examples/blog-posts.html"}
+                  %i.now-ui-icons.design_bullet-list-67
+                  Blog Posts
+                %a.dropdown-item{href: "./examples/contact-us.html"}
+                  %i.now-ui-icons.location_pin
+                  Contact Us
+                %a.dropdown-item{href: "./examples/landing-page.html"}
+                  %i.now-ui-icons.education_paper
+                  Landing Page
+                %a.dropdown-item{href: "./examples/login-page.html"}
+                  %i.now-ui-icons.users_circle-08
+                  Login Page
+                %a.dropdown-item{href: "./examples/pricing.html"}
+                  %i.now-ui-icons.business_money-coins
+                  Pricing
+                %a.dropdown-item{href: "./examples/ecommerce.html"}
+                  %i.now-ui-icons.shopping_shop
+                  Ecommerce Page
+                %a.dropdown-item{href: "./examples/product-page.html"}
+                  %i.now-ui-icons.shopping_bag-16
+                  Product Page
+                %a.dropdown-item{href: "./examples/profile-page.html"}
+                  %i.now-ui-icons.users_single-02
+                  Profile Page
+                %a.dropdown-item{href: "./examples/signup-page.html"}
+                  %i.now-ui-icons.tech_mobile
+                  Signup Page
+            %li.nav-item
+              %a.nav-link.btn.btn-primary{href: "https://www.creative-tim.com/product/now-ui-kit-pro", target: "_blank"}
+                %p Buy Now
+            /
+              <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
+              <i class="fa fa-twitter"></i>
+              <p class="hidden-lg-up">Twitter</p>
+              </a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
+              <i class="fa fa-facebook-square"></i>
+              <p class="hidden-lg-up">Facebook</p>
+              </a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
+              <i class="fa fa-instagram"></i>
+              <p class="hidden-lg-up">Instagram</p>
+              </a>
+              </li>
+    / End Navbar
+    .wrapper
+      .section-space
+      #headers.cd-section
+        / *********     HEADER 1      *********
+        .header-1
+          %nav.navbar.navbar-expand-lg.navbar-transparent.bg-primary.navbar-absolute
+            .container
+              .navbar-translate
+                %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#example-navbar-primary", "data-toggle" => "collapse", type: "button"}
+                  %span.navbar-toggler-bar.bar1
+                  %span.navbar-toggler-bar.bar2
+                  %span.navbar-toggler-bar.bar3
+                %a.navbar-brand{href: "#pablo"} Creative Tim
+              #example-navbar-primary.collapse.navbar-collapse
+                %ul.navbar-nav.mx-auto
+                  %li.nav-item.active
+                    %a.nav-link{href: "#pablo"}
+                      Home
+                  %li.nav-item
+                    %a.nav-link{href: "#pablo"}
+                      About Us
+                  %li.nav-item
+                    %a.nav-link{href: "#pablo"}
+                      Contact Us
+                %ul.nav.navbar-nav
+                  %li.nav-item
+                    %a.nav-link{href: "https://twitter.com/CreativeTim"}
+                      %i.fa.fa-twitter
+                  %li.nav-item
+                    %a.nav-link{href: "https://www.facebook.com/CreativeTim"}
+                      %i.fa.fa-facebook-square
+                  %li.nav-item
+                    %a.nav-link{href: "https://www.instagram.com/CreativeTimOfficial"}
+                      %i.fa.fa-instagram
+          .page-header.header-filter
+            .page-header-image{style: "background-image: url('assets/img/bg16.jpg');"}
+            .content-center
+              .container
+                .row
+                  .col-md-7.ml-auto.text-right
+                    %h1.title History of surfing
+                    %h4.description The riding of waves has likely existed since humans began swimming in the ocean. In this sense, bodysurfing is the oldest type of wave-catching. Standing up on what is now called a surfboard is a relatively recent innovation developed by the Polynesians.
+                    %br/
+                    .buttons
+                      %a.btn.btn-icon.btn-link.btn-neutral.btn-lg{href: "#pablo"}
+                        %i.fa.fa-twitter
+                      %a.btn.btn-icon.btn-link.btn-neutral.btn-lg{href: "#pablo"}
+                        %i.fa.fa-facebook-square
+                      %a.btn.btn-icon.btn-link.btn-neutral.btn-lg{href: "#pablo"}
+                        %i.fa.fa-get-pocket
+                      %a.btn.btn-info.btn-lg.mr-3{href: "#pablo"}
+                        Read More
+        / *********    END HEADER 1      *********
+        / *********     HEADER 2      *********
+        .header-2
+          %nav.navbar.navbar-expand-lg.navbar-transparent.bg-primary.navbar-absolute
+            .container
+              .navbar-translate
+                %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#example-navbar-primary", "data-toggle" => "collapse", type: "button"}
+                  %span.navbar-toggler-bar.bar1
+                  %span.navbar-toggler-bar.bar2
+                  %span.navbar-toggler-bar.bar3
+                %a.navbar-brand{href: "#pablo"} Creative Tim
+              #example-navbar-primary.collapse.navbar-collapse
+                %ul.navbar-nav.mx-auto
+                  %li.nav-item.active
+                    %a.nav-link{href: "#pablo"}
+                      Home
+                  %li.nav-item
+                    %a.nav-link{href: "#pablo"}
+                      About Us
+                  %li.nav-item
+                    %a.nav-link{href: "#pablo"}
+                      Products
+                  %li.nav-item
+                    %a.nav-link{href: "#pablo"}
+                      Contact Us
+                %ul.nav.navbar-nav.navbar-right
+                  %li.nav-item
+                    %a.nav-link{href: "https://twitter.com/CreativeTim"}
+                      %i.fa.fa-twitter
+                  %li.nav-item
+                    %a.nav-link{href: "https://www.facebook.com/CreativeTim"}
+                      %i.fa.fa-facebook-square
+                  %li.nav-item
+                    %a.nav-link{href: "https://www.instagram.com/CreativeTimOfficial"}
+                      %i.fa.fa-instagram
+          .page-header.header-filter
+            .page-header-image{style: "background-image: url('assets/img/bg14.jpg');"}
+            .content-center
+              .container
+                .row
+                  .col-md-8.ml-auto.mr-auto.text-center
+                    %h1.title You should be here!
+                    %h5.description
+                      5,000 capacity venue, holding some of the latest technology lighting with a 24 colour laser system Amnesia is one of the islands most legendary clubs.
+                  .col-md-10.ml-auto.mr-auto
+                    .card.card-raised.card-form-horizontal.card-plain{"data-background-color" => ""}
+                      .card-body
+                        %form{action: "", method: ""}
+                          .row
+                            .col-md-3
+                              .form-group
+                                %input.form-control{placeholder: "Full Name", type: "text", value: ""}/
+                            .col-md-3
+                              .form-group
+                                %input.form-control{placeholder: "Your Email", type: "email", value: ""}/
+                            .col-md-3
+                              .form-group
+                                %input.form-control{placeholder: "Password", type: "password", value: ""}/
+                            .col-md-3
+                              %button.btn.btn-primary.btn-round.btn-block{type: "button"} Join Us
+        / *********    END HEADER 2      *********
+        / *********     HEADER 3      *********
+        .header-3
+          %nav.navbar.navbar-expand-lg.navbar-transparent.bg-primary.navbar-absolute
+            .container
+              .navbar-translate
+                %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#example-navbar-primary", "data-toggle" => "collapse", type: "button"}
+                  %span.navbar-toggler-bar.bar1
+                  %span.navbar-toggler-bar.bar2
+                  %span.navbar-toggler-bar.bar3
+                %a.navbar-brand{href: "#pablo"} Creative Tim
+              #example-navbar-primary.collapse.navbar-collapse
+                %ul.navbar-nav.ml-auto
+                  %li.nav-item.active
+                    %a.nav-link{href: "#pablo"}
+                      Home
+                  %li.nav-item
+                    %a.nav-link{href: "#pablo"}
+                      About Us
+                  %li.nav-item
+                    %a.nav-link{href: "#pablo"}
+                      Contact Us
+          #carouselExampleIndicators.carousel.slide
+            %ol.carousel-indicators
+              %li.active{"data-slide-to" => "0", "data-target" => "#carouselExampleIndicators"}
+              %li{"data-slide-to" => "1", "data-target" => "#carouselExampleIndicators"}
+              %li{"data-slide-to" => "2", "data-target" => "#carouselExampleIndicators"}
+            .carousel-inner{role: "listbox"}
+              .carousel-item.active
+                .page-header.header-filter
+                  .page-header-image{style: "background-image: url('assets/img/bg20.jpg');"}
+                  .content-center
+                    .container.text-left
+                      .content-center
+                        .row
+                          .col-md-5
+                            .iframe-container
+                              %iframe{allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/rmfmdKOLzVI?rel=0&controls=0&showinfo=0"}
+                          .col-md-6.ml-auto.mr-auto.text-right
+                            %h1.title On the run tour.
+                            %h4.description On the Run Tour: Beyoncé and Jay Z is a 2014 concert special which documents the September 12 and 13, 2014, shows of American singers' Beyoncé and Jay-Z joint co-headlining venture On the Run Tour.
+              .carousel-item
+                .page-header.header-filter
+                  .page-header-image{style: "background-image: url('assets/img/bg15.jpg');"}
+                  .content-center
+                    .container
+                      .content-center
+                        .row
+                          .col-md-8.ml-auto.mr-auto.text-center
+                            %h1.title Island of legends.
+                            %h4.description The islands of Malta and Gozo are brilliant for a family holiday, packed with fun places to visit whatever your children’s ages. The islands’ small size means everywhere is within easy reach.
+                            %br/
+                            %h5 Connect with us on:
+                            .buttons
+                              %a.btn.btn-icon.btn-neutral.btn-danger.btn-round.mt-2{href: "#pablo"}
+                                %i.fa.fa-twitter
+                              %a.btn.btn-icon.btn-neutral.btn-danger.btn-round.mt-2{href: "#pablo"}
+                                %i.fa.fa-facebook-square
+                              %a.btn.btn-icon.btn-neutral.btn-danger.btn-round.mt-2{href: "#pablo"}
+                                %i.fa.fa-google-plus
+                              %a.btn.btn-icon.btn-neutral.btn-danger.btn-round.mt-2{href: "#pablo"}
+                                %i.fa.fa-instagram
+              .carousel-item
+                .page-header.header-filter
+                  .page-header-image{style: "background-image: url('assets/img/bg17.jpg');"}
+                  .content-center
+                    .container
+                      .content-center
+                        .row
+                          .col-md-6.text-left
+                            %h1.title Arctic Sea ice.
+                            %h4.description According to the National Oceanic and Atmospheric Administration, Ted Scambos, NSIDC lead scientist, puts the potentially record low maximum sea ice extent this year down to low ice extent in the Pacific and a late drop in ice extent in the Barents Sea.
+                            %br/
+                            .buttons
+                              %a.btn.btn-neutral.btn-primary.btn-lg.mr-1{href: "#pablo"}
+                                %i.now-ui-icons.files_single-copy-04
+                                Read More..
+                              %a.btn.btn-primary.btn-lg{href: "#pablo"}
+                                %i.now-ui-icons.arrows-1_share-66
+                                Subscribe
+            %a.carousel-control-prev{"data-slide" => "prev", href: "#carouselExampleIndicators", role: "button"}
+              %i.now-ui-icons.arrows-1_minimal-left
+            %a.carousel-control-next{"data-slide" => "next", href: "#carouselExampleIndicators", role: "button"}
+              %i.now-ui-icons.arrows-1_minimal-right
+        / *********    END HEADER 3      *********
+      #features.cd-section
+        / *********     FEATURES 1      *********
+        .features-1
+          .container
+            .row
+              .col-md-8.ml-auto.mr-auto
+                %h2.title Full-Funnel Social Analytics
+                %h4.description Insight to help you create, connect, and convert. Understand Your Audience's Interests, Influence, Interactions, and Intent. Discover emerging topics and influencers to reach new audiences.
+            .row
+              .col-md-4
+                .info.info-hover
+                  .icon.icon-primary
+                    %i.now-ui-icons.ui-2_chat-round
+                  %h4.info-title Social Conversations
+                  %p.description Gain access to the demographics, psychographics, and location of unique people.
+              .col-md-4
+                .info.info-hover
+                  .icon.icon-success
+                    %i.now-ui-icons.business_chart-pie-36
+                  %h4.info-title Analyze Performance
+                  %p.description Unify data from Facebook, Instagram, Twitter, LinkedIn, and Youtube to gain rich insights.
+              .col-md-4
+                .info.info-hover
+                  .icon.icon-warning
+                    %i.now-ui-icons.design-2_ruler-pencil
+                  %h4.info-title Measure Conversions
+                  %p.description Track actions taken on your website, understand the impact on your bottom line.
+        / *********    END FEATURES 1      *********
+        / *********     FEATURES 2      *********
+        .features-2.section-image{style: "background-image: url('assets/img/bg22.jpg')"}
+          .container-fluid
+            .row
+              .col-md-8.mr-auto.ml-auto
+                %h2.title Trello lets you work more.
+                %h4.description Trello’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible and rewarding way.
+            .row
+              .col-md-4
+                .info
+                  .icon.icon-primary.icon-circle
+                    %i.now-ui-icons.users_single-02
+                  %h4.info-title Work With Any Team
+                  %p.description Whether it’s for work or even the next family vacation, Trello helps your team.
+              .col-md-4
+                .info
+                  .icon.icon-danger.icon-circle
+                    %i.now-ui-icons.business_chart-bar-32
+                  %h4.info-title A Productivity Platform
+                  %p.description Integrate the apps your team already uses directly into your workflow.
+              .col-md-4
+                .info
+                  .icon.icon-warning.icon-circle
+                    %i.now-ui-icons.arrows-1_refresh-69
+                  %h4.info-title Always In Sync
+                  %p.description No matter where you are, Trello stays in sync across all of your devices.
+        / *********    END FEATURES 2      *********
+        / *********     FEATURES 3      *********
+        .features-3
+          .container
+            .row
+              .col-md-8.ml-auto.mr-auto
+                %h2.title Simpler. Smarter. Faster.
+                %h4.description The CloudCheckr Cloud Management Platform (CMP) provides full visibility and control to reduce costs, improve cybersecurity posture, and automate critical tasks.
+            .row
+              .col-md-4
+                .info.info-hover
+                  .icon.icon-success.icon-circle
+                    %i.now-ui-icons.objects_globe
+                  %h4.info-title Asset Management
+                  %p.description Cross-account dashboards provide sophisticated reporting for enterprise.
+              .col-md-4
+                .info.info-hover
+                  .icon.icon-info.icon-circle
+                    %i.now-ui-icons.education_atom
+                  %h4.info-title Resource Utilization
+                  %p.description CloudCheckr provides summary and detailed usage statistics for resources.
+              .col-md-4
+                .info.info-hover
+                  .icon.icon-primary.icon-circle
+                    %i.now-ui-icons.tech_watch-time
+                  %h4.info-title Self-Healing
+                  %p.description CloudCheckr enables users to save money, time, and effort.
+        / *********    END FEATURES 3      *********
+        / *********     FEATURES 4      *********
+        .features-4
+          .container
+            .row
+              .col-md-8.ml-auto.mr-auto.text-center
+                %h2.title Coming home, a pleasure!
+                %h4.description Havenly is a convenient, personal and affordable way to redecorate your home room by room. Collaborate with our professional interior designers on our online platform.
+            .row
+              .col-md-4
+                .card.card-background.card-raised{"data-background-color" => "", style: "background-image: url('assets/img/bg24.jpg')"}
+                  .info
+                    .icon.icon-white
+                      %i.now-ui-icons.business_bulb-63
+                    .description
+                      %h4.info-title Collaborate on ideas
+                      %p Your designer will come back to you with an initial set of ideas.
+                      %a.ml-3{href: "#pablo"} Find more...
+              .col-md-4
+                .card.card-background.card-raised{"data-background-color" => "", style: "background-image: url('assets/img/bg23.jpg')"}
+                  .info
+                    .icon.icon-white
+                      %i.now-ui-icons.business_badge
+                    .description
+                      %h4.info-title Pick your designer
+                      %p Havenly interior designers are vetted professionals and real people.
+                      %a{href: "#pablo"} Find more...
+              .col-md-4
+                .card.card-background.card-raised{"data-background-color" => "", style: "background-image: url('assets/img/bg25.jpg')"}
+                  .info
+                    .icon.icon-white
+                      %i.now-ui-icons.location_map-big
+                    .description
+                      %h4.info-title Visualize your room
+                      %p Share a floor plan, and we'll create a visualization of your room.
+                      %a.ml-3{href: "#pablo"} Find more...
+        / *********    END FEATURES 4      *********
+        / *********     FEATURES 5      *********
+        .features-5
+          .container
+            .row
+              .col-md-5
+                %h2.title Working is a pleasure
+                .info.info-horizontal
+                  .icon.icon-primary.icon-circle
+                    %i.now-ui-icons.location_world
+                  .description
+                    %h4.info-title Hundreds of Components
+                    %p The moment you use Now UI Kit, you know you’ve never felt anything like it. With a single use lets you do more than ever before.
+                .info.info-horizontal
+                  .icon.icon-primary.icon-circle
+                    %i.now-ui-icons.sport_user-run
+                  .description
+                    %h4.info-title Easy to Use
+                    %p Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature.
+                .info.info-horizontal
+                  .icon.icon-primary.icon-circle
+                    %i.now-ui-icons.ui-2_time-alarm
+                  .description
+                    %h4.info-title Fast Prototyping
+                    %p Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature.
+              .col-md-7
+                .tablet-container
+                  %img{src: "assets/img/ipad2-inverted.png"}/
+        / *********    END FEATURES 5      *********
+        / *********     FEATURES 6      *********
+        .features-6
+          .container
+            .row
+              .col-md-8.ml-auto.mr-auto.text-center
+                %h2.title Working is a pleasure
+                %h4.description This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information.
+            .row
+              .col-md-4
+                .info.info-horizontal
+                  .icon.icon-info
+                    %i.now-ui-icons.design-2_html5
+                  .description
+                    %h5.info-title For Developers
+                    %p The moment you use Now UI Kit, you know you’ve never felt anything like it. With a single use, this powerfull UI Kit lets you do more than ever before.
+                .info.info-horizontal
+                  .icon.icon-danger
+                    %i.now-ui-icons.design_palette
+                  .description
+                    %h4.info-title For Designers
+                    %p Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.
+              .col-md-4
+                .phone-container
+                  %img{src: "assets/img/iphone2.png"}/
+              .col-md-4
+                .info.info-horizontal
+                  .icon.icon-primary
+                    %i.now-ui-icons.design-2_ruler-pencil
+                  .description
+                    %h5.info-title Bootstrap Grid
+                    %p Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.
+                .info.info-horizontal
+                  .icon.icon-success
+                    %i.now-ui-icons.files_single-copy-04
+                  .description
+                    %h4.info-title Example Pages Included
+                    %p Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.
+        / *********    END FEATURES 6      *********
+        / *********     FEATURES 7      *********
+        .features-7.section-image{style: "background-image: url('assets/img/bg11.jpg')"}
+          .col-md-8.mr-auto.ml-auto.text-center
+            %h2.title Working is a pleasure
+            %h4.description This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information.
+          .container-fluid
+            .row
+              .col-md-6.px-0
+                .col-sm-12
+                  .info.info-horizontal
+                    .icon
+                      %i.now-ui-icons.design-2_html5
+                    .description
+                      %h5.info-title For Developers
+                      %p.description The moment you use Now UI Kit, you know you’ve never felt anything like it. With a single use, this powerfull UI Kit lets you do more than ever before.
+                  .info.info-horizontal
+                    .icon
+                      %i.now-ui-icons.design_palette
+                    .description
+                      %h5.info-title For Designers
+                      %p.description The moment you use Now UI Kit, you know you’ve never felt anything like it. With a single use, this powerfull UI Kit lets you do more than ever before.
+                  .info.info-horizontal
+                    .icon
+                      %i.now-ui-icons.design-2_ruler-pencil
+                    .description
+                      %h5.info-title For Artists
+                      %p.description The moment you use Now UI Kit, you know you’ve never felt anything like it. With a single use, this powerfull UI Kit lets you do more than ever before.
+              .col-md-6
+                .image-container
+                  %img{alt: "", src: "assets/img/ipad3.png"}/
+        / *********    END FEATURES 7      *********
+        / *********     FEATURES 8      *********
+        .features-8.section-image{style: "background-image: url('assets/img/bg30.jpg')"}
+          .col-md-8.ml-auto.mr-auto.text-center
+            %h2.title Working is a pleasure
+            %h4.description Woodpecker.co is a follow-up automation SaaS founded in 2015. We’re an international team of 17, speaking 4 languages. Our mission is to enable all B2B companies to connect with their Ideal Customers.
+          .container
+            .row
+              .col-md-3
+                .card
+                  .card-image
+                    %img.rounded{alt: "", src: "assets/img/bg28.jpg"}/
+                  .info.text-center
+                    .icon
+                      %i.now-ui-icons.ui-1_email-85
+                    %h4.info-title Reply detection
+                    %p.description If you get a reply, further follow-ups are automatically stopped.
+              .col-md-3
+                .card
+                  .card-image
+                    %img.rounded{alt: "", src: "assets/img/bg26.jpg"}/
+                  .info.text-center
+                    .icon
+                      %i.now-ui-icons.ui-1_calendar-60
+                    %h4.info-title Follow-up
+                    %p.description Just set a number of days that you want send a follow-up.
+              .col-md-3
+                .card
+                  .card-image
+                    %img.rounded{alt: "", src: "assets/img/bg27.jpg"}/
+                  .info.text-center
+                    .icon
+                      %i.now-ui-icons.ui-1_send
+                    %h4.info-title Cold email
+                    %p.description Unlimited number of prospects daily with personalized emails.
+              .col-md-3
+                .card
+                  .card-image
+                    %img.rounded{alt: "", src: "assets/img/bg29.jpg"}/
+                  .info.text-center
+                    .icon
+                      %i.now-ui-icons.ui-2_like
+                    %h4.info-title Teamwork
+                    %p.description You and your teammates won’t address the same person twice.
+        / *********    END FEATURES 8      *********
+      #blogs.cd-section
+        / *********     BLOGS 1      *********
+        #blogs-1.blogs-1
+          .container
+            .row
+              .col-md-10.ml-auto.mr-auto
+                %h2.title Latest Blogposts
+                %br/
+                .card.card-plain.card-blog
+                  .row
+                    .col-md-5
+                      .card-image
+                        %img.img.img-raised.rounded{src: "assets/img/examples/card-blog4.jpg"}/
+                    .col-md-7
+                      %h6.category.text-info Enterprise
+                      %h3.card-title
+                        %a{href: "#pablo"} Warner Music Group buys concert discovery service Songkick
+                      %p.card-description
+                        Warner Music Group announced today it’s acquiring the selected assets of the music platform Songkick, including its app for finding concerts and the company’s trademark. Songkick has been involved in a lawsuit against the major…
+                        %a{href: "#pablo"} Read More
+                      %p.author
+                        by
+                        = succeed "," do
+                          %a{href: "#pablo"}
+                            %b Sarah Perez
+                .card.card-plain.card-blog
+                  .row
+                    .col-md-7
+                      %h6.category.text-danger
+                        %i.now-ui-icons.now-ui-icons.media-2_sound-wave
+                        Startup
+                      %h3.card-title
+                        %a{href: "#pablo"} Insticator raises $5.2M to help publishers
+                      %p.card-description
+                        Insticator is announcing that it has raised $5.2 million in Series A funding. The startup allows online publishers to add quizzes, polls and other interactive elements (either created by Insticator or by the publisher themselves) to their stories.
+                        %a{href: "#pablo"} Read More
+                      %p.author
+                        by
+                        = succeed "," do
+                          %a{href: "#pablo"}
+                            %b Anthony Ha
+                    .col-md-5
+                      .card-image
+                        %img.img.img-raised.rounded{src: "assets/img/examples/card-blog6.jpg"}/
+        / *********    END BLOGS 1      *********
+        / *********     BLOGS 2      *********
+        #blogs-2.blogs-2
+          .container
+            .row
+              .col-md-10.ml-auto.mr-auto
+                %h2.title Latest Blogposts 2
+                %br/
+                .row.justify-content-center
+                  .col-md-5
+                    .card.card-plain.card-blog
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img.img-raised.rounded{src: "assets/img/examples/card-blog7.jpg"}/
+                      .card-body
+                        %h6.category.text-info Enterprise
+                        %h5.card-title
+                          %a{href: "#pablo"} Alexa brings hands-free TV to more devices
+                        %p.card-description
+                          Alexa’s latest trick is offering a hands-free TV viewing experience, that will allow consumers to turn on or off their television, change inputs, fast forward, rewind and more, without having to first invoke a specific skill, or even press a button on their remote.
+                          %a{href: "#pablo"} Read More
+                  .col-md-5
+                    .card.card-plain.card-blog
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img.img-raised.rounded{src: "assets/img/examples/card-blog9.jpg"}/
+                      .card-body
+                        %h6.category.text-success
+                          M&amp;A
+                        %h5.card-title
+                          %a{href: "#pablo"} Uber, Yandex combine ridesharing and UberEATS in $3.72B. JV
+                        %p.card-description
+                          As Uber works through a huge amount of internal management turmoil, the company is also consolidating and rationalizing more of its international business. Today, the company announced it will be combining its rides-on-demand business and UberEATS.
+                          %a{href: "#pablo"} Read More
+                .row.justify-content-center
+                  .col-md-5
+                    .card.card-plain.card-blog
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img.img-raised.rounded{src: "assets/img/examples/card-blog16.jpg"}/
+                      .card-body
+                        %h6.category.text-info Music
+                        %h5.card-title
+                          %a{href: "#pablo"} The Affect Music Has On Different Teens
+                        %p.card-description
+                          Music is something that every person has his or her own specific opinion about. Different people have different taste, and various types of music have many ways of leaving an impact on someone.
+                          %a{href: "#pablo"} Read More
+                  .col-md-5
+                    .card.card-plain.card-blog
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img.img-raised.rounded{src: "assets/img/examples/card-blog15.jpg"}/
+                      .card-body
+                        %h6.category.text-success
+                          Broadcasting
+                        %h5.card-title
+                          %a{href: "#pablo"} Radio networks to broadcast a common radio format
+                        %p.card-description
+                          Radio broadcasting is a unidirectional wireless transmission over radio waves intended to reach a wide audience. Stations can be linked in radio networks to broadcast a common radio format.
+                          %a{href: "#pablo"} Read More
+        / *********    END BLOGS 2      *********
+        / *********     BLOGS 3      *********
+        .blogs-3
+          .container
+            .row
+              .col-md-10.ml-auto.mr-auto
+                %h2.title Latest Blogposts 3
+                %br/
+                .card.card-plain.card-blog
+                  .row
+                    .col-md-4
+                      .card-image
+                        %img.img.img-raised.rounded{src: "assets/img/examples/card-blog10.jpg"}/
+                    .col-md-8
+                      %h3.card-title
+                        %a{href: "#pablo"} Rover raised $65 million for pet sitting
+                      %p.card-description
+                        Finding temporary housing for your dog should be as easy as renting an Airbnb. That’s the idea behind Rover, which raised $65 million to expand its pet sitting and dog-walking businesses..
+                        %a{href: "#pablo"} Read More
+                      .author
+                        %img.avatar.img-raised{alt: "...", src: "assets/img/olivia.jpg"}/
+                        %span Katie Roof
+                .card.card-plain.card-blog
+                  .row
+                    .col-md-4
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img.img-raised.rounded{src: "assets/img/examples/card-blog11.jpg"}/
+                    .col-md-8
+                      %h3.card-title
+                        %a{href: "#pablo"} MateLabs mixes machine learning with IFTTT
+                      %p.card-description
+                        If you’ve ever wanted to train a machine learning model and integrate it with IFTTT, you now can with a new offering from MateLabs. MateVerse, a platform where novices can spin out machine...
+                        %a{href: "#pablo"} Read More
+                      .author
+                        %img.avatar.img-raised{alt: "...", src: "assets/img/james.jpg"}/
+                        %span John Mannes
+                .card.card-plain.card-blog
+                  .row
+                    .col-md-4
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img.img-raised.rounded{src: "assets/img/examples/card-blog12.jpg"}/
+                    .col-md-8
+                      %h3.card-title
+                        %a{href: "#pablo"} US venture investment ticks up in Q2 2017
+                      %p.card-description
+                        Venture investment in U.S. startups rose sequentially in the second quarter of 2017, boosted by large, late-stage financings and a few outsized early-stage rounds in tech and healthcare..
+                        %a{href: "#pablo"} Read More
+                      .author
+                        %img.avatar.img-raised{alt: "...", src: "assets/img/michael.jpg"}/
+                        %span Devin Coldewey
+        / *********    END BLOGS 4      *********
+        #blogs-4.blogs-4
+          .container
+            .row
+              .col-md-8.ml-auto.mr-auto
+                %h2.title Latest Blogposts 4
+                %br/
+                .card.card-plain.card-blog
+                  .card-image
+                    %a{href: "#pablo"}
+                      %img.img.img-raised.rounded{src: "assets/img/examples/card-blog13.jpg"}/
+                  %h6.category.text-info Fashion
+                  %h3.card-title
+                    %a{href: "#pablo"} Groupon Moves Into Flash Fashion
+                  %h5.card-description
+                    More acquisitions for Groupon to widen the net of consumers using its platform for more than daily deals. Today it is announcing the acquisition of ideeli, a flash fashion retailer, for $43 million in...
+                  %a.btn.btn-primary.btn-round{href: "#pablo"} Read More
+                .card.card-plain.card-blog
+                  .card-image
+                    %a{href: "#pablo"}
+                      %img.img.img-raised.rounded{src: "assets/img/examples/card-blog14.jpg"}/
+                  %h6.category.text-success Entertainment
+                  %h3.card-title
+                    %a{href: "#pablo"} When music and technology collide
+                  %h5.card-description
+                    Some might say that technology is killing the music industry. But if you look around, there’s a beautiful marriage there — the music industry is evolving every day, and artists are embracing technology in new and innovative ways...
+                  %a.btn.btn-primary.btn-round{href: "#pablo"} Read More
+        / *********    END BLOGS 4      *********
+        / *********    END BLOGS 5      *********
+        .blogs-5{"data-background-color" => "gray"}
+          .container
+            .row
+              .col-md-10.ml-auto.mr-auto
+                %h2.title Latest Blogposts 5
+                .row
+                  .col-md-4
+                    .card.card-blog
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img.rounded{src: "assets/img/card-blog2.jpg"}/
+                      .card-body
+                        %h6.category.text-primary Features
+                        %h5.card-title
+                          That’s One Way To Ditch Your Passenger
+                        %p.card-description
+                          As near as we can tell, this guy must have thought he was going over backwards and tapped the rear...
+                        .card-footer
+                          .author
+                            %img.avatar.img-raised{alt: "...", src: "assets/img/julie.jpg"}/
+                            %span Mike John
+                          .stats.stats-right
+                            %i.now-ui-icons.tech_watch-time
+                            5 min read
+                  .col-md-4
+                    .card.card-blog
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img.rounded{src: "assets/img/examples/card-blog18.jpg"}/
+                      .card-body
+                        %h6.category.text-danger Animals
+                        %h5.card-title
+                          Shark Week: How to Watch It Like a Scientist
+                        %p.card-description
+                          Just when you thought it was safe to turn on your television, the Discovery Channel's "Shark Week"...
+                        .card-footer
+                          .author
+                            %img.avatar.img-raised{alt: "...", src: "assets/img/julie.jpg"}/
+                            %span Mike John
+                          .stats.stats-right
+                            %i.now-ui-icons.tech_watch-time
+                            5 min read
+                  .col-md-4
+                    .card.card-blog
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img.rounded{src: "assets/img/examples/card-blog17.jpg"}/
+                      .card-body
+                        %h6.category.text-primary Cars
+                        %h5.card-title
+                          Who's Afraid of the Self-Driving Car?
+                        %p.card-description
+                          It's been 60 years since the cover of Popular Mechanics magazine gave us the promise of flying cars...
+                        .card-footer
+                          .author
+                            %img.avatar.img-raised{alt: "...", src: "assets/img/olivia.jpg"}/
+                            %span Johanna Zmud
+                          .stats.stats-right
+                            %i.now-ui-icons.ui-2_favourite-28
+                            2.4K
+        / *********    END BLOGS 5      *********
+      #teams.cd-section
+        / *********    TEAM 1     *********
+        .team-1
+          .container
+            .row
+              .col-md-8.ml-auto.mr-auto.text-center
+                %h2.title Our Awesome Team 1
+                %h4.description This is the paragraph where you can write more details about your team. Keep you user engaged by providing meaningful information.
+            .row.justify-content-center
+              .col-md-4.ml-1
+                .card.card-profile.card-plain
+                  .card-avatar
+                    %a{href: "#pablo"}
+                      %img.img.img-raised{src: "assets/img/james.jpg"}/
+                  .card-body
+                    %h3.card-title Oliver Atticus
+                    %h6.category.text-primary Web Developer
+                    %p.card-description
+                      If you want to know what a man's like, take a good look at how he treats his inferiors, not his equals.
+                    .card-footer
+                      %a.btn.btn-icon.btn-primary.btn-round{href: "#pablo"}
+                        %i.fa.fa-facebook-square
+                      %a.btn.btn-icon.btn-primary.btn-round{href: "#pablo"}
+                        %i.fa.fa-dribbble
+              .col-md-4.mr-1
+                .card.card-profile.card-plain
+                  .card-avatar
+                    %a{href: "#pablo"}
+                      %img.img.img-raised{src: "assets/img/michael.jpg"}/
+                  .card-body
+                    %h3.card-title Smith College
+                    %h6.category.text-primary CEO / Co-Founder
+                    %p.card-description
+                      Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.
+                    .card-footer
+                      %a.btn.btn-icon.btn-primary.btn-round{href: "#pablo"}
+                        %i.fa.fa-twitter
+                      %a.btn.btn-icon.btn-primary.btn-round{href: "#pablo"}
+                        %i.fa.fa-facebook-square
+                      %a.btn.btn-icon.btn-primary.btn-round{href: "#pablo"}
+                        %i.fa.fa-google
+              .col-md-4.ml-1.mt-4
+                .card.card-profile.card-plain
+                  .card-avatar
+                    %a{href: "#pablo"}
+                      %img.img.img-raised{src: "assets/img/emily.jpg"}/
+                  .card-body
+                    %h3.card-title Sophia Madison
+                    %h6.category.text-primary Entrepreneur
+                    %p.card-description
+                      Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.
+                    .card-footer
+                      %a.btn.btn-icon.btn-primary.btn-round{href: "#pablo"}
+                        %i.fa.fa-twitter
+                      %a.btn.btn-icon.btn-primary.btn-round{href: "#pablo"}
+                        %i.fa.fa-dribbble
+                      %a.btn.btn-icon.btn-primary.btn-round{href: "#pablo"}
+                        %i.fa.fa-linkedin
+              .col-md-4.mr-1.mt-4
+                .card.card-profile.card-plain
+                  .card-avatar
+                    %a{href: "#pablo"}
+                      %img.img.img-raised{src: "assets/img/olivia.jpg"}/
+                  .card-body
+                    %h3.card-title Emily Chloe
+                    %h6.category.text-primary Entrepreneur
+                    %p.card-description
+                      You know you're in love when you can't fall asleep because reality is finally better than your dreams.
+                    .card-footer
+                      %a.btn.btn-icon.btn-primary.btn-round{href: "#pablo"}
+                        %i.fa.fa-google
+                      %a.btn.btn-icon.btn-primary.btn-round{href: "#pablo"}
+                        %i.fa.fa-dribbble
+        / *********    END TEAM 1      *********
+        / *********    TEAM 2     *********
+        .team-2
+          .container
+            .row
+              .col-md-8.ml-auto.mr-auto.text-center
+                %h2.title The Executive Team 2
+                %h4.description This is the paragraph where you can write more details about your team. Keep you user engaged by providing meaningful information.
+            .row
+              .col-md-4
+                .card.card-profile.card-plain
+                  .card-image
+                    %a{href: "#pablo"}
+                      %img.img.img-raised.rounded{src: "assets/img/examples/card-profile1.jpg"}/
+                  .card-body
+                    %h4.card-title Sofia Scarlett
+                    %h6.category Account Manager
+                    .card-footer
+                      %a.btn.btn-icon.btn-twitter.btn-round{href: "#pablo"}
+                        %i.fa.fa-twitter
+                      %a.btn.btn-icon.btn-facebook.btn-round{href: "#pablo"}
+                        %i.fa.fa-facebook-square
+                      %a.btn.btn-icon.btn-dribbble.btn-round{href: "#pablo"}
+                        %i.fa.fa-dribbble
+              .col-md-4
+                .card.card-profile.card-plain
+                  .card-image
+                    %a{href: "#pablo"}
+                      %img.img.img-raised.rounded{src: "assets/img/examples/card-profile2.jpg"}/
+                  .card-body
+                    %h4.card-title Lucas Jacob
+                    %h6.category Aerospace Engineer
+                    .card-footer
+                      %a.btn.btn-icon.btn-dribbble.btn-round{href: "#pablo"}
+                        %i.fa.fa-dribbble
+                      %a.btn.btn-icon.btn-facebook.btn-round{href: "#pablo"}
+                        %i.fa.fa-facebook-square
+              .col-md-4
+                .card.card-profile.card-plain
+                  .card-image
+                    %a{href: "#pablo"}
+                      %img.img.img-raised.rounded{src: "assets/img/examples/card-profile3.jpg"}/
+                  .card-body
+                    %h4.card-title Amelia Charlotte
+                    %h6.category Photographer
+                    .card-footer
+                      %a.btn.btn-icon.btn-linkedin.btn-round{href: "#pablo"}
+                        %i.fa.fa-linkedin
+                      %a.btn.btn-icon.btn-twitter.btn-round{href: "#pablo"}
+                        %i.fa.fa-twitter
+                      %a.btn.btn-icon.btn-dribbble.btn-round{href: "#pablo"}
+                        %i.fa.fa-dribbble
+        / *********    END TEAM 2      *********
+        / *********    TEAM 3     *********
+        .team-3.section-image{style: "background-image: url('assets/img/bg21.jpg')"}
+          .container
+            .row
+              .col-md-8.ml-auto.mr-auto.text-center
+                %h2.title The Executive Team 3
+                %h4.description This is the paragraph where you can write more details about your team. Keep you user engaged by providing meaningful information.
+            .row
+              .col-xl-6.col-lg-7.ml-auto.mr-auto
+                .card.card-profile
+                  .row
+                    .col-md-5
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img{src: "assets/img/olivia.jpg"}/
+                    .col-md-7
+                      .card-body
+                        %h3.card-title Ariana Hazel
+                        %h6.category.text-primary Fashion Designer
+                        %p.card-description
+                          Happiness resides not in possessions, and not in gold, happiness dwells in the soul...
+              .col-xl-6.col-lg-7.ml-auto.mr-auto
+                .card.card-profile
+                  .row
+                    .col-md-5
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img{src: "assets/img/james.jpg"}/
+                    .col-md-7
+                      .card-body
+                        %h3.card-title Ryan Samuel
+                        %h6.category.text-primary Financial Examiner
+                        %p.card-description
+                          Today you are you! That is truer than true! There is no one alive who is you-er than you!..
+              .col-xl-6.col-lg-7.ml-auto.mr-auto
+                .card.card-profile
+                  .row
+                    .col-md-5
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img{src: "assets/img/michael.jpg"}/
+                    .col-md-7
+                      .card-body
+                        %h3.card-title Joshua Jackson
+                        %h6.category.text-primary Landscape Architect
+                        %p.card-description
+                          Success is not final, failure is not fatal: it is the courage to continue that counts...
+              .col-xl-6.col-lg-7.ml-auto.mr-auto
+                .card.card-profile
+                  .row
+                    .col-md-5
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img{src: "assets/img/emily.jpg"}/
+                    .col-md-7
+                      .card-body
+                        %h3.card-title Nora Hazel
+                        %h6.category.text-primary Legal Secretary
+                        %p.card-description
+                          Do not dwell in the past, do not dream of the future, concentrate the mind...
+        / *********    END TEAM 3      *********
+        / *********    TEAM 4     *********
+        .team-4
+          .container
+            .row
+              .col-md-8.ml-auto.mr-auto.text-center
+                %h2.title The Executive Team 4
+                %h4.description This is the paragraph where you can write more details about your team. Keep you user engaged by providing meaningful information.
+            .row
+              .col-md-6
+                .card.card-profile.card-plain
+                  .row
+                    .col-md-5
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img.img-raised.rounded{src: "assets/img/olivia.jpg"}/
+                    .col-md-7
+                      .card-body
+                        %h4.card-title Ella Evelyn
+                        %h6.category Air Crew Member
+                        %p.card-description
+                          Think in the morning. Act in the noon. Eat in the evening. Sleep in the night......
+                        .card-footer
+                          %a.btn.btn-icon.btn-neutral.btn-twitter{href: "#pablo"}
+                            %i.fa.fa-twitter
+                          %a.btn.btn-icon.btn-neutral.btn-facebook{href: "#pablo"}
+                            %i.fa.fa-facebook-square
+                          %a.btn.btn-icon.btn-neutral.btn-google{href: "#pablo"}
+                            %i.fa.fa-google
+              .col-md-6
+                .card.card-profile.card-plain
+                  .row
+                    .col-md-5
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img.img-raised.rounded{src: "assets/img/emily.jpg"}/
+                    .col-md-7
+                      .card-body
+                        %h4.card-title Mila Skylar
+                        %h6.category Architect
+                        %p.card-description
+                          Love cures people - both the ones who give it and the ones who receive it...
+                        .card-footer
+                          %a.btn.btn-icon.btn-neutral.btn-linkedin{href: "#pablo"}
+                            %i.fa.fa-linkedin
+                          %a.btn.btn-icon.btn-neutral.btn-facebook{href: "#pablo"}
+                            %i.fa.fa-facebook-square
+                          %a.btn.btn-icon.btn-neutral.btn-dribbble{href: "#pablo"}
+                            %i.fa.fa-dribbble
+                          %a.btn.btn-icon.btn-neutral.btn-google{href: "#pablo"}
+                            %i.fa.fa-google
+              .col-md-6
+                .card.card-profile.card-plain
+                  .row
+                    .col-md-5
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img.img-raised.rounded{src: "assets/img/james.jpg"}/
+                    .col-md-7
+                      .card-body
+                        %h4.card-title Daniel Carter
+                        %h6.category Aviation Inspector
+                        %p.card-description
+                          Keep your face always toward the sunshine - and shadows will fall behind you...
+                        .card-footer
+                          %a.btn.btn-icon.btn-neutral.btn-youtube{href: "#pablo"}
+                            %i.fa.fa-youtube-play
+                          %a.btn.btn-icon.btn-neutral.btn-twitter{href: "#pablo"}
+                            %i.fa.fa-twitter
+                          %a.btn.btn-icon.btn-neutral.btn-instagram{href: "#pablo"}
+                            %i.fa.fa-instagram
+              .col-md-6
+                .card.card-profile.card-plain
+                  .row
+                    .col-md-5
+                      .card-image
+                        %a{href: "#pablo"}
+                          %img.img.img-raised.rounded{src: "assets/img/michael.jpg"}/
+                    .col-md-7
+                      .card-body
+                        %h4.card-title Dylan Wyatt
+                        %h6.category Conservation Scientist
+                        %p.card-description
+                          There is only one corner of the universe you can be certain of improving, and that's your own self...
+                        .card-footer
+                          %a.btn.btn-icon.btn-neutral.btn-linkedin{href: "#pablo"}
+                            %i.fa.fa-linkedin
+                          %a.btn.btn-icon.btn-neutral.btn-facebook{href: "#pablo"}
+                            %i.fa.fa-facebook-square
+                          %a.btn.btn-icon.btn-neutral.btn-google{href: "#pablo"}
+                            %i.fa.fa-google
+        / *********    END TEAM 4      *********
+        / *********    TEAM 5     *********
+        .team-5.section-image{style: "background-image: url('assets/img/bg9.jpg')"}
+          .container
+            .row
+              .col-md-8.ml-auto.mr-auto.text-center
+                %h2.title The Executive Team 5
+                %h4.description This is the paragraph where you can write more details about your team. Keep you user engaged by providing meaningful information.
+            .row
+              .col-md-4
+                .card.card-profile
+                  .card-avatar
+                    %a{href: "#pablo"}
+                      %img.img.img-raised{src: "assets/img/olivia.jpg"}/
+                  .card-body
+                    %h3.card-title Natalie Paisley
+                    %h6.category.text-primary Credit Analyst
+                    %p.card-description
+                      Very little is needed to make a happy life; it is all within yourself, in your way of thinking...
+                    .card-footer
+                      %a.btn.btn-icon.btn-neutral.btn-round{href: "#pablo"}
+                        %i.fa.fa-linkedin
+                      %a.btn.btn-icon.btn-neutral.btn-round{href: "#pablo"}
+                        %i.fa.fa-twitter
+                      %a.btn.btn-icon.btn-neutral.btn-round{href: "#pablo"}
+                        %i.fa.fa-dribbble
+              .col-md-4
+                .card.card-profile
+                  .card-avatar
+                    %a{href: "#pablo"}
+                      %img.img.img-raised{src: "assets/img/james.jpg"}/
+                  .card-body
+                    %h4.card-title Anthony Jackson
+                    %h6.category.text-primary Desktop Publisher
+                    %p.card-description
+                      Let us be grateful to people who make us happy, they are the charming gardeners who make our souls blossom...
+                    .card-footer
+                      %a.btn.btn-icon.btn-neutral.btn-round{href: "#pablo"}
+                        %i.fa.fa-dribbble
+                      %a.btn.btn-icon.btn-neutral.btn-round{href: "#pablo"}
+                        %i.fa.fa-twitter
+              .col-md-4
+                .card.card-profile
+                  .card-avatar
+                    %a{href: "#pablo"}
+                      %img.img.img-raised{src: "assets/img/emily.jpg"}/
+                  .card-body
+                    %h4.card-title Bella Audrey
+                    %h6.category.text-primary Economist
+                    %p.card-description
+                      For it was not into my ear you whispered, but into my heart. It was not my lips you kissed, but my soul...
+                    .card-footer
+                      %a.btn.btn-icon.btn-neutral.btn-round{href: "#pablo"}
+                        %i.fa.fa-dribbble
+                      %a.btn.btn-icon.btn-neutral.btn-round{href: "#pablo"}
+                        %i.fa.fa-twitter
+                      %a.btn.btn-icon.btn-neutral.btn-round{href: "#pablo"}
+                        %i.fa.fa-pinterest
+        / *********    END TEAM 5      *********
+      #projects.cd-section
+        / *********    PROJECTS 1     *********
+        .projects-1
+          .container-fluid
+            .row
+              .col-md-8.ml-auto.mr-auto.text-center
+                %h2.title Some of Our Awesome Products - 1
+                %ul.nav.nav-pills.nav-pills-danger.justify-content-center{role: "tablist"}
+                  %li.nav-item
+                    %a.nav-link.active{"data-toggle" => "tab", href: "#pill1", role: "tablist"}
+                      All
+                  %li.nav-item
+                    %a.nav-link{"data-toggle" => "tab", href: "#pill2", role: "tablist"}
+                      History
+                  %li.nav-item
+                    %a.nav-link{"data-toggle" => "tab", href: "#pill3", role: "tablist"}
+                      Satire
+                  %li.nav-item
+                    %a.nav-link{"data-toggle" => "tab", href: "#pill4", role: "tablist"}
+                      Fiction
+                .tab-content.tab-space
+                  #pill1.tab-pane.active
+                  #pill2.tab-pane
+                  #pill3.tab-pane
+                  #pill4.tab-pane
+            .row
+              .col-md-6.px-0
+                .card.card-background.card-background-product.card-no-shadow{style: "background-image: url('assets/img/project1.jpg')"}
+                  .card-body
+                    %h6.category History
+                    %h3.card-title
+                      The City Lost &amp; Found
+                    %p.card-description
+                      Developed on the occasion of an exhibition of the same name, The City Lost &amp; Found: Capturing New York...
+                    %a.btn.btn-danger.btn-round{href: "#pablo"}
+                      %i.now-ui-icons.ui-1_send
+                      View Book
+              .col-md-6.px-0
+                .card.card-raised.card-background.card-background-product.card-no-shadow{style: "background-image: url('assets/img/project18.jpg')"}
+                  .card-body
+                    %h6.category Satire
+                    %h3.card-title A Confederacy of Dunces
+                    %p.card-description
+                      Satires, in the most basic definition, are works making fun of some sort of person or institution...
+                    %a.btn.btn-neutral.btn-round{href: "#pablo"}
+                      %i.now-ui-icons.ui-1_send
+                      View more
+              .col-md-6.px-0
+                .card.card-background.card-background-product.card-no-shadow{style: "background-image: url('assets/img/project20.jpg')"}
+                  .card-body
+                    %h6.category Fiction
+                    %h3.card-title The Sun Also Rises
+                    %p.card-description
+                      The most commonly read works are works of fiction. Fiction books are ones that have been made up...
+                    %a.btn.btn-neutral.btn-round{href: "#pablo"}
+                      %i.now-ui-icons.ui-1_send
+                      Read Now
+              .col-md-6.px-0
+                .card.card-background.card-background-product.card-no-shadow{style: "background-image: url('assets/img/project19.jpg')"}
+                  .card-body
+                    %h6.category Basic Civitas
+                    %h3.card-title The Right Mistake
+                    %p.card-description
+                      Living in South Central L.A., Socrates Fortlow is a sixty-year-old ex-convict, still strong enough to kill men with...
+                    %a.btn.btn-danger.btn-round{href: "#pablo"}
+                      %i.now-ui-icons.ui-1_send
+                      Read Now
+        / *********    END PROJECTS 1      *********
+        / *********    PROJECTS 2     *********
+        .projects-2
+          .container
+            .row
+              .col-md-8.ml-auto.mr-auto.text-center
+                %h6.text-muted Our work
+                %h2.title Some of Our Awesome Products - 2
+                %h5.description This is the paragraph where you can write more details about your projects. Keep you user engaged by providing meaningful information.
+                .section-space
+            .row
+              .col-md-4
+                .card.card-plain
+                  %a{href: "http://www.creative-tim.com/product/now-ui-kit", target: "_blank"}
+                    .card-image
+                      %img.img-raised.rounded{src: "http://s3.amazonaws.com/creativetim_bucket/products/38/original/opt_mk_thumbnail.jpg?1458052306"}/
+                  .card-body
+                    %a{href: "http://www.creative-tim.com/product/now-ui-kit", target: "_blank"}
+                      %h4.card-title Now UI Kit Free
+                    %h6.category.text-primary Free UI Kit
+                    %p.card-description
+                      Now UI Kit is a Free Bootstrap UI Kit with a fresh, new design inspired by Google's material design. It's a great pleasure to introduce to you the material concepts in an easy to use and beautiful set of components.
+              .col-md-4
+                .card.card-plain
+                  %a{href: "http://www.creative-tim.com/product/light-bootstrap-dashboard-pro", target: "_blank"}
+                    .card-image
+                      %img.img-raised.rounded{src: "http://s3.amazonaws.com/creativetim_bucket/products/34/original/opt_lbd_pro_thumbnail.jpg?1449352503"}/
+                  .card-body
+                    %a{href: "http://www.creative-tim.com/product/light-bootstrap-dashboard-pro", target: "_blank"}
+                      %h4.card-title Light Bootstrap Dashboard
+                    %h6.category.text-primary Premium Template
+                    %p.card-description
+                      Light Bootstrap Dashboard PRO is a Bootstrap Admin Theme designed to look simple and beautiful. Forget about boring dashboards and grab yourself a copy to kickstart new project!
+              .col-md-4
+                .card.card-plain
+                  %a{href: "http://www.creative-tim.com/product/get-shit-done-pro", target: "_blank"}
+                    .card-image
+                      %img.img-raised.rounded{src: "http://s3.amazonaws.com/creativetim_bucket/products/26/original/opt_gsdk_new_thumbnail.jpg"}/
+                  .card-body
+                    %a{href: "http://www.creative-tim.com/product/get-shit-done-pro", target: "_blank"}
+                      %h4.card-title Get Shit Done Kit PRO
+                    %h6.category.text-primary Premium UI Kit
+                    %p.card-description
+                      Get Shit Done Kit Pro it's a Bootstrap Kit that comes with a huge number of customisable components. They are pixel perfect, light and easy to use and combine with other elements.
+        / *********    END PROJECTS 2      *********
+        / *********    PROJECTS 3     *********
+        .projects-3{"data-background-color" => "black"}
+          .container
+            .row
+              .col-md-8.ml-auto.mr-auto.text-center
+                %h6.category.text-muted Our work
+                %h2.title Some of Our Awesome Projects - 3
+            .section-story-overview
+              .row
+                .col-md-6
+                  .image-container.image-left{style: "background-image: url('assets/img/project4.jpg')"}
+                    / First image on the left side
+                    %p.blockquote.blockquote-primary
+                      "Amber Interiors is available to assist in all aspects of a project from start to finish including consulting with Architects and Builders"
+                .col-md-5
+                  / First image on the right side, above the article
+                  .image-container.image-right{style: "background-image: url('assets/img/project21.jpg')"}
+                  %h6.category.text-primary Design
+                  %h4.card-title Coco Kelley
+                  %p
+                    Amber Lewis’s interior design blog takes you inside the creative workings of her Los Angeles–based studio. Keep an eye on this website for an industry insider’s point of view.
+            .section-story-overview
+              .row
+                .col-md-6
+                  / First image on the left side
+                  .image-container.image-left{style: "background-image: url('assets/img/project24.jpg')"}
+                    %p.blockquote.blockquote-primary
+                      "We provide a simple, approachable way to decorate your desired space with ease. Each e-décor is completely individualized"
+                .col-md-5
+                  / First image on the right side, above the article
+                  .image-container.image-right{style: "background-image: url('assets/img/project23.jpg')"}
+                  %h6.category.text-primary E-Decor
+                  %h4.card-title Red Trad
+                  %p
+                    We designed this new build family home located in Santa Monica with a mission to make the large size of the property, feel cozy, collected, and unique.
+        / *********    END PROJECTS 3      *********
+        / *********    PROJECTS 4     *********
+        .projects-4{"data-background-color" => "gray"}
+          .container-fluid
+            .row
+              .col-md-8.mr-auto.ml-auto.text-center
+                %h6.category.text-muted Our work
+                %h2.title Some of Our Awesome Projects - 4
+            .row
+              .col-md-6.px-0
+                .card.card-fashion.card-background{style: "background-image: url('assets/img/project14.jpg')"}
+                  .card-body
+                    .card-title.text-left
+                      %h2
+                        %a{href: "#pablo"}
+                          The “crazy idea that could lead to a big future commission” project.
+                    .card-footer.text-left
+                      .stats
+                        %span
+                          %i.now-ui-icons.objects_globe>
+                          The “Crazy idea” project
+              .col-md-6.px-0
+                .card-container
+                  .card.card-fashion
+                    .card-title
+                      %a{href: "#pablo"}
+                        %h4
+                          %a{href: "#pablo"}
+                            The next time you’re on vacation, take advantage of all the work you can get done...
+                    .card-body
+                      .card-footer
+                        .stats
+                          %span
+                            %i.now-ui-icons.education_paper
+                            The “I’m on vacation” project
+                  .card.card-fashion.card-background{style: "background-image: url('assets/img/project15.jpg')"}
+            .row
+              .col-md-6.px-0
+                .card-container
+                  .card.card-fashion.card-background{style: "background-image: url('assets/img/project17.jpg')"}
+                  .card.card-fashion.arrow-left
+                    .card-title
+                      %h4
+                        %a{href: "#pablo"}
+                          The elements of Agile Project Management have been around for decades...
+                    .card-body
+                      .card-footer
+                        .stats
+                          %span
+                            %i.now-ui-icons.design_app>
+                            The "Agile Project" project
+              .col-md-6.px-0
+                .card.card-fashion.card-background{style: "background-image: url('assets/img/project16.jpg')"}
+                  .card-body
+                    .card-title.text-left
+                      %h2
+                        %a{href: "#pablo"} Performing a Project Premortem
+                    .card-footer.text-left
+                      .stats
+                        %span
+                          %i.now-ui-icons.media-2_sound-wave>
+                          The "Premortem" project
+        / *********    END PROJECTS 4      *********
+        / *********    PROJECTS 5     *********
+        .projects-5
+          .container
+            .row
+              .col-md-8.ml-auto.mr-auto.text-center
+                %h2.title Some of Our Awesome Projects - 5
+                %h4.description This is the paragraph where you can write more details about your projects. Keep you user engaged by providing meaningful information.
+                .section-space
+            .row
+              .col-md-5.ml-auto
+                .card.card-background.card-background-product.card-raised{style: "background-image: url('assets/img/project8.jpg')"}
+                  .card-body
+                    %h2.card-title Social Analytics
+                    %p.card-description
+                      Insight to help you create, connect, and convert. Understand Your Audience's Interests, Influence, Interactions, and Intent. Discover emerging topics and influencers to reach new audiences.
+                    %label.badge.badge-neutral Analytics
+              .col-md-5.mr-auto
+                .info.info-horizontal
+                  .icon.icon-danger
+                    %i.now-ui-icons.ui-2_chat-round
+                  .description
+                    %h4.info-title Listen to Social Conversations
+                    %p.description
+                      Gain access to the demographics, psychographics, and location of unique people who talk about your brand.
+                .info.info-horizontal
+                  .icon.icon-danger
+                    %i.now-ui-icons.business_chart-pie-36
+                  .description
+                    %h4.info-title Performance Analyze
+                    %p.description
+                      Unify data from Facebook, Instagram, Twitter, LinkedIn, and Youtube to gain rich insights from easy-to-use reports.
+                .info.info-horizontal
+                  .icon.icon-danger
+                    %i.now-ui-icons.design-2_ruler-pencil
+                  .description
+                    %h4.info-title Social Conversions
+                    %p.description
+                      Track actions taken on your website that originated from social, and understand the impact on your bottom line.
+            %hr/
+            .row
+              .col-md-5.ml-auto.mt-5
+                .info.info-horizontal
+                  .icon.icon-warning
+                    %i.now-ui-icons.users_single-02
+                  .description
+                    %h4.info-title Work With Any Team
+                    %p.description
+                      Whether it’s for work or even the next family vacation, Trello helps your team.
+                .info.info-horizontal
+                  .icon.icon-warning
+                    %i.now-ui-icons.business_chart-bar-32
+                  .description
+                    %h4.info-title A Productivity Platform
+                    %p.description
+                      Integrate the apps your team already uses directly into your workflow.
+                .info.info-horizontal
+                  .icon.icon-warning
+                    %i.now-ui-icons.arrows-1_refresh-69
+                  .description
+                    %h4.info-title Always In Sync
+                    %p.description
+                      No matter where you are, Trello stays in sync across all of your devices.
+              .col-md-5.mr-auto
+                .card.card-background.card-background-product.card-raised{style: "background-image: url('assets/img/project9.jpg')"}
+                  .card-body
+                    %h2.card-title Trello lets you work.
+                    %p.card-description
+                      Trello’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible and rewarding way.
+                    %label.badge.badge-neutral Trello
+        / *********    END PROJECTS 5      *********
+      #pricing.cd-section
+        / *********    PRICING 1     *********
+        #pricing-1.pricing-1.section-image{style: "background-image: url('assets/img/pricing1.jpg')"}
+          .container
+            .row
+              .col-md-6.ml-auto.mr-auto.text-center
+                %h2.title Pick the best plan for you
+                %h4.description You have Free Unlimited Updates and Premium Support on each package.
+                .section-space
+            .row
+              .col-md-3
+                .card.card-pricing.card-plain
+                  .card-body
+                    %h6.category Bravo Pack
+                    .icon.icon-warning
+                      %i.now-ui-icons.media-1_button-power
+                    %h3.card-title $10
+                    %ul
+                      %li Complete documentation
+                      %li Working materials in Sketch
+                    %a.btn.btn-neutral.btn-warning.btn-round{href: "#pablo"} Add to Cart
+              .col-md-3
+                .card.card-pricing
+                  .card-body
+                    %h6.category Alpha Pack
+                    .icon.icon-primary
+                      %i.now-ui-icons.objects_diamond
+                    %h3.card-title $67
+                    %ul
+                      %li Working materials in EPS
+                      %li 6 months access to the library
+                    %a.btn.btn-primary.btn-round{href: "#pablo"} Add to Cart
+              .col-md-3
+                .card.card-pricing.card-plain
+                  .card-body
+                    %h6.category Charlie Pack
+                    .icon.icon-success
+                      %i.now-ui-icons.media-2_sound-wave
+                    %h3.card-title $69
+                    %ul
+                      %li Working materials in PSD
+                      %li 1 year access to the library
+                    %a.btn.btn-neutral.btn-success.btn-round{href: "#pablo"} Add to Cart
+              .col-md-3
+                .card.card-pricing.card-plain
+                  .card-body
+                    %h6.category Extra Pack
+                    .icon.icon-danger
+                      %i.now-ui-icons.education_atom
+                    %h3.card-title $159
+                    %ul
+                      %li Complete documentation
+                      %li 2GB cloud storage
+                    %a.btn.btn-neutral.btn-danger.btn-round{href: "#pablo"} Add to Cart
+        / *********    END PRICING 1      *********
+        / *********    PRICING 2     *********
+        #pricing-2.pricing-2
+          .container
+            .row
+              .col-md-6.ml-auto.mr-auto.text-center
+                %h2.title Pick the best plan for you
+                %ul.nav.nav-pills.nav-pills-primary.justify-content-center{role: "tablist"}
+                  %li.nav-item
+                    %a.nav-link.active{"data-toggle" => "tab", href: "#pill1", role: "tablist"}
+                      Legal Entity
+                  %li.nav-item
+                    %a.nav-link{"data-toggle" => "tab", href: "#pill2", role: "tablist"}
+                      Individual
+            .row
+              .col-md-4
+                .card.card-pricing.card-plain
+                  .card-body
+                    %h6.category Enterprise
+                    %h1.card-title
+                      %small> $
+                      59
+                    %ul
+                      %li
+                        %b 10GB
+                        Disk Space
+                      %li
+                        %b 100GB
+                        Monthly Bandwidth
+                      %li
+                        %b 20
+                        Email Accounts
+                      %li
+                        %b Unlimited
+                        subdomains
+                    %a.btn.btn-primary.btn-round{href: "#pablo"}
+                      Sign Up
+              .col-md-4
+                .card.card-pricing.card-background.card-raised{style: "background-image: url('assets/img/pricing2.jpg')"}
+                  .card-body
+                    %h6.category.text-info Professional
+                    %h1.card-title
+                      %small> $
+                      29
+                    %ul
+                      %li
+                        %b 5GB
+                        Disk Space
+                      %li
+                        %b 50GB
+                        Monthly Bandwidth
+                      %li
+                        %b 10
+                        Email Accounts
+                      %li
+                        %b Unlimited
+                        subdomains
+                    %a.btn.btn-neutral.btn-round{href: "#pablo"}
+                      Sign Up
+              .col-md-4
+                .card.card-pricing.card-plain
+                  .card-body
+                    %h6.category Standard
+                    %h1.card-title
+                      %small> $
+                      17
+                    %ul
+                      %li
+                        %b 2GB
+                        Disk Space
+                      %li
+                        %b 25GB
+                        Monthly Bandwidth
+                      %li
+                        %b 5
+                        Email Accounts
+                      %li
+                        %b Unlimited
+                        subdomains
+                    %a.btn.btn-primary.btn-round{href: "#pablo"}
+                      Get Started
+        / *********    END PRICING 2      *********
+        / *********    PRICING 3     *********
+        #pricing-3.pricing-3.section-image{style: "background-image: url('assets/img/pricing3.jpg')"}
+          .container
+            .row
+              .col-md-6.ml-auto.mr-auto.text-center
+                %h2.title Pick the best plan for you
+                %h4.description You have Free Unlimited Updates on each package.
+                .section-space
+            .row
+              .col-md-4.ml-auto
+                .card.card-pricing
+                  .card-body
+                    %h6.category Freelance
+                    %h1.card-title
+                      %small> $
+                      29
+                      %small /mo
+                    %ul
+                      %li 1 GB of space
+                      %li Limited Support
+                      %li Support at $25/hour
+                      %li Limited cloud access
+                    %a.btn.btn-primary.btn-round{href: "#pablo"}
+                      Get Started
+              .col-md-4.mr-auto
+                .card.card-pricing.card-raised{"data-background-color" => "orange"}
+                  .card-body
+                    %h6.category Business
+                    %h1.card-title
+                      %small> $
+                      59
+                      %small /mo
+                    %ul
+                      %li 5 GB of space
+                      %li UnLimited Support
+                      %li Unlimited Downloads
+                      %li Full cloud access
+                    %a.btn.btn-neutral.btn-round{href: "#pablo"}
+                      Get Started
+        / *********    END PRICING 3      *********
+        / *********    PRICING 4     *********
+        #pricing-4.pricing-4
+          .container
+            .row
+              .col-md-6.ml-auto.mr-auto.text-center
+                %h2.title Pick the best plan for you
+                %h4.description You have Free Unlimited Updates and Premium Support on each package.
+                .section-space
+            .row
+              .col-md-4
+                .card.card-pricing.card-plain
+                  .card-body
+                    %h6.category Starter
+                    .icon.icon-danger
+                      %i.now-ui-icons.tech_headphones
+                    %h3.card-title
+                      %small> $
+                      10
+                    %ul
+                      %li 1000 MB
+                      %li 3 email
+                      %li 5 Databases
+                    %a.btn.btn-danger.btn-round{href: "#pablo"}
+                      Get it Now
+              .col-md-4
+                .card.card-pricing{"data-background-color" => "orange"}
+                  .card-body
+                    %h6.category Professional
+                    .icon.icon-primary
+                      %i.now-ui-icons.tech_headphones
+                    %h3.card-title
+                      %small> $
+                      40
+                    %ul
+                      %li Unlimited MB
+                      %li Unlimited emails
+                      %li Full Support
+                    %a.btn.btn-neutral.btn-primary.disabled.btn-round{href: "#pablo"}
+                      Current Plan
+              .col-md-4
+                .card.card-pricing.card-plain
+                  .card-body
+                    %h6.category Basic
+                    .icon.icon-warning
+                      %i.now-ui-icons.tech_headphones
+                    %h3.card-title
+                      %small> $
+                      20
+                    %ul
+                      %li 1000 MB
+                      %li 3 email
+                      %li No Support
+                    %a.btn.btn-warning.btn-round{href: "#pablo"}
+                      Upgrade Plan
+        / *********    END PRICING 4      *********
+        / *********    PRICING 5     *********
+        #pricing-5.pricing-5.section-pricing-5.section-image{style: "background-image: url('assets/img/bg31.jpg')"}
+          .container
+            .row
+              .col-md-4
+                %h2.title Choose a plan for your next project
+                %ul.nav.nav-pills.nav-pills-primary{role: "tablist"}
+                  %li.nav-item
+                    %a.nav-link.active{"data-toggle" => "tab", href: "#personal", role: "tablist"}
+                      Expensive
+                  %li.nav-item
+                    %a.nav-link{"data-toggle" => "tab", href: "#commercial", role: "tablist"}
+                      Cheaper
+                %p.description You have Free Unlimited Updates and Premium Support on each package. You also have 20 days to request a refund if you're not happy with your purchase.
+              .col-md-7.ml-auto.mr-auto
+                .tab-content.tab-space
+                  #personal.tab-pane.active
+                    .row
+                      .col-md-6
+                        .card.card-pricing.card-raised
+                          .card-body
+                            %h6.category Plus
+                            %h1.card-title
+                              %small> $
+                              100
+                            %ul
+                              %li
+                                %b 15
+                                Projects
+                              %li
+                                %b 5GB
+                                Storage
+                              %li
+                                %b Unlimited
+                                users
+                              %li
+                                %b No time
+                                tracking
+                            %a.btn.btn-primary.btn-round{href: "#pablo"}
+                              Buy Now!
+                      .col-md-6
+                        .card.card-pricing.card-plain
+                          .card-body
+                            %h6.category Maximum
+                            %h1.card-title
+                              %small> $
+                              120
+                            %ul
+                              %li
+                                %b 25
+                                Projects
+                              %li
+                                %b 15GB
+                                Storage
+                              %li
+                                %b Unlimited
+                                users
+                              %li
+                                %b No time
+                                tracking
+                            %a.btn.btn-primary.btn-round{href: "#pablo"}
+                              Buy Now!
+                  #commercial.tab-pane
+                    .row
+                      .col-md-6
+                        .card.card-pricing.card-raised
+                          .card-body
+                            %h6.category Standard
+                            %h1.card-title
+                              %small> $
+                              20
+                            %ul
+                              %li
+                                %b 5
+                                Projects
+                              %li
+                                %b 2GB
+                                Storage
+                              %li
+                                %b Unlimited
+                                users
+                              %li
+                                %b No time
+                                tracking
+                            %a.btn.btn-primary.btn-round{href: "#pablo"}
+                              Buy Now!
+                      .col-md-6
+                        .card.card-pricing.card-plain
+                          .card-body
+                            %h6.category Premium
+                            %h1.card-title
+                              %small> $
+                              60
+                            %ul
+                              %li
+                                %b 7
+                                Projects
+                              %li
+                                %b 3GB
+                                Storage
+                              %li
+                                %b Unlimited
+                                users
+                              %li
+                                %b No time
+                                tracking
+                            %a.btn.btn-primary.btn-round{href: "#pablo"}
+                              Buy Now!
+        / *********    END PRICING 5      *********
+      #testimonials.cd-section
+        / *********    TESTIMONIALS 1     *********
+        .testimonials-1.section-image{style: "background-image: url('assets/img/bg19.jpg')"}
+          .container
+            .row
+              .col-md-6.ml-auto.mr-auto.text-center
+                %h2.title What is ALPHA?
+                %h4.description If you’re selected for ALPHA you’ll also get 3 tickets, opportunity to access Investor Office Hours and Mentor Hours and much more all for €850.
+            .row
+              .col-md-4
+                .card.card-testimonial
+                  .card-avatar
+                    %a{href: "#pablo"}
+                      %img.img.img-raised{src: "assets/img/michael.jpg"}/
+                  .card-body
+                    %p.card-description
+                      The networking at Web Summit is like no other European tech conference.
+                  .icon.icon-primary
+                    %i.fa.fa-quote-right
+                  .card-footer
+                    %h4.card-title Michael Elijah
+                    %p.category @michaelelijah
+              .col-md-4
+                .card.card-testimonial
+                  .card-avatar
+                    %a{href: "#pablo"}
+                      %img.img.img-raised{src: "assets/img/olivia.jpg"}/
+                  .card-body
+                    %p.card-description
+                      The connections you make at Web Summit are unparalleled, we met users all over the world.
+                  .icon.icon-primary
+                    %i.fa.fa-quote-right
+                  .card-footer
+                    %h4.card-title Olivia Harper
+                    %p.category @oliviaharper
+              .col-md-4
+                .card.card-testimonial
+                  .card-avatar
+                    %a{href: "#pablo"}
+                      %img.img.img-raised{src: "assets/img/james.jpg"}/
+                  .card-body
+                    %p.card-description
+                      Web Summit will increase your appetite, your inspiration, and your network.
+                  .icon.icon-primary
+                    %i.fa.fa-quote-right
+                  .card-footer
+                    %h4.card-title James Logan
+                    %p.category @jameslogan
+        / *********    END TESTIMONIALS 1      *********
+        / *********    TESTIMONIALS 2     *********
+        .testimonials-2
+          .container
+            .row
+              .col-md-12
+                #carouselExampleIndicators2.carousel.slide
+                  %ol.carousel-indicators
+                    %li.active{"data-slide-to" => "0", "data-target" => "#carouselExampleIndicators2"}
+                    %li{"data-slide-to" => "1", "data-target" => "#carouselExampleIndicators2"}
+                  .carousel-inner{role: "listbox"}
+                    .carousel-item.active.justify-content-center
+                      .card.card-testimonial.card-plain
+                        .card-avatar
+                          %a{href: "#pablo"}
+                            %img.img.img-raised.rounded{src: "assets/img/james.jpg"}/
+                        .card-body
+                          %h5.card-description
+                            "Take up one idea. Make that one idea your life - think of it, dream of it, live on that idea. Let the brain, muscles, nerves, every part of your body, be full of that idea, and just leave every other idea alone. This is the way to success. A single rose can be my garden... a single friend, my world."
+                          %h3.card-title Isaac Hunter
+                          .card-footer
+                            %h6.category.text-primary Human Resource Director
+                    .carousel-item.justify-content-center
+                      .card.card-testimonial.card-plain
+                        .card-avatar
+                          %a{href: "#pablo"}
+                            %img.img.img-raised.rounded{src: "assets/img/olivia.jpg"}/
+                        .card-body
+                          %h5.card-description
+                            "When we are no longer able to change a situation - we are challenged to change ourselves. Spread love everywhere you go. Let no one ever come to you without leaving happier. Problems are not stop signs, they are guidelines."
+                          %h3.card-title Alexa Hailey
+                          .card-footer
+                            %h6.category.text-primary Human Resource Director
+                  %a.carousel-control-prev{"data-slide" => "prev", href: "#carouselExampleIndicators2", role: "button"}
+                    %i.now-ui-icons.arrows-1_minimal-left
+                  %a.carousel-control-next{"data-slide" => "next", href: "#carouselExampleIndicators2", role: "button"}
+                    %i.now-ui-icons.arrows-1_minimal-right
+        / *********    END TESTIMONIALS 2      *********
+        / *********    TESTIMONIALS 3     *********
+        .testimonials-3
+          .container
+            .row
+              .col-md-6.ml-auto.mr-auto.text-center
+                %h2.title What Clients Say
+            .row
+              .col-md-4
+                .card.card-testimonial.card-plain
+                  .card-avatar
+                    %a{href: "#pablo"}
+                      %img.img.img-raised.rounded{src: "assets/img/michael.jpg"}/
+                  .card-body
+                    %h3.card-title Andrew John
+                    %h6.category.text-primary Loan Counselor
+                    %p.card-description
+                      "Do not go where the path may lead, go instead where there is no path and leave a trail."
+              .col-md-4
+                .card.card-testimonial.card-plain
+                  .card-avatar
+                    %a{href: "#pablo"}
+                      %img.img.img-raised.rounded{src: "assets/img/olivia.jpg"}/
+                  .card-body
+                    %h4.card-title Zoe Gabriella
+                    %h6.category.text-primary Interpreter OR Translator
+                    %p.card-description
+                      "Don't walk behind me; I may not lead. Don't walk in front of me; I may not follow. Just walk beside me and be my friend."
+              .col-md-4
+                .card.card-testimonial.card-plain
+                  .card-avatar
+                    %a{href: "#pablo"}
+                      %img.img.img-raised.rounded{src: "assets/img/james.jpg"}/
+                  .card-body
+                    %h4.card-title Joshiah Luke
+                    %h6.category.text-primary HR Specialist
+                    %p.card-description
+                      "The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails."
+        / *********    END TESTIMONIALS 3      *********
+      #contactus.cd-section
+        / *********    CONTACT US 1     *********
+        .contactus-1.section-image{style: "background-image: url('assets/img/contact1.jpg')"}
+          .container
+            .row
+              .col-md-5
+                %h2.title Get in Touch
+                %h4.description You need more information? Check what other persons are saying about our product. They are very happy with their purchase.
+                .info.info-horizontal
+                  .icon.icon-primary
+                    %i.now-ui-icons.location_pin
+                  .description
+                    %h4.info-title Find us at the office
+                    %p.description
+                      Bld Mihail Kogalniceanu, nr. 8,
+                      %br/
+                      7652 Bucharest,
+                      %br/
+                      Romania
+                .info.info-horizontal
+                  .icon.icon-primary
+                    %i.now-ui-icons.tech_mobile
+                  .description
+                    %h4.info-title Give us a ring
+                    %p.description
+                      Michael Jordan
+                      %br/
+                      +40 762 321 762
+                      %br/
+                      Mon - Fri, 8:00-22:00
+              .col-md-5.ml-auto.mr-auto
+                .card.card-contact.card-raised
+                  %form#contact-form{method: "post", role: "form"}
+                    .card-header.text-center
+                      %h4.card-title Contact Us
+                    .card-body
+                      .row
+                        .col-md-6.pr-2
+                          %label First name
+                          .input-group
+                            .input-group-prepend
+                              %span.input-group-text
+                                %i.now-ui-icons.users_circle-08
+                            %input.form-control{"aria-label" => "First Name...", placeholder: "First Name...", type: "text"}/
+                        .col-md-6.pl-2
+                          .form-group
+                            %label Last name
+                            .input-group
+                              .input-group-prepend
+                                %span.input-group-text
+                                  %i.now-ui-icons.text_caps-small
+                              %input.form-control{"aria-label" => "Last Name...", placeholder: "Last Name...", type: "text"}/
+                      .form-group
+                        %label Email address
+                        .input-group
+                          .input-group-prepend
+                            %span.input-group-text
+                              %i.now-ui-icons.ui-1_email-85
+                          %input.form-control{placeholder: "Email Here...", type: "text"}/
+                      .form-group
+                        %label Your message
+                        %textarea#message.form-control{name: "message", rows: "6"}
+                      .row
+                        .col-md-6
+                          .form-check
+                            %label.form-check-label
+                              %input.form-check-input{type: "checkbox"}/
+                              %span.form-check-sign
+                              I'm not a robot
+                        .col-md-6
+                          %button.btn.btn-primary.btn-round.pull-right{type: "submit"} Send Message
+        / *********    END CONTACT US 1      *********
+        / *********    CONTACT US 2     *********
+        .contactus-2
+          #contactUsMap.map
+          .col-lg-6.col-md-10
+            .card.card-contact.card-raised
+              %form#contact-form{method: "post", role: "form"}
+                .card-header.text-center
+                  %h4.card-title Contact Us
+                .card-body
+                  .row
+                    .col-md-6
+                      .info.info-horizontal
+                        .icon.icon-primary
+                          %i.now-ui-icons.tech_mobile
+                        .description
+                          %h5.info-title Give us a ring
+                          %p
+                            Michael Jordan
+                            %br/
+                            +40 762 321 762
+                            %br/
+                            Mon - Fri, 8:00-22:00
+                    .col-md-6
+                      .info.info-horizontal
+                        .icon.icon-primary
+                          %i.now-ui-icons.location_pin
+                        .description
+                          %h5.info-title Find us at the office
+                          %p
+                            Bld Mihail Kogalniceanu, nr. 8,
+                            %br/
+                            7652 Bucharest,
+                            %br/
+                            Romania
+                  .row
+                    .col-md-6.pr-2
+                      %label Full name
+                      .input-group
+                        .input-group-prepend
+                          %span.input-group-text
+                            %i.now-ui-icons.users_circle-08
+                        %input.form-control{placeholder: "First Name...", type: "text"}/
+                    .col-md-6.pl-2
+                      %label Email address
+                      .input-group
+                        .input-group-prepend
+                          %span.input-group-text
+                            %i.now-ui-icons.ui-1_email-85
+                        %input.form-control{placeholder: "Email Here...", type: "text"}/
+                  .row
+                    .col-md-6
+                      .form-check
+                        %label.form-check-label
+                          %input.form-check-input{type: "checkbox"}/
+                          %span.form-check-sign
+                          I'm not a robot
+                    .col-md-6
+                      %button.btn.btn-primary.btn-round.pull-right{type: "submit"} Send Message
+        / *********    END CONTACT US 2      *********
+      %footer.footer
+        .container
+          %nav
+            %ul
+              %li
+                %a{href: "https://www.creative-tim.com"}
+                  Creative Tim
+              %li
+                %a{href: "http://presentation.creative-tim.com"}
+                  About Us
+              %li
+                %a{href: "http://blog.creative-tim.com"}
+                  Blog
+              %li
+                %a{href: "https://www.creative-tim.com/license"}
+                  License
+          .copyright
+            ©
+            :javascript
+              document.write(new Date().getFullYear())
+            , Designed by
+            = succeed "." do
+              %a{href: "http://www.invisionapp.com", target: "_blank"} Invision
+            = succeed "." do
+              %a{href: "https://www.creative-tim.com", target: "_blank"} Creative Tim
+  / Core JS Files
+  %script{src: "./assets/js/core/jquery.3.2.1.min.js", type: "text/javascript"}
+  %script{src: "./assets/js/core/popper.min.js", type: "text/javascript"}
+  %script{src: "./assets/js/core/bootstrap.min.js", type: "text/javascript"}
+  %script{src: "./assets/js/plugins/moment.min.js"}
+  / Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/
+  %script{src: "./assets/js/plugins/bootstrap-switch.js"}
+  / Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs
+  %script{src: "./assets/js/plugins/bootstrap-tagsinput.js"}
+  / Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select
+  %script{src: "./assets/js/plugins/bootstrap-selectpicker.js", type: "text/javascript"}
+  / Google Maps Plugin
+  %script{src: "https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE", type: "text/javascript"}
+  / Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput
+  %script{src: "./assets/js/plugins/jasny-bootstrap.min.js"}
+  / Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/
+  %script{src: "./assets/js/plugins/nouislider.min.js", type: "text/javascript"}
+  / Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker
+  %script{src: "./assets/js/plugins/bootstrap-datetimepicker.min.js", type: "text/javascript"}
+  / Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc
+  %script{src: "./assets/js/now-ui-kit.js?v=1.2.0", type: "text/javascript"}
+  :javascript
+    $(document).ready(function() {
+        // the body of this function is in assets/js/now-ui-kit.js
+        nowuiKit.initContactUsMap();
+    });

@@ -1,2 +1,20 @@
-<h1>Trips#new</h1>
-<p>Find me in app/views/trips/new.html.erb</p>
+<%= render "new_trip_header" %>
+
+<main>
+  <section class="new-trip-container">
+    <%= render "new_trip" %>
+  </span>
+</main>
+
+
+<% if false %>
+<% if current_user %>
+
+<% else %>
+
+  <section class="trip-login">
+    <p> Log in to start planning your trip. </p>
+  </section>
+
+<% end %>
+<% end %>

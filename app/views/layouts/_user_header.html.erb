@@ -1,0 +1,33 @@
+<div class="profile-page">
+  <div class="wrapper">
+    <div class="page-header page-header-small" filter-color="orange">
+      <div class="page-header-image" data-parallax="false" style="background-image: url('<%= image_path('img/bg5.jpg') %>'); transform: translate3d(0px, 0px, 0px);">
+      </div>
+      <div class="content-center">
+        <div class="photo-container">
+          <%= image_tag("img/ryan.jpg") %>
+        </div>
+        <h3 class="title"><%= current_user.first_name %> <%= current_user.last_name %></h3>
+        <div class="content">
+          <div class="social-description">
+            <h2><%= current_user.trips.count %></h2>
+            <p>Trips</p>
+          </div>
+          <div class="social-description">
+            <h2>26</h2>
+            <p>Reviews</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="button-container">
+          <%= link_to "My Trips", user_trips_path(current_user[:id]), class: "btn btn-primary btn-round btn-lg" %>
+          <a href="#button" class="btn btn-primary btn-round btn-lg">Shared Trips</a>
+          <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary btn-round btn-lg" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

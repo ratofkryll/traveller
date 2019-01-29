@@ -1,0 +1,440 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{charset: "utf-8"}/
+    %link{href: "../assets/img/apple-icon.png", rel: "apple-touch-icon", sizes: "76x76"}/
+    %link{href: "../assets/img/favicon.png", rel: "icon", type: "image/png"}/
+    %meta{content: "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %title Product Page - Now UI Kit Pro by Creative Tim
+    %meta{content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no", name: "viewport"}/
+    / Fonts and icons
+    %link{href: "https://fonts.googleapis.com/css?family=Montserrat:400,700,200", rel: "stylesheet"}/
+    %link{href: "https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css", rel: "stylesheet"}/
+    / CSS Files
+    %link{href: "../assets/css/bootstrap.min.css", rel: "stylesheet"}/
+    %link{href: "../assets/css/now-ui-kit.css?v=1.2.0", rel: "stylesheet"}/
+    / CSS Just for demo purpose, don't include it in your project
+    %link{href: "../assets/css/demo.css", rel: "stylesheet"}/
+  %body.product-page
+    / Navbar
+    %nav.navbar.navbar-expand-lg.bg-white.fixed-top.navbar-transparent{"color-on-scroll" => "500"}
+      .container
+        .navbar-translate
+          %a.navbar-brand{"data-placement" => "bottom", href: "http://demos.creative-tim.com/now-ui-kit-pro/presentation.html", rel: "tooltip", target: "_blank", title: "Designed by Invision. Coded by Creative Tim"}
+            Now Ui Kit Pro
+          %button.navbar-toggler{"aria-controls" => "navigation-index", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navigation", "data-toggle" => "collapse", type: "button"}
+            %span.navbar-toggler-bar.bar1
+            %span.navbar-toggler-bar.bar2
+            %span.navbar-toggler-bar.bar3
+        .collapse.navbar-collapse{"data-color" => "orange", "data-nav-image" => "../assets/img/blurred-image-1.jpg"}
+          %ul.navbar-nav.ml-auto
+            %li.nav-item
+              %a.nav-link{href: "../index.html", target: "_blank"}
+                %i.now-ui-icons.design_app
+                %p Components
+            %li.nav-item.dropdown
+              %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+                %i.now-ui-icons.files_paper{"aria-hidden" => "true"}
+                %p Sections
+              .dropdown-menu.dropdown-menu-right{"aria-labelledby" => "navbarDropdownMenuLink"}
+                %a.dropdown-item{href: "../sections.html#headers"}
+                  %i.now-ui-icons.shopping_box
+                  Headers
+                %a.dropdown-item{href: "../sections.html#features"}
+                  %i.now-ui-icons.ui-2_settings-90
+                  Features
+                %a.dropdown-item{href: "../sections.html#blogs"}
+                  %i.now-ui-icons.text_align-left
+                  Blogs
+                %a.dropdown-item{href: "../sections.html#teams"}
+                  %i.now-ui-icons.sport_user-run
+                  Teams
+                %a.dropdown-item{href: "../sections.html#projects"}
+                  %i.now-ui-icons.education_paper
+                  Projects
+                %a.dropdown-item{href: "../sections.html#pricing"}
+                  %i.now-ui-icons.business_money-coins
+                  Pricing
+                %a.dropdown-item{href: "../sections.html#testimonials"}
+                  %i.now-ui-icons.ui-2_chat-round
+                  Testimonials
+                %a.dropdown-item{href: "../sections.html#contactus"}
+                  %i.now-ui-icons.tech_mobile
+                  Contact Us
+            %li.nav-item.dropdown
+              %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+                %i.now-ui-icons.design_image{"aria-hidden" => "true"}
+                %p Examples
+              .dropdown-menu.dropdown-menu-right{"aria-labelledby" => "navbarDropdownMenuLink"}
+                %a.dropdown-item{href: "../examples/about-us.html"}
+                  %i.now-ui-icons.business_bulb-63
+                  About-us
+                %a.dropdown-item{href: "../examples/blog-post.html"}
+                  %i.now-ui-icons.text_align-left
+                  Blog Post
+                %a.dropdown-item{href: "../examples/blog-posts.html"}
+                  %i.now-ui-icons.design_bullet-list-67
+                  Blog Posts
+                %a.dropdown-item{href: "../examples/contact-us.html"}
+                  %i.now-ui-icons.location_pin
+                  Contact Us
+                %a.dropdown-item{href: "../examples/landing-page.html"}
+                  %i.now-ui-icons.education_paper
+                  Landing Page
+                %a.dropdown-item{href: "../examples/login-page.html"}
+                  %i.now-ui-icons.users_circle-08
+                  Login Page
+                %a.dropdown-item{href: "../examples/pricing.html"}
+                  %i.now-ui-icons.business_money-coins
+                  Pricing
+                %a.dropdown-item{href: "../examples/ecommerce.html"}
+                  %i.now-ui-icons.shopping_shop
+                  Ecommerce Page
+                %a.dropdown-item{href: "../examples/product-page.html"}
+                  %i.now-ui-icons.shopping_bag-16
+                  Product Page
+                %a.dropdown-item{href: "../examples/profile-page.html"}
+                  %i.now-ui-icons.users_single-02
+                  Profile Page
+                %a.dropdown-item{href: "../examples/signup-page.html"}
+                  %i.now-ui-icons.tech_mobile
+                  Signup Page
+            %li.nav-item
+              %a.nav-link.btn.btn-primary{href: "https://www.creative-tim.com/product/now-ui-kit-pro", target: "_blank"}
+                %p Buy Now
+            /
+              <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
+              <i class="fa fa-twitter"></i>
+              <p class="hidden-lg-up">Twitter</p>
+              </a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
+              <i class="fa fa-facebook-square"></i>
+              <p class="hidden-lg-up">Facebook</p>
+              </a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
+              <i class="fa fa-instagram"></i>
+              <p class="hidden-lg-up">Instagram</p>
+              </a>
+              </li>
+    / End Navbar
+    .wrapper
+      .page-header.page-header-mini
+        .page-header-image{"data-parallax" => "true", style: "background-image: url('../assets/img/pp-cov.jpg') ;"}
+      .section
+        .container
+          .row
+            .col-md-5
+              #productCarousel.carousel.slide{"data-interval" => "8000", "data-ride" => "carousel"}
+                %ol.carousel-indicators
+                  %li.active{"data-slide-to" => "0", "data-target" => "#productCarousel"}
+                  %li{"data-slide-to" => "1", "data-target" => "#productCarousel"}
+                  %li{"data-slide-to" => "2", "data-target" => "#productCarousel"}
+                  %li{"data-slide-to" => "3", "data-target" => "#productCarousel"}
+                .carousel-inner{role: "listbox"}
+                  .carousel-item.active
+                    %img.d-block.img-raised{alt: "First slide", src: "../assets/img/pp-1.jpg"}/
+                  .carousel-item
+                    %img.d-block.img-raised{alt: "Second slide", src: "../assets/img/pp-2.jpg"}/
+                  .carousel-item
+                    %img.d-block.img-raised{alt: "Third slide", src: "../assets/img/pp-3.jpg"}/
+                  .carousel-item
+                    %img.d-block.img-raised{alt: "Third slide", src: "../assets/img/pp-4.jpg"}/
+                %a.carousel-control-prev{"data-slide" => "prev", href: "#productCarousel", role: "button"}
+                  %button.btn.btn-primary.btn-icon.btn-round.btn-sm{name: "button", type: "button"}
+                    %i.now-ui-icons.arrows-1_minimal-left
+                %a.carousel-control-next{"data-slide" => "next", href: "#productCarousel", role: "button"}
+                  %button.btn.btn-primary.btn-icon.btn-round.btn-sm{name: "button", type: "button"}
+                    %i.now-ui-icons.arrows-1_minimal-right
+              %p.blockquote.blockquote-primary
+                "And thank you for turning my personal jean jacket into a couture piece. Wear yours with mirrored sunglasses on vacation."
+                %br/
+                %br/
+                %small Kanye West
+            .col-md-6.ml-auto.mr-auto
+              %h2.title Saint Laurent
+              %h5.category Slim-Fit Leather Biker Jacket
+              %h2.main-price $3,390
+              #accordion.card-collapse{"aria-multiselectable" => "true", role: "tablist"}
+                .card.card-plain
+                  #headingOne.card-header{role: "tab"}
+                    %a{"aria-controls" => "collapseOne", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseOne"}
+                      Description
+                      %i.now-ui-icons.arrows-1_minimal-down
+                  #collapseOne.collapse.show{"aria-labelledby" => "headingOne", role: "tabpanel"}
+                    .card-body
+                      %p Eres' daring 'Grigri Fortune' swimsuit has the fit and coverage of a bikini in a one-piece silhouette. This fuchsia style is crafted from the label's sculpting peau douce fabric and has flattering cutouts through the torso and back. Wear yours with mirrored sunglasses on vacation.
+                .card.card-plain
+                  #headingTwo.card-header{role: "tab"}
+                    %a.collapsed{"aria-controls" => "collapseTwo", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseTwo"}
+                      Designer Information
+                      %i.now-ui-icons.arrows-1_minimal-down
+                  #collapseTwo.collapse{"aria-labelledby" => "headingTwo", role: "tabpanel"}
+                    .card-body
+                      %p An infusion of West Coast cool and New York attitude, Rebecca Minkoff is synonymous with It girl style. Minkoff burst on the fashion scene with her best-selling 'Morning After Bag' and later expanded her offering with the Rebecca Minkoff Collection - a range of luxe city staples with a "downtown romantic" theme.
+                .card.card-plain
+                  #headingThree.card-header{role: "tab"}
+                    %a.collapsed{"aria-controls" => "collapseThree", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseThree"}
+                      Details and Care
+                      %i.now-ui-icons.arrows-1_minimal-down
+                  #collapseThree.collapse{"aria-labelledby" => "headingThree", role: "tabpanel"}
+                    .card-body
+                      %ul
+                        %li Storm and midnight-blue stretch cotton-blend
+                        %li Notch lapels, functioning buttoned cuffs, two front flap pockets, single vent, internal pocket
+                        %li Two button fastening
+                        %li 84% cotton, 14% nylon, 2% elastane
+                        %li Dry clean
+              .row.pick-size
+                .col-lg-6.col-md-8.col-sm-6
+                  %label Select color
+                  %select.selectpicker{"data-size" => "7", "data-style" => "select-with-transition btn btn-block"}
+                    %option{value: "1"} Black
+                    %option{value: "2"} Gray
+                    %option{value: "3"} White
+                .col-lg-6.col-md-8.col-sm-6
+                  %label Select size
+                  %select.selectpicker{"data-size" => "7", "data-style" => "select-with-transition btn btn-block"}
+                    %option{value: "1"} Small
+                    %option{value: "2"} Medium
+                    %option{value: "3"} Large
+              .row.justify-content-end
+                %button.btn.btn-primary.mr-3
+                  Add to Cart  
+                  %i.now-ui-icons.shopping_cart-simple
+          .section
+            .row
+              .col-md-8.ml-auto.mr-auto.text-center.mr-5
+                %h2.title How to wear it
+                %h4.description You need more information? Check what other persons are saying about our product. They are very happy with their purchase.
+            .section-story-overview
+              .row
+                .col-md-4.ml-auto.mr-auto
+                  .image-container.image-left{style: "background-image: url('../assets/img/pp-5.jpg')"}
+                    / First image on the left side
+                    %p.blockquote.blockquote-primary
+                      "Over the span of the satellite record, Arctic sea ice has been declining significantly, while sea ice in the Antarctichas increased very slightly"
+                      %br/
+                      %br/
+                      %small - NOAA
+                  / Second image on the left side of the article
+                  .image-container{style: "background-image: url('../assets/img/bg29.jpg')"}
+                .col-md-4.ml-auto.mr-auto
+                  / First image on the right side, above the article
+                  .image-container.image-right{style: "background-image: url('../assets/img/pp-4.jpg')"}
+                  %h3 So what does the new record for the lowest level of winter ice actually mean
+                  %p
+                    The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens with climate change. Even if the Arctic continues to be one of the fastest-warming regions of the world, it will always be plunged into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural reasons, there’s huge variety of the state of the ice.
+                  %p For a start, it does not automatically follow that a record amount of ice will melt this summer. More important for determining the size of the annual thaw is the state of the weather as the midnight sun approaches and temperatures rise. But over the more than 30 years of satellite records, scientists have observed a clear pattern of decline, decade-by-decade.
+          .features-4
+            .container
+              .row
+                .col-md-8.ml-auto.mr-auto.text-center
+                  %h2.title Not convinced yet!
+                  %h4.description Havenly is a convenient, personal and affordable way to redecorate your home room by room. Collaborate with our professional interior designers on our online platform.
+              .row
+                .col-md-4
+                  .card.card-background.card-raised{"data-background-color" => "", style: "background-image: url('../assets/img/bg24.jpg')"}
+                    .info
+                      .icon.icon-white
+                        %i.now-ui-icons.shopping_delivery-fast
+                      .description
+                        %h4.info-title 1 Day Delivery
+                        %p Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.
+                        %a.ml-3{href: "#pablo"} Find more...
+                .col-md-4
+                  .card.card-background.card-raised{"data-background-color" => "", style: "background-image: url('../assets/img/bg28.jpg')"}
+                    .info
+                      .icon.icon-white
+                        %i.now-ui-icons.business_badge
+                      .description
+                        %h4.info-title Refund Policy
+                        %p Divide details about your product or agency work into parts. Write a few lines about each one. Very good refund policy just for you.
+                        %a{href: "#pablo"} Find more...
+                .col-md-4
+                  .card.card-background.card-raised{"data-background-color" => "", style: "background-image: url('../assets/img/bg25.jpg')"}
+                    .info
+                      .icon
+                        %i.now-ui-icons.ui-2_favourite-28
+                      .description
+                        %h4.info-title Popular Item
+                        %p Share a floor plan, and we'll create a visualization of your room. A paragraph describing a feature will be enough. This is a popular item for you.
+                        %a.ml-3{href: "#pablo"} Find more...
+      .section.related-products{"data-background-color" => "black"}
+        .container
+          %h3.title.text-center You may also be interested in:
+          .row
+            .col-sm-6.col-md-3
+              .card.card-product
+                .card-image
+                  %a{href: "#pablo"}
+                    %img.img.rounded{src: "../assets/img/saint-laurent.jpg"}/
+                .card-body
+                  %h6.category.text-danger Trending
+                  %h4.card-title
+                    %a.card-link{href: "#pablo"} Dolce &amp; Gabbana
+                  .card-description
+                    Dolce &amp; Gabbana's 'Greta' tote has been crafted in Italy from hard-wearing red textured-leather.
+                  .card-footer
+                    .price-container
+                      %span.price €1,459
+                    %button.btn.btn-neutral.btn-icon.btn-round.pull-right{"data-original-title" => "Add to wishlist", "data-placement" => "left", rel: "tooltip", title: ""}
+                      %i.now-ui-icons.ui-2_favourite-28
+            .col-sm-6.col-md-3
+              .card.card-product
+                .card-image
+                  %a{href: "#pablo"}
+                    %img.img.rounded{src: "../assets/img/gucci.jpg"}/
+                .card-body
+                  %h6.category.text-muted Popular
+                  %h4.card-title
+                    %a.card-link{href: "#pablo"} Balmain
+                  .card-description
+                    Balmain's mid-rise skinny jeans are cut with stretch to ensure they retain their second-skin fit but move comfortably.
+                  .card-footer
+                    .price-container
+                      %span.price €459
+                    %button.btn.btn-neutral.btn-icon.btn-round.pull-right{"data-original-title" => "Add to wishlist", "data-placement" => "left", rel: "tooltip", title: ""}
+                      %i.now-ui-icons.ui-2_favourite-28
+            .col-sm-6.col-md-3
+              .card.card-product
+                .card-image
+                  %a{href: "#pablo"}
+                    %img.img.rounded{src: "../assets/img/wooyoungmi.jpg"}/
+                .card-body
+                  %h6.category.text-muted Popular
+                  %h4.card-title
+                    %a.card-link{href: "#pablo"} Balenciaga
+                  .card-description
+                    Balenciaga's black textured-leather wallet is finished with the label's iconic 'Giant' studs. This is where you can...
+                  .card-footer
+                    .price-container
+                      %span.price €559
+                    %button.btn.btn-neutral.btn-icon.btn-round.pull-right{"data-original-title" => "Add to wishlist", "data-placement" => "left", rel: "tooltip", title: ""}
+                      %i.now-ui-icons.ui-2_favourite-28
+            .col-sm-6.col-md-3
+              .card.card-product
+                .card-image
+                  %a{href: "#pablo"}
+                    %img.img.rounded{src: "../assets/img/saint-laurent1.jpg"}/
+                .card-body
+                  %h6.category.text-rose Trending
+                  %h4.card-title
+                    %a.card-link{href: "#pablo"} Dolce &amp; Gabbana
+                  .card-description
+                    Dolce &amp; Gabbana's 'Greta' tote has been crafted in Italy from hard-wearing red textured-leather.
+                  .card-footer
+                    .price-container
+                      %span.price € 1,359
+                    %button.btn.btn-neutral.btn-icon.btn-round.pull-right{"data-original-title" => "Add to wishlist", "data-placement" => "left", rel: "tooltip", title: ""}
+                      %i.now-ui-icons.ui-2_favourite-28
+      %footer.footer.footer-big.footer-white
+        .container
+          .content
+            .row
+              .col-md-2
+                %h5 About Us
+                %ul.links-vertical
+                  %li
+                    %a.text-muted{href: "#pablo"}
+                      Blog
+                  %li
+                    %a.text-muted{href: "#pablo"}
+                      About Us
+                  %li
+                    %a.text-muted{href: "#pablo"}
+                      Presentation
+                  %li
+                    %a.text-muted{href: "#pablo"}
+                      Contact Us
+              .col-md-2
+                %h5 Market
+                %ul.links-vertical
+                  %li
+                    %a.text-muted{href: "#pablo"}
+                      Sales FAQ
+                  %li
+                    %a.text-muted{href: "#pablo"}
+                      How to Register
+                  %li
+                    %a.text-muted{href: "#pablo"}
+                      Sell Goods
+                  %li
+                    %a.text-muted{href: "#pablo"}
+                      Receive Payment
+                  %li
+                    %a.text-muted{href: "#pablo"}
+                      Transactions Issues
+                  %li
+                    %a.text-muted{href: "#pablo"}
+                      Affiliates Program
+              .col-md-4
+                %h5 Social Feed
+                .social-feed
+                  .feed-line
+                    %i.fa.fa-twitter
+                    %p How to handle ethical disagreements with your clients.
+                  .feed-line
+                    %i.fa.fa-twitter
+                    %p The tangible benefits of designing at 1x pixel density.
+                  .feed-line
+                    %i.fa.fa-facebook-square
+                    %p A collection of 25 stunning sites that you can use for inspiration.
+              .col-md-4
+                %h5 Follow Us
+                %ul.social-buttons
+                  %li
+                    %a.btn.btn-icon.btn-neutral.btn-twitter.btn-round{href: "#pablo"}
+                      %i.fa.fa-twitter
+                  %li
+                    %a.btn.btn-icon.btn-neutral.btn-facebook.btn-round{href: "#pablo"}
+                      %i.fa.fa-facebook-square
+                  %li
+                    %a.btn.btn-icon.btn-neutral.btn-dribbble.btn-round{href: "#pablo"}
+                      %i.fa.fa-dribbble
+                  %li
+                    %a.btn.btn-icon.btn-neutral.btn-google.btn-round{href: "#pablo"}
+                      %i.fa.fa-google-plus
+                  %li
+                    %a.btn.btn-icon.btn-neutral.btn-instagram.btn-round{href: "#pablo"}
+                      %i.fa.fa-instagram
+                %h5
+                  %small Numbers Don't Lie
+                %h5
+                  14.521
+                  %small.text-muted Freelancers
+                %h5
+                  1.423.183
+                  %small.text-muted Transactions
+          %hr/
+          .copyright
+            Copyright ©
+            :javascript
+              document.write(new Date().getFullYear())
+            Creative Tim All Rights Reserved.
+  / Core JS Files
+  %script{src: "../assets/js/core/jquery.3.2.1.min.js", type: "text/javascript"}
+  %script{src: "../assets/js/core/popper.min.js", type: "text/javascript"}
+  %script{src: "../assets/js/core/bootstrap.min.js", type: "text/javascript"}
+  %script{src: "../assets/js/plugins/moment.min.js"}
+  / Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/
+  %script{src: "../assets/js/plugins/bootstrap-switch.js"}
+  / Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs
+  %script{src: "../assets/js/plugins/bootstrap-tagsinput.js"}
+  / Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select
+  %script{src: "../assets/js/plugins/bootstrap-selectpicker.js", type: "text/javascript"}
+  / Google Maps Plugin
+  %script{src: "https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE", type: "text/javascript"}
+  / Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput
+  %script{src: "../assets/js/plugins/jasny-bootstrap.min.js"}
+  / Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/
+  %script{src: "../assets/js/plugins/nouislider.min.js", type: "text/javascript"}
+  / Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker
+  %script{src: "../assets/js/plugins/bootstrap-datetimepicker.min.js", type: "text/javascript"}
+  / Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc
+  %script{src: "../assets/js/now-ui-kit.js?v=1.2.0", type: "text/javascript"}
