@@ -1,20 +1,35 @@
 <%= render "trip_header" %>
 
-<nav class="trip-container">
-
-<ul class="nav nav-tabs nav-tabs-neutral trip-nav" role="tablist" data-background-color="orange">
-  <div class="trip-days">
-    <li>Day 1</li>
-    <li>Day 2</li>
-  </div>
-
-  <div class="trip-more">
-    <li>...</li>
-  </div>
-</ul>
-
-</nav>
-
 <body>
-<%= @itinerary %>
+
+<div class="mr-auto">
+  <div class="card">
+
+    <div class="card-header">
+      <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="orange">
+        <% @itinerary.order(:date).each do |day| %>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#<%= day.name %>" role="tab"><%= day.name %></a>
+          </li>
+        <% end %>
+        <li class="nav-item">
+          <%= link_to new_itinerary_url, class: "nav-link" do %>
+          <i class="fas fa-plus-circle"></i>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card-body">
+      <div class="tab-content text-center">
+        <% @itinerary.order(:date).each do |day| %>
+          <div class="tab-pane" id="<%= day.name %>" role="tabpanel">
+            <p><%= day.notes %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
