@@ -175,7 +175,7 @@ puts "Creating reviews..."
 
 50.times do |i|
   Review.create({
-    user_id: rand(1..20),
+    user_id: rand(1..21),
     attraction_id: rand(1..3),
     review: Faker::VentureBros.quote,
     rating: rand(1..5)
