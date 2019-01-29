@@ -12,7 +12,6 @@
  *
  *= require_self
  *= require bootstrap.min
- *= require bootstrap-datepicker
  *= require now-ui-kit
  *= require attractions
  *= require cities
