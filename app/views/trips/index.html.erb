@@ -1,6 +1,18 @@
 <%= render "layouts/user_header" %>
-<ul>
-<% @trips.each do |trip| %>
-  <li><%= trip.name %></li>
-<% end %>
-</ul>
+<main>
+<div class="container">
+  <% @trips.each do |trip| %>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= trip.name %></h5>
+        <p class="card-description"><%= trip.start_date %> to <%= trip.end_date %></p>
+        <ul>
+          <% trip.itineraries.each do |itinerary| %>
+            <li><%= itinerary.name %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+</div>
+</main>
