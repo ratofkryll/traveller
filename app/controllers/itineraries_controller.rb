@@ -1,16 +1,17 @@
 class ItinerariesController < ApplicationController
   def new
+    @itinerary = Itinerary.new
   end
 
   def create
     @itinerary = Itinerary.new(itinerary_params)
     @itinerary.trip_id = params[:trip_id]
-    
+
     if @itinerary.save
-      notice: `Let's get planning!`
+      flash[:notice] = `Let's get planning!`
       render itinerary_path(@itinerary.id)
     else
-      notice: `Woops. We've had some problems saving your trip. Try again soon.`
+      flash[:notice] = `Woops. We've had some problems saving your trip. Try again soon.`
     end
 
   end
@@ -39,7 +40,7 @@ class ItinerariesController < ApplicationController
       :date,
       :notes,
       :public,
-      :featured,
+      :featured
     )
   end
 
