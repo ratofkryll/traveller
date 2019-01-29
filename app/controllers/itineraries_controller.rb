@@ -1,17 +1,19 @@
 class ItinerariesController < ApplicationController
   def new
+    
     @itinerary = Itinerary.new
   end
 
   def create
     @itinerary = Itinerary.new(itinerary_params)
-    @itinerary.trip_id = params[:trip_id]
 
     if @itinerary.save
       flash[:notice] = `Let's get planning!`
-      render itinerary_path(@itinerary.id)
+      redirect_to trip_url(@itinerary.trip_id)
+      puts "It's been saved."
     else
       flash[:notice] = `Woops. We've had some problems saving your trip. Try again soon.`
+      puts "It hasn't been saved."
     end
 
   end
@@ -28,8 +30,8 @@ class ItinerariesController < ApplicationController
   end
 
   def show
-    @itinerary = Itinerary.find params[:itinerary_id]
-    @itinerary_items = @itinerary.itinerary_items
+    # @itinerary = Itinerary.find params[:itinerary_id]
+    # @itinerary_items = @itinerary.itinerary_items
   end
 
   private
@@ -39,6 +41,7 @@ class ItinerariesController < ApplicationController
       :name,
       :date,
       :notes,
+      :trip_id,
       :public,
       :featured
     )

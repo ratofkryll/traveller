@@ -19,14 +19,14 @@
   <div class="datepicker-container">
     <div class="form-group trip-field">
       <%= form.label 'Start date' %>
-      <%= form.text_field :start_date, class: 'form-control datepicker', required: true %>
+      <%= form.text_field :start_date, class: 'form-control datepicker', data: { date_format: 'YYYY/MM/DD' }, required: true %>
     </div>
   </div>
 
   <div class="datepicker-container">
     <div class="form-group trip-field">
       <%= form.label 'End date' %>
-      <%= form.text_field :end_date, class: 'form-control datepicker', required: true %>
+      <%= form.text_field :end_date, class: 'form-control datepicker', data: { date_format: 'YYYY/MM/DD' }, required: true %>
     </div>
   </div>
 
