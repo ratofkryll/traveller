@@ -14,13 +14,16 @@
         <li class="nav-item">
           <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
           <% if current_user %>
-            <%= link_to "Your Trips", edit_user_registration_path, class: "nav-link" %>
+            <li class="nav-item">
+              <%= link_to "My Trips", user_trips_path(current_user[:id]), class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "My Account", edit_user_registration_path, class: "nav-link" %>
+            </li>
           <% else %>
             <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
           <% end %>
-        </li>
         <li class="nav-item">
           <% if current_user %>
             <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
