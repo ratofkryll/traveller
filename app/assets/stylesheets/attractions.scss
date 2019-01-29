@@ -10,7 +10,15 @@
   display: flex;
   flex-direction: column;
   height: 80em;
+  max-width: 66%;
   overflow: auto;
   margin: 1em 1em 1em 1em;
   align-items: flex-start;
+}
+
+.form-col {
+  disply: flex;
+  flex-direction: column;
+  height: 35em;
+  max-width: 30%;
 }
