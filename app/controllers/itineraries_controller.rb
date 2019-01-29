@@ -6,7 +6,7 @@ class ItinerariesController < ApplicationController
   def create
     @itinerary = Itinerary.new(itinerary_params)
     @itinerary.trip_id = params[:trip_id]
-    
+
     if @itinerary.save
       flash[:notice] = `Let's get planning!`
       render itinerary_path(@itinerary.id)
@@ -40,7 +40,7 @@ class ItinerariesController < ApplicationController
       :date,
       :notes,
       :public,
-      :featured,
+      :featured
     )
   end
 

@@ -1,0 +1,25 @@
+<!--Header Image -->
+<div class="page-header page-header-small"> <!-- <img src=<%= @attraction.image %> > -->
+  <div class="page-header-image" data-parallax="false" style="background-image: url('<%= image_path("#{@attraction.image}") %>'); transform: translate3d(0px, 0px, 0px);">
+  </div>
+
+  <!-- Attraction Title -->
+  <div class="content-center">
+    <div class="row">
+      <div class="col-md-8 ml-auto mr-auto text-center">
+        <h2 class="title"><%= @attraction.name %></h2>
+          <h5>Average rating: 
+            <% rating = @attraction.reviews.average(:rating).to_i %>
+              <% rating.times do %>
+                <i class="fas fa-star"></i>
+              <% end %>
+
+              <% blank = 5 - rating %>
+              <% blank.times do %>
+                <i class="far fa-star"></i>
+              <% end %></p>
+          </h5>
+      </div>
+    </div>
+  </div>
+</div>

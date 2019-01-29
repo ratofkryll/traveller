@@ -1,0 +1,61 @@
+<!-- Address & Opening Hours Side Panel -->
+<main>
+  <article class="city-info">
+    <div class="all-city-info">
+
+      <h5><strong>Opening Hours:</strong></h5>
+        <p><strong>Monday: </strong><%= @attraction.monday_hours %></p>
+        <p><strong>Tuesday: </strong><%= @attraction.tuesday_hours %></p>
+        <p><strong>Wednesday: </strong><%= @attraction.wednesday_hours %></p>
+        <p><strong>Thursday: </strong><%= @attraction.thursday_hours %></p>
+        <p><strong>Friday: </strong><%= @attraction.friday_hours %></p>
+        <p><strong>Saturday: </strong><%= @attraction.saturday_hours %></p>
+        <p><strong>Sunday: </strong><%= @attraction.sunday_hours %></p>
+        
+        <br >
+        <br >
+        
+      <h5><strong>Address:</strong></h5>
+        <p><%= @attraction.address %></p>
+        <p><%= @attraction.address_city %></p>
+        <p><%= @attraction.address_postcode %></p>
+        <p>
+          <a target="_blank" href="http://www.stm.info/en">
+            <button class="btn btn-sm transit-button"><i class="fas fa-subway"></i> Plan your trip</button>
+          </a>
+        </p>
+    </div>
+  </article>
+
+  <!-- Attraction Descritption -->
+  <article>
+    <div class="container">
+      <div class="card pl-5 pr-5">
+        <div class="col-md-12 ml-auto mr-auto pb-4">
+          <h3 class="title"><%= @attraction.name %></h3>
+            <div class="attractions-all-cards">
+              <p><%= @attraction.description %></p>
+            </div>
+        </div>
+      </div>
+
+        <br >
+        <br >
+        
+        <div class="card reviews-col mt-3 ml-2, mr-2 pl-5 pr-5">
+          <%= render 'reviews' %>
+        <div class="section section-comments">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 ml-auto mr-auto">
+                <div class="media-area">
+                  <%= render 'review_form' %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</main>
