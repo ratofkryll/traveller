@@ -7,6 +7,7 @@
 
             <div class="col-md-4 ml-auto mr-auto">
 
+              <!-- "Why Register?" Splash START-->
               <div class="info info-horizontal">
                 <div class="icon icon-primary">
                   <i class="fas fa-user-friends"></i>
@@ -43,19 +44,22 @@
                   </div>
                 </div>
             </div>
+            <!-- "Why Register?" Splash END-->
 
+            <!-- Registration Form START-->
             <div class="col-md-4 mr-auto">
               <div class="card card-signup">
                 <div class="card-body">
-                  <h4 class="card-title text-center">Register</h4>
+                  <h5 class="card-title text-center">Register</h5>
                     <div class="social text-center">
-                      <button class="btn btn-icon btn-round btn-twitter">
+                    
+                      <button class="btn btn-icon btn-twitter btn-round" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-animation="true" data-original-title="Register with your Twitter account">
                         <i class="fab fa-twitter"></i>
                       </button>
-                      <button class="btn btn-icon btn-round btn-dribbble">
-                        <i class="fab fa-dribbble"></i>
+                      <button class="btn btn-icon btn-round btn-google" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-animation="true" data-original-title="Register with your Google Plus account">
+                        <i class="fab fa-google-plus-g"></i>
                       </button>
-                      <button class="btn btn-icon btn-round btn-facebook">
+                      <button class="btn btn-icon btn-round btn-facebook" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-animation="true" data-original-title="Register with your Facebook account">
                         <i class="fab fa-facebook-f"></i>
                       </button>
                       <h5 class="card-description"> or be old school </h5>
@@ -67,6 +71,24 @@
                       <% if @token != nil %>
                         <%= hidden_field_tag :invite_token, @token %>
                       <% end %>
+
+                      <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                        <div class="fileinput-new thumbnail img-circle img-raised">
+                          <img src="/assets/img/placeholder.jpg" alt="Avatar input">
+                        </div>
+                        <div class="fileinput-preview fileinput-exists thumbnail img-circle img-raised">
+                        </div>
+                          <div>
+                            <span class="btn btn-raised btn-round btn-default btn-file">
+                                <span class="fileinput-new">Add Photo</span>
+                                <span class="fileinput-exists">Change</span>
+                                <input type="file" name="...">
+                            </span>
+                            <br>
+                            <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="now-ui-icons ui-1_simple-remove"></i> Remove</a>
+                           </div>
+                          </div>
+                      </div>
 
                       <div class="row d-flex justify-content-center">
                         <div class="input-group ml-4 mr-4 mb-0">
@@ -94,7 +116,6 @@
                           <div class="col-md-9">
                             <div class="input-group">
                               <%= f.submit "Sign up", class: "btn btn-primary btn-round btn-block" %>
-                              <br />
                             </div>
                           </div>
                         </div>
@@ -107,10 +128,10 @@
                 </div>
               </div>
             </div>
+            <!-- Registration Form END-->
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
