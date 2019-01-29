@@ -1,0 +1,964 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{charset: "UTF-8"}/
+    %meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
+    %link{href: "./assets/css/now-ui-kit.css", rel: "stylesheet"}/
+    %link{href: "./assets/img/favicon.png", rel: "shortcut icon"}/
+    %title Nucleo Outline Web Font
+    %script{crossorigin: "anonymous", integrity: "sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", src: "https://code.jquery.com/jquery-3.2.1.min.js"}
+    %style{media: "screen"}
+      :cdata
+        \/* http://meyerweb.com/eric/tools/css/reset/
+        v2.0 | 20110126
+        License: none (public domain)
+        */
+        
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        }
+        
+        \/* HTML5 display-role reset for older browsers */
+        
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section,
+        main {
+        display: block;
+        }
+        
+        body {
+        line-height: 1;
+        }
+        
+        ol,
+        ul {
+        list-style: none;
+        }
+        
+        blockquote,
+        q {
+        quotes: none;
+        }
+        
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+        content: '';
+        content: none;
+        }
+        
+        table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        }
+        
+        
+        
+        \/* --------------------------------
+        
+        Nucleo Outline Web Font - nucleoapp.com/
+        License - nucleoapp.com/license/
+        Created using IcoMoon - icomoon.io
+        
+        \-------------------------------- */
+        
+        \/* --------------------------------
+        
+        Primary style
+        
+        \-------------------------------- */
+        
+        *,
+        *::after,
+        *::before {
+        box-sizing: border-box;
+        }
+        
+        html {
+        font-size: 62.5%;
+        }
+        
+        body {
+        font-size: 1.6rem;
+        font-family: sans-serif;
+        color: #333333;
+        background: #efefef url("assets/img/nucleo-logo.svg") no-repeat center top;
+        }
+        
+        a {
+        color: #766acf;
+        text-decoration: none;
+        }
+        
+        \/* --------------------------------
+        
+        Main components
+        
+        \-------------------------------- */
+        
+        header {
+        text-align: center;
+        padding: 120px 0 0;
+        }
+        
+        header h1 {
+        font-size: 2rem;
+        }
+        
+        header p {
+        font-size: 1.4rem;
+        margin-top: .6em;
+        }
+        
+        header a:hover {
+        text-decoration: underline;
+        }
+        
+        section {
+        width: 90%;
+        max-width: 1200px;
+        margin: 50px auto;
+        }
+        
+        section h2 {
+        border-bottom: 1px solid #e2e2e2;
+        padding: 0 0 1em .2em;
+        margin-bottom: 1em;
+        }
+        
+        ul::after {
+        clear: both;
+        content: "";
+        display: table;
+        }
+        
+        ul li {
+        width: 25%;
+        float: left;
+        padding: 16px 0;
+        text-align: center;
+        border-radius: .25em;
+        \-webkit-transition: background 0.2s;
+        \-moz-transition: background 0.2s;
+        transition: background 0.2s;
+        \-webkit-user-select: none;
+        \-moz-user-select: none;
+        \-ms-user-select: none;
+        user-select: none;
+        overflow: hidden;
+        }
+        
+        ul li:hover {
+        background: #dbdbdb;
+        }
+        
+        ul p,
+        ul em,
+        ul input {
+        display: inline-block;
+        font-size: 1rem;
+        color: #999999;
+        \-webkit-user-select: auto;
+        \-moz-user-select: auto;
+        \-ms-user-select: auto;
+        user-select: auto;
+        white-space: nowrap;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        }
+        
+        ul p {
+        padding: 10px;
+        margin-top: 10px;
+        }
+        
+        ul p::selection,
+        ul em::selection {
+        background: #766acf;
+        color: #efefef;
+        }
+        
+        ul em {
+        margin-bottom: 8px;
+        }
+        
+        ul em::before {
+        content: '[';
+        }
+        
+        ul em::after {
+        content: ']';
+        }
+        
+        ul input {
+        text-align: center;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        }
+        
+        @media only screen and (min-width: 768px) {
+        ul li {
+        width: 20%;
+        float: left;
+        }
+        }
+        
+        @media only screen and (min-width: 1024px) {
+        ul li {
+        width: 12.5%;
+        float: left;
+        padding: 32px 0;
+        }
+        }
+        
+        \/* --------------------------------
+        
+        Smart fixed navigation
+        
+        \-------------------------------- */
+        
+        \#cd-nav ul {
+        \/* mobile first */
+        position: fixed;
+        width: 90%;
+        max-width: 400px;
+        max-height: 90%;
+        right: 5%;
+        bottom: 5%;
+        border-radius: 0.25em;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background: white;
+        visibility: hidden;
+        \/* remove overflow:hidden if you want to create a drop-down menu - but then remember to fix/eliminate the list items animation */
+        overflow: hidden;
+        overflow-y: auto;
+        z-index: 1;
+        \/* Force Hardware Acceleration in WebKit */
+        \-webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        \-webkit-transform: scale(0);
+        \-moz-transform: scale(0);
+        \-ms-transform: scale(0);
+        \-o-transform: scale(0);
+        transform: scale(0);
+        \-webkit-transform-origin: 100% 100%;
+        \-moz-transform-origin: 100% 100%;
+        \-ms-transform-origin: 100% 100%;
+        \-o-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+        \-webkit-transition: -webkit-transform 0.3s, visibility 0s 0.3s;
+        \-moz-transition: -moz-transform 0.3s, visibility 0s 0.3s;
+        transition: transform 0.3s, visibility 0s 0.3s;
+        }
+        
+        \#cd-nav ul li {
+        \/* Force Hardware Acceleration in WebKit */
+        \-webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        display: block;
+        width: 100%;
+        padding: 0;
+        text-align: left;
+        }
+        
+        \#cd-nav ul li:hover {
+        background-color: #FFF;
+        }
+        
+        \#cd-nav ul.is-visible {
+        visibility: visible;
+        \-webkit-transform: scale(1);
+        \-moz-transform: scale(1);
+        \-ms-transform: scale(1);
+        \-o-transform: scale(1);
+        transform: scale(1);
+        \-webkit-transition: -webkit-transform 0.3s, visibility 0s 0s;
+        \-moz-transition: -moz-transform 0.3s, visibility 0s 0s;
+        transition: transform 0.3s, visibility 0s 0s;
+        }
+        
+        \#cd-nav li a {
+        display: block;
+        padding: 1em;
+        font-size: 1.2rem;
+        border-bottom: 1px solid #eff2f6;
+        }
+        
+        \#cd-nav li a:hover {
+        color: #333333;
+        }
+        
+        \#cd-nav li:last-child a {
+        border-bottom: none;
+        }
+        
+        \.cd-nav-trigger {
+        position: fixed;
+        bottom: 5%;
+        right: 5%;
+        width: 44px;
+        height: 44px;
+        background: white;
+        border-radius: 0.25em;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        \/* image replacement */
+        overflow: hidden;
+        text-indent: 100%;
+        white-space: nowrap;
+        z-index: 2;
+        }
+        
+        \.cd-nav-trigger span {
+        \/* the span element is used to create the menu icon */
+        position: absolute;
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #333333;
+        top: 50%;
+        margin-top: -1px;
+        left: 50%;
+        margin-left: -10px;
+        \-webkit-transition: background 0.3s;
+        \-moz-transition: background 0.3s;
+        transition: background 0.3s;
+        }
+        
+        \.cd-nav-trigger span::before,
+        \.cd-nav-trigger span::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        background: inherit;
+        width: 100%;
+        height: 100%;
+        \/* Force Hardware Acceleration in WebKit */
+        \-webkit-transform: translateZ(0);
+        \-moz-transform: translateZ(0);
+        \-ms-transform: translateZ(0);
+        \-o-transform: translateZ(0);
+        transform: translateZ(0);
+        \-webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        \-webkit-transition: -webkit-transform 0.3s, background 0s;
+        \-moz-transition: -moz-transform 0.3s, background 0s;
+        transition: transform 0.3s, background 0s;
+        }
+        
+        \.cd-nav-trigger span::before {
+        top: -6px;
+        \-webkit-transform: rotate(0);
+        \-moz-transform: rotate(0);
+        \-ms-transform: rotate(0);
+        \-o-transform: rotate(0);
+        transform: rotate(0);
+        }
+        
+        \.cd-nav-trigger span::after {
+        bottom: -6px;
+        \-webkit-transform: rotate(0);
+        \-moz-transform: rotate(0);
+        \-ms-transform: rotate(0);
+        \-o-transform: rotate(0);
+        transform: rotate(0);
+        }
+        
+        \.cd-nav-trigger.menu-is-open {
+        box-shadow: none;
+        }
+        
+        \.cd-nav-trigger.menu-is-open span {
+        background: rgba(232, 74, 100, 0);
+        }
+        
+        \.cd-nav-trigger.menu-is-open span::before,
+        \.cd-nav-trigger.menu-is-open span::after {
+        background: #333333;
+        }
+        
+        \.cd-nav-trigger.menu-is-open span::before {
+        top: 0;
+        \-webkit-transform: rotate(135deg);
+        \-moz-transform: rotate(135deg);
+        \-ms-transform: rotate(135deg);
+        \-o-transform: rotate(135deg);
+        transform: rotate(135deg);
+        }
+        
+        \.cd-nav-trigger.menu-is-open span::after {
+        bottom: 0;
+        \-webkit-transform: rotate(225deg);
+        \-moz-transform: rotate(225deg);
+        \-ms-transform: rotate(225deg);
+        \-o-transform: rotate(225deg);
+        transform: rotate(225deg);
+        }
+        
+        \.now-ui-icons {
+        display: inline-block;
+        font: normal normal normal 32px/1 'Nucleo Outline';
+        speak: none;
+        text-transform: none;
+        \-webkit-font-smoothing: antialiased;
+        \-moz-osx-font-smoothing: grayscale;
+        }
+  %body
+    %header
+      %h1 Nucleo Outline Web Font v2.9
+      %p
+        %a{href: "https://nucleoapp.com/?ref=1712"} nucleoapp.com
+    #cd-nav
+      %a#cd-nav-trigger.cd-nav-trigger{href: "#0"}
+        Menu
+        %span
+      %nav
+        %ul#cd-main-nav
+          %li
+            %a{href: "#arrows"} Arrows
+          %li
+            %a{href: "#business"} Business &amp; Finance
+          %li
+            %a{href: "#clothes"} Clothes &amp; Accessories
+          %li
+            %a{href: "#design"} Design &amp; Development
+          %li
+            %a{href: "#emoticons"} Emoticons
+          %li
+            %a{href: "#files"} Files &amp; Folders
+          %li
+            %a{href: "#medical"} Healthcare &amp; Medical
+          %li
+            %a{href: "#loaders"} Loaders
+          %li
+            %a{href: "#maps"} Maps &amp; Location
+          %li
+            %a{href: "#media"} Media
+          %li
+            %a{href: "#objects"} Objects
+          %li
+            %a{href: "#school"} School &amp; Education
+          %li
+            %a{href: "#shopping"} Shopping
+          %li
+            %a{href: "#sport"} Sport
+          %li
+            %a{href: "#technology"} Technology
+          %li
+            %a{href: "#text"} Text Editing
+          %li
+            %a{href: "#gestures"} Touch Gestures
+          %li
+            %a{href: "#transportation"} Transportation
+          %li
+            %a{href: "#travel"} Travel
+          %li
+            %a{href: "#interface"} User Interface
+          %li
+            %a{href: "#users"} Users
+    #icons-wrapper
+      %section#arrows
+        %h2 Arrows
+        %ul
+          %li
+            %i.now-ui-icons.arrows-1_cloud-download-93
+            %p arrows-1_cloud-download-93
+          %li
+            %i.now-ui-icons.arrows-1_cloud-upload-94
+            %p arrows-1_cloud-upload-94
+          %li
+            %i.now-ui-icons.arrows-1_minimal-down
+            %p arrows-1_minimal-down
+          %li
+            %i.now-ui-icons.arrows-1_minimal-left
+            %p arrows-1_minimal-left
+          %li
+            %i.now-ui-icons.arrows-1_minimal-right
+            %p arrows-1_minimal-right
+          %li
+            %i.now-ui-icons.arrows-1_minimal-up
+            %p arrows-1_minimal-up
+          %li
+            %i.now-ui-icons.arrows-1_refresh-69
+            %p arrows-1_refresh-69
+          %li
+            %i.now-ui-icons.arrows-1_share-66
+            %p arrows-1_share-66
+      %section#business
+        %h2 Business &amp; Finance
+        %ul
+          %li
+            %i.now-ui-icons.business_badge
+            %p business_badge
+          %li
+            %i.now-ui-icons.business_bank
+            %p business_bank
+          %li
+            %i.now-ui-icons.business_briefcase-24
+            %p business_briefcase-24
+          %li
+            %i.now-ui-icons.business_bulb-63
+            %p business_bulb-63
+          %li
+            %i.now-ui-icons.business_chart-bar-32
+            %p business_chart-bar-32
+          %li
+            %i.now-ui-icons.business_chart-pie-36
+            %p business_chart-pie-36
+          %li
+            %i.now-ui-icons.business_globe
+            %p business_globe
+          %li
+            %i.now-ui-icons.business_money-coins
+            %p business_money-coins
+      %section#clothes
+        %h2 Clothes &amp; Accessories
+        %ul
+          %li
+            %i.now-ui-icons.clothes_tie-bow
+            %p clothes_tie-bow
+      %section#design
+        %h2 Design &amp; Development
+        %ul
+          %li
+            %i.now-ui-icons.design_app
+            %p design_app
+          %li
+            %i.now-ui-icons.design_bullet-list-67
+            %p design_bullet-list-67
+          %li
+            %i.now-ui-icons.design_image
+            %p design_image
+          %li
+            %i.now-ui-icons.design_palette
+            %p design_palette
+          %li
+            %i.now-ui-icons.design_scissors
+            %p design_scissors
+          %li
+            %i.now-ui-icons.design_vector
+            %p design_vector
+          %li
+            %i.now-ui-icons.design-2_html5
+            %p design-2_html5
+          %li
+            %i.now-ui-icons.design-2_ruler-pencil
+            %p design-2_ruler-pencil
+      %section#emoticons
+        %h2 Emoticons
+        %ul
+          %li
+            %i.now-ui-icons.emoticons_satisfied
+            %p emoticons_satisfied
+      %section#files
+        %h2 Files &amp; Folders
+        %ul
+          %li
+            %i.now-ui-icons.files_box
+            %p files_box
+          %li
+            %i.now-ui-icons.files_paper
+            %p files_paper
+          %li
+            %i.now-ui-icons.files_single-copy-04
+            %p files_single-copy-04
+      %section#medical
+        %h2 Healthcare &amp; Medical
+        %ul
+          %li
+            %i.now-ui-icons.health_ambulance
+            %p health_ambulance
+      %section#loaders
+        %h2 Loaders
+        %ul
+          %li
+            %i.now-ui-icons.loader_gear.spin
+            %p loader_gear
+          %li
+            %i.now-ui-icons.loader_refresh.spin
+            %p loader_refresh
+      %section#maps
+        %h2 Maps &amp; Location
+        %ul
+          %li
+            %i.now-ui-icons.location_bookmark
+            %p location_bookmark
+          %li
+            %i.now-ui-icons.location_compass-05
+            %p location_compass-05
+          %li
+            %i.now-ui-icons.location_map-big
+            %p location_map-big
+          %li
+            %i.now-ui-icons.location_pin
+            %p location_pin
+          %li
+            %i.now-ui-icons.location_world
+            %p location_world
+      %section#media
+        %h2 Media
+        %ul
+          %li
+            %i.now-ui-icons.media-1_album
+            %p media-1_album
+          %li
+            %i.now-ui-icons.media-1_button-pause
+            %p media-1_button-pause
+          %li
+            %i.now-ui-icons.media-1_button-play
+            %p media-1_button-play
+          %li
+            %i.now-ui-icons.media-1_button-power
+            %p media-1_button-power
+          %li
+            %i.now-ui-icons.media-1_camera-compact
+            %p media-1_camera-compact
+          %li
+            %i.now-ui-icons.media-2_note-03
+            %p media-2_note-03
+          %li
+            %i.now-ui-icons.media-2_sound-wave
+            %p media-2_sound-wave
+      %section#objects
+        %h2 Objects
+        %ul
+          %li
+            %i.now-ui-icons.objects_diamond
+            %p objects_diamond
+          %li
+            %i.now-ui-icons.objects_globe
+            %p objects_globe
+          %li
+            %i.now-ui-icons.objects_key-25
+            %p objects_key-25
+          %li
+            %i.now-ui-icons.objects_planet
+            %p objects_planet
+          %li
+            %i.now-ui-icons.objects_spaceship
+            %p objects_spaceship
+          %li
+            %i.now-ui-icons.objects_support-17
+            %p objects_support-17
+          %li
+            %i.now-ui-icons.objects_umbrella-13
+            %p objects_umbrella-13
+      %section#school
+        %h2 School &amp; Education
+        %ul
+          %li
+            %i.now-ui-icons.education_agenda-bookmark
+            %p education_agenda-bookmark
+          %li
+            %i.now-ui-icons.education_atom
+            %p education_atom
+          %li
+            %i.now-ui-icons.education_glasses
+            %p education_glasses
+          %li
+            %i.now-ui-icons.education_hat
+            %p education_hat
+          %li
+            %i.now-ui-icons.education_paper
+            %p education_paper
+      %section#shopping
+        %h2 Shopping
+        %ul
+          %li
+            %i.now-ui-icons.shopping_bag-16
+            %p shopping_bag-16
+          %li
+            %i.now-ui-icons.shopping_basket
+            %p shopping_basket
+          %li
+            %i.now-ui-icons.shopping_box
+            %p shopping_box
+          %li
+            %i.now-ui-icons.shopping_cart-simple
+            %p shopping_cart-simple
+          %li
+            %i.now-ui-icons.shopping_credit-card
+            %p shopping_credit-card
+          %li
+            %i.now-ui-icons.shopping_delivery-fast
+            %p shopping_delivery-fast
+          %li
+            %i.now-ui-icons.shopping_shop
+            %p shopping_shop
+          %li
+            %i.now-ui-icons.shopping_tag-content
+            %p shopping_tag-content
+      %section#sport
+        %h2 Sport
+        %ul
+          %li
+            %i.now-ui-icons.sport_trophy
+            %p sport_trophy
+          %li
+            %i.now-ui-icons.sport_user-run
+            %p sport_user-run
+      %section#technology
+        %h2 Technology
+        %ul
+          %li
+            %i.now-ui-icons.tech_controller-modern
+            %p tech_controller-modern
+          %li
+            %i.now-ui-icons.tech_headphones
+            %p tech_headphones
+          %li
+            %i.now-ui-icons.tech_laptop
+            %p tech_laptop
+          %li
+            %i.now-ui-icons.tech_mobile
+            %p tech_mobile
+          %li
+            %i.now-ui-icons.tech_tablet
+            %p tech_tablet
+          %li
+            %i.now-ui-icons.tech_tv
+            %p tech_tv
+          %li
+            %i.now-ui-icons.tech_watch-time
+            %p tech_watch-time
+      %section#text
+        %h2 Text Editing
+        %ul
+          %li
+            %i.now-ui-icons.text_align-center
+            %p text_align-center
+          %li
+            %i.now-ui-icons.text_align-left
+            %p text_align-left
+          %li
+            %i.now-ui-icons.text_bold
+            %p text_bold
+          %li
+            %i.now-ui-icons.text_caps-small
+            %p text_caps-small
+      %section#gestures
+        %h2 Touch Gestures
+        %ul
+          %li
+            %i.now-ui-icons.gestures_tap-01
+            %p gestures_tap-01
+      %section#transportation
+        %h2 Transportation
+        %ul
+          %li
+            %i.now-ui-icons.transportation_air-baloon
+            %p transportation_air-baloon
+          %li
+            %i.now-ui-icons.transportation_bus-front-12
+            %p transportation_bus-front-12
+      %section#travel
+        %h2 Travel
+        %ul
+          %li
+            %i.now-ui-icons.travel_info
+            %p travel_info
+          %li
+            %i.now-ui-icons.travel_istanbul
+            %p travel_istanbul
+      %section#interface
+        %h2 User Interface
+        %ul
+          %li
+            %i.now-ui-icons.ui-1_bell-53
+            %p ui-1_bell-53
+          %li
+            %i.now-ui-icons.ui-1_calendar-60
+            %p ui-1_calendar-60
+          %li
+            %i.now-ui-icons.ui-1_check
+            %p ui-1_check
+          %li
+            %i.now-ui-icons.ui-1_lock-circle-open
+            %p ui-1_lock-circle-open
+          %li
+            %i.now-ui-icons.ui-1_send
+            %p ui-1_send
+          %li
+            %i.now-ui-icons.ui-1_settings-gear-63
+            %p ui-1_settings-gear-63
+          %li
+            %i.now-ui-icons.ui-1_simple-add
+            %p ui-1_simple-add
+          %li
+            %i.now-ui-icons.ui-1_simple-delete
+            %p ui-1_simple-delete
+          %li
+            %i.now-ui-icons.ui-1_simple-remove
+            %p ui-1_simple-remove
+          %li
+            %i.now-ui-icons.ui-1_zoom-bold
+            %p ui-1_zoom-bold
+          %li
+            %i.now-ui-icons.ui-2_chat-round
+            %p ui-2_chat-round
+          %li
+            %i.now-ui-icons.ui-2_favourite-28
+            %p ui-2_favourite-28
+          %li
+            %i.now-ui-icons.ui-2_like
+            %p ui-2_like
+          %li
+            %i.now-ui-icons.ui-2_settings-90
+            %p ui-2_settings-90
+          %li
+            %i.now-ui-icons.ui-2_time-alarm
+            %p ui-2_time-alarm
+          %li
+            %i.now-ui-icons.ui-1_email-85
+            %p ui-1_email-85
+      %section#users
+        %h2 Users
+        %ul
+          %li
+            %i.now-ui-icons.users_circle-08
+            %p users_circle-08
+          %li
+            %i.now-ui-icons.users_single-02
+            %p users_single-02
+    :javascript
+      function SelectText(element) {
+          var doc = document,
+              text = element,
+              range, selection;
+          if (doc.body.createTextRange) {
+              range = document.body.createTextRange();
+              range.moveToElementText(text);
+              range.select();
+          } else if (window.getSelection) {
+              selection = window.getSelection();
+              range = document.createRange();
+              range.selectNodeContents(text);
+              selection.removeAllRanges();
+              selection.addRange(range);
+          }
+      }
+
+      function hasClass(ele, cls) {
+          return !!ele.getAttribute('class').match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+      }
+
+      window.onload = function() {
+          var trigger = document.getElementById('cd-nav-trigger'),
+              menu = document.getElementById('cd-main-nav'),
+              menuItems = menu.getElementsByTagName('li');
+          trigger.onclick = function toggleMenu() {
+              if (hasClass(trigger, 'menu-is-open')) {
+                  trigger.setAttribute('class', 'cd-nav-trigger');
+                  menu.setAttribute('class', '');
+              } else {
+                  trigger.setAttribute('class', 'cd-nav-trigger menu-is-open');
+                  menu.setAttribute('class', 'is-visible');
+              }
+          }
+
+          for (var i = 0; i < menuItems.length; i++) {
+              menuItems[i].onclick = function closeMenu() {
+                  trigger.setAttribute('class', 'cd-nav-trigger');
+                  menu.setAttribute('class', '');
+              }
+          }
+      }

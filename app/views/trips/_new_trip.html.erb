@@ -1,0 +1,40 @@
+<%= form_for @trip do |form| %>
+
+  <% if form.object.errors.any? %>
+    <div class="alert alert-danger">
+      <strong>The following errors prevented saving:</strong>
+      <ul>
+        <% form.object.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group trip-field">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: 'form-control', placeholder: 'My awesome EuroTrip' %>
+  </div>
+
+  <div class="datepicker-container">
+  <div class="form-group trip-field">
+    <%= form.label 'Start date' %>
+    <%= form.text_field :start_date, class: 'form-control datepicker' %>
+  </div>
+  </div>
+
+  <div class="datepicker-container">
+  <div class="form-group trip-field">
+    <%= form.label 'End date' %>
+    <%= form.text_field :end_date, class: 'form-control datepicker' %>
+  </div>
+  </div>
+
+  <div class="form-group">
+    <%= form.label 'Public?' %>
+    <%= form.check_box :public %>
+  </div>
+  
+  <%= form.submit 'Start planning', class: 'btn btn-primary' %>
+
+<% end %>

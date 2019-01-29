@@ -187,21 +187,13 @@ end
 
 puts "Creating trips..."
 
-10.times do |i|
+5.times do |i|
   Trip.create({
     name: Faker::VentureBros.organization,
     start_date: Faker::Date.between(60.days.ago, 30.days.ago),
     end_date: Faker::Date.between(29.days.ago, Date.today),
     public: true,
     featured: true
-  })
-
-  Trip.create({
-    name: Faker::VentureBros.organization,
-    start_date: Faker::Date.between(30.days.ago, Date.today),
-    end_date: nil,
-    public: true,
-    featured: false
   })
 end
 
@@ -212,7 +204,7 @@ puts "Linking trips to test user..."
 5.times do |i|
   UserTrip.create({
     user_id: 21,
-    trip_id: rand(1..20),
+    trip_id: rand(1..5),
     role: 'creator'
   })
 end
@@ -221,14 +213,14 @@ end
 
 puts "Creating itineraries..."
 
-5.times do |i|
+15.times do |i|
   Itinerary.create({
     name: Faker::HeyArnold.location,
     date: Faker::Date.between(60.days.ago, 30.days.ago),
     notes: Faker::HeyArnold.quote,
     public: true,
     featured: false,
-    trip_id: 2
+    trip_id: rand(1..5)
     })
 end
 

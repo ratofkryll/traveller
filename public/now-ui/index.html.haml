@@ -1,0 +1,2988 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{charset: "utf-8"}/
+    %link{href: "./assets/img/apple-icon.png", rel: "apple-touch-icon", sizes: "76x76"}/
+    %link{href: "./assets/img/favicon.png", rel: "icon", type: "image/png"}/
+    %meta{content: "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %title Now UI Kit Pro by Creative Tim
+    %meta{content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no", name: "viewport"}/
+    / Fonts and icons
+    %link{href: "https://fonts.googleapis.com/css?family=Montserrat:400,700,200", rel: "stylesheet"}/
+    %link{href: "https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css", rel: "stylesheet"}/
+    / CSS Files
+    %link{href: "./assets/css/bootstrap.min.css", rel: "stylesheet"}/
+    %link{href: "./assets/css/now-ui-kit.css?v=1.2.0", rel: "stylesheet"}/
+    / CSS Just for demo purpose, don't include it in your project
+    %link{href: "./assets/css/demo.css", rel: "stylesheet"}/
+  %body.index-page
+    / Navbar
+    %nav.navbar.navbar-expand-lg.bg-white.fixed-top.navbar-transparent{"color-on-scroll" => "500"}
+      .container
+        .navbar-translate
+          %a.navbar-brand{"data-placement" => "bottom", href: "http://demos.creative-tim.com/now-ui-kit-pro/presentation.html", rel: "tooltip", target: "_blank", title: "Designed by Invision. Coded by Creative Tim"}
+            Now Ui Kit Pro
+          %button.navbar-toggler{"aria-controls" => "navigation-index", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navigation", "data-toggle" => "collapse", type: "button"}
+            %span.navbar-toggler-bar.bar1
+            %span.navbar-toggler-bar.bar2
+            %span.navbar-toggler-bar.bar3
+        .collapse.navbar-collapse{"data-color" => "orange", "data-nav-image" => "./assets/img/blurred-image-1.jpg"}
+          %ul.navbar-nav.ml-auto
+            %li.nav-item
+              %a.nav-link{href: "./index.html", target: "_blank"}
+                %i.now-ui-icons.design_app
+                %p Components
+            %li.nav-item.dropdown
+              %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+                %i.now-ui-icons.files_paper{"aria-hidden" => "true"}
+                %p Sections
+              .dropdown-menu.dropdown-menu-right{"aria-labelledby" => "navbarDropdownMenuLink"}
+                %a.dropdown-item{href: "./sections.html#headers"}
+                  %i.now-ui-icons.shopping_box
+                  Headers
+                %a.dropdown-item{href: "./sections.html#features"}
+                  %i.now-ui-icons.ui-2_settings-90
+                  Features
+                %a.dropdown-item{href: "./sections.html#blogs"}
+                  %i.now-ui-icons.text_align-left
+                  Blogs
+                %a.dropdown-item{href: "./sections.html#teams"}
+                  %i.now-ui-icons.sport_user-run
+                  Teams
+                %a.dropdown-item{href: "./sections.html#projects"}
+                  %i.now-ui-icons.education_paper
+                  Projects
+                %a.dropdown-item{href: "./sections.html#pricing"}
+                  %i.now-ui-icons.business_money-coins
+                  Pricing
+                %a.dropdown-item{href: "./sections.html#testimonials"}
+                  %i.now-ui-icons.ui-2_chat-round
+                  Testimonials
+                %a.dropdown-item{href: "./sections.html#contactus"}
+                  %i.now-ui-icons.tech_mobile
+                  Contact Us
+            %li.nav-item.dropdown
+              %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+                %i.now-ui-icons.design_image{"aria-hidden" => "true"}
+                %p Examples
+              .dropdown-menu.dropdown-menu-right{"aria-labelledby" => "navbarDropdownMenuLink"}
+                %a.dropdown-item{href: "./examples/about-us.html"}
+                  %i.now-ui-icons.business_bulb-63
+                  About-us
+                %a.dropdown-item{href: "./examples/blog-post.html"}
+                  %i.now-ui-icons.text_align-left
+                  Blog Post
+                %a.dropdown-item{href: "./examples/blog-posts.html"}
+                  %i.now-ui-icons.design_bullet-list-67
+                  Blog Posts
+                %a.dropdown-item{href: "./examples/contact-us.html"}
+                  %i.now-ui-icons.location_pin
+                  Contact Us
+                %a.dropdown-item{href: "./examples/landing-page.html"}
+                  %i.now-ui-icons.education_paper
+                  Landing Page
+                %a.dropdown-item{href: "./examples/login-page.html"}
+                  %i.now-ui-icons.users_circle-08
+                  Login Page
+                %a.dropdown-item{href: "./examples/pricing.html"}
+                  %i.now-ui-icons.business_money-coins
+                  Pricing
+                %a.dropdown-item{href: "./examples/ecommerce.html"}
+                  %i.now-ui-icons.shopping_shop
+                  Ecommerce Page
+                %a.dropdown-item{href: "./examples/product-page.html"}
+                  %i.now-ui-icons.shopping_bag-16
+                  Product Page
+                %a.dropdown-item{href: "./examples/profile-page.html"}
+                  %i.now-ui-icons.users_single-02
+                  Profile Page
+                %a.dropdown-item{href: "./examples/signup-page.html"}
+                  %i.now-ui-icons.tech_mobile
+                  Signup Page
+            %li.nav-item
+              %a.nav-link.btn.btn-primary{href: "https://www.creative-tim.com/product/now-ui-kit-pro", target: "_blank"}
+                %p Buy Now
+            /
+              <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
+              <i class="fa fa-twitter"></i>
+              <p class="hidden-lg-up">Twitter</p>
+              </a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
+              <i class="fa fa-facebook-square"></i>
+              <p class="hidden-lg-up">Facebook</p>
+              </a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
+              <i class="fa fa-instagram"></i>
+              <p class="hidden-lg-up">Instagram</p>
+              </a>
+              </li>
+    / End Navbar
+    .wrapper
+      .page-header.clear-filter{"filter-color" => "orange"}
+        .page-header-image{"data-parallax" => "true", style: "background-image: ;"}
+        .rellax-header.rellax-header-sky{"data-rellax-speed" => "-8"}
+          .page-header-image{style: "background-image: url('./assets/img/presentation-page/nuk-pro-back-sky.jpg')"}
+        .rellax-header.rellax-header-buildings{"data-rellax-speed" => "0"}
+          .page-header-image.page-header-city{style: "background-image: url('./assets/img/presentation-page/nuk-pro-buildings.png')"}
+        .rellax-text-container
+          %h1.h1-seo.rellax-text{"data-rellax-speed" => "-2"} Components
+        %h3.h3-description.rellax-text{"data-rellax-speed" => "-1"} A beautiful premium Bootstrap 4 UI Kit.
+        %h6.category.category-absolute.rellax-text{"data-rellax-speed" => "-2"}
+          Designed by
+          = succeed "." do
+            %a{href: "http://invisionapp.com/", target: "_blank"}
+              %img.invision-logo{src: "./assets/img/invision-white-slim.png"}/
+          = succeed "." do
+            %a{href: "https://www.creative-tim.com", target: "_blank"}
+              %img.creative-tim-logo{src: "./assets/img/creative-tim-white-slim2.png"}/
+      .main
+        .section.section-images
+          .container
+            .row
+              .col-md-12
+                .hero-images-container
+                  %img{alt: "", src: "assets/img/hero-image-1.png"}/
+                .hero-images-container-1
+                  %img{alt: "", src: "assets/img/hero-image-2.png"}/
+                .hero-images-container-2
+                  %img{alt: "", src: "assets/img/hero-image-3.png"}/
+        #basic-elements.section.section-basic
+          .container
+            %h3.title Basic Elements
+            %h4 Buttons
+            %p.category Pick your style
+            .row
+              .col-md-10
+                %button.btn.btn-primary{type: "button"} Default
+                %button.btn.btn-primary.btn-round{type: "button"} Round
+                %button.btn.btn-primary.btn-round{type: "button"}
+                  %i.now-ui-icons.ui-2_favourite-28
+                  With Icon
+                %button.btn.btn-primary.btn-icon.btn-round{type: "button"}
+                  %i.now-ui-icons.ui-2_favourite-28
+                %button.btn.btn-primary.btn-simple.btn-round{type: "button"} Simple
+            %p.category Pick your size
+            .row
+              .col-md-10
+                %button.btn.btn-primary.btn-sm Small
+                %button.btn.btn-primary Regular
+                %button.btn.btn-primary.btn-lg Large
+            %p.category Pick your color
+            .row
+              .col-md-10
+                %button.btn Default
+                %button.btn.btn-primary Primary
+                %button.btn.btn-info Info
+                %button.btn.btn-success Success
+                %button.btn.btn-warning Warning
+                %button.btn.btn-danger Danger
+                %button.btn.btn-neutral Neutral
+            %h4 Links
+            .row
+              .col-md-8
+                %button.btn.btn-link Default
+                %button.btn.btn-link.btn-primary Primary
+                %button.btn.btn-link.btn-info Info
+                %button.btn.btn-link.btn-success Success
+                %button.btn.btn-link.btn-warning Warning
+                %button.btn.btn-link.btn-danger Danger
+            / social buttons
+            #social-buttons
+              %h4 Social Buttons
+              .row
+                .col-md-4.col-sm-5
+                  %p.category Default
+                  %button.btn.btn-twitter
+                    %i.fa.fa-twitter
+                    Connect with Twitter
+                .col-md-1.col-sm-1
+                  %p.category  
+                  %button.btn.btn-icon.btn-twitter
+                    %i.fa.fa-twitter
+                .col-md-1.col-sm-1
+                  %p.category  
+                  %button.btn.btn-icon.btn-round.btn-twitter
+                    %i.fa.fa-twitter
+                .col-md-1.col-sm-1
+                  %p.category Neutral
+                  %button.btn.btn-icon.btn-neutral.btn-twitter
+                    %i.fa.fa-twitter
+                .col-md-3.col-sm-4
+                  %p.category  
+                  %button.btn.btn-neutral.btn-twitter
+                    %i.fa.fa-twitter
+                    Connect with Twitter
+              .row
+                .col-md-4.col-sm-5
+                  %button.btn.btn-facebook
+                    %i.fa.fa-facebook-square
+                    Share · 2.2k
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-facebook
+                    %i.fa.fa-facebook
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-round.btn-facebook
+                    %i.fa.fa-facebook
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-neutral.btn-facebook
+                    %i.fa.fa-facebook-square
+                .col-md-3.col-sm-4
+                  %button.btn.btn-neutral.btn-facebook
+                    %i.fa.fa-facebook-square
+                    Share · 2.2k
+              .row
+                .col-md-4.col-sm-5
+                  %button.btn.btn-google
+                    %i.fa.fa-google
+                    Share on Google+
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-google
+                    %i.fa.fa-google
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-round.btn-google
+                    %i.fa.fa-google
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-neutral.btn-google
+                    %i.fa.fa-google
+                .col-md-3.col-sm-4
+                  %button.btn.btn-neutral.btn-google
+                    %i.fa.fa-google
+                    Share on Google+
+              .row
+                .col-md-4.col-sm-5
+                  %button.btn.btn-linkedin
+                    %i.fa.fa-linkedin-square
+                    Connect with Linkedin
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-linkedin
+                    %i.fa.fa-linkedin
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-round.btn-linkedin
+                    %i.fa.fa-linkedin
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-neutral.btn-linkedin
+                    %i.fa.fa-linkedin-square
+                .col-md-3.col-sm-4
+                  %button.btn.btn-neutral.btn-linkedin
+                    %i.fa.fa-linkedin-square
+                    Connect with Linkedin
+              .row
+                .col-md-4.col-sm-5
+                  %button.btn.btn-pinterest
+                    %i.fa.fa-pinterest
+                    Pint it · 212
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-pinterest
+                    %i.fa.fa-pinterest
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-round.btn-pinterest
+                    %i.fa.fa-pinterest
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-neutral.btn-pinterest
+                    %i.fa.fa-pinterest
+                .col-md-3.col-sm-4
+                  %button.btn.btn-neutral.btn-pinterest
+                    %i.fa.fa-pinterest
+                    Pint it · 212
+              .row
+                .col-md-4.col-sm-5
+                  %button.btn.btn-youtube
+                    %i.fa.fa-youtube-play
+                    View on Youtube
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-youtube
+                    %i.fa.fa-youtube
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-round.btn-youtube
+                    %i.fa.fa-youtube
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-neutral.btn-youtube
+                    %i.fa.fa-youtube
+                .col-md-3.col-sm-4
+                  %button.btn.btn-neutral.btn-youtube
+                    %i.fa.fa-youtube-play
+                    View on Youtube
+              .row
+                .col-md-4.col-sm-5
+                  %button.btn.btn-tumblr
+                    %i.fa.fa-tumblr-square
+                    Repost
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-tumblr
+                    %i.fa.fa-tumblr
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-round.btn-tumblr
+                    %i.fa.fa-tumblr
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-neutral.btn-tumblr
+                    %i.fa.fa-tumblr-square
+                .col-md-3.col-sm-4
+                  %button.btn.btn-neutral.btn-tumblr
+                    %i.fa.fa-tumblr-square
+                    Repost
+              .row
+                .col-md-4.col-sm-5
+                  %button.btn.btn-github
+                    %i.fa.fa-github
+                    Connect with Github
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-github
+                    %i.fa.fa-github
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-round.btn-github
+                    %i.fa.fa-github
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-neutral.btn-github
+                    %i.fa.fa-github
+                .col-md-3.col-sm-4
+                  %button.btn.btn-neutral.btn-github
+                    %i.fa.fa-github
+                    Connect with Github
+              .row
+                .col-md-4.col-sm-5
+                  %button.btn.btn-behance
+                    %i.fa.fa-behance-square
+                    Follow us
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-behance
+                    %i.fa.fa-behance
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-round.btn-behance
+                    %i.fa.fa-behance
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-neutral.btn-behance
+                    %i.fa.fa-behance
+                .col-md-3.col-sm-4
+                  %button.btn.btn-neutral.btn-behance
+                    %i.fa.fa-behance-square
+                    Follow us
+              .row
+                .col-md-4.col-sm-5
+                  %button.btn.btn-dribbble
+                    %i.fa.fa-dribbble
+                    Find us on Dribble
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-dribbble
+                    %i.fa.fa-dribbble
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-round.btn-dribbble
+                    %i.fa.fa-dribbble
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-neutral.btn-dribbble
+                    %i.fa.fa-dribbble
+                .col-md-3.col-sm-4
+                  %button.btn.btn-neutral.btn-dribbble
+                    %i.fa.fa-dribbble
+                    Find us on Dribble
+              .row
+                .col-md-4.col-sm-5
+                  %button.btn.btn-reddit
+                    %i.fa.fa-reddit
+                    Repost · 232
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-reddit
+                    %i.fa.fa-reddit
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-round.btn-reddit
+                    %i.fa.fa-reddit
+                .col-md-1.col-sm-1
+                  %button.btn.btn-icon.btn-neutral.btn-reddit
+                    %i.fa.fa-reddit
+                .col-md-3.col-sm-4
+                  %button.btn.btn-neutral.btn-reddit
+                    %i.fa.fa-reddit
+                    Repost · 232
+            / end social buttons
+            .space-70
+            #inputs
+              %h4 Inputs
+              %p.category Form Controls
+              .row
+                .col-sm-6.col-lg-3
+                  .form-group
+                    %input.form-control{placeholder: "Regular", type: "text", value: ""}/
+                .col-sm-6.col-lg-3
+                  .form-group.has-success
+                    %input.form-control.form-control-success{type: "text", value: "Success"}/
+                .col-sm-6.col-lg-3
+                  .form-group.has-danger
+                    %input.form-control.form-control-danger{type: "email", value: "Error Input"}/
+                .col-sm-6.col-lg-3
+                  .input-group
+                    .input-group-prepend
+                      %span.input-group-text
+                        %i.fa.fa-user-circle
+                    %input.form-control{placeholder: "Left Font Awesome Icon", type: "text"}/
+                .col-sm-6.col-lg-3
+                  .input-group
+                    %input.form-control{placeholder: "Right Nucleo Icon", type: "text"}/
+                    .input-group-append
+                      %span.input-group-text
+                        %i.now-ui-icons.users_single-02
+            .space-70
+            / select
+            .select
+              .row
+                .col-md-6
+                  .title
+                    %h4 Customizable Select
+                  .row
+                    .col-lg-6.col-md-8.col-sm-5
+                      %select.selectpicker{"data-size" => "7", "data-style" => "btn btn-primary btn-round", title: "Single Select"}
+                        %option{disabled: "disabled", selected: "selected"} Single Option
+                        %option{value: "2"} Foobar
+                        %option{value: "3"} Is great
+                    .col-lg-6.col-md-8.col-sm-5
+                      %select.selectpicker{"data-size" => "7", "data-style" => "btn btn-info btn-round", multiple: "multiple", title: "Choose City"}
+                        %option{disabled: "disabled"} Multiple Options
+                        %option{value: "2"} Paris
+                        %option{value: "3"} Bucharest
+                        %option{value: "4"} Rome
+                        %option{value: "5"} New York
+                        %option{value: "6"} Miami
+                        %option{value: "7"} Piatra Neamt
+                        %option{value: "8"} Paris
+                        %option{value: "9"} Bucharest
+                        %option{value: "10"} Rome
+                        %option{value: "11"} New York
+                        %option{value: "12"} Miami
+                        %option{value: "13"} Piatra Neamt
+                        %option{value: "14"} Paris
+                        %option{value: "15"} Bucharest
+                        %option{value: "16"} Rome
+                        %option{value: "17"} New York
+                        %option{value: "18"} Miami
+                        %option{value: "19"} Piatra Neamt
+                .col-md-4
+                  .title
+                    %h4 Dropdown &amp; Dropup
+                  .row
+                    .col-lg-5.col-md-8
+                      .dropdown
+                        %button#navbarDropdownMenuLink.btn.btn-primary.btn-round.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"}
+                          Dropdown
+                        .dropdown-menu{"aria-labelledby" => "navbarDropdownMenuLink"}
+                          %a.dropdown-item{href: "#"} Action
+                          %a.dropdown-item{href: "#"} Another action
+                          %a.dropdown-item{href: "#"} Something else here
+                    .col-lg-5.col-md-8
+                      .dropup
+                        %button#navbarDropdownMenuLink.btn.btn-primary.btn-round.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"}
+                          Dropup
+                        .dropdown-menu{"aria-labelledby" => "navbarDropdownMenuLink"}
+                          %a.dropdown-item{href: "#"} Action
+                          %a.dropdown-item{href: "#"} Another action
+                          %a.dropdown-item{href: "#"} Something else here
+            / end select
+            .space-70
+            / textarea/tags
+            #textareaTags
+              .row
+                .col-md-6
+                  .title
+                    %h4 Textarea
+                  %textarea.form-control{cols: "80", name: "name", placeholder: "You can write your text here...", rows: "4"}
+                .col-md-6
+                  .title
+                    %h4 Tags
+                  %input.tagsinput{"data-color" => "danger", "data-role" => "tagsinput", type: "text", value: "Amsterdam,Washington,Sydney,Beijing"}/
+                  / You can change data-color="rose" with one of our colors primary | warning | info | danger | success
+            .space-70
+            #checkRadios.row
+              .col-sm-6.col-lg-3
+                %p.category Checkboxes
+                .form-check
+                  %label.form-check-label
+                    %input.form-check-input{type: "checkbox"}/
+                    %span.form-check-sign
+                    Unchecked
+                .form-check
+                  %label.form-check-label
+                    %input.form-check-input{checked: "checked", type: "checkbox"}/
+                    %span.form-check-sign
+                    Checked
+                .form-check.disabled
+                  %label.form-check-label
+                    %input.form-check-input{disabled: "disabled", type: "checkbox"}/
+                    %span.form-check-sign
+                    Disabled Unchecked
+                .form-check.disabled
+                  %label.form-check-label
+                    %input.form-check-input{checked: "checked", disabled: "disabled", type: "checkbox"}/
+                    %span.form-check-sign
+                    Disabled Checked
+              .col-sm-6.col-lg-3
+                %p.category Radios
+                .form-check.form-check-radio
+                  %label.form-check-label
+                    %input#exampleRadios1.form-check-input{name: "exampleRadios", type: "radio", value: "option1"}/
+                    %span.form-check-sign
+                    Radio is off
+                .form-check.form-check-radio
+                  %label.form-check-label
+                    %input#exampleRadios1.form-check-input{checked: "checked", name: "exampleRadios", type: "radio", value: "option2"}/
+                    %span.form-check-sign
+                    Radio is on
+                .form-check.form-check-radio.disabled
+                  %label.form-check-label
+                    %input#exampleRadios2.form-check-input{disabled: "disabled", name: "exampleRadios1", type: "radio", value: "option3"}/
+                    %span.form-check-sign
+                    Disabled radio is off
+                .form-check.form-check-radio.disabled
+                  %label.form-check-label
+                    %input#exampleRadios2.form-check-input{checked: "checked", disabled: "disabled", name: "exampleRadios1", type: "radio", value: "option4"}/
+                    %span.form-check-sign
+                    Disabled radio is on
+              .col-sm-6.col-lg-3
+                %p.category Toggle Buttons
+                %input.bootstrap-switch{checked: "checked", name: "checkbox", type: "checkbox"}/
+                %br/
+                %input.bootstrap-switch{"data-off-label" => "OFF", "data-on-label" => "ON", name: "checkbox", type: "checkbox"}/
+              .col-sm-6.col-lg-3
+                %p.category Sliders
+                #sliderRegular.slider
+                %br/
+                #sliderDouble.slider.slider-primary
+        .section.section-navbars
+          #menu-dropdown.container
+            .row
+              .col-md-6
+                %h4 Menu
+                %nav.navbar.navbar-expand-lg.bg-primary
+                  .container
+                    %a.navbar-brand{href: "#"} Menu
+                    %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#example-navbar", "data-toggle" => "collapse", type: "button"}
+                      %span.navbar-toggler-bar.bar1
+                      %span.navbar-toggler-bar.bar2
+                      %span.navbar-toggler-bar.bar3
+                    #example-navbar.collapse.navbar-collapse{"data-nav-image" => "assets/img/blurred-image-1.jpg"}
+                      %ul.navbar-nav
+                        %li.nav-item.active
+                          %a.nav-link{href: "#"}
+                            %p Link
+                        %li.nav-item
+                          %a.nav-link{href: "#"}
+                            %p Link
+                        %li.nav-item.dropdown
+                          %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", href: "http://example.com"}
+                            %p
+                              Dropdown
+                          .dropdown-menu{"aria-labelledby" => "navbarDropdownMenuLink"}
+                            %a.dropdown-item{href: "#"} Action
+                            %a.dropdown-item{href: "#"} Another action
+                            %a.dropdown-item{href: "#"} Something else here
+              .col-md-6
+                %h4 Menu with Icons
+                %nav.navbar.navbar-expand-lg.bg-info
+                  .container
+                    %a.navbar-brand{href: "#"} Icons
+                    %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#example-navbar-icons", "data-toggle" => "collapse", type: "button"}
+                      %span.navbar-toggler-bar.bar1
+                      %span.navbar-toggler-bar.bar2
+                      %span.navbar-toggler-bar.bar3
+                    #example-navbar-icons.collapse.navbar-collapse
+                      %ul.navbar-nav.ml-auto
+                        %li.nav-item
+                          %a.nav-link{href: "#pablo"}
+                            %i.now-ui-icons.ui-1_send{"aria-hidden" => "true"}
+                        %li.nav-item
+                          %a.nav-link{href: "#pablo"}
+                            %i.now-ui-icons.users_single-02{"aria-hidden" => "true"}
+                        %li.nav-item.dropdown
+                          %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+                            %i.now-ui-icons.ui-1_settings-gear-63{"aria-hidden" => "true"}
+                          .dropdown-menu.dropdown-menu-right{"aria-labelledby" => "navbarDropdownMenuLink"}
+                            %a.dropdown-header Dropdown header
+                            %a.dropdown-item{href: "#"} Action
+                            %a.dropdown-item{href: "#"} Another action
+                            %a.dropdown-item{href: "#"} Something else here
+                            .divider
+                            %a.dropdown-item{href: "#"} Separated link
+                            .divider
+                            %a.dropdown-item{href: "#"} One more separated link
+            %h4 Navigation
+          #navbar
+            .navigation-example{style: "background-image:url('assets/img/bg7.jpg')"}
+              / Navbar Primary
+              %nav.navbar.navbar-expand-lg.bg-primary
+                .container
+                  .navbar-translate
+                    %a.navbar-brand{href: "#pablo"} Primary color
+                    %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#example-navbar-primary", "data-toggle" => "collapse", type: "button"}
+                      %span.navbar-toggler-bar.bar1
+                      %span.navbar-toggler-bar.bar2
+                      %span.navbar-toggler-bar.bar3
+                  #example-navbar-primary.collapse.navbar-collapse
+                    %ul.navbar-nav.ml-auto
+                      %li.nav-item.active
+                        %a.nav-link{href: "#pablo"}
+                          %i.now-ui-icons.objects_globe
+                          %p Discover
+                      %li.nav-item
+                        %a.nav-link{href: "#pablo"}
+                          %i.now-ui-icons.users_circle-08
+                          %p Profile
+                      %li.nav-item
+                        %a.nav-link{href: "#pablo"}
+                          %i.now-ui-icons.ui-1_settings-gear-63
+                          %p Settings
+              / End Navbar Primary
+              / Navbar Info
+              %nav.navbar.navbar-expand-lg.bg-info
+                .container
+                  .navbar-translate
+                    %a.navbar-brand{href: "#pablo"} Info Color
+                    %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#example-navbar-info", "data-toggle" => "collapse", type: "button"}
+                      %span.navbar-toggler-bar.bar1
+                      %span.navbar-toggler-bar.bar2
+                      %span.navbar-toggler-bar.bar3
+                  #example-navbar-info.collapse.navbar-collapse
+                    %ul.navbar-nav.ml-auto
+                      %li.nav-item.active
+                        %a.nav-link{href: "#pablo"}
+                          %p Discover
+                      %li.nav-item
+                        %a.nav-link{href: "#pablo"}
+                          %p Profile
+                      %li.nav-item
+                        %a.nav-link{href: "#pablo"}
+                          %p Settings
+              / End Navbar Info
+              / Navbar Success
+              %nav.navbar.navbar-expand-lg.bg-success
+                .container
+                  .navbar-translate
+                    %a.navbar-brand{href: "#"} Success Color
+                    %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#example-navbar-success", "data-toggle" => "collapse", type: "button"}
+                      %span.navbar-toggler-bar.bar1
+                      %span.navbar-toggler-bar.bar2
+                      %span.navbar-toggler-bar.bar3
+                  #example-navbar-success.collapse.navbar-collapse
+                    %ul.navbar-nav.ml-auto
+                      %li.nav-item.active
+                        %a.nav-link{href: "#pablo"}
+                          %i.now-ui-icons.objects_globe
+                      %li.nav-item
+                        %a.nav-link{href: "#pablo"}
+                          %i.now-ui-icons.users_circle-08
+                      %li.nav-item
+                        %a.nav-link{href: "#pablo"}
+                          %i.now-ui-icons.ui-1_settings-gear-63
+              / End Navbar Success
+              / Navbar Warning
+              %nav.navbar.navbar-expand-lg.bg-warning
+                .container
+                  .navbar-translate
+                    %a.navbar-brand{href: "#pablo"} Warning Color
+                    %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#example-navbar-warning", "data-toggle" => "collapse", type: "button"}
+                      %span.navbar-toggler-bar.bar1
+                      %span.navbar-toggler-bar.bar2
+                      %span.navbar-toggler-bar.bar3
+                  #example-navbar-warning.collapse.navbar-collapse
+                    %ul.navbar-nav.ml-auto
+                      %li.nav-item
+                        %a.nav-link{href: "#pablo"}
+                          %i.fa.fa-facebook-square
+                      %li.nav-item
+                        %a.nav-link{href: "#pablo"}
+                          %i.fa.fa-twitter
+                      %li.nav-item
+                        %a.nav-link{href: "#pablo"}
+                          %i.fa.fa-google-plus
+                      %li.nav-item
+                        %a.nav-link{href: "#pablo"}
+                          %i.fa.fa-instagram
+              / End Navbar Warning
+              / Navbar Danger
+              %nav.navbar.navbar-expand-lg.bg-danger
+                .container
+                  .navbar-translate
+                    %a.navbar-brand{href: "#pablo"} Danger Color
+                    %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#example-navbar-danger", "data-toggle" => "collapse", type: "button"}
+                      %span.navbar-toggler-bar.bar1
+                      %span.navbar-toggler-bar.bar2
+                      %span.navbar-toggler-bar.bar3
+                  #example-navbar-danger.collapse.navbar-collapse
+                    %ul.navbar-nav.ml-auto
+                      %li.nav-item
+                        %a.nav-link{href: "#pablo"}
+                          %i.fa.fa-facebook-square
+                          %p Share
+                      %li.nav-item
+                        %a.nav-link{href: "#pablo"}
+                          %i.fa.fa-twitter
+                          %p Tweet
+                      %li.nav-item
+                        %a.nav-link{href: "#pablo"}
+                          %i.fa.fa-pinterest
+                          %p Pin
+              / End Navbar Danger
+              / Navbar Transparent
+              %nav.navbar.navbar-expand-lg.navbar-transparent
+                .container
+                  .navbar-translate
+                    %a.navbar-brand{href: "#pablo"} Transparent
+                    %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#example-navbar-transparent", "data-toggle" => "collapse", type: "button"}
+                      %span.navbar-toggler-bar.bar1
+                      %span.navbar-toggler-bar.bar2
+                      %span.navbar-toggler-bar.bar3
+                  #example-navbar-transparent.collapse.navbar-collapse
+                    %ul.navbar-nav.ml-auto
+                      %li.nav-item
+                        %a.nav-link{href: "#pablo"}
+                          %i.fa.fa-facebook-square
+                          %p Facebook
+                      %li.nav-item
+                        %a.nav-link{href: "#pablo"}
+                          %i.fa.fa-twitter
+                          %p Twitter
+                      %li.nav-item
+                        %a.nav-link{href: "#pablo"}
+                          %i.fa.fa-instagram
+                          %p Instagram
+              / End Navbar Transparent
+        / End .section-navbars
+        .section.section-tabs
+          .container
+            .title
+              %h4 Navigation Tabs
+            .row
+              .col-md-10.ml-auto.col-xl-6.mr-auto
+                %p.category Tabs with Icons on Card
+                / Nav tabs
+                .card
+                  .card-header
+                    %ul.nav.nav-tabs.justify-content-center{role: "tablist"}
+                      %li.nav-item
+                        %a.nav-link.active{"data-toggle" => "tab", href: "#home", role: "tab"}
+                          %i.now-ui-icons.objects_umbrella-13
+                          Home
+                      %li.nav-item
+                        %a.nav-link{"data-toggle" => "tab", href: "#profile", role: "tab"}
+                          %i.now-ui-icons.shopping_cart-simple
+                          Profile
+                      %li.nav-item
+                        %a.nav-link{"data-toggle" => "tab", href: "#messages", role: "tab"}
+                          %i.now-ui-icons.shopping_shop
+                          Messages
+                      %li.nav-item
+                        %a.nav-link{"data-toggle" => "tab", href: "#settings", role: "tab"}
+                          %i.now-ui-icons.ui-2_settings-90
+                          Settings
+                  .card-body
+                    / Tab panes
+                    .tab-content.text-center
+                      #home.tab-pane.active{role: "tabpanel"}
+                        %p I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.
+                      #profile.tab-pane{role: "tabpanel"}
+                        %p I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.
+                      #messages.tab-pane{role: "tabpanel"}
+                        %p I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.
+                      #settings.tab-pane{role: "tabpanel"}
+                        %p
+                          "I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at."
+              .col-md-10.ml-auto.col-xl-6.mr-auto
+                %p.category Tabs with Background on Card
+                / Tabs with Background on Card
+                .card
+                  .card-header
+                    %ul.nav.nav-tabs.nav-tabs-neutral.justify-content-center{"data-background-color" => "orange", role: "tablist"}
+                      %li.nav-item
+                        %a.nav-link.active{"data-toggle" => "tab", href: "#home1", role: "tab"} Home
+                      %li.nav-item
+                        %a.nav-link{"data-toggle" => "tab", href: "#profile1", role: "tab"} Profile
+                      %li.nav-item
+                        %a.nav-link{"data-toggle" => "tab", href: "#messages1", role: "tab"} Messages
+                      %li.nav-item
+                        %a.nav-link{"data-toggle" => "tab", href: "#settings1", role: "tab"} Settings
+                  .card-body
+                    / Tab panes
+                    .tab-content.text-center
+                      #home1.tab-pane.active{role: "tabpanel"}
+                        %p I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.
+                      #profile1.tab-pane{role: "tabpanel"}
+                        %p I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.
+                      #messages1.tab-pane{role: "tabpanel"}
+                        %p I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.
+                      #settings1.tab-pane{role: "tabpanel"}
+                        %p
+                          "I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at."
+                / End Tabs on plain Card
+        / End Section Tabs
+        .section.section-pills
+          .container
+            #navigation-pills
+              .title
+                %h4 Navigation Pills
+              .row
+                .col-md-6
+                  %p.category Horizontal tabs
+                  %ul.nav.nav-pills.nav-pills-primary{role: "tablist"}
+                    %li.nav-item
+                      %a.nav-link.active{"data-toggle" => "tab", href: "#link1", role: "tablist"}
+                        Profile
+                    %li.nav-item
+                      %a.nav-link{"data-toggle" => "tab", href: "#link2", role: "tablist"}
+                        Settings
+                    %li.nav-item
+                      %a.nav-link{"data-toggle" => "tab", href: "#link3", role: "tablist"}
+                        Options
+                  .tab-content.tab-space
+                    #link1.tab-pane.active
+                      Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
+                      %br/
+                      %br/
+                      Dramatically visualize customer directed convergence without revolutionary ROI.
+                    #link2.tab-pane
+                      Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
+                      %br/
+                      = succeed "Dramatically" do
+                        %br/
+                    #link3.tab-pane
+                      Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.
+                      %br/
+                      = succeed "Dynamically" do
+                        %br/
+                .col-md-6
+                  %p.category Vertical tabs
+                  .row
+                    .col-md-4
+                      %ul.nav.nav-pills.nav-pills-primary.flex-column{role: "tablist"}
+                        %li.nav-item
+                          %a.nav-link.active{"data-toggle" => "tab", href: "#link4", role: "tablist"}
+                            Profile
+                        %li.nav-item
+                          %a.nav-link{"data-toggle" => "tab", href: "#link5", role: "tablist"}
+                            Settings
+                        %li.nav-item
+                          %a.nav-link{"data-toggle" => "tab", href: "#link6", role: "tablist"}
+                            Options
+                    .col-md-8
+                      .tab-content
+                        #link4.tab-pane.active
+                          Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
+                          %br/
+                          %br/
+                          Dramatically visualize customer directed convergence without revolutionary ROI.
+                        #link5.tab-pane
+                          Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
+                          %br/
+                          = succeed "Dramatically" do
+                            %br/
+                        #link6.tab-pane
+                          Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.
+                          %br/
+                          = succeed "Dynamically" do
+                            %br/
+              .title
+                %p.category With Icons
+              .row
+                .col-md-6
+                  /
+                    color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+                  %ul.nav.nav-pills.nav-pills-primary.nav-pills-icons{role: "tablist"}
+                    %li.nav-item
+                      %a.nav-link.active{"data-toggle" => "tab", href: "#link7", role: "tablist"}
+                        %i.now-ui-icons.objects_umbrella-13
+                        Home
+                    %li.nav-item
+                      %a.nav-link{"data-toggle" => "tab", href: "#link8", role: "tablist"}
+                        %i.now-ui-icons.shopping_shop
+                        Messages
+                    %li.nav-item
+                      %a.nav-link{"data-toggle" => "tab", href: "#link9", role: "tablist"}
+                        %i.now-ui-icons.ui-2_settings-90
+                        Settings
+                  .tab-content.tab-space
+                    #link7.tab-pane.active
+                      Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
+                      %br/
+                      %br/
+                      Dramatically visualize customer directed convergence without revolutionary ROI.
+                    #link8.tab-pane
+                      Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
+                      %br/
+                      = succeed "Dramatically" do
+                        %br/
+                    #link9.tab-pane
+                      Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.
+                      %br/
+                      = succeed "Dynamically" do
+                        %br/
+                .col-md-6
+                  .row
+                    .col-lg-3.col-md-6
+                      /
+                        color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+                      %ul.nav.nav-pills.nav-pills-primary.nav-pills-icons.flex-column{role: "tablist"}
+                        %li.nav-item
+                          %a.nav-link.active{"data-toggle" => "tab", href: "#link10", role: "tablist"}
+                            %i.now-ui-icons.objects_umbrella-13
+                            Home
+                        %li.nav-item
+                          %a.nav-link{"data-toggle" => "tab", href: "#link11", role: "tablist"}
+                            %i.now-ui-icons.ui-2_settings-90
+                            Settings
+                    .col-md-8
+                      .tab-content
+                        #link10.tab-pane.active
+                          Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
+                          %br/
+                          %br/
+                          Dramatically visualize customer directed convergence without revolutionary ROI.
+                        #link11.tab-pane
+                          Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
+                          %br/
+                          = succeed "Dramatically" do
+                            %br/
+              .title
+                %p.category Just Icons
+              .row
+                .col-md-6
+                  .row
+                    .col-md-3
+                      /
+                        color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+                      %ul.nav.nav-pills.nav-pills-info.nav-pills-just-icons.flex-column{role: "tablist"}
+                        %li.nav-item
+                          %a.nav-link.active{"data-toggle" => "tab", href: "#link20", role: "tablist"}
+                            %i.now-ui-icons.objects_umbrella-13
+                        %li.nav-item
+                          %a.nav-link{"data-toggle" => "tab", href: "#link21", role: "tablist"}
+                            %i.now-ui-icons.ui-2_settings-90
+                    .col-md-8
+                      .tab-content
+                        #link20.tab-pane.active
+                          Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
+                          %br/
+                          %br/
+                          Dramatically visualize customer directed convergence without revolutionary ROI.
+                        #link21.tab-pane
+                          Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
+                          %br/
+                          = succeed "Dramatically" do
+                            %br/
+                .col-md-6
+                  /
+                    color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+                  %ul.nav.nav-pills.nav-pills-info.nav-pills-just-icons{role: "tablist"}
+                    %li.nav-item
+                      %a.nav-link.active{"data-toggle" => "tab", href: "#link22", role: "tablist"}
+                        %i.now-ui-icons.objects_umbrella-13
+                    %li.nav-item
+                      %a.nav-link{"data-toggle" => "tab", href: "#link23", role: "tablist"}
+                        %i.now-ui-icons.shopping_shop
+                    %li.nav-item
+                      %a.nav-link{"data-toggle" => "tab", href: "#link24", role: "tablist"}
+                        %i.now-ui-icons.ui-2_settings-90
+                  .tab-content.tab-space
+                    #link22.tab-pane.active
+                      Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
+                      %br/
+                      %br/
+                      Dramatically visualize customer directed convergence without revolutionary ROI.
+                    #link23.tab-pane
+                      Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
+                      %br/
+                      = succeed "Dramatically" do
+                        %br/
+                    #link24.tab-pane
+                      Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.
+                      %br/
+                      = succeed "Dynamically" do
+                        %br/
+              / end nav pills
+        .section.section-pagination
+          .container
+            .row
+              .col-md-6
+                %h4 Progress Bars
+                .progress-container
+                  %span.progress-badge Default
+                  .progress
+                    .progress-bar{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", role: "progressbar", style: "width: 25%;"}
+                      %span.progress-value 25%
+                .progress-container.progress-primary
+                  %span.progress-badge Primary
+                  .progress
+                    .progress-bar.progress-bar-warning{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", role: "progressbar", style: "width: 60%;"}
+                      %span.progress-value 60%
+                .progress-container.progress-danger
+                  %span.progress-badge Danger
+                  .progress
+                    .progress-bar.progress-bar-warning{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", role: "progressbar", style: "width: 60%;"}
+                      %span.progress-value 60%
+                .progress-container.progress-warning
+                  %span.progress-badge Warning
+                  .progress
+                    .progress-bar.progress-bar-warning{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", role: "progressbar", style: "width: 60%;"}
+                      %span.progress-value 60%
+                .progress-container.progress-success
+                  %span.progress-badge Success
+                  .progress
+                    .progress-bar.progress-bar-warning{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", role: "progressbar", style: "width: 60%;"}
+                      %span.progress-value 60%
+                .progress-container.progress-info
+                  %span.progress-badge Info
+                  .progress
+                    .progress-bar.progress-bar-warning{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", role: "progressbar", style: "width: 60%;"}
+                      %span.progress-value 60%
+              .col-md-6
+                %h4 Pagination
+                %ul.pagination.pagination-primary
+                  %li.page-item.active
+                    %a.page-link{href: "#"} 1
+                  %li.page-item
+                    %a.page-link{href: "#link"} 2
+                  %li.page-item
+                    %a.page-link{href: "#link"} 3
+                  %li.page-item
+                    %a.page-link{href: "#link"} 4
+                  %li.page-item
+                    %a.page-link{href: "#link"} 5
+                %ul.pagination
+                  %li.page-item
+                    %a.page-link{"aria-label" => "Previous", href: "#link"}
+                      %span{"aria-hidden" => "true"}
+                        %i.fa.fa-angle-double-left{"aria-hidden" => "true"}
+                  %li.page-item
+                    %a.page-link{href: "#link"} 1
+                  %li.page-item.active
+                    %a.page-link{href: "#link"} 2
+                  %li.page-item
+                    %a.page-link{href: "#link"} 3
+                  %li.page-item
+                    %a.page-link{"aria-label" => "Next", href: "#link"}
+                      %span{"aria-hidden" => "true"}
+                        %i.fa.fa-angle-double-right{"aria-hidden" => "true"}
+                .pagination-container.justify-content-center
+                  %ul.pagination.pagination-primary
+                    %li.page-item.arrow-margin-left
+                      %a.page-link{"aria-label" => "Previous", href: "#"}
+                        %span{"aria-hidden" => "true"}
+                          %i.fa.fa-angle-double-left{"aria-hidden" => "true"}
+                    %li.page-item
+                      %a.page-link{href: "#"} 1
+                    %li.page-item
+                      %a.page-link{href: "#"} 2
+                    %li.page-item.active
+                      %a.page-link{href: "#"} 3
+                    %li.page-item
+                      %a.page-link{href: "#"} 4
+                    %li.page-item
+                      %a.page-link{href: "#"} 5
+                    %li.page-item.arrow-margin-right
+                      %a.page-link{"aria-label" => "Next", href: "#"}
+                        %span{"aria-hidden" => "true"}
+                          %i.fa.fa-angle-double-right{"aria-hidden" => "true"}
+                %br/
+                %h4 Labels
+                %span.badge.badge-default Default
+                %span.badge.badge-primary Primary
+                %span.badge.badge-success Success
+                %span.badge.badge-info Info
+                %span.badge.badge-warning Warning
+                %span.badge.badge-danger Danger
+                %span.badge.badge-neutral Neutral
+            .space
+            %h4 Notifications
+        #notifications.section.section-notifications
+          .alert.alert-success{role: "alert"}
+            .container
+              .alert-icon
+                %i.now-ui-icons.ui-2_like
+              %strong Well done!
+              You successfully read this important alert message.
+              %button.close{"aria-label" => "Close", "data-dismiss" => "alert", type: "button"}
+                %span{"aria-hidden" => "true"}
+                  %i.now-ui-icons.ui-1_simple-remove
+          .alert.alert-info{role: "alert"}
+            .container
+              .alert-icon
+                %i.now-ui-icons.travel_info
+              %strong Heads up!
+              This alert needs your attention, but it's not super important.
+              %button.close{"aria-label" => "Close", "data-dismiss" => "alert", type: "button"}
+                %span{"aria-hidden" => "true"}
+                  %i.now-ui-icons.ui-1_simple-remove
+          .alert.alert-warning{role: "alert"}
+            .container
+              .alert-icon
+                %i.now-ui-icons.ui-1_bell-53
+              %strong Warning!
+              Better check yourself, you're not looking too good.
+              %button.close{"aria-label" => "Close", "data-dismiss" => "alert", type: "button"}
+                %span{"aria-hidden" => "true"}
+                  %i.now-ui-icons.ui-1_simple-remove
+          .alert.alert-danger{role: "alert"}
+            .container
+              .alert-icon
+                %i.now-ui-icons.objects_support-17
+              %strong Oh snap!
+              Change a few things up and try submitting again.
+              %button.close{"aria-label" => "Close", "data-dismiss" => "alert", type: "button"}
+                %span{"aria-hidden" => "true"}
+                  %i.now-ui-icons.ui-1_simple-remove
+        / end notifications
+        .section.section-pre-footer{"data-background-color" => "gray"}
+          #pre-footer-areas
+            .container
+              .title
+                %h3 Pre-Footer Areas
+            / *********    SIMPLE SOCIAL LINE     *********
+            .social-line.social-line-white.text-center
+              .container
+                .row.justify-content-center
+                  .col-md-12
+                    %h4.title Thank you for your support!
+                  %a.btn.btn-twitter.btn-round{href: "#pablo"}
+                    %i.fa.fa-twitter
+                    Twitter · 2.5k
+                  %a.btn.btn-facebook.btn-round{href: "#pablo"}
+                    %i.fa.fa-facebook-square
+                    Facebook · 3.2k
+                  %a.btn.btn-google.btn-round{href: "#pablo"}
+                    %i.fa.fa-google-plus
+                    Google · 1.2k
+                  %a.btn.btn-dribbble.btn-round{href: "#pablo"}
+                    %i.fa.fa-dribbble
+                    Dribbble · 1.8k
+            / *********   SIMPLE SOCIAL LINE     *********
+            %br/
+            %br/
+            / *********    SIMPLE SOCIAL LINE     *********
+            .social-line.social-line-big-icons.social-line-white
+              .container
+                .row
+                  .col-md-2
+                    %a.btn.btn-neutral.btn-icon.btn-twitter.btn-footer{href: "#pablo"}
+                      %i.fa.fa-twitter
+                  .col-md-2
+                    %a.btn.btn-neutral.btn-icon.btn-facebook.btn-footer{href: "#pablo"}
+                      %i.fa.fa-facebook-square
+                  .col-md-2
+                    %a.btn.btn-neutral.btn-icon.btn-google.btn-footer{href: "#pablo"}
+                      %i.fa.fa-google-plus
+                  .col-md-2
+                    %a.btn.btn-neutral.btn-icon.btn-dribbble.btn-footer{href: "#pablo"}
+                      %i.fa.fa-dribbble
+                  .col-md-2
+                    %a.btn.btn-neutral.btn-icon.btn-youtube.btn-footer{href: "#pablo"}
+                      %i.fa.fa-youtube-play
+                  .col-md-2
+                    %a.btn.btn-neutral.btn-icon.btn-instagram.btn-footer{href: "#pablo"}
+                      %i.fa.fa-instagram
+            / *********   SIMPLE SOCIAL LINE     *********
+            %br/
+            %br/
+            / *********    SIMPLE BLACK SOCIAL LINE     *********
+            .social-line.social-line-big-icons.social-line-black
+              .container
+                .row
+                  .col-md-2
+                    %a.btn.btn-simple.btn-icon.btn-footer{href: "#pablo"}
+                      %i.fa.fa-twitter
+                  .col-md-2
+                    %a.btn.btn-simple.btn-icon.btn-footer{href: "#pablo"}
+                      %i.fa.fa-facebook-square
+                  .col-md-2
+                    %a.btn.btn-simple.btn-icon.btn-footer{href: "#pablo"}
+                      %i.fa.fa-google-plus
+                  .col-md-2
+                    %a.btn.btn-simple.btn-icon.btn-footer{href: "#pablo"}
+                      %i.fa.fa-dribbble
+                  .col-md-2
+                    %a.btn.btn-simple.btn-icon.btn-footer{href: "#pablo"}
+                      %i.fa.fa-youtube-play
+                  .col-md-2
+                    %a.btn.btn-simple.btn-icon.btn-footer{href: "#pablo"}
+                      %i.fa.fa-instagram
+            %br/
+            %br/
+            / *********   SIMPLE BLACK SOCIAL LINE     *********
+            %br/
+            %br/
+            / *********    SIMPLE SUBSCRIBE LINE     *********
+            .subscribe-line.subscribe-line-white
+              .container
+                .row
+                  .col-md-6
+                    %h4.title Get Tips &amp; Tricks every Week!
+                    %p.description
+                      Join our newsletter and get news in your inbox every week! We hate spam too, so no worries about this.
+                  .col-md-6
+                    .card.card-plain.card-form-horizontal
+                      .card-body
+                        %form{action: "", method: ""}
+                          .row
+                            .col-sm-8
+                              .input-group
+                                .input-group-prepend
+                                  %span.input-group-text
+                                    %i.now-ui-icons.ui-1_email-85
+                                %input.form-control{placeholder: "Your Email...", type: "text"}/
+                            .col-sm-4
+                              %button.btn.btn-primary.btn-round.btn-block{type: "button"} Subscribe
+            / *********   SIMPLE SUBSCRIBE LINE     *********
+            %br/
+            %br/
+            / *********    IMAGE SUBSCRIBE LINE     *********
+            .subscribe-line.subscribe-line-image{style: "background-image: url('assets/img/bg7.jpg');"}
+              .container
+                .row
+                  .col-md-6.ml-auto.mr-auto
+                    .text-center
+                      %h4.title Subscribe to our Newsletter
+                      %p.description
+                        Join our newsletter and get news in your inbox every week! We hate spam too, so no worries about this.
+                    .card.card-raised.card-form-horizontal
+                      .card-body
+                        %form{action: "", method: ""}
+                          .row
+                            .col-sm-8
+                              .input-group
+                                .input-group-prepend
+                                  %span.input-group-text
+                                    %i.now-ui-icons.ui-1_email-85
+                                %input.form-control{placeholder: "Your Email...", type: "email"}/
+                            .col-sm-4
+                              %button.btn.btn-primary.btn-round.btn-block{type: "button"} Subscribe
+            / *********   IMAGE SUBSCRIBE LINE     *********
+        / footer areas
+        .section.section-footers{"data-background-color" => "gray"}
+          .container
+            .title
+              %h3 Footer Areas
+          #footer-areas
+            / *********    SIMPLE FOOTER WITH SOCIAL AND BRAND     *********
+            %footer.footer.footer-white
+              .container
+                %a.footer-brand{href: "http://www.creative-tim.com"} Now Ui Kit PRO
+                %ul.pull-center
+                  %li
+                    %a.nav-link{href: "#pablo"}
+                      Creative Tim
+                  %li
+                    %a.nav-link{href: "#pablo"}
+                      About Us
+                  %li
+                    %a.nav-link{href: "#pablo"}
+                      Blog
+                  %li
+                    %a.nav-link{href: "#pablo"}
+                      Licenses
+                %ul.social-buttons.pull-right
+                  %li
+                    %a.btn.btn-icon.btn-neutral.btn-twitter{href: "https://twitter.com/CreativeTim", target: "_blank"}
+                      %i.fa.fa-twitter
+                  %li
+                    %a.btn.btn-icon.btn-neutral.btn-dribbble{href: "https://www.facebook.com/CreativeTim", target: "_blank"}
+                      %i.fa.fa-dribbble
+                  %li
+                    %a.btn.btn-icon.btn-neutral.btn-google{href: "https://www.instagram.com/CreativeTimOfficial", target: "_blank"}
+                      %i.fa.fa-google-plus
+            / *********   END SIMPLE FOOTER WITH SOCIAL AND BRAND     *********
+            %br/
+            %br/
+            / *********    SIMPLE FOOTER     *********
+            %footer.footer
+              .container
+                %nav
+                  %ul
+                    %li
+                      %a.nav-link{href: "https://www.creative-tim.com"}
+                        Creative Tim
+                    %li
+                      %a.nav-link{href: "http://presentation.creative-tim.com"}
+                        About Us
+                    %li
+                      %a.nav-link{href: "http://blog.creative-tim.com"}
+                        Blog
+                    %li
+                      %a.nav-link{href: "https://www.creative-tim.com/license", target: "_blank"}
+                        License
+                .copyright
+                  ©
+                  :javascript
+                    document.write(new Date().getFullYear())
+                  , Designed by
+                  = succeed "." do
+                    %a.copyright-link{href: "http://www.invisionapp.com", target: "_blank"} Invision
+                  = succeed "." do
+                    %a.copyright-link{href: "https://www.creative-tim.com", target: "_blank"} Creative Tim
+            / *********   END SIMPLE FOOTER     *********
+            %br/
+            %br/
+            / *********    BLACK SIMPLE FOOTER WITH SOCIAL AND BRAND     *********
+            %footer.footer{"data-background-color" => "black"}
+              .container
+                %a.footer-brand{href: "#pablo"} Now Ui Kit PRO
+                %ul.pull-center
+                  %li
+                    %a{href: "#pablo"}
+                      Blog
+                  %li
+                    %a{href: "#pablo"}
+                      Presentation
+                  %li
+                    %a{href: "#pablo"}
+                      Discover
+                  %li
+                    %a{href: "#pablo"}
+                      Payment
+                  %li
+                    %a{href: "#pablo"}
+                      Contact Us
+                %ul.social-buttons.pull-right
+                  %li
+                    %a.btn.btn-icon.btn-link.btn-neutral{href: "https://twitter.com/CreativeTim", target: "_blank"}
+                      %i.fa.fa-twitter
+                  %li
+                    %a.btn.btn-icon.btn-neutral.btn-link{href: "https://www.facebook.com/CreativeTim", target: "_blank"}
+                      %i.fa.fa-facebook-square
+                  %li
+                    %a.btn.btn-icon.btn-neutral.btn-link{href: "https://www.instagram.com/CreativeTimOfficial", target: "_blank"}
+                      %i.fa.fa-instagram
+            / *********   END BLACK SIMPLE FOOTER WITH SOCIAL AND BRAND     *********
+            %br/
+            %br/
+            / *********    BIG FOOTER     *********
+            %footer.footer.footer-big.footer-white
+              .container
+                .content
+                  .row
+                    .col-md-4
+                      %h5 About Us
+                      %p Creative Tim is a startup that creates design tools that make the web development process faster and easier.
+                      %p We love the web and care deeply for how users interact with a digital product. We power businesses and individuals to create better looking web projects around the world.
+                    .col-md-4
+                      %h5 Social Feed
+                      .social-feed
+                        .feed-line
+                          %i.fa.fa-twitter
+                          %p How to handle ethical disagreements with your clients.
+                        .feed-line
+                          %i.fa.fa-twitter
+                          %p The tangible benefits of designing at 1x pixel density.
+                        .feed-line
+                          %i.fa.fa-facebook-square
+                          %p A collection of 25 stunning sites that you can use for inspiration.
+                    .col-md-4
+                      %h5 Instagram Feed
+                      .gallery-feed
+                        %img.img.img-raised.rounded{alt: "", src: "assets/img/olivia.jpg"}/
+                        %img.img.img-raised.rounded{alt: "", src: "assets/img/james.jpg"}/
+                        %img.img.img-raised.rounded{alt: "", src: "assets/img/michael.jpg"}/
+                        %img.img.img-raised.rounded{alt: "", src: "assets/img/emily.jpg"}/
+                        %img.img.img-raised.rounded{alt: "", src: "assets/img/marie.jpg"}/
+                        %img.img.img-raised.rounded{alt: "", src: "assets/img/usher.jpg"}/
+                        %img.img.img-raised.rounded{alt: "", src: "assets/img/mike.jpg"}/
+                        %img.img.img-raised.rounded{alt: "", src: "assets/img/julie.jpg"}/
+                %hr/
+                %ul.pull-left
+                  %li
+                    %a{href: "#pablo"}
+                      Blog
+                  %li
+                    %a{href: "#pablo"}
+                      Presentation
+                  %li
+                    %a{href: "#pablo"}
+                      Discover
+                  %li
+                    %a{href: "#pablo"}
+                      Payment
+                  %li
+                    %a{href: "#pablo"}
+                      Contact Us
+                .copyright.pull-right
+                  Copyright ©
+                  :javascript
+                    document.write(new Date().getFullYear())
+                  Creative Tim All Rights Reserved.
+            / *********   END BIG FOOTER     *********
+            %br/
+            %br/
+            / *********    BIG BlACK FOOTER     *********
+            %footer.footer.footer-big{"data-background-color" => "black"}
+              .container
+                .content
+                  .row
+                    .col-md-2
+                      %h5 About Us
+                      %ul.links-vertical
+                        %li
+                          %a.text-muted{href: "#pablo"}
+                            Blog
+                        %li
+                          %a.text-muted{href: "#pablo"}
+                            About Us
+                        %li
+                          %a.text-muted{href: "#pablo"}
+                            Presentation
+                        %li
+                          %a.text-muted{href: "#pablo"}
+                            Contact Us
+                    .col-md-2
+                      %h5 Market
+                      %ul.links-vertical
+                        %li
+                          %a.text-muted{href: "#pablo"}
+                            Sales FAQ
+                        %li
+                          %a.text-muted{href: "#pablo"}
+                            How to Register
+                        %li
+                          %a.text-muted{href: "#pablo"}
+                            Sell Goods
+                        %li
+                          %a.text-muted{href: "#pablo"}
+                            Receive Payment
+                        %li
+                          %a.text-muted{href: "#pablo"}
+                            Transactions Issues
+                        %li
+                          %a.text-muted{href: "#pablo"}
+                            Affiliates Program
+                    .col-md-4
+                      %h5 Social Feed
+                      .social-feed
+                        .feed-line
+                          %i.fa.fa-twitter
+                          %p How to handle ethical disagreements with your clients.
+                        .feed-line
+                          %i.fa.fa-twitter
+                          %p The tangible benefits of designing at 1x pixel density.
+                        .feed-line
+                          %i.fa.fa-facebook-square
+                          %p A collection of 25 stunning sites that you can use for inspiration.
+                    .col-md-4
+                      %h5 Follow Us
+                      %ul.social-buttons
+                        %li
+                          %a.btn.btn-icon.btn-neutral.btn-twitter.btn-round{href: "#pablo"}
+                            %i.fa.fa-twitter
+                        %li
+                          %a.btn.btn-icon.btn-neutral.btn-facebook.btn-round{href: "#pablo"}
+                            %i.fa.fa-facebook-square
+                        %li
+                          %a.btn.btn-icon.btn-neutral.btn-dribbble.btn-round{href: "#pablo"}
+                            %i.fa.fa-dribbble
+                        %li
+                          %a.btn.btn-icon.btn-neutral.btn-google.btn-round{href: "#pablo"}
+                            %i.fa.fa-google-plus
+                        %li
+                          %a.btn.btn-icon.btn-neutral.btn-instagram.btn-round{href: "#pablo"}
+                            %i.fa.fa-instagram
+                      %h5
+                        %small Numbers Don't Lie
+                      %h5
+                        14.521
+                        %small.text-muted Freelancers
+                      %h5
+                        1.423.183
+                        %small.text-muted Transactions
+                %hr/
+                .copyright
+                  Copyright ©
+                  :javascript
+                    document.write(new Date().getFullYear())
+                  Creative Tim All Rights Reserved.
+            / *********   END BIG WHITE FOOTER     *********
+            %br/
+            %br/
+            / *********    BIG WHITE FOOTER V2     *********
+            %footer.footer.footer-white.footer-big
+              .container
+                .content
+                  .row
+                    .col-md-3
+                      %a{href: "#pablo"}
+                        %h5 Now Ui Kit PRO
+                      %p Probably the best UI Kit in the world! We know you've been waiting for it, so don't be shy!
+                    .col-md-2
+                      %h5 About
+                      %ul.links-vertical
+                        %li
+                          %a{href: "#pablo"}
+                            Blog
+                        %li
+                          %a{href: "#pablo"}
+                            About Us
+                        %li
+                          %a{href: "#pablo"}
+                            Presentation
+                        %li
+                          %a{href: "#pablo"}
+                            Contact Us
+                    .col-md-2
+                      %h5 Market
+                      %ul.links-vertical
+                        %li
+                          %a{href: "#pablo"}
+                            Sales FAQ
+                        %li
+                          %a{href: "#pablo"}
+                            How to Register
+                        %li
+                          %a{href: "#pablo"}
+                            Sell Goods
+                        %li
+                          %a{href: "#pablo"}
+                            Receive Payment
+                        %li
+                          %a{href: "#pablo"}
+                            Transactions Issues
+                    .col-md-2
+                      %h5 Legal
+                      %ul.links-vertical
+                        %li
+                          %a{href: "#pablo"}
+                            Transactions FAQ
+                        %li
+                          %a{href: "#pablo"}
+                            Terms &amp; Conditions
+                        %li
+                          %a{href: "#pablo"}
+                            Licenses
+                    .col-md-3
+                      %h5 Subscribe to Newsletter
+                      %p
+                        Join our newsletter and get news in your inbox every week! We hate spam too, so no worries about this.
+                      %form.form.form-newsletter{action: "", method: ""}
+                        .form-group
+                          %input.form-control{placeholder: "Your Email...", type: "email"}/
+                        %button.btn.btn-primary.btn-icon.btn-round{name: "button", type: "button"}
+                          %i.now-ui-icons.ui-1_email-85
+                %hr/
+                %ul.social-buttons
+                  %li
+                    %a.btn.btn-icon.btn-neutral.btn-twitter.btn-lg{href: "#pablo"}
+                      %i.fa.fa-twitter
+                  %li
+                    %a.btn.btn-icon.btn-neutral.btn-facebook.btn-lg{href: "#pablo"}
+                      %i.fa.fa-facebook-square
+                  %li
+                    %a.btn.btn-icon.btn-neutral.btn-dribbble.btn-lg{href: "#pablo"}
+                      %i.fa.fa-dribbble
+                  %li
+                    %a.btn.btn-icon.btn-neutral.btn-google.btn-lg{href: "#pablo"}
+                      %i.fa.fa-google-plus
+                  %li
+                    %a.btn.btn-icon.btn-neutral.btn-youtube.btn-lg{href: "#pablo"}
+                      %i.fa.fa-youtube-play
+                .copyright.pull-center
+                  Copyright ©
+                  :javascript
+                    document.write(new Date().getFullYear())
+                  Creative Tim All Rights Reserved.
+            / *********   END BIG WHITE FOOTER v2     *********
+        / footer areas
+        / Typography
+        .section
+          .container
+            %h3.title Typography
+            #typography
+              .row
+                .col-md-12
+                  .typography-line
+                    %h1
+                      %span> Header 1
+                      The Life of Now UI Kit
+                  .typography-line
+                    %h2
+                      %span> Header 2
+                      The Life of Now UI Kit
+                  .typography-line
+                    %h3
+                      %span> Header 3
+                      The Life of Now UI Kit
+                  .typography-line
+                    %h4
+                      %span> Header 4
+                      The Life of Now UI Kit
+                  .typography-line
+                    %h5
+                      %span> Header 5
+                      The Life of Now UI Kit
+                  .typography-line
+                    %h6
+                      %span> Header 6
+                      The Life of Now UI Kit
+                  .typography-line
+                    %p
+                      %span Paragraph
+                      I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.
+                  .typography-line
+                    %span Quote
+                    %blockquote
+                      %p.blockquote.blockquote-primary
+                        "I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at."
+                        %br/
+                        %br/
+                        %small
+                          \- Noaa
+                  .typography-line
+                    %span Muted Text
+                    %p.text-muted
+                      I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
+                  .typography-line
+                    %span Primary Text
+                    %p.text-primary
+                      I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
+                  .typography-line
+                    %span Info Text
+                    %p.text-info
+                      I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
+                  .typography-line
+                    %span Success Text
+                    %p.text-success
+                      I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
+                  .typography-line
+                    %span Warning Text
+                    %p.text-warning
+                      I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
+                  .typography-line
+                    %span Danger Text
+                    %p.text-danger
+                      I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
+                  .typography-line
+                    %h2
+                      %span Small Tag
+                      Header with small subtitle
+                      %br/
+                      %small Use "small" tag for the headers
+            .space-50
+            #images
+              %h4 Images
+              .row
+                .col-sm-2
+                  %p.category Image
+                  %img.rounded{alt: "Rounded Image", src: "assets/img/julie.jpg"}/
+                .col-sm-2
+                  %p.category Circle Image
+                  %img.rounded-circle{alt: "Circle Image", src: "assets/img/julie.jpg"}/
+                .col-sm-2
+                  %p.category Raised
+                  %img.rounded.img-raised{alt: "Raised Image", src: "assets/img/julie.jpg"}/
+                .col-sm-2
+                  %p.category Circle Raised
+                  %img.rounded-circle.img-raised{alt: "Thumbnail Image", src: "assets/img/julie.jpg"}/
+            .space-70
+            #contentAreas.cd-section
+              %h3.title Content Areas
+              / tables
+              #tables
+                .title
+                  %h3
+                    %small Tables
+                .row
+                  .col-md-12
+                    %h4
+                      %small Simple Table
+                  .col-md-8.ml-auto.mr-auto
+                    %h6 Simple With Actions
+                    .card.card-plain
+                      .card-body
+                        .table-responsive
+                          %table.table
+                            %thead
+                              %th.text-center
+                                \#
+                              %th
+                                Name
+                              %th
+                                Job Position
+                              %th.text-center
+                                Since
+                              %th.text-right
+                                Salary
+                              %th.text-right
+                                Actions
+                            %tbody
+                              %tr
+                                %td.text-center
+                                  1
+                                %td
+                                  Andrew Mike
+                                %td
+                                  Develop
+                                %td.text-center
+                                  2013
+                                %td.text-right
+                                  € 99,225
+                                %td.text-right
+                                  %button.btn.btn-info.btn-icon.btn-sm{rel: "tooltip", type: "button"}
+                                    %i.now-ui-icons.users_single-02
+                                  %button.btn.btn-success.btn-icon.btn-sm{rel: "tooltip", type: "button"}
+                                    %i.now-ui-icons.ui-2_settings-90
+                                  %button.btn.btn-danger.btn-icon.btn-sm{rel: "tooltip", type: "button"}
+                                    %i.now-ui-icons.ui-1_simple-remove
+                              %tr
+                                %td.text-center
+                                  2
+                                %td
+                                  John Doe
+                                %td
+                                  Design
+                                %td.text-center
+                                  2012
+                                %td.text-right
+                                  € 89,241
+                                %td.text-right
+                                  %button.btn.btn-info.btn-icon.btn-sm{rel: "tooltip", type: "button"}
+                                    %i.now-ui-icons.users_single-02
+                                  %button.btn.btn-success.btn-icon.btn-sm{rel: "tooltip", type: "button"}
+                                    %i.now-ui-icons.ui-2_settings-90
+                                  %button.btn.btn-danger.btn-icon.btn-sm{rel: "tooltip", type: "button"}
+                                    %i.now-ui-icons.ui-1_simple-remove
+                              %tr
+                                %td.text-center
+                                  3
+                                %td
+                                  Alex Mike
+                                %td
+                                  Design
+                                %td.text-center
+                                  2010
+                                %td.text-right
+                                  € 92,144
+                                %td.text-right
+                                  %button.btn.btn-info.btn-icon.btn-sm.btn-neutral{rel: "tooltip", type: "button"}
+                                    %i.now-ui-icons.users_single-02
+                                  %button.btn.btn-success.btn-icon.btn-sm.btn-neutral{rel: "tooltip", type: "button"}
+                                    %i.now-ui-icons.ui-2_settings-90
+                                  %button.btn.btn-danger.btn-icon.btn-sm.btn-neutral{rel: "tooltip", type: "button"}
+                                    %i.now-ui-icons.ui-1_simple-remove
+                              %tr
+                                %td.text-center
+                                  4
+                                %td
+                                  Mike Monday
+                                %td
+                                  Marketing
+                                %td.text-center
+                                  2013
+                                %td.text-right
+                                  € 49,990
+                                %td.text-right
+                                  %button.btn.btn-info.btn-icon.btn-sm.btn-neutral{rel: "tooltip", type: "button"}
+                                    %i.now-ui-icons.users_single-02
+                                  %button.btn.btn-success.btn-icon.btn-sm.btn-neutral{rel: "tooltip", type: "button"}
+                                    %i.now-ui-icons.ui-2_settings-90
+                                  %button.btn.btn-danger.btn-icon.btn-sm.btn-neutral{rel: "tooltip", type: "button"}
+                                    %i.now-ui-icons.ui-1_simple-remove
+                              %tr
+                                %td.text-center
+                                  5
+                                %td
+                                  Paul Dickens
+                                %td
+                                  Communication
+                                %td.text-center
+                                  2015
+                                %td.text-right
+                                  € 69,201
+                                %td.text-right
+                                  %button.btn.btn-info.btn-icon.btn-sm.btn-round{rel: "tooltip", type: "button"}
+                                    %i.now-ui-icons.users_single-02
+                                  %button.btn.btn-success.btn-icon.btn-sm.btn-round{rel: "tooltip", type: "button"}
+                                    %i.now-ui-icons.ui-2_settings-90
+                                  %button.btn.btn-danger.btn-icon.btn-sm.btn-round{rel: "tooltip", type: "button"}
+                                    %i.now-ui-icons.ui-1_simple-remove
+                              %tr
+                                %td.text-center
+                                  6
+                                %td
+                                  Manuel Rico
+                                %td
+                                  Manager
+                                %td.text-center
+                                  2012
+                                %td.text-right
+                                  € 99,201
+                                %td.text-right
+                                  %button.btn.btn-info.btn-icon.btn-sm.btn-round{rel: "tooltip", type: "button"}
+                                    %i.now-ui-icons.users_single-02
+                                  %button.btn.btn-success.btn-icon.btn-sm.btn-round{rel: "tooltip", type: "button"}
+                                    %i.now-ui-icons.ui-2_settings-90
+                                  %button.btn.btn-danger.btn-icon.btn-sm.btn-round{rel: "tooltip", type: "button"}
+                                    %i.now-ui-icons.ui-1_simple-remove
+                    %h6 Striped With Checkboxes
+                    .card.card-plain
+                      .card-body
+                        .table-responsive
+                          %table.table.table-striped
+                            %thead
+                              %th.text-center
+                                \#
+                              %th.text-center
+                              %th
+                                Product Name
+                              %th
+                                Type
+                              %th.text-center
+                                Qty
+                              %th.text-right
+                                Price
+                              %th.text-right
+                                Amount
+                            %tbody
+                              %tr
+                                %td.text-center
+                                  1
+                                %td.text-center
+                                  .form-check
+                                    %label.form-check-label
+                                      %input.form-check-input{checked: "checked", type: "checkbox"}/
+                                      %span.form-check-sign
+                                %td
+                                  Moleskine Agenda
+                                %td
+                                  Office
+                                %td.text-center
+                                  25
+                                %td.text-right
+                                  € 49
+                                %td.text-right
+                                  € 1,225
+                              %tr
+                                %td.text-center
+                                  2
+                                %td.text-center
+                                  .form-check
+                                    %label.form-check-label
+                                      %input.form-check-input{type: "checkbox"}/
+                                      %span.form-check-sign
+                                %td
+                                  Stabilo Pen
+                                %td
+                                  Office
+                                %td.text-center
+                                  30
+                                %td.text-right
+                                  € 10
+                                %td.text-right
+                                  € 300
+                              %tr
+                                %td.text-center
+                                  3
+                                %td.text-center
+                                  .form-check
+                                    %label.form-check-label
+                                      %input.form-check-input{checked: "checked", type: "checkbox"}/
+                                      %span.form-check-sign
+                                %td
+                                  A4 Paper Pack
+                                %td
+                                  Office
+                                %td.text-center
+                                  50
+                                %td.text-right
+                                  € 10.99
+                                %td.text-right
+                                  € 109
+                              %tr
+                                %td.text-center
+                                  4
+                                %td.text-center
+                                  .form-check
+                                    %label.form-check-label
+                                      %input.form-check-input{type: "checkbox"}/
+                                      %span.form-check-sign
+                                %td
+                                  Apple iPad
+                                %td
+                                  Meeting
+                                %td.text-center
+                                  10
+                                %td.text-right
+                                  € 499.00
+                                %td.text-right
+                                  € 4,990
+                              %tr
+                                %td.text-center
+                                  5
+                                %td.text-center
+                                  .form-check
+                                    %label.form-check-label
+                                      %input.form-check-input{checked: "checked", type: "checkbox"}/
+                                      %span.form-check-sign
+                                %td
+                                  Apple iPhone
+                                %td
+                                  Communication
+                                %td.text-center
+                                  10
+                                %td.text-right
+                                  € 599.00
+                                %td.text-right
+                                  € 5,999
+                              %tr
+                                %td{colspan: "5"}
+                                %td.td-total Total
+                                %td.td-price € 35,999
+                .row
+                  .col-md-12
+                    %h4
+                      %small Shopping Cart Table
+                  .col-md-12
+                    .card.card-plain
+                      .card-body
+                        .table-responsive
+                          %table.table.table-shopping
+                            %thead
+                              %th.text-center
+                              %th
+                                Product
+                              %th
+                                Color
+                              %th
+                                Size
+                              %th.text-right
+                                Price
+                              %th.text-right
+                                Qty
+                              %th.text-right
+                                Amount
+                            %tbody
+                              %tr
+                                %td
+                                  .img-container
+                                    %img{alt: "...", src: "./assets/img/saint-laurent.jpg"}/
+                                %td.td-name
+                                  %a{href: "#jacket"} Suede Biker Jacket
+                                  %br/
+                                  %small by Saint Laurent
+                                %td
+                                  Black
+                                %td
+                                  M
+                                %td.td-number
+                                  %small> €
+                                  3,390
+                                %td.td-number
+                                  1
+                                  .btn-group
+                                    %button.btn.btn-info.btn-sm
+                                      %i.now-ui-icons.ui-1_simple-delete
+                                    %button.btn.btn-info.btn-sm
+                                      %i.now-ui-icons.ui-1_simple-add
+                                %td.td-number
+                                  %small> €
+                                  549
+                                %td.td-actions
+                                  %button.btn.btn-neutral{"data-placement" => "left", rel: "tooltip", title: "Remove item", type: "button"}
+                                    %i.now-ui-icons.ui-1_simple-remove
+                              %tr
+                                %td
+                                  .img-container
+                                    %img{alt: "...", src: "./assets/img/balmain.jpg"}/
+                                %td.td-name
+                                  %a{href: "#pants"} Jersey T-Shirt
+                                  %br/
+                                  %small by Balmain
+                                %td
+                                  Black
+                                %td
+                                  M
+                                %td.td-number
+                                  %small> €
+                                  499
+                                %td.td-number
+                                  2
+                                  .btn-group
+                                    %button.btn.btn-info.btn-sm
+                                      %i.now-ui-icons.ui-1_simple-delete
+                                    %button.btn.btn-info.btn-sm
+                                      %i.now-ui-icons.ui-1_simple-add
+                                %td.td-number
+                                  %small> €
+                                  998
+                                %td.td-actions
+                                  %button.btn.btn-neutral{"data-placement" => "left", rel: "tooltip", title: "Remove item", type: "button"}
+                                    %i.now-ui-icons.ui-1_simple-remove
+                              %tr
+                                %td
+                                  .img-container
+                                    %img{alt: "...", src: "./assets/img/prada.jpg"}/
+                                %td.td-name
+                                  %a{href: "#nothing"} Slim-Fit Swim Short
+                                  %br/
+                                  %small by Prada
+                                %td
+                                  Red
+                                %td
+                                  M
+                                %td.td-number
+                                  %small> €
+                                  200
+                                %td.td-number
+                                  1
+                                  .btn-group
+                                    %button.btn.btn-info.btn-sm
+                                      %i.now-ui-icons.ui-1_simple-delete
+                                    %button.btn.btn-info.btn-sm
+                                      %i.now-ui-icons.ui-1_simple-add
+                                %td.td-number
+                                  %small> €
+                                  799
+                                %td.td-actions
+                                  %button.btn.btn-neutral{"data-placement" => "left", rel: "tooltip", title: "Remove item", type: "button"}
+                                    %i.now-ui-icons.ui-1_simple-remove
+                              %tr
+                                %td{colspan: "3"}
+                                %td.td-total
+                                  Total
+                                %td.td-price
+                                  %small> €
+                                  2,346
+                                %td.text-right{colspan: "3"}
+                                  %button.btn.btn-info.btn-round{rel: "tooltip", type: "button"}
+                                    Complete Purchase
+                                    %i.now-ui-icons.arrows-1_minimal-right
+              / end tables
+              .space-50
+              / comments
+              #comments
+                .title
+                  %h3
+                    %small Comments
+                .row
+                  .col-md-8.ml-auto.mr-auto
+                    .media-area
+                      %h3.title.text-center
+                        %small 10 Comments
+                      .media
+                        %a.pull-left{href: "#pablo"}
+                          .avatar
+                            %img.media-object.img-raised{alt: "...", src: "assets/img/marie.jpg"}/
+                        .media-body
+                          %h5.media-heading
+                            Tina Andrew
+                            %small.text-muted · 7 minutes ago
+                          %p Chance too good. God level bars. I'm so proud of @LifeOfDesiigner #1 song in the country. Panda! Don't be scared of the truth because we need to restart the human foundation in truth I stand with the most humility. We are so blessed!
+                          %p All praises and blessings to the families of people who never gave up on dreams. Don't forget, You're Awesome!
+                          .media-footer
+                            %a.btn.btn-primary.btn-neutral.pull-right{href: "#pablo", rel: "tooltip", title: "Reply to Comment"}
+                              %i.now-ui-icons.ui-1_send
+                              Reply
+                            %a.btn.btn-danger.btn-neutral.pull-right{href: "#pablo"}
+                              %i.now-ui-icons.ui-2_favourite-28
+                              243
+                          .media.media-post
+                            %a.pull-left.author{href: "#pablo"}
+                              .avatar
+                                %img.media-object.img-raised{alt: "64x64", src: "assets/img/michael.jpg"}/
+                            .media-body
+                              %textarea.form-control{placeholder: "Write a nice reply or go home...", rows: "4"}
+                              .media-footer
+                                %a.btn.btn-primary.pull-right{href: "#pablo"}
+                                  %i.now-ui-icons.ui-1_send
+                                  Reply
+                      .media
+                        %a.pull-left{href: "#pablo"}
+                          .avatar
+                            %img.media-object.img-raised{alt: "Tim Picture", src: "assets/img/olivia.jpg"}/
+                        .media-body
+                          %h5.media-heading
+                            John Camber
+                            %small.text-muted · Yesterday
+                          %p Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.
+                          %p Don't forget, You're Awesome!
+                          .media-footer
+                            %a.btn.btn-primary.btn-neutral.pull-right{href: "#pablo", rel: "tooltip", title: "Reply to Comment"}
+                              %i.now-ui-icons.ui-1_send
+                              Reply
+                            %a.btn.btn-default.btn-neutral.pull-right{href: "#pablo"}
+                              %i.now-ui-icons.ui-2_favourite-28
+                              25
+                          .media
+                            %a.pull-left{href: "#pablo"}
+                              .avatar
+                                %img.media-object.img-raised{alt: "64x64", src: "assets/img/emily.jpg"}/
+                            .media-body
+                              %h5.media-heading
+                                Tina Andrew
+                                %small.text-muted · 2 Days Ago
+                              %p Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.
+                              %p Don't forget, You're Awesome!
+                              .media-footer
+                                %a.btn.btn-primary.btn-neutral.pull-right{href: "#pablo", rel: "tooltip", title: "Reply to Comment"}
+                                  %i.now-ui-icons.ui-1_send
+                                  Reply
+                                %a.btn.btn-danger.btn-neutral.pull-right{href: "#pablo"}
+                                  %i.now-ui-icons.ui-2_favourite-28
+                                  243
+                      .media
+                        %a.pull-left{href: "#pablo"}
+                          .avatar
+                            %img.media-object.img-raised{alt: "64x64", src: "assets/img/james.jpg"}/
+                        .media-body
+                          %h5.media-heading
+                            Rosa Thompson
+                            %small.text-muted · 2 Days Ago
+                          %p Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.
+                          %p Don't forget, You're Awesome!
+                          .media-footer
+                            %a.btn.btn-primary.btn-neutral.pull-right{href: "#pablo", rel: "tooltip", title: "Reply to Comment"}
+                              %i.now-ui-icons.ui-1_send
+                              Reply
+                            %a.btn.btn-danger.btn-neutral.pull-right{href: "#pablo"}
+                              %i.now-ui-icons.ui-2_favourite-28
+                              243
+                      %ul.pagination.pagination-primary.justify-content-center
+                        %li.page-item
+                          %a.page-link{"aria-label" => "Previous", href: "#"}
+                            %span{"aria-hidden" => "true"}
+                              %i.fa.fa-angle-double-left{"aria-hidden" => "true"}
+                        %li.page-item
+                          %a.page-link{href: "#"} 1
+                        %li.page-item.active
+                          %a.page-link{href: "#"} 2
+                        %li.page-item
+                          %a.page-link{href: "#"} 3
+                        %li.page-item
+                          %a.page-link{"aria-label" => "Next", href: "#"}
+                            %span{"aria-hidden" => "true"}
+                              %i.fa.fa-angle-double-right{"aria-hidden" => "true"}
+                    %h4.text-center
+                      Post your comment
+                      %br/
+                      %small.text-muted - Logged In User -
+                    .media.media-post
+                      %a.pull-left.author{href: "#pablo"}
+                        .avatar
+                          %img.media-object.img-raised{alt: "64x64", src: "assets/img/james.jpg"}/
+                      .media-body
+                        %textarea.form-control{placeholder: "Write some nice stuff or nothing...", rows: "6"}
+                        .media-footer
+                          %a.btn.btn-primary.btn-wd.pull-right{href: "#pablo"} Post Comment
+                    / end media-post
+                    %h4.text-center
+                      Post your comment
+                      %br/
+                      %small.text-muted - Not Logged In User -
+                    .media.media-post
+                      %a.pull-left.author{href: "#pablo"}
+                        .avatar
+                          %img.media-object.img-raised{alt: "64x64", src: "assets/img/placeholder.jpg"}/
+                      .media-body
+                        %form.form
+                          .row
+                            .col-md-6
+                              .form-group
+                                %input.form-control{placeholder: "Your Name", type: "text"}/
+                            .col-md-6
+                              .form-group
+                                %input.form-control{placeholder: "Your email", type: "email"}/
+                          %textarea.form-control{placeholder: "Write some nice stuff or nothing...", rows: "6"}
+                          .media-footer
+                            %h6.text-muted Sign in with
+                            %a.btn.btn-icon.btn-round.btn-twitter{href: ""}
+                              %i.fa.fa-twitter
+                            %a.btn.btn-icon.btn-round.btn-facebook{href: ""}
+                              %i.fa.fa-facebook-square
+                            %a.btn.btn-icon.btn-round.btn-google{href: ""}
+                              %i.fa.fa-google-plus-square
+                            %a.btn.btn-primary.pull-right{href: "#pablo"} Post Comment
+                      / end media-body
+                    / end media-post
+              / end comments
+        #cards.section.section-cards{"data-background-color" => "gray"}
+          / *********    BLOG CARDS     *********
+          .cards
+            .container
+              .title
+                %h3.title Cards
+                %h3
+                  %small Blog Cards
+              .row
+                .col-md-6.col-lg-4
+                  .card{"data-background-color" => "red"}
+                    .card-body
+                      %h6.category-social
+                        %i.fa.fa-fire
+                        Trending
+                      %p.card-description
+                        "The supreme art of war is to subdue the enemy without fighting."
+                      .card-footer
+                        .author
+                          %img.avatar.img-raised{alt: "...", src: "assets/img/julie.jpg"}/
+                          %span Susan B. Anthony
+                        .stats.stats-right
+                          %i.now-ui-icons.ui-2_favourite-28
+                          10.4K ·
+                          %i.now-ui-icons.files_single-copy-04
+                          425
+                  .card.card-blog
+                    .card-image
+                      %img.img.rounded{src: "assets/img/project13.jpg"}/
+                    .card-body
+                      %h6.category.text-warning
+                        %i.now-ui-icons.business_bulb-63
+                        Focus
+                      %h5.card-title
+                        %a{href: "#nuk"} Stay Focused: Train Your Brain
+                      %p.card-description
+                        Our brains are finely attuned to distraction, so today's digital environment makes it especially hard to focus...
+                  .card
+                    .card-body
+                      %h6.category.text-danger
+                        %i.now-ui-icons.media-2_sound-wave
+                        Trending
+                      %h5.card-title
+                        %a{href: "#pablo"} Here Be Dragons
+                      %p.card-description
+                        An immersive production studio focused on virtual reality content, has closed a $10 million Series A round led by Discovery Communications
+                      .card-footer
+                        .author
+                          %img.avatar.img-raised{alt: "...", src: "assets/img/olivia.jpg"}/
+                          %span Lord Alex
+                        .stats.stats-right
+                          %i.now-ui-icons.ui-2_favourite-28
+                          342 ·
+                          %i.now-ui-icons.files_single-copy-04
+                          45
+                .col-md-6.col-lg-4
+                  .card{"data-background-color" => "black"}
+                    .card-body.content-danger
+                      %h6.category-social
+                        %i.fa.fa-apple
+                        New Apps
+                      %h4.card-title
+                        %a{href: "#nuk"} FiftyThree Files For Paper
+                      %p.card-description
+                        Yesterday, as Facebook launched its news reader app Paper, design-focused startup FiftyThree called out Facebook publicly for using their brand name...
+                      .card-footer.text-center
+                        %a.btn.btn-default.btn-round{href: "#pablo"} Read Article
+                  .card.card-blog
+                    .card-image
+                      %a{href: "#pablo"}
+                        %img.img.rounded{src: "assets/img/card-blog2.jpg"}/
+                    .card-body
+                      %h6.category.text-primary Features
+                      %h5.card-title
+                        That’s One Way To Ditch Your Passenger
+                      %p.card-description
+                        As near as we can tell, this guy must have thought he was going over backwards and tapped the rear break to bring the nose down...
+                      .card-footer
+                        .author
+                          %img.avatar.img-raised{alt: "...", src: "assets/img/julie.jpg"}/
+                          %span Mike John
+                        .stats.stats-right
+                          %i.now-ui-icons.tech_watch-time
+                          5 min read
+                  .card{"data-background-color" => "blue"}
+                    .card-body
+                      %h6.category-social
+                        %i.fa.fa-twitter
+                        Twitter
+                      %p
+                        "You Don't Have to Sacrifice Joy to Build a Fabulous Business and Life"
+                      .card-footer
+                        .author
+                          %img.avatar.img-raised{alt: "...", src: "assets/img/james.jpg"}/
+                          %span Tania Andrew
+                        .stats.stats-right
+                          %i.now-ui-icons.ui-2_favourite-28
+                          2.4K ·
+                          %i.now-ui-icons.files_single-copy-04
+                          45
+                .col-md-8.offset-md-2.col-lg-4.offset-lg-0
+                  .card.card-blog
+                    .card-image
+                      %a{href: "#pablo"}
+                        %img.img.rounded{src: "assets/img/examples/card-blog6.jpg"}/
+                    .card-body.text-center
+                      %h6.category.text-danger
+                        %i.now-ui-icons.media-2_sound-wave
+                        Business
+                      %h5.card-title
+                        Axel Springer Spends $343M To Buy Business Insider
+                      %p.card-description
+                        German media giant Axel Springer has announced it’s acquiring online business news publication Business Inside...
+                      .card-footer
+                        %a.btn.btn-primary{href: "#nuk"} Read Article
+                  .card.card-blog
+                    .card-image
+                      %img.img.rounded{src: "assets/img/card-blog3.jpg"}/
+                    .card-body
+                      %h6.category.text-warning
+                        %i.now-ui-icons.media-1_camera-compact
+                        Photo
+                      %h5.card-title
+                        %a{href: "#pablo"} Indispensible to nature photography: the hide
+                      .card-footer
+                        .stats.stats-right
+                          %i.now-ui-icons.ui-2_favourite-28
+                          342 ·
+                          %i.now-ui-icons.files_single-copy-04
+                          45
+                        .author
+                          %img.avatar.img-raised{alt: "...", src: "assets/img/james.jpg"}/
+                          %span Devin Coldewey
+          .container-fluid
+            .row
+              .col-md-6.px-0
+                .card.card-fashion.card-background{style: "background-image: url('assets/img/bg26.jpg')"}
+                  .card-body
+                    .card-title.text-left
+                      %h2
+                        %a{href: "#pablo"}
+                          Walk of shame - Latest Urban Trend
+                    .card-footer.text-left
+                      .stats
+                        %span
+                          %i.now-ui-icons.users_circle-08>
+                          Author
+                        %span
+                          %i.now-ui-icons.tech_watch-time
+                          June 2, 2017
+                      .stats-link.pull-right
+                        %a.footer-link{href: "#pablo"} People
+              .col-md-6.px-0
+                .card-container
+                  .card.card-fashion
+                    %h4.card-title
+                      %a{href: "#pablo"}
+                        The view from south Texas in one Picture
+                    .card-body
+                      .card-footer
+                        .stats
+                          %span
+                            %i.now-ui-icons.users_circle-08>
+                            Author
+                          %span
+                            %i.now-ui-icons.tech_watch-time
+                            June 2, 2017
+                        .stats-link.pull-right
+                          %a{href: "#pablo"}> Mountains
+                          ‚
+                          %a{href: "#pablo"} Outdoor
+                  .card.card-fashion.card-background{style: "background-image: url('http://mvpwp.com/demo/nowwp/wp-content/uploads/sites/6/2017/06/a-james-donovan-180375.jpg')"}
+          / *********    END BLOG CARDS      *********
+          / *********    PROFILE CARDS     *********
+          .cards
+            .container
+              .title
+                %h3
+                  %small Profile Cards
+              .row
+                .col-md-6.col-lg-3
+                  .card.card-profile
+                    .card-image
+                      %img.img.rounded{src: "assets/img/julie.jpg"}/
+                    .card-body
+                      %a{href: "pablo"}
+                        %h4.card-title Julie Andrew
+                      %h6.card-category.text-info
+                        Web Designer
+                      .card-footer
+                        %a.btn.btn-icon.btn-neutral.btn-lg.btn-twitter{href: "#pablo"}
+                          %i.fa.fa-twitter
+                        %a.btn.btn-icon.btn-neutral.btn-lg.btn-dribbble{href: "#pablo"}
+                          %i.fa.fa-dribbble
+                        %a.btn.btn-icon.btn-neutral.btn-lg.btn-instagram{href: "#pablo"}
+                          %i.fa.fa-instagram
+                .col-md-6.col-lg-3
+                  .card.card-profile
+                    .card-avatar
+                      %a{href: "#pablo"}
+                        %img.img.img-raised{src: "assets/img/mike.jpg"}/
+                    .card-body
+                      %h4.card-title Alec Mike
+                      %h6.category.text-gray
+                        Designer
+                      %p.card-description
+                        One of the co-founders. Alec drives the technical strategy of the platform, customer support and brand.
+                      .card-footer
+                        %a.btn.btn-icon.btn-twitter.btn-round{href: "#pablo"}
+                          %i.fa.fa-twitter
+                        %a.btn.btn-icon.btn-facebook.btn-round{href: "#pablo"}
+                          %i.fa.fa-facebook-square
+                        %a.btn.btn-icon.btn-google.btn-round{href: "#pablo"}
+                          %i.fa.fa-google
+                .col-md-6.col-lg-3
+                  .card.card-profile{"data-background-color" => "black"}
+                    .card-avatar
+                      %a{href: "#pablo"}
+                        %img.img.img-raised{src: "assets/img/james.jpg"}/
+                    .card-body
+                      %h6.card-category CEO / Co-Founder
+                      %h4.card-title James Thompson
+                      %p.card-description
+                        Don't be scared of the truth because we need to restart the human foundation in truth.
+                      %a.btn.btn-primary.btn-round{href: "#pablo"} Follow
+                .col-md-6.col-lg-3
+                  .card.card-profile
+                    .card-body
+                      .card-avatar
+                        %a{href: "#pablo"}
+                          %img.img.img-raised{src: "assets/img/olivia.jpg"}/
+                      %h6.category.text-gray Growth Hacker
+                      %h4.card-title Olivia Thompson
+                      %p.card-description
+                        "Work hard play harder."
+                      .card-footer
+                        %a.btn.btn-icon.btn-primary.btn-simple.btn-round{href: "#pablo"}
+                          %i.fa.fa-twitter
+                        %a.btn.btn-icon.btn-primary.btn-simple.btn-round{href: "#pablo"}
+                          %i.fa.fa-facebook-square
+                        %a.btn.btn-icon.btn-primary.btn-simple.btn-round{href: "#pablo"}
+                          %i.fa.fa-google
+          / *********    END PROFILE CARDS      *********
+          / *********    PRODUCT CARDS     *********
+          .cards
+            .container
+              .title
+                %h3
+                  %small Full Background Cards
+              .row
+                .col-md-6
+                  .card.card-background{style: "background-image: url('assets/img/bg1.jpg')"}
+                    .card-body
+                      .card-title.text-left
+                        %h3 How wild Animals live in the National Forest
+                      .card-footer.text-left
+                        .stats
+                          %span
+                            %i.now-ui-icons.media-2_sound-wave>
+                            SPACE.com
+                          %span
+                            %i.now-ui-icons.tech_watch-time
+                            20min ago
+                        .stats-link.pull-right
+                          %a.footer-link{href: "#pablo"} Environment
+                .col-md-6
+                  .card.card-background{style: "background-image: url('assets/img/bg3.jpg')"}
+                    .card-body
+                      .card-title.text-left
+                        %h3 How wild Animals live in the National Forest
+                      .card-footer.text-left
+                        .stats-link
+                          %a.footer-link{href: "#pablo"} Environment
+                        .stats.stats-right
+                          %span
+                            %i.now-ui-icons.media-2_sound-wave>
+                            SPACE.com
+                          %span
+                            %i.now-ui-icons.tech_watch-time
+                            20min ago
+          / *********    END PRODUCT CARDS      *********
+          / *********    PRICING CARDS     *********
+          .cards
+            .container
+              .title
+                %h3
+                  %small Pricing Cards
+              .row
+                .col-md-6.col-lg-3
+                  .card.card-pricing
+                    .card-body
+                      %h6.category Alpha Pack
+                      .icon.icon-primary
+                        %i.now-ui-icons.objects_diamond
+                      %h3.card-title $67
+                      %p.card-description
+                        This is good if your company size is between 100 and 299 employees.
+                      %a.btn.btn-primary.btn-round{href: "#pablo"} Add to Cart
+                .col-md-6.col-lg-3
+                  .card.card-pricing{"data-background-color" => "orange"}
+                    .card-body
+                      %h1.card-title $40
+                      %ul
+                        %li
+                          %i.now-ui-icons.ui-1_check.text-primary
+                          Unlimited MB
+                        %li
+                          %i.now-ui-icons.ui-1_check.text-primary
+                          Unlimited emails
+                        %li
+                          %i.now-ui-icons.ui-1_check.text-primary
+                          Unlimited Databases
+                        %li
+                          %i.now-ui-icons.ui-1_check.text-primary
+                          Full Support
+                      %a.btn.btn-neutral.btn-default.disabled.btn-round{href: "#pablo"}
+                        Current Plan
+                .col-md-6.col-lg-3
+                  .card.card-pricing.card-background{style: "background-image: url('assets/img/project12.jpg')"}
+                    .card-body
+                      %h6.category Professional
+                      .icon.icon-primary
+                        %i.now-ui-icons.objects_spaceship
+                      %h2.card-title $67
+                      %p.card-description
+                        This is good if you are a freelancer of photographer.
+                      %a.btn.btn-primary.btn-round{href: "#pablo"}
+                        Sign Up
+                .col-md-6.col-lg-3
+                  .card.card-pricing
+                    .card-body
+                      %h6.category Starter
+                      %h1.card-title
+                        %small> $
+                        10
+                      %ul
+                        %li
+                          %i.now-ui-icons.ui-1_check.text-success
+                          1000 MB
+                        %li
+                          %i.now-ui-icons.ui-1_simple-remove.text-danger
+                          3 email
+                        %li
+                          %i.now-ui-icons.ui-1_simple-remove.text-danger
+                          5 Databases
+                        %li
+                          %i.now-ui-icons.ui-1_simple-remove.text-danger
+                          No Support
+                      %a.btn.btn-primary.btn-round{href: "#pablo"}
+                        Register
+          / *********    END PRICING CARDS      *********
+        .section.section-plain-cards
+          .container
+            .title
+              %h3 Plain Cards
+              %h3
+                %small Blog Cards
+            / *********    PLAIN BLOG CARDS      *********
+            .row
+              .col-md-6.col-lg-4
+                .card.card-blog.card-plain
+                  .card-image
+                    %img.img.rounded.img-raised{src: "assets/img/project13.jpg"}/
+                  .card-body
+                    %h6.category.text-warning
+                      %i.now-ui-icons.business_bulb-63
+                      Focus
+                    %h5.card-title
+                      %a{href: "#nuk"} Stay Focused: Train Your Brain
+                    %p.card-description
+                      Our brains are finely attuned to distraction, so today's digital environment makes it especially hard to focus...
+              .col-md-6.col-lg-4
+                .card.card-blog.card-plain
+                  .card-image
+                    %a{href: "#pablo"}
+                      %img.img.rounded.img-raised{src: "assets/img/card-blog2.jpg"}/
+                  .card-body
+                    %h6.category.text-primary Features
+                    %h5.card-title
+                      %a{href: "#nuk"} That’s One Way To Ditch Your Passenger
+                    %p.card-description
+                      As near as we can tell, this guy must have thought he was going over backwards and tapped the rear break to bring the nose down...
+                    .card-footer
+                      .author
+                        %img.avatar.img-raised{alt: "...", src: "assets/img/julie.jpg"}/
+                        %span Mike John
+                      .stats.stats-right
+                        %i.now-ui-icons.tech_watch-time
+                        5 min read
+              .col-md-6.col-lg-4
+                .card.card-blog.card-plain
+                  .card-image
+                    %a{href: "#pablo"}
+                      %img.img.img-raised.rounded{src: "assets/img/examples/card-blog6.jpg"}/
+                  .card-body.text-center
+                    %h6.category.text-danger
+                      %i.now-ui-icons.media-2_sound-wave
+                      Business
+                    %h5.card-title
+                      %a{href: "#nuk"} Axel Springer Spends $343M To Buy Business Insider
+                    %p.card-description
+                      German media giant Axel Springer has announced it’s acquiring online business news publication Business Inside...
+                    .card-footer
+                      %a.btn.btn-primary{href: "#nuk"} Read Article
+          / *********    END PLAIN BLOG CARDS      *********
+          / *********   PLAIN PROFILE CARDS     *********
+          .container
+            .title
+              %h3
+                %small Profile Cards
+            .row
+              .col-md-6.col-lg-3
+                .card.card-profile.card-plain
+                  .card-image
+                    %img.img.rounded{src: "assets/img/julie.jpg"}/
+                  .card-body
+                    %a{href: "pablo"}
+                      %h4.card-title Julie Andrew
+                    %h6.card-category.text-info
+                      Web Designer
+                    .card-footer
+                      %a.btn.btn-icon.btn-neutral.btn-lg.btn-twitter{href: "#pablo"}
+                        %i.fa.fa-twitter
+                      %a.btn.btn-icon.btn-neutral.btn-lg.btn-dribbble{href: "#pablo"}
+                        %i.fa.fa-dribbble
+                      %a.btn.btn-icon.btn-neutral.btn-lg.btn-instagram{href: "#pablo"}
+                        %i.fa.fa-instagram
+              .col-md-6.col-lg-3
+                .card.card-profile.card-plain
+                  .card-avatar
+                    %a{href: "#pablo"}
+                      %img.img.img-raised{src: "assets/img/mike.jpg"}/
+                  .card-body
+                    %h4.card-title Alec Mike
+                    %h6.category.text-gray
+                      Designer
+                    %p.card-description
+                      One of the co-founders. Alec drives the technical strategy of the platform, customer support and brand.
+                    .card-footer
+                      %a.btn.btn-icon.btn-twitter.btn-round{href: "#pablo"}
+                        %i.fa.fa-twitter
+                      %a.btn.btn-icon.btn-facebook.btn-round{href: "#pablo"}
+                        %i.fa.fa-facebook-square
+                      %a.btn.btn-icon.btn-google.btn-round{href: "#pablo"}
+                        %i.fa.fa-google
+              .col-md-6.col-lg-3
+                .card.card-profile.card-plain
+                  .card-avatar
+                    %a{href: "#pablo"}
+                      %img.img.img-raised{src: "assets/img/james.jpg"}/
+                  .card-body
+                    %h6.card-category CEO / Co-Founder
+                    %h4.card-title James Thompson
+                    %p.card-description
+                      Don't be scared of the truth because we need to restart the human foundation in truth.
+                    %a.btn.btn-primary.btn-round{href: "#pablo"} Follow
+              .col-md-6.col-lg-3
+                .card.card-profile.card-plain
+                  .card-body
+                    .card-avatar
+                      %a{href: "#pablo"}
+                        %img.img.img-raised{src: "assets/img/olivia.jpg"}/
+                    %h6.category.text-gray Growth Hacker
+                    %h4.card-title Olivia Thompson
+                    %p.card-description
+                      "Work hard play harder."
+                    .card-footer
+                      %a.btn.btn-icon.btn-primary.btn-simple.btn-round{href: "#pablo"}
+                        %i.fa.fa-twitter
+                      %a.btn.btn-icon.btn-primary.btn-simple.btn-round{href: "#pablo"}
+                        %i.fa.fa-facebook-square
+                      %a.btn.btn-icon.btn-primary.btn-simple.btn-round{href: "#pablo"}
+                        %i.fa.fa-google
+          / *********    END PROFILE CARDS      *********
+        #javascriptComponents.section.section-javascript
+          .container
+            %h3.title Javascript components
+            #modals.row
+              .col-md-6
+                %h4 Modal
+                %button.btn.btn-primary{"data-target" => "#myModal", "data-toggle" => "modal"}
+                  %i.now-ui-icons.files_single-copy-04
+                  Classic
+                %button.btn.btn-primary{"data-target" => "#myModal1", "data-toggle" => "modal"}
+                  %i.now-ui-icons.media-1_button-power
+                  Launch Modal Mini
+                %button.btn.btn-primary{"data-target" => "#noticeModal", "data-toggle" => "modal"}
+                  %i.now-ui-icons.travel_info
+                  Notice
+                %button.btn.btn-primary{"data-target" => "#loginModal", "data-toggle" => "modal"}
+                  %i.now-ui-icons.users_single-02
+                  Login Modal
+              .col-md-6
+                %h4 Popovers
+                %button.btn.btn-default{"data-color" => "primary", "data-container" => "body", "data-content" => "Here will be some very useful information about his popover.", "data-original-title" => "Popover On Left", "data-placement" => "left", "data-toggle" => "popover", type: "button"}
+                  On left
+                %button.btn.btn-default{"data-container" => "body", "data-content" => "Here will be some very useful information about his popover.", "data-original-title" => "Popover on Top", "data-placement" => "top", "data-toggle" => "popover", type: "button"}
+                  On top
+                %button.btn.btn-default{"data-container" => "body", "data-content" => "Here will be some very useful information about his popover.<br> Here will be some very useful information about his popover.", "data-original-title" => "Popover on Right", "data-placement" => "right", "data-toggle" => "popover", type: "button"}
+                  On right
+                %button.btn.btn-default{"data-container" => "body", "data-content" => "Here will be some very useful information about his popover.", "data-original-title" => "Popover on Bottom", "data-placement" => "bottom", "data-toggle" => "popover", type: "button"}
+                  On bottom
+              %br/
+              %br/
+              .col-md-6
+                %h4 Datetimepicker
+                .row
+                  .col-md-6
+                    .datepicker-container
+                      .form-group
+                        %input.form-control.datetimepicker{"data-color" => "orange", type: "text", value: "10/05/2016"}/
+                      .form-group
+                        %input.form-control.timepicker{type: "text", value: "10/05/2016"}/
+                      .form-group
+                        %input.form-control.datepicker{type: "text", value: "10/05/2016"}/
+                / collapse
+                #collapse
+                  .title
+                    %h4 Collapse
+                  .row
+                    .col-md-12
+                      #accordion.card-collapse{"aria-multiselectable" => "true", role: "tablist"}
+                        .card.card-plain
+                          #headingOne.card-header{role: "tab"}
+                            %a{"aria-controls" => "collapseOne", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseOne"}
+                              Collapsible Group Item #1
+                              %i.now-ui-icons.arrows-1_minimal-down
+                          #collapseOne.collapse.show{"aria-labelledby" => "headingOne", role: "tabpanel"}
+                            .card-body
+                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        .card.card-plain
+                          #headingTwo.card-header{role: "tab"}
+                            %a.collapsed{"aria-controls" => "collapseTwo", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseTwo"}
+                              Collapsible Group Item #2
+                              %i.now-ui-icons.arrows-1_minimal-down
+                          #collapseTwo.collapse{"aria-labelledby" => "headingTwo", role: "tabpanel"}
+                            .card-body
+                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        .card.card-plain
+                          #headingThree.card-header{role: "tab"}
+                            %a.collapsed{"aria-controls" => "collapseThree", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseThree"}
+                              Collapsible Group Item #3
+                              %i.now-ui-icons.arrows-1_minimal-down
+                          #collapseThree.collapse{"aria-labelledby" => "headingThree", role: "tabpanel"}
+                            .card-body
+                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                / end collapse
+              .col-md-6
+                %h4 Tooltips
+                %button.btn.btn-default.btn-tooltip{"data-animation" => "true", "data-container" => "body", "data-delay" => "100", "data-placement" => "left", "data-toggle" => "tooltip", title: "Tooltip on left", type: "button"} On left
+                %button.btn.btn-default.btn-tooltip{"data-animation" => "true", "data-container" => "body", "data-placement" => "top", "data-toggle" => "tooltip", title: "Tooltip on top", type: "button"} On top
+                %button.btn.btn-default.btn-tooltip{"data-animation" => "true", "data-container" => "body", "data-placement" => "bottom", "data-toggle" => "tooltip", title: "Tooltip on bottom", type: "button"} On bottom
+                %button.btn.btn-default.btn-tooltip{"data-animation" => "true", "data-container" => "body", "data-placement" => "right", "data-toggle" => "tooltip", title: "Tooltip on right", type: "button"} On right
+                .clearfix
+                %br/
+                %br/
+        #file-uploader
+          .container
+            .title
+              %h4 File Uploader
+            .row
+              .col-md-5.col-sm-8
+                %h4
+                  %small Regular Image
+                .fileinput.fileinput-new.text-center{"data-provides" => "fileinput"}
+                  .fileinput-new.thumbnail.img-raised
+                    %img{alt: "...", src: "assets/img/image_placeholder.jpg"}/
+                  .fileinput-preview.fileinput-exists.thumbnail.img-raised
+                  %div
+                    %span.btn.btn-raised.btn-round.btn-default.btn-file
+                      %span.fileinput-new Select image
+                      %span.fileinput-exists Change
+                      %input{name: "...", type: "file"}/
+                    %a.btn.btn-danger.btn-round.fileinput-exists{"data-dismiss" => "fileinput", href: "#pablo"}
+                      %i.now-ui-icons.ui-1_simple-remove
+                      Remove
+              .col-md-3.col-sm-4
+                %h4
+                  %small Avatar
+                .fileinput.fileinput-new.text-center{"data-provides" => "fileinput"}
+                  .fileinput-new.thumbnail.img-circle.img-raised
+                    %img{alt: "...", src: "assets/img/placeholder.jpg"}/
+                  .fileinput-preview.fileinput-exists.thumbnail.img-circle.img-raised
+                  %div
+                    %span.btn.btn-raised.btn-round.btn-default.btn-file
+                      %span.fileinput-new Add Photo
+                      %span.fileinput-exists Change
+                      %input{name: "...", type: "file"}/
+                    %br/
+                    %a.btn.btn-danger.btn-round.fileinput-exists{"data-dismiss" => "fileinput", href: "#pablo"}
+                      %i.now-ui-icons.ui-1_simple-remove
+                      Remove
+        #carousel.section
+          .container
+            .title
+              %h4 Carousel
+            .row.justify-content-center
+              .col-8
+                #carouselExampleIndicators.carousel.slide{"data-ride" => "carousel"}
+                  %ol.carousel-indicators
+                    %li.active{"data-slide-to" => "0", "data-target" => "#carouselExampleIndicators"}
+                    %li{"data-slide-to" => "1", "data-target" => "#carouselExampleIndicators"}
+                    %li{"data-slide-to" => "2", "data-target" => "#carouselExampleIndicators"}
+                  .carousel-inner{role: "listbox"}
+                    .carousel-item.active
+                      %img.d-block{alt: "First slide", src: "assets/img/bg1.jpg"}/
+                      .carousel-caption.d-none.d-md-block
+                        %h5 Nature, United States
+                    .carousel-item
+                      %img.d-block{alt: "Second slide", src: "assets/img/bg3.jpg"}/
+                      .carousel-caption.d-none.d-md-block
+                        %h5 Somewhere Beyond, United States
+                    .carousel-item
+                      %img.d-block{alt: "Third slide", src: "assets/img/bg4.jpg"}/
+                      .carousel-caption.d-none.d-md-block
+                        %h5 Yellowstone National Park, United States
+                  %a.carousel-control-prev{"data-slide" => "prev", href: "#carouselExampleIndicators", role: "button"}
+                    %i.now-ui-icons.arrows-1_minimal-left
+                  %a.carousel-control-next{"data-slide" => "next", href: "#carouselExampleIndicators", role: "button"}
+                    %i.now-ui-icons.arrows-1_minimal-right
+        .section.section-nucleo-icons
+          .container
+            .row
+              .col-lg-6.col-md-12
+                %h2.title Nucleo Icons
+                %h5.description
+                  Now UI Kit PRO comes with 100 custom icons made by our friends from NucleoApp. The official package contains over 2.100 thin icons which are looking great in combination with Now UI Kit PRO Make sure you check all of them and use those that you like the most.
+                /
+                  <div class="nucleo-container">
+                  <img src="assets/img/nucleo.svg" alt="">
+                  </div>
+                %a.btn.btn-primary.btn-round.btn-lg{href: "nucleo-icons.html", target: "_blank"} View Demo Icons
+                %a.btn.btn-primary.btn-simple.btn-round.btn-lg{href: "https://nucleoapp.com/?ref=1712", target: "_blank"} View All Icons
+              .col-lg-6.col-md-12
+                .icons-container
+                  %i.now-ui-icons.ui-1_send
+                  %i.now-ui-icons.ui-2_like
+                  %i.now-ui-icons.transportation_air-baloon
+                  %i.now-ui-icons.text_bold
+                  %i.now-ui-icons.tech_headphones
+                  %i.now-ui-icons.emoticons_satisfied
+                  %i.now-ui-icons.shopping_cart-simple
+                  %i.now-ui-icons.objects_spaceship
+                  %i.now-ui-icons.media-2_note-03
+                  %i.now-ui-icons.ui-2_favourite-28
+                  %i.now-ui-icons.design_palette
+                  %i.now-ui-icons.clothes_tie-bow
+                  %i.now-ui-icons.location_pin
+                  %i.now-ui-icons.objects_key-25
+                  %i.now-ui-icons.travel_istanbul
+        / Sart Modal
+      #myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
+        .modal-dialog
+          .modal-content
+            .modal-header.justify-content-center
+              %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"}
+                %i.now-ui-icons.ui-1_simple-remove
+              %h4.title.title-up Modal title
+            .modal-body
+              %p
+                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+            .modal-footer
+              %button.btn.btn-default{type: "button"} Nice Button
+              %button.btn.btn-danger{"data-dismiss" => "modal", type: "button"} Close
+      / End Modal
+      / Mini Modal
+      #myModal1.modal.fade.modal-mini.modal-primary{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
+        .modal-dialog
+          .modal-content
+            .modal-header.justify-content-center
+              .modal-profile
+                %i.now-ui-icons.users_circle-08
+            .modal-body
+              %p Always have an access to your profile
+            .modal-footer
+              %button.btn.btn-link.btn-neutral{type: "button"} Back
+              %button.btn.btn-link.btn-neutral{"data-dismiss" => "modal", type: "button"} Close
+      / End Modal
+      / notice modal
+      #noticeModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
+        .modal-dialog.modal-notice
+          .modal-content
+            .modal-header
+              %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"}
+                %i.now-ui-icons.ui-1_simple-remove
+              %h5#myModalLabel.modal-title How Do You Become an Affiliate?
+            .modal-body
+              .instruction
+                .row
+                  .col-md-8
+                    %strong 1. Register
+                    %p.description
+                      The first step is to create an account at
+                      = succeed "." do
+                        %a{href: "http://www.creative-tim.com/"} Creative Tim
+                  .col-md-4
+                    .picture
+                      %img.rounded.img-raised{alt: "Thumbnail Image", src: "assets/img/pricing1.jpg"}/
+              .instruction
+                .row
+                  .col-md-8
+                    %strong 2. Apply
+                    %p.description
+                      The first step is to create an account at
+                      = succeed "." do
+                        %a{href: "http://www.creative-tim.com/"} Creative Tim
+                  .col-md-4
+                    .picture
+                      %img.rounded.img-raised{alt: "Thumbnail Image", src: "assets/img/project9.jpg"}/
+              %p If you have more questions, don't hesitate to contact us or send us a tweet @creativetim. We're here to help!
+            .modal-footer.justify-content-center
+              %button.btn.btn-info.btn-round{"data-dismiss" => "modal", type: "button"} Sounds good!
+      / end notice modal
+      / Login Modal
+      #loginModal.modal.fade.modal-primary{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
+        .modal-dialog.modal-login
+          .modal-content
+            .card.card-login.card-plain
+              .modal-header.justify-content-center
+                %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"}
+                  %i.now-ui-icons.ui-1_simple-remove
+                .header.header-primary.text-center
+                  .logo-container
+                    %img{alt: "", src: "assets/img/now-logo.png"}/
+              .modal-body
+                %form.form{action: "", method: ""}
+                  .card-body
+                    .input-group.form-group-no-border.input-lg
+                      .input-group-prepend
+                        %span.input-group-text
+                          %i.now-ui-icons.users_circle-08
+                      %input.form-control{placeholder: "First Name...", type: "text"}/
+                    .input-group.form-group-no-border.input-lg
+                      .input-group-prepend
+                        %span.input-group-text
+                          %i.now-ui-icons.ui-1_lock-circle-open
+                      %input.form-control{placeholder: "Password...", type: "text"}/
+              .modal-footer.text-center
+                %a.btn.btn-neutral.btn-round.btn-lg.btn-block{href: "#pablo"} Get Started
+      / End Modal
+      %footer.footer{"data-background-color" => "black"}
+        .container
+          %nav
+            %ul
+              %li
+                %a{href: "https://www.creative-tim.com"}
+                  Creative Tim
+              %li
+                %a{href: "http://presentation.creative-tim.com"}
+                  About Us
+              %li
+                %a{href: "http://blog.creative-tim.com"}
+                  Blog
+              %li
+                %a{href: "https://www.creative-tim.com/license"}
+                  License
+          .copyright
+            ©
+            :javascript
+              document.write(new Date().getFullYear())
+            , Designed by
+            = succeed "." do
+              %a{href: "http://www.invisionapp.com", target: "_blank"} Invision
+            = succeed "." do
+              %a{href: "https://www.creative-tim.com", target: "_blank"} Creative Tim
+  / Core JS Files
+  %script{src: "./assets/js/core/jquery.3.2.1.min.js", type: "text/javascript"}
+  %script{src: "./assets/js/core/popper.min.js", type: "text/javascript"}
+  %script{src: "./assets/js/core/bootstrap.min.js", type: "text/javascript"}
+  %script{src: "./assets/js/plugins/moment.min.js"}
+  / Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/
+  %script{src: "./assets/js/plugins/bootstrap-switch.js"}
+  / Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs
+  %script{src: "./assets/js/plugins/bootstrap-tagsinput.js"}
+  / Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select
+  %script{src: "./assets/js/plugins/bootstrap-selectpicker.js", type: "text/javascript"}
+  / Google Maps Plugin
+  %script{src: "https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE", type: "text/javascript"}
+  / Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput
+  %script{src: "./assets/js/plugins/jasny-bootstrap.min.js"}
+  / Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/
+  %script{src: "./assets/js/plugins/nouislider.min.js", type: "text/javascript"}
+  / Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker
+  %script{src: "./assets/js/plugins/bootstrap-datetimepicker.min.js", type: "text/javascript"}
+  / Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc
+  %script{src: "./assets/js/now-ui-kit.js?v=1.2.0", type: "text/javascript"}
+  :javascript
+    $(document).ready(function() {
+        // the body of this function is in assets/js/now-ui-kit.js
+        nowuiKit.initSliders();
+    });
