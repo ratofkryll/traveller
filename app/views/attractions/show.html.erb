@@ -1,42 +1,14 @@
-<img src=<%= @attraction.image %> >
+<div class="blog-post">
+  <div class="wrapper">
 
-<p><%= @attraction.name %></p>
-<p><%= @attraction.address %></p>
-<p><%= @attraction.address_city %></p>
-<p><%= @attraction.address_postcode %></p>
+    <%= render 'attractioncarousel' %>
 
-<p><%= @attraction.website %></p>
-<p><%= @attraction.facebook %></p>
-<p><%= @attraction.instagram %></p>
-<p><%= @attraction.twitter %></p>
+    <div class="section">
+      <%= render 'socialmediabuttons' %>
 
-<p>Average rating: 
-<% rating = @attraction.reviews.average(:rating).to_i %>
-  <% rating.times do %>
-    <i class="fas fa-star"></i>
-  <% end %>
+      <%=render 'mainbody' %>
+    
+    </div>
 
-  <% blank = 5 - rating %>
-  <% blank.times do %>
-    <i class="far fa-star"></i>
-  <% end %>
-</p>
-
-
-<p><%= @attraction.description %></p>
-
-<p><%= @attraction.monday_hours %></p>
-<p><%= @attraction.tuesday_hours %></p>
-<p><%= @attraction.wednesday_hours %></p>
-<p><%= @attraction.thursday_hours %></p>
-<p><%= @attraction.friday_hours %></p>
-<p><%= @attraction.saturday_hours %></p>
-<p><%= @attraction.sunday_hours %></p>
-
-<div class="review-form">
-  <%= render 'review_form' %>
-</div>
-
-<div class="review-form">
-  <%= render 'reviews' %>
+  </div>
 </div>

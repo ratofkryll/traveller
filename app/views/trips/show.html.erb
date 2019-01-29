@@ -18,10 +18,9 @@
 
 <div class="row">
 Hello
-<%= current_user.email %>
+<%= current_user.first_name %>
 <% @users.each do |user| %>
-  <%= user.users %>
+  <%= user.first_name %>
 <% end %>
 </div>
-
 </body>

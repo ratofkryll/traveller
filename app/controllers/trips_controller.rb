@@ -12,12 +12,12 @@ class TripsController < ApplicationController
 
     if @trip.save
       @trip.users << current_user
-      render trip_path(@trip.id)
+      render trips_path(@trip.id)
     else
       render new_trip_path
+      flash[:notice] = 'Woops. We\'ve had some problems with saving your trip.'
     end
   end
-
 
   def destroy
     tripId = params[:id]
@@ -28,14 +28,20 @@ class TripsController < ApplicationController
       @user_trip = UserTrip.find_by(trip_id: tripId)
       @user_trip.destroy!
     else
-      flash[:notice] = `Woops. Looks like we couldn't delete your trip.`
+      flash[:notice] = 'Woops. Looks like we couldn\'t delete your trip.'
     end
 
   end
 
+  def index
+    @user = User.find params[:user_id]
+    @trips = @user.trips
+  end
+
   def show
     @trip = Trip.find params[:id]
-    @itinerary = @trip.itineraries
+    @itinerary = Itinerary.find_by(trip_id: @trip)
+    @users = @trip.users
   end
 
   private
