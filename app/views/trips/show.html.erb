@@ -1,5 +1,27 @@
-<main>
+<%= render "trip-header" %>
 
-  <%= render trip-header %>
-  
-</main>
+<nav class="trip-container">
+
+<ul class="nav nav-tabs nav-tabs-neutral trip-nav" role="tablist" data-background-color="orange">
+<div class="trip-days">
+<li>Day 1</li>
+<li>Day 2</li>
+</div>
+<div class="trip-more">
+<li>...</li>
+</div>
+</ul>
+
+</nav>
+
+<body>
+
+<div class="row">
+Hello
+<%= current_user.email %>
+<% @users.each do |user| %>
+  <%= user.users %>
+<% end %>
+</div>
+
+</body>
