@@ -15,7 +15,7 @@ class TripsController < ApplicationController
       render trip_path(@trip.id)
     else
       render new_trip_path
-      flash[:notice] `Woops. We've had some problems with saving your trip.`
+      flash[:notice] = 'Woops. We\'ve had some problems with saving your trip.'
     end
   end
 
@@ -28,7 +28,7 @@ class TripsController < ApplicationController
       @user_trip = UserTrip.find_by(trip_id: tripId)
       @user_trip.destroy!
     else
-      flash[:notice] = `Woops. Looks like we couldn't delete your trip.`
+      flash[:notice] = 'Woops. Looks like we couldn\'t delete your trip.'
     end
 
   end
