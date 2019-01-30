@@ -3,18 +3,26 @@
   <div class="row">
     <div class="col-md-12">
       <div class="button-container">
+        <%= link_to @attraction.website, target: '_blank' do %>
         <button class="btn btn-icon btn-lg btn-primary btn-round" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-animation="true" data-original-title="Visit <%= @attraction.name%>'s Website"<%= @attraction.website %>>
           <i class="fas fa-globe"></i>
         </button>
+        <% end %>
+        <%= link_to @attraction.twitter, target: '_blank' do %>
         <button class="btn btn-icon btn-lg btn-twitter btn-round" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-animation="true" data-original-title="Visit <%= @attraction.name%>'s Twitter Page"<%= @attraction.twitter %>>
           <i class="fab fa-twitter"></i>
         </button>
+        <% end %>
+        <%= link_to @attraction.facebook, target: '_blank' do %>
         <button class="btn btn-icon btn-lg btn-facebook btn-round" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-animation="true" data-original-title="Visit <%= @attraction.name%>'s Facebook Page"<%= @attraction.facebook %>>
           <i class="fab fa-facebook-f"></i>
         </button>
+        <% end %>
+        <%= link_to @attraction.instagram, target: '_blank' do %>
         <button class="btn btn-icon btn-lg btn-google btn-round" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-animation="true" data-original-title="Visit <%= @attraction.name%>'s Instagram Page"<%= @attraction.instagram %>>
           <i class="fab fa-instagram"></i>
         </button>
+        <% end %>
 
         <button class="btn btn-icon btn-lg btn-success btn-round pull-right" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-animation="true" data-original-title="Add <%= @attraction.name%> to your itinerary">
           <i class="fas fa-plus"></i>
