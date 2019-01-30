@@ -13,7 +13,7 @@ class ItineraryItemsController < ApplicationController
       flash[:notice] = 'Woops something went wrong with adding your itinerary item.'
     end
 
-    redirect_to itinerary_path(@itinerary_item.trip)
+    redirect_to trip_url(@itinerary_item.itinerary.trip_id)
   end
 
   def edit
@@ -35,12 +35,13 @@ class ItineraryItemsController < ApplicationController
 
   private
   def itinerary_params
-    params.require(:itinerary_items).permit(
+    params.require(:itinerary_item).permit(
       :name,
       :notes,
       :start_time,
       :end_time,
-      :itinerary_id
+      :itinerary_id,
+      :attraction_id
     )
   end
 

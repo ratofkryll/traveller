@@ -1,5 +1,5 @@
 <%= render "trip_header" %>
-
+ 
 <body>
 
 <div class="mr-auto">
@@ -24,12 +24,17 @@
       <div class="tab-content text-center">
         <% @itinerary.order(:date).each do |day| %>
           <div class="tab-pane" id="<%= day.name %>" role="tabpanel">
-            <p><%= day.notes %></p>
+            <% a = ItineraryItem.where(itinerary_id: day) %>
+            <% a.each do |item| %>
+              <p> <%= item.name %> </p>
+              <p> <%= item.notes %> </p>
+            <% end %>
           </div>
         <% end %>
       </div>
     </div>
   </div>
 </div>
+
 
 </body>

@@ -25,12 +25,12 @@
 
     <div class="form-group">
       <%= form.label 'Start time' %>
-      <%= form.time_select :start_time, {minute_step: 15} %>
+      <%= form.text_field :start_time, class:"timepicker" %>
     </div>
 
     <div class="form-group">
       <%= form.label 'End time' %>
-      <%= form.time_select :end_time, {minute_step: 15} %>
+      <%= form.text_field :end_time, class:"timepicker" %>
     </div>
     
     <div class="datepicker-container">
@@ -41,7 +41,7 @@
           <%= trip.name %>
           <% itinerary = Itinerary.where(trip_id: trip.id) %>
           <% itinerary.each do |i| %>
-            <p><%= form.radio_button :itinerary_id, i.name %><%= i.name %> <br /></p>
+            <p><%= form.radio_button :itinerary_id, i.id %><%= i.name %> <br /></p>
           <% end %>
           </div>
         <% end %>
