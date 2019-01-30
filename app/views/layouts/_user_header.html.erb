@@ -3,18 +3,18 @@
     <div class="page-header page-header-small" filter-color="orange">
       <div class="page-header-image" data-parallax="false" style="background-image: url('<%= image_path('img/bg5.jpg') %>'); transform: translate3d(0px, 0px, 0px);">
       </div>
-      <div class="content-center">
+      <div class="content-center user-header-info">
         <div class="photo-container">
           <%= image_tag("img/ryan.jpg") %>
         </div>
-        <h3 class="title"><%= current_user.first_name %> <%= current_user.last_name %></h3>
+        <h3 class="category text-white"><%= current_user.first_name %> <%= current_user.last_name %></h3>
         <div class="content">
           <div class="social-description">
             <h2><%= current_user.trips.count %></h2>
             <p>Trips</p>
           </div>
           <div class="social-description">
-            <h2>26</h2>
+            <h2><%= current_user.reviews.count %></h2>
             <p>Reviews</p>
           </div>
         </div>
