@@ -66,3 +66,15 @@ body {
 .trip-table {
   width: 50%;
 }
+
+a.edit-link:hover {
+  text-decoration: underline !important;
+  color: #fa7a50 !important;
+  border: 0;
+}
+
+a.delete-link:hover {
+  text-decoration: underline !important;
+  color: #ff3636 !important;
+  border: 0 !important;
+}
