@@ -3,5 +3,7 @@ class AttractionsController < ApplicationController
     @attraction = Attraction.find params[:id]
     @reviews = @attraction.reviews
     @review = Review.new
+
+    @instagram
   end
 end
