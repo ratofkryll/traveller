@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
+  
   def new
     @token = params[:invite_token]
   end
@@ -23,7 +25,7 @@ class UsersController < ApplicationController
       :last_name,
       :email,
       :profile_pic,
-      :password, 
+      :password,
       :password_confirmation
     )
   end
