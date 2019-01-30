@@ -27,6 +27,7 @@ Rails.application.routes.draw do
 
   resources :attractions, only: [:show] do
     resources :reviews, only: [:create]
+    resources :itinerary_items, only: [:create, :new]
   end
 
   resources :reviews, only: [:destroy]

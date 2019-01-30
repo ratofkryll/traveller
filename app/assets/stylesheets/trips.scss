@@ -33,6 +33,7 @@ nav.trip-container {
 
 .trip-field {
   display: flex;
+  margin-bottom: 1.5em;
 }
 
 form.text-field {
@@ -49,10 +50,6 @@ form.text-field {
   margin-right: 1em;
 }
 
-.trip-field {
-  margin-bottom: 1.5em;
-}
-
 body {
   margin-left: 3em;
 }
@@ -61,6 +58,11 @@ body {
   font-size: 3em;
   color: $white-color;
   margin-top: 1.5em;
+}
+
+.user-pics img {
+  max-height: 4em;
+  margin: 0.7em;
 }
 
 .trip-table {

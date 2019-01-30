@@ -1,6 +1,9 @@
 class ItineraryItemsController < ApplicationController
   
   def new
+    if params[:attraction_id]
+      @attraction = Attraction.find params[:attraction_id]
+    end
     @itinerary_item = ItineraryItem.new
   end
   

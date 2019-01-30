@@ -1,3 +1,77 @@
+@import './now-ui-kit/variables';
+
 // Place all the styles related to the ItineraryItems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+main.new-item-container {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}
+
+.new-item-container label {
+  font-size: 2em;
+  font-weight: 600;
+  width: 25%;
+  height: 35px;
+  color: $primary-color;
+  margin-right: 1em;
+}
+
+form.text-field {
+  width: 25em;
+  font-size: 2em;
+}
+
+.attraction-item {
+  display: flex;
+  justify-content: center;
+}
+
+.attraction-card-itinerary {
+  display: flex;
+  flex-direction: row;
+  max-width: 50em;
+  max-height: 20em;
+  justify-content: center;
+  border: 0.1em black solid;
+  border-radius: 0.5em;
+}
+
+.attraction-image {
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  margin-right: 0.5em;
+}
+
+.attraction-image img {
+  max-width: 50em;
+  max-height: 10em;
+  overflow: hidden;
+}
+
+.attraction-description {
+  padding: 0.8em;
+}
+
+.attraction-description .name {
+  font-weight: 400;
+}
+
+.attraction-description .description {
+  max-height: 3em;
+  overflow: scroll;
+}
+
+
+// <div class="attraction">
+// <div class="attraction-image">
+//     <%= image_tag @attraction.image %>
+// </div>
+// <div class="attraction-description">
+//   <p class="name"><%= @attraction.name %></p>
+//   <p class="description"><%= @attraction.description %></p>
+// </div>
+// </div>

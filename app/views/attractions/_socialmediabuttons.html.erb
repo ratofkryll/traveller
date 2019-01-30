@@ -23,10 +23,11 @@
           <i class="fab fa-instagram"></i>
         </button>
         <% end %>
-
+        <%= link_to new_attraction_itinerary_item_path(@attraction.id) do %>
         <button class="btn btn-icon btn-lg btn-success btn-round pull-right" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-animation="true" data-original-title="Add <%= @attraction.name%> to your itinerary">
           <i class="fas fa-plus"></i>
         </button>
+        <% end %>
       </div>
     </div>
   </div>
