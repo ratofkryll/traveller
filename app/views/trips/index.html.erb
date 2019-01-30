@@ -4,13 +4,22 @@
   <% @trips.each do |trip| %>
     <div class="card">
       <div class="card-body">
+        <div class="pull-right text-right">
+        <a href="#" class="text-primary">Edit</a> | <a href="#" class="text-danger">Delete</a>
+        </div>
         <h5 class="card-title"><%= trip.name %></h5>
-        <p class="card-description"><%= trip.start_date %> to <%= trip.end_date %></p>
-        <ul>
+        <p class="card-description"><%= trip.start_date.to_formatted_s(:long) %> to <%= trip.end_date.to_formatted_s(:long) %></p>
+        <table class="table trip-table">
+          <tbody>
           <% trip.itineraries.each do |itinerary| %>
-            <li><%= itinerary.name %></li>
+            <tr>
+              <td class="text-center"><%= itinerary.date.to_formatted_s(:short) %></td>
+              <td><%= itinerary.name %></td>
+            </tr>
           <% end %>
-        </ul>
+          </tbody>
+        </table>
+
       </div>
     </div>
   <% end %>
