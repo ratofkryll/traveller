@@ -1,0 +1,54 @@
+<main class="new-trip-container">
+
+  <%= form_for @itinerary_item do |form| %>
+
+    <% if form.object.errors.any? %>
+      <div class="alert alert-danger">
+        <strong>The following errors prevented saving:</strong>
+        <ul>
+          <% form.object.errors.full_messages.each do |error| %>
+            <li><%= error %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: 'form-control', placeholder: 'Flight' %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label 'Notes' %>
+      <%= form.text_field :notes, class: 'form-control', placeholder:'Flight number: BA085' %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label 'Start time' %>
+      <%= form.time_select :start_time, {minute_step: 15} %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label 'End time' %>
+      <%= form.time_select :end_time, {minute_step: 15} %>
+    </div>
+    
+    <div class="datepicker-container">
+      <div class="form-group">
+        <%= form.label 'Trip' %>
+        <% current_user.trips.each do |trip| %>
+          <div class="trip">
+          <%= trip.name %>
+          <% itinerary = Itinerary.where(trip_id: trip.id) %>
+          <% itinerary.each do |i| %>
+            <p><%= form.radio_button :itinerary_id, i.name %><%= i.name %> <br /></p>
+          <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <%= form.submit 'Add itinerary', class: 'btn btn-primary' %>
+
+  <% end %>
+</main>

@@ -1,7 +1,11 @@
 class ItineraryItemsController < ApplicationController
+  
+  def new
+    @itinerary_item = ItineraryItem.new
+  end
+  
   def create
     @itinerary_item = ItineraryItem.new(itinerary_params)
-    @itinerary_item.itinerary_id = params[:itinerary_id]
 
     if @itinerary_item.save
       flash[:notice] = 'Added to itinerary'
@@ -10,7 +14,6 @@ class ItineraryItemsController < ApplicationController
     end
 
     redirect_to itinerary_path(@itinerary_item.trip)
-
   end
 
   def edit
@@ -36,7 +39,8 @@ class ItineraryItemsController < ApplicationController
       :name,
       :notes,
       :start_time,
-      :end_time
+      :end_time,
+      :itinerary_id
     )
   end
 

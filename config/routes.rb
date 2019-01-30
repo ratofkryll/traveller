@@ -18,10 +18,10 @@ Rails.application.routes.draw do
   end
 
   resources :itineraries, except: [:index] do
-    resources :itineraryitems, except: [:index, :destroy]
+    resources :itinerary_items, only: [:show]
   end
 
-  resources :itineraryitems, only: [:destroy]
+  resources :itinerary_items, except: [:show]
 
   resources :cities, only: [:show, :index]
 

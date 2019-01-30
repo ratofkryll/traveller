@@ -41,6 +41,7 @@ class TripsController < ApplicationController
   def show
     @trip = Trip.find params[:id]
     @itinerary = Itinerary.where(trip_id: @trip)
+    @itineraryItems = ItineraryItem.where(itinerary_id: @itinerary)
     @users = @trip.users
   end
 
