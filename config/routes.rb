@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :trips, except: [:index] do
     resources :invites, only: [:create, :new, :show]
     resources :user_trips, only: [:create, :new]
-    # resources :itineraries, only: [:new, :create, :destroy]
+    resources :itineraries, only: [:new, :create, :destroy]
   end
 
   resources :itineraries, except: [:index] do
