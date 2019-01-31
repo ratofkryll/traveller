@@ -4,7 +4,7 @@
   <div class="tab-content text-center">
     <% @itinerary.order(:date).each do |day| %>
       <div class="tab-pane" id="<%= day.name %>" role="tabpanel">
-          <% items = ItineraryItem.where(itinerary_id: day) %>
+          <% items = ItineraryItem.where(itinerary_id: day.id) %>
           <% items.each do |item| %>
 
           <div class="container">
