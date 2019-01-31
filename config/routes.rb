@@ -37,4 +37,6 @@ Rails.application.routes.draw do
     resources :cities, except: [:show]
   end
 
+  mount ActionCable.server => '/cable'
+
 end
