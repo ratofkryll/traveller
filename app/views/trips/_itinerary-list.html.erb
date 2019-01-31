@@ -1,20 +1,16 @@
-
 <div class="card-body">
   <div class="tab-content text-center">
     <% @itinerary.order(:date).each do |day| %>
-      <div class="tab-pane" id="<%= day.name %>" role="tabpanel">
+      <div class="tab-pane" id="<%= day.id %>" role="tabpanel">
           <% items = ItineraryItem.where(itinerary_id: day) %>
           <% items.each do |item| %>
 
           <div class="container">
             <div class="col-md-12">
-              <h3 class="title text-center"> <%= item.name %>
-              </h3>
-                <p><%= day.date %>
-                </p>
-                <p> <%= item.notes %> Description about itinerary goes here!</p>
-                <br>
-
+              <h3 class="title text-center"> <%= item.name %></h3>
+                <p><%= day.date %></p>
+                <p> <%= item.notes %> </p>
+                <br />
                 <div class="card-body">
                   <div class="blogs-1" id="blogs-1">
                     <div class="row">
@@ -49,9 +45,9 @@
                                   <p class="card-description">
                                     Attraction Description Goes Here
                                     Attraction Description Goes Here
-                                    Attraction Description Goes Here Attraction Description Goes Here Attraction Description Goes Here Attraction Description Goes Here 
-                                    Attraction Description Goes Here Attraction Description Goes Here 
-                                    Attraction Description Goes Here Attraction Description Goes Here Attraction Description Goes Here 
+                                    Attraction Description Goes Here Attraction Description Goes Here Attraction Description Goes Here Attraction Description Goes Here
+                                    Attraction Description Goes Here Attraction Description Goes Here
+                                    Attraction Description Goes Here Attraction Description Goes Here Attraction Description Goes Here
                                   </p>
                                 </div>
                                 <div class="col-md-5 pull-right">
@@ -60,7 +56,7 @@
                                     " src="../assets/img/examples/card-blog6.jpg">
                                 </div>
                               </div>
-                              
+
                               </div>
                             </div>
                           </div>
@@ -70,11 +66,7 @@
                   </div>
                 </div>
             </div>
+            <% end %>
           </div>
+          <% end %>
         </div>
-      </div>
-      <% end %>
-    </div>
-    <% end %>
-  </div>
-</div>

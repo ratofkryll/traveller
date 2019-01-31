@@ -1,11 +1,11 @@
 <%= render "trip_header" %>
-<div class="mr-auto">
+<div class="container">
   <div class="card">
     <div class="card-header">
       <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="orange">
-        <% @itinerary.order(:date).each do |day| %>
+        <% @itinerary.order(:date).each do |itinerary| %>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#<%= day.name %>" role="tab"><%= day.name %></a>
+            <a class="nav-link" data-toggle="tab" href="#<%= itinerary.id %>" role="tab" aria-selected="true"><%= itinerary.name %></a>
           </li>
         <% end %>
         <li class="nav-item">
@@ -14,10 +14,15 @@
           </button>
         </li>
       </ul>
-      <%= render "itinerary-list" %>
+      <div class="card-body">
+        <div class="tab-content">
+          <%= render "itinerary_list" %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
 <div class="modal fade" id="newItineraryModal" tabindex="-1" role="dialog" aria-labelledby="newItineraryModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

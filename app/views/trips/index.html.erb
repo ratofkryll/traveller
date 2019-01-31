@@ -4,7 +4,7 @@
     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newTripModal">
       New Trip
     </button>
-    <% @trips.each do |trip| %>
+    <% @trips.order(start_date: :desc).each do |trip| %>
       <div class="card">
         <div class="card-body">
           <div class="pull-right text-right">
@@ -14,7 +14,7 @@
           <p class="card-description"><%= trip.start_date.to_formatted_s(:long) %> to <%= trip.end_date.to_formatted_s(:long) %></p>
           <table class="table trip-table">
             <tbody>
-            <% trip.itineraries.each do |itinerary| %>
+            <% trip.itineraries.order(:date).each do |itinerary| %>
               <tr>
                 <td class="text-center"><%= itinerary.date.to_formatted_s(:short) %></td>
                 <td><%= itinerary.name %></td>
@@ -27,6 +27,7 @@
     <% end %>
   </div>
 </main>
+
 <div class="modal fade" id="newTripModal" tabindex="-1" role="dialog" aria-labelledby="newTripModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

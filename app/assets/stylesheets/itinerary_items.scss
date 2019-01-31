@@ -52,12 +52,6 @@ form.text-field {
   font-weight: 400;
 }
 
-.attraction-description .description {
-  max-height: 3em;
-  overflow: scroll;
-}
-
-
 // <div class="attraction">
 // <div class="attraction-image">
 //     <%= image_tag @attraction.image %>
