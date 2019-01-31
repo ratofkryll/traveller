@@ -1,7 +1,5 @@
 <%= render "trip_header" %>
 
-<body>
-
 <div class="mr-auto">
   <div class="card">
 
@@ -35,7 +33,6 @@
     </div>
   </div>
 </div>
-
 <div class="modal fade" id="newItineraryModal" tabindex="-1" role="dialog" aria-labelledby="newItineraryModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -49,10 +46,8 @@
         <%= render "/itineraries/new_itinerary_form" %>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-link btn-danger" data-dismiss="modal">Cancel</button>
       </div>
     </div>
   </div>
 </div>
-
-</body>

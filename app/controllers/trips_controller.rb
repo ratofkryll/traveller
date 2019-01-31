@@ -26,8 +26,7 @@ class TripsController < ApplicationController
     @trip.destroy!
 
     if @trip.destroy
-      @user_trip = UserTrip.find_by(trip_id: tripId)
-      @user_trip.destroy!
+      redirect_back fallback_location: user_trips_path(current_user.id)
     else
       flash[:notice] = 'Woops. Looks like we couldn\'t delete your trip.'
     end
@@ -37,6 +36,7 @@ class TripsController < ApplicationController
   def index
     @user = User.find params[:user_id]
     @trips = @user.trips
+    @trip_new = Trip.new
   end
 
   def show
