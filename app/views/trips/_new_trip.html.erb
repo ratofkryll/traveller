@@ -1,4 +1,4 @@
-<%= form_for @trip do |form| %>
+<%= form_for @trip_new do |form| %>
 
   <% if form.object.errors.any? %>
     <div class="alert alert-danger">
@@ -11,30 +11,30 @@
     </div>
   <% end %>
 
-  <div class="form-group trip-field">
+  <div class="form-group">
     <%= form.label :name %>
     <%= form.text_field :name, class: 'form-control', placeholder: 'My Awesome EuroTrip' %>
   </div>
 
   <div class="datepicker-container">
-    <div class="form-group trip-field">
+    <div class="form-group">
       <%= form.label 'Start date' %>
       <%= form.text_field :start_date, class: 'form-control datepicker', data: { date_format: 'YYYY/MM/DD' }, required: true %>
     </div>
   </div>
 
   <div class="datepicker-container">
-    <div class="form-group trip-field">
+    <div class="form-group">
       <%= form.label 'End date' %>
       <%= form.text_field :end_date, class: 'form-control datepicker', data: { date_format: 'YYYY/MM/DD' }, required: true %>
     </div>
   </div>
 
-  <div class="form-group trip-field">
+  <div class="form-group">
     <%= form.label 'Public?' %>
     <%= form.check_box :public %>
   </div>
-  
+
   <%= form.submit 'Start planning', class: 'btn btn-primary' %>
 
 <% end %>
