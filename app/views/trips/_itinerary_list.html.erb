@@ -1,0 +1,10 @@
+<% @itinerary.each do |itinerary| %>
+  <div class="tab-pane" id="<%= itinerary.id %>" role="tabpanel">
+    <h1><%= itinerary.name %></h1>
+    <ul>
+      <% itinerary.itinerary_items.order(:start_time).each do |itinerary_item| %>
+        <li><%= itinerary_item.name %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
