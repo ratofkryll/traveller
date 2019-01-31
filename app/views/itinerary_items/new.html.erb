@@ -1,84 +1,21 @@
-
-<h1>Add to itinerary</h1>
-
-<% if params[:attraction_id] %>
-<div class="attraction-item">
-<div class="attraction-card-itinerary">
-  <div class="attraction-image">
-      <%= image_tag @attraction.image %>
-  </div>
-  <div class="attraction-description">
-    <p class="name"><%= @attraction.name %></p>
-    <p class="description"><%= @attraction.description %></p>
-  </div>
-</div>
-</div>
-<% end %>
-
-<main class="new-item-container">
+<br >
+<br >
+<br >
+<br >
+<br >
 
 
-  <%= form_for @itinerary_item do |form| %>
 
-    <% if form.object.errors.any? %>
-      <div class="alert alert-danger">
-        <strong>The following errors prevented saving:</strong>
-        <ul>
-          <% form.object.errors.full_messages.each do |error| %>
-            <li><%= error %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
 
-    <%= form.hidden_field :attraction_id, value: params[:attraction_id] %>
-
-    <div class="form-group">
-      <%= form.label :name %>
-      <%= form.text_field :name, class: 'form-control', placeholder: 'Flight' %>
-    </div>
-
-    <div class="form-group">
-      <%= form.label 'Item Notes' %>
-      <%= form.text_field :notes, class: 'form-control', placeholder:'Flight number: BA085' %>
-    </div>
-
-    <div class="form-group">
-      <%= form.label 'Start time' %>
-      <%= form.text_field :start_time, class:"form-control timepicker" %>
-    </div>
-
-    <div class="form-group">
-      <%= form.label 'End time' %>
-      <%= form.text_field :end_time, class:"form-control timepicker" %>
-    </div>
-    
-    <div class="datepicker-container">
-      <div class="form-group">
-        <%= form.label 'Trip' %>
-        <% current_user.trips.each do |trip| %>
-          <div class="trip">
-          <%= trip.name %>
-          <% itinerary = Itinerary.where(trip_id: trip.id) %>
-          <% itinerary.each do |i| %>
-            <p><%= form.radio_button :itinerary_id, i.id %><%= i.name %> <br /></p>
-          <% end %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-
-    <%= form.submit 'Looks Good!', class: 'btn btn-primary' %>
-
-  <% end %>
-</main>
 
 
 <button class="btn btn-primary" data-toggle="modal" data-target="#noticeModal">
-    <i class="now-ui-icons travel_info"></i> Add to Itinerary
+  <i class="now-ui-icons travel_info"></i> Notice
 </button>
 
-<% if params[:attraction_id] %>
+
+
+
 <div class="modal fade" id="noticeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
   <div class="modal-dialog modal-notice">
     <div class="modal-content">
@@ -86,75 +23,86 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
           <i class="now-ui-icons ui-1_simple-remove"></i>
         </button>
-        <h6 class="modal-title" id="myModalLabel">Add <%= @attraction.name %> to an itinerary</h6>
+        <h6 class="modal-title" id="myModalLabel">Add an item to your itinerary</h6>
       </div>
 
-      <%= form_for @itinerary_item do |form| %>
-
-      <% if form.object.errors.any? %>
-        <div class="alert alert-danger">
-          <strong>The following errors prevented saving:</strong>
-          <ul>
-            <% form.object.errors.full_messages.each do |error| %>
-              <li><%= error %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
-
-      <%= form.hidden_field :attraction_id, value: params[:attraction_id] %>
-
       <div class="modal-body">
-       <div class="instruction">
-        <div class="row">
-          <div class="col-md-12">
-
-            <div class="attraction-image">
-              <%= image_tag @attraction.image %>
-            </div>
-
-            <div class="form-group">
-              <%= form.label :name %>
-              <%= form.text_field :name, class: 'form-control', placeholder: 'Flight' %>
-            </div>
-
-            <div class="form-group">
-              <%= form.label 'Item Notes' %>
-              <%= form.text_field :notes, class: 'form-control', placeholder:'Flight number: BA085' %>
-            </div>
-
-            <div class="form-group">
-              <%= form.label 'Start time' %>
-              <%= form.text_field :start_time, class:"form-control timepicker" %>
-            </div>
-
-            <div class="form-group">
-              <%= form.label 'End time' %>
-              <%= form.text_field :end_time, class:"form-control timepicker" %>
-            </div>
-
-            <div class="datepicker-container">
-              <div class="form-group">
-                <%= form.label 'Trip' %>
-                <% current_user.trips.each do |trip| %>
-                  <div class="trip">
-                  <%= trip.name %>
-                  <% itinerary = Itinerary.where(trip_id: trip.id) %>
-                  <% itinerary.each do |i| %>
-                    <p><%= form.radio_button :itinerary_id, i.id %><%= i.name %> <br /></p>
-                  <% end %>
+        <div class="instruction">
+          <div class="row">
+            <div class="col-md-8">
+              <% if params[:attraction_id] %>
+                <div class="attraction-item">
+                  <div class="attraction-card-itinerary">
+                    <div class="attraction-image">
+                      <%= image_tag @attraction.image %>
+                    </div>
+                    <div class="attraction-description">
+                      <p class="name"><%= @attraction.name %></p>
+                      <p class="description"><%= @attraction.description %></p>
+                    </div>
                   </div>
-                <% end %>
+                </div>
+              <% end %>
+
+              <div class="new-item-container">
+                <%= form_for @itinerary_item do |form| %>
+                  <% if form.object.errors.any? %>
+                    <div class="alert alert-danger">
+                      <strong>The following errors prevented saving:</strong>
+                        <ul>
+                          <% form.object.errors.full_messages.each do |error| %>
+                            <li><%= error %></li>
+                          <% end %>
+                        </ul>
+                    </div>
+                  <% end %>
+
+                  <%= form.hidden_field :attraction_id, value: params[:attraction_id] %>
+
+                  <div class="form-group">
+                    <%= form.label :name %>
+                    <%= form.text_field :name, class: 'form-control', placeholder: 'Flight' %>
+                  </div>
+
+                  <div class="form-group">
+                    <%= form.label 'Item Notes' %>
+                    <%= form.text_field :notes, class: 'form-control', placeholder:'Flight number: BA085' %>
+                  </div>
+
+                  <div class="form-group">
+                    <%= form.label 'Start time' %>
+                    <%= form.text_field :start_time, class:"form-control timepicker" %>
+                  </div>
+
+                  <div class="form-group">
+                    <%= form.label 'End time' %>
+                    <%= form.text_field :end_time, class:"form-control timepicker" %>
+                  </div>
+                  
+                  <div class="choose=trip">
+                    <div class="form-group">
+                      <%= form.label 'Trip' %>
+                      <% current_user.trips.each do |trip| %>
+                        <div class="trip">
+                          <%= trip.name %>
+                          <% itinerary = Itinerary.where(trip_id: trip.id) %>
+                          <% itinerary.each do |i| %>
+                            <p>
+                              <%= form.radio_button :itinerary_id, i.id %><%= i.name %> 
+                            <br />
+                            </p>
+                          <% end %>
+                        </div>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="modal-footer justify-content-center">
-              <%= form.submit 'Looks Good!', class: 'btn btn-primary' %>
-            </div>
-          </div>
+            <%= form.submit 'Looks Good!', class: 'btn btn-primary' %>
+          <% end %>
         </div>
-      </div> 
+       </div>
+      </div>
     </div>
   </div>
-  <% end %>
 </div>
-<% end %>

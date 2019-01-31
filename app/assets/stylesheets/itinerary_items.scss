@@ -11,14 +11,6 @@ main.new-item-container {
   padding: 2em;
 }
 
-.new-item-container label {
-  font-size: 2em;
-  font-weight: 600;
-  width: 25%;
-  height: 35px;
-  color: $primary-color;
-  margin-right: 1em;
-}
 
 form.text-field {
   width: 25em;
@@ -65,6 +57,10 @@ form.text-field {
   overflow: scroll;
 }
 
+.choose-trip {
+  max-height: 10em;
+  overflow: scroll;
+}
 
 // <div class="attraction">
 // <div class="attraction-image">
