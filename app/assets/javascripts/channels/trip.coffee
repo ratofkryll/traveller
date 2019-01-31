@@ -9,3 +9,4 @@ App.trip = App.cable.subscriptions.create "TripChannel",
 
   # $(document).on 'submit', '[data-behavior~=submit_itinerary_item]', (event) ->
   #   App.trip.itinerary event.target.value
+

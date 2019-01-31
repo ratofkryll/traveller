@@ -42,7 +42,7 @@
                 <div class="instruction">
                   <div class="row">
                     <div class="col-md-12">
-                      <% if params[:attraction_id] %>
+                      <% if params[:id] %>
                         <div class="attraction-item">
                           <div class="attraction-card-itinerary">
                             <div class="attraction-image">
@@ -68,7 +68,7 @@
                             </div>
                           <% end %>
 
-                          <%= form.hidden_field :attraction_id, value: params[:attraction_id] %>
+                          <%= form.hidden_field :attraction_id, value: params[:id] %>
                           
                           <div class="form-group">
                             <%= form.label :name %>

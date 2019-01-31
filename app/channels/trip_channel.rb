@@ -1,7 +1,7 @@
 class TripChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "trip_channel"
-    # stream_from "trip_channel_#{trip.id}"
+    # itinerary = Itinerary.find(trips.itinerary)
+    # stream_for itinerary
   end
 
   def unsubscribed
