@@ -16,7 +16,9 @@
       </ul>
       <div class="card-body">
         <div class="tab-content">
-          <%= render "itinerary_list" %>
+          <% @itinerary.each do |itinerary| %>
+            <%= render "itinerary_list" %>
+          <% end %>
         </div>
       </div>
     </div>
