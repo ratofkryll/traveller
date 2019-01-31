@@ -1,19 +1,38 @@
 <%= render "trip_header" %>
- 
-<body>
-  <div class="mr-auto">
-    <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="orange">
-      <% @itinerary.order(:date).each do |day| %>
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#<%= day.name %>" role="tab"><%= day.name %></a>
-        </li>
-      <% end %>
-      <li class="nav-item">
-        <%= link_to new_itinerary_url, class: "nav-link" do %>
-        <i class="fas fa-plus-circle"></i>
+<div class="mr-auto">
+  <div class="card">
+    <div class="card-header">
+      <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="orange">
+        <% @itinerary.order(:date).each do |day| %>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#<%= day.name %>" role="tab"><%= day.name %></a>
+          </li>
         <% end %>
-      </li>
-    </ul>
-  <%= render "itinerary-list" %>
-  </div> 
-</body>
+        <li class="nav-item">
+          <button type="button" class="nav-link" data-toggle="modal" data-target="#newItineraryModal">
+            <i class="fas fa-plus-circle"></i>
+          </button>
+        </li>
+      </ul>
+      <%= render "itinerary-list" %>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="newItineraryModal" tabindex="-1" role="dialog" aria-labelledby="newItineraryModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newItineraryModalLabel">New Itinerary</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= render "/itineraries/new_itinerary_form" %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-link btn-danger" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
