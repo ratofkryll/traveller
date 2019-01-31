@@ -2,12 +2,12 @@ class ItineraryItemBroadcastJob < ApplicationJob
   queue_as :default
 
   def perform(data)
-    ActionCable.server.broadcast 'trip_channel', data: render_itinerary(data)
+    ActionCable.server.broadcast 'trip_channel', itinerary_list: render_itinerary(data)
   end
 
   private
     def render_itinerary(data)
-      ApplicationController.renderer.render(partial: 'trips/itinerary-list', locals: { message: message })
+      TripController.renderer.render(partial: 'trips/itinerary_list', locals: { itinerary_list: data })
     end
 
 end

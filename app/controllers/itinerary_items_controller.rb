@@ -11,6 +11,7 @@ class ItineraryItemsController < ApplicationController
     @itinerary_item = ItineraryItem.new(itinerary_params)
 
     if @itinerary_item.save
+      # ActionCable.server.broadcast 'trip_channel', content: @itinerary_item
       flash[:notice] = 'Added to itinerary'
     else
       flash[:notice] = 'Woops something went wrong with adding your itinerary item.'
