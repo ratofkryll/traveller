@@ -5,16 +5,15 @@ class ItinerariesController < ApplicationController
 
   def create
     @itinerary = Itinerary.new(itinerary_params)
-
-    if @itinerary.save
-      flash[:notice] = `Let's get planning!`
-      redirect_to trip_url(@itinerary.trip_id)
-      puts "It's been saved."
-    else
-      flash[:notice] = `Woops. We've had some problems saving your trip. Try again soon.`
-      puts "It hasn't been saved."
+    respond_to do |format|
+      if @itinerary.save
+        format.html { redirect_to @itinerary, notice: 'Todo was successfully created.' }
+        format.json { render :show, status: :created, location: @itinerary }
+      else
+        format.html { render :new }
+        format.json { render json: @itinerary.errors, status: :unprocessable_entity }
+      end
     end
-
   end
 
   def edit

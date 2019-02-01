@@ -3,6 +3,10 @@ class Trip < ApplicationRecord
   has_many :users, through: :user_trips
   has_many :itineraries, dependent: :delete_all
 
+  attr_accessor :selected_itinerary
+
+  
+
   after_save :broadcast
   def broadcast
     TripChannel.broadcast_to(self, {})

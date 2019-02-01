@@ -4,7 +4,7 @@ class ItineraryItem < ApplicationRecord
 
   after_save :broadcast
   def broadcast
-    TripChannel.broadcast_to(self.itinerary.trip, {})
+    ItineraryChannel.broadcast_to(self.itinerary, {itinerary_item_id: self.id })
   end
 
 end
