@@ -9,6 +9,8 @@ gem 'rails', '~> 5.2.2'
 gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+# Use jquery
+gem 'jquery-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -47,6 +49,10 @@ gem 'faker'
 
 # AWS S3 asset hosting
 gem 'aws-sdk', '~> 2'
+gem 'formtastic'
+
+# React
+# gem 'react-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :todos
   devise_for :users
   root to: 'cities#index'
 
@@ -36,5 +37,7 @@ Rails.application.routes.draw do
     resources :attractions, except: [:show]
     resources :cities, except: [:show]
   end
+
+  mount ActionCable.server => '/cable'
 
 end
