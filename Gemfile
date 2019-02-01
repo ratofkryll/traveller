@@ -50,8 +50,7 @@ gem 'faker'
 # AWS S3 asset hosting
 gem 'aws-sdk', '~> 2'
 
-# Rails
-gem 'webpacker'
+# React
 gem 'react-rails'
 
 group :development, :test do

@@ -14,6 +14,9 @@
 //= require jquery
 //= require activestorage
 //= require now-ui-kit
+//= require react
+//= require react_ujs
+//= require components
 //= require_tree .
 
 
