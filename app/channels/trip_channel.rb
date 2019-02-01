@@ -7,9 +7,10 @@ class TripChannel < ApplicationCable::Channel
     # Any cleanup needed when channel is unsubscribed
   end
 
-  # def itinerary(data)
-  #   ItineraryItem.create(data)
-  #   ActionCable.server.broadcast 'trip_channel', itinerary_item: data[params]
-  # end
+  def speak(data)
+    itinerary_item = ItineraryItem.create(data)
+    itinerary = Itinerary.find_by_id(itinerary_item.itinerary_id)
+    TripChannel.broadcast_to('trip_channel', itinerary)
+  end
 
 end

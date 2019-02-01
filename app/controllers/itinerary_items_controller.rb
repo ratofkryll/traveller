@@ -12,10 +12,9 @@ class ItineraryItemsController < ApplicationController
 
     if @itinerary_item.save
 
-      ActionCable.server.broadcast 'trip_channel',
-                                      name: @itinerary_item.name
-                                        # itinerary_item: render_items(@itinerary_item)
-                                        # itinerary: render_itinerary(@itinerary)
+      # ActionCable.server.broadcast 'trip_channel',
+      #                                 name: @itinerary_item.name
+
       flash[:notice] = 'Added to itinerary'
     else
       flash[:notice] = 'Woops something went wrong with adding your itinerary item.'
@@ -53,12 +52,12 @@ class ItineraryItemsController < ApplicationController
     )
   end
 
-  def render_items(itinerary_item)
-    render(partial: '/trips/itinerary_list', locals: { itinerary_item: itinerary_item})
-  end
+  # def render_items(itinerary_item)
+  #   render(partial: '/trips/itinerary_list', locals: { itinerary_item: itinerary_item})
+  # end
 
-  def render_itinerary(itinerary)
-    render(partial: '/trips/itinerary_list', locals: { itinerary: itinerary})
-  end
+  # def render_itinerary(itinerary)
+  #   render(partial: '/trips/itinerary_list', locals: { itinerary: itinerary})
+  # end
 
 end
