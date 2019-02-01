@@ -6,4 +6,9 @@ class Itinerary < ApplicationRecord
     self.itinerary_items.order(:start_time)
   end
 
+  after_save :broadcast
+  def broadcast
+    TripChannel.broadcast_to(self.trip, {})
+  end
+
 end
