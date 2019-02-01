@@ -1,6 +1,6 @@
 class UserChannel < ApplicationCable::Channel
   def subscribed
-    @User = User.find(params[:id])
+    @user = User.find(params[:id])
     stream_for @user
     # stream_from "some_channel"
   end

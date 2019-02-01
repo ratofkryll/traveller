@@ -1,6 +1,5 @@
 class TripsController < ApplicationController
   before_action :authenticate_user!
-
   def new
     @trip = Trip.new
   end
@@ -38,10 +37,15 @@ class TripsController < ApplicationController
     @trip_new = Trip.new
   end
 
+
   def show
     @trip = Trip.includes(itineraries: :itinerary_items).find params[:id]
     @selected_itinerary = @trip.itineraries.find_by(id: params[:selected_itinerary_id])
     @selected_itinerary ||= @trip.itineraries.first
+    respond_to do |format|
+      format.cable { render layout: false }
+    end
+
   end
 
   private

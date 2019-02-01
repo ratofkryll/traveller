@@ -28,7 +28,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <%= render Itinerary.new(trip: @trip, date: @trip.itineraries.order(date: :desc).pluck(:date).first + 1.day, name: "Day #{@trip.itineraries.count + 1} " ) %>
+        <%= render Itinerary.new(trip: @trip, date: (@trip.itineraries.order(date: :desc).pluck(:date).first || Time.now) + 1.day, name: "Day #{@trip.itineraries.count + 1} " ) %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-link btn-danger" data-dismiss="modal">Cancel</button>
