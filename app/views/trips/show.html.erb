@@ -3,26 +3,21 @@
   <div class="card">
     <div class="card-header">
       <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="orange">
-        <% @itinerary.order(:date).each do |itinerary| %>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#<%= itinerary.id %>" role="tab" aria-selected="true"><%= itinerary.name %></a>
-          </li>
-        <% end %>
+        <%= render partial: 'itineraries/tab_header', collection: @trip.itineraries.order(:date), as: :itinerary %>
         <li class="nav-item">
-          <button type="button" class="nav-link" data-toggle="modal" data-target="#newItineraryModal">
-            <i class="fas fa-plus-circle"></i>
-          </button>
+        <button type="button" class="nav-link" data-toggle="modal" data-target="#newItineraryModal">
+          <i class="fas fa-plus-circle"></i>
+        </button>
         </li>
       </ul>
       <div class="card-body">
         <div class="tab-content">
-          <%= render "itinerary_list" %>
+          <%= render partial: 'itineraries/tab_content', collection: @trip.itineraries.order(:date), as: :itinerary %>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 <div class="modal fade" id="newItineraryModal" tabindex="-1" role="dialog" aria-labelledby="newItineraryModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -33,7 +28,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <%= render "/itineraries/new_itinerary_form" %>
+        <%= render Itinerary.new(trip: @trip, date: (@trip.itineraries.order(date: :desc).pluck(:date).first || Time.now) + 1.day, name: "Day #{@trip.itineraries.count + 1} " ) %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-link btn-danger" data-dismiss="modal">Cancel</button>
@@ -41,3 +36,4 @@
     </div>
   </div>
 </div>
+<div class="trip-listener" data-trip-id="<%= @trip.id %>"></div>

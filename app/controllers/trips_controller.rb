@@ -1,6 +1,5 @@
 class TripsController < ApplicationController
   before_action :authenticate_user!
-
   def new
     @trip = Trip.new
   end
@@ -10,7 +9,6 @@ class TripsController < ApplicationController
 
   def create
     @trip = Trip.new(trip_params)
-
     if @trip.save
       @trip.users << current_user
       redirect_to trip_url(@trip.id)
@@ -39,12 +37,15 @@ class TripsController < ApplicationController
     @trip_new = Trip.new
   end
 
+
   def show
-    @trip = Trip.find params[:id]
-    @itinerary = Itinerary.where(trip_id: @trip)
-    @itinerary_items = ItineraryItem.where(itinerary_id: @itinerary)
-    @itinerary_new = Itinerary.new
-    @users = @trip.users
+    @trip = Trip.includes(itineraries: :itinerary_items).find params[:id]
+    @selected_itinerary = @trip.itineraries.find_by(id: params[:selected_itinerary_id])
+    @selected_itinerary ||= @trip.itineraries.first
+    respond_to do |format|
+      format.cable { render layout: false }
+    end
+
   end
 
   private
