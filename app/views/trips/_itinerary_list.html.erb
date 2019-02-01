@@ -7,7 +7,7 @@
       </div>
     </div>
     <ul class="itinerary-item-append">
-      <% itinerary.itinerary_items.order(:start_time).each do |itinerary_item| %>
+      <% itinerary.items_by_start_time.each do |itinerary_item| %>
         <div class="card card-plain card-blog border-bottom">
           <div class="row">
             <% if itinerary_item.attraction_id %>
@@ -44,3 +44,6 @@
     </ul>
   </div>
 <% end %>
+
+<div class="testing-our-append"></div>
+

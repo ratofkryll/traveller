@@ -1,12 +1,10 @@
 App.trip = App.cable.subscriptions.create "TripChannel",
+  connected: ->
 
-  received: (itinerary_items) ->
+  disconnected: ->
+  
+  received: (data) ->
     # Called when there's incoming data on the websocket for this channel
-    $(".itinerary-item-append").append data['itinerary_items']
-
-  # itinerary: (data) ->
-  #   @perform 'itinerary', itinerary_item: data
-
-  # $(document).on 'submit', '[data-behavior~=submit_itinerary_item]', (event) ->
-  #   App.trip.itinerary event.target.value
-
+    # $(".itinerary-item-append").append data['itinerary_items']
+    # alert data.itinerary_item
+    $(".testing-our-append").append data.name
