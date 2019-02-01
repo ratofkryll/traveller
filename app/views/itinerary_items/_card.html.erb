@@ -7,6 +7,9 @@
         </div>
       </div>
       <div class="col-md-7">
+      <div class="pull-right">
+        <%= link_to "Edit", itinerary_item_path(itinerary_item.id), class: "text-primary edit-link" %> | <%= link_to "Delete", itinerary_item, method: :delete, class: "text-danger delete-link" %>
+        </div>
         <h6 class="category text-info"><i class="far fa-clock"></i> <%= itinerary_item.start_time.strftime("%I:%M%p") %> - <%= itinerary_item.end_time.strftime("%I:%M%p") %>
         </h6>
           <h3 class="card-title">
