@@ -5,10 +5,8 @@ class Trip < ApplicationRecord
 
   attr_accessor :selected_itinerary
 
-  
+  after_create -> { TripChannel.broadcast_to(self, {created: self.id}) }
+  after_update -> { TripChannel.broadcast_to(self, {updated: self.id}) }
+  after_destroy -> { TripChannel.broadcast_to(self, {destroyed: self.id}) }
 
-  after_save :broadcast
-  def broadcast
-    TripChannel.broadcast_to(self, {})
-  end
 end
