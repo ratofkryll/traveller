@@ -1,5 +1,6 @@
 <% @itinerary.each do |itinerary| %>
   <div class="tab-pane" id="<%= itinerary.id %>" role="tabpanel">
+<<<<<<< HEAD
   <div class="pull-right text-right">      
     <%= link_to "Edit", itinerary_path(itinerary), class: "text-primary edit-link" %> | <%= link_to "Delete", itinerary, method: :delete, class: "text-danger delete-link" %>
   </div>
@@ -7,6 +8,12 @@
       <div class="d-flex justify-content-between align-items-baseline">
         <h3><%= itinerary.name %></h3>
         <h4 class="text-primary"><%= itinerary.date.to_formatted_s(:long) %></h4>
+=======
+    <div class="itinerary-header-container">
+      <div class="d-flex justify-content-between align-items-baseline">
+        <h2><%= itinerary.name %></h2>
+        <h3 class="text-primary"><%= itinerary.date.to_formatted_s(:long) %></h3>
+>>>>>>> 854c0afeefe9bed724b75865bcd2318f59832d18
       </div>
     </div>
     <ul>
@@ -47,6 +54,9 @@
     </ul>
   </div>
 <% end %>
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 854c0afeefe9bed724b75865bcd2318f59832d18
