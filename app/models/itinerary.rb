@@ -6,7 +6,7 @@ class Itinerary < ApplicationRecord
 
 
     after_create -> {
-      TripChannel.broadcast_to(self, {created_itinerary: self.id})
+      TripChannel.broadcast_to(self.trip, {created_itinerary: self.id})
       ItineraryChannel.broadcast_to(self, {created: self.id})
     }
     after_update -> { ItineraryChannel.broadcast_to(self, {updated: self.id}) }

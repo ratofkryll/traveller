@@ -3,7 +3,7 @@ class ItineraryItem < ApplicationRecord
   belongs_to :attraction, optional: true
 
   after_create -> {
-    ItineraryChannel.broadcast_to(self, {created_itinerary_item: self.id})
+    ItineraryChannel.broadcast_to(self.itinerary, {created_itinerary_item: self.id})
     ItineraryItemChannel.broadcast_to(self, {created: self.id})
   }
   after_update -> { ItineraryItemChannel.broadcast_to(self, {updated: self.id}) }
