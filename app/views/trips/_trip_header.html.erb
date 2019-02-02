@@ -10,7 +10,9 @@
         <div class="user-pics">
           <% @trip.users.each do |user| %>
             <% if user.profile_pic != nil %>
+            <a href="<%= user_trips_path(user) %>" title="<%= user.first_name %>">
               <%= image_tag user.profile_pic, class: 'rounded-circle' %>
+            </a>
             <% else %>
               <a href="<%= user_trips_path(user) %>">
                 <i class="user-icon fas fa-user-circle" title="<%= user.first_name %>"></i>

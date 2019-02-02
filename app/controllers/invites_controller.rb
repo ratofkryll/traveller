@@ -6,7 +6,7 @@ class InvitesController < ApplicationController
       redirect_to trip_path(@invite.trip_id)
       if @invite.recipient != nil
         InviteMailer.existing_user_invite(@invite).deliver
-        User_trip.create({user_id: @invite.recipient, trip_id: @invite.trip_id, role: 'contributor'})
+        UserTrip.create({user_id: @invite.recipient, trip_id: @invite.trip_id, role: 'contributor'})
       else 
         InviteMailer.register_invite(@invite).deliver
       end

@@ -7,14 +7,14 @@
         <div class="photo-container">
           <%= image_tag("img/ryan.jpg") %>
         </div>
-        <h3 class="category text-white"><%= current_user.first_name %> <%= current_user.last_name %></h3>
+        <h3 class="category text-white"><%= @user.first_name %> <%= @user.last_name %></h3>
         <div class="content">
           <div class="social-description">
-            <h2><%= current_user.trips.count %></h2>
+            <h2><%= @user.trips.count %></h2>
             <p>Trips</p>
           </div>
           <div class="social-description">
-            <h2><%= current_user.reviews.count %></h2>
+            <h2><%= @user.reviews.count %></h2>
             <p>Reviews</p>
           </div>
         </div>
@@ -26,7 +26,7 @@
           <button type="button" class="btn btn-primary btn-lg btn-round" data-toggle="modal" data-target="#newTripModal">
             New Trip
           </button>
-          <%= link_to "My Trips", user_trips_path(current_user[:id]), class: "btn btn-primary btn-round btn-lg" %>
+          <%= link_to "My Trips", user_trips_path(@user[:id]), class: "btn btn-primary btn-round btn-lg" %>
           <a href="#button" class="btn btn-primary btn-round btn-lg">Shared Trips</a>
           <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary btn-round btn-lg" %>
         </div>
