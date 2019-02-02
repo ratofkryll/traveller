@@ -1,19 +1,19 @@
 <h3 class="title text-center">Have you visited? <br > Leave a review below:  </h3>
   <%= form_for [@attraction, @review] do |f| %>
           
-    <div class="media media-post">
+    <div class="media media-post pt-2">
       <a class="pull-left author" href="#pablo">
         <div class="avatar">
           <img class="media-object img-raised" alt="64x64" src="../assets/img/olivia.jpg">
         </div>
       </a>
 
-      <div class="media-body">
+      <div class="media-body pt-3">
         <%= f.label :rating %>
         <%= f.select :rating, options_for_select([["Select a Rating", ""], 1, 2, 3, 4, 5]), class: 'genForm_dropBox' %>
         <br >
         <br >
-        <div class="text-muted">
+        <div class="text-muted pt-4">
         <%= f.label 'Write a nice review or go home...' %>
         </div>
         <%= f.text_area :review, class: "form-control" %>
