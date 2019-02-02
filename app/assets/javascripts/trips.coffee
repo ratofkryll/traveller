@@ -4,7 +4,6 @@
 
 $ ->
   $("div[data-trip-id]").each (idx, item) ->
-    console.log(idx, item)
     App.cable.subscriptions.create {
           channel: "TripChannel"
           id: $(item).data('trip-id')
