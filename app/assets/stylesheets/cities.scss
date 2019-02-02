@@ -5,6 +5,18 @@
 
 .city-card {
   min-width: 20em;
+  max-height: 60em;
+  overflow: scroll;
+}
+
+.card-image {
+  max-height: 30em;
+  min-width: 25em;
+}
+
+.card-image img {
+  width: 25em;
+  height: 18em;
 }
 
 .cities-carousel {
