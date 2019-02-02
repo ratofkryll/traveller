@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_01_072634) do
+ActiveRecord::Schema.define(version: 2019_02_02_002232) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,14 +59,15 @@ ActiveRecord::Schema.define(version: 2019_02_01_072634) do
   end
 
   create_table "invites", force: :cascade do |t|
-    t.bigint "user_trip_id"
     t.integer "recipient"
     t.string "email"
     t.text "message"
     t.string "token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_trip_id"], name: "index_invites_on_user_trip_id"
+    t.bigint "trip_id"
+    t.integer "sender"
+    t.index ["trip_id"], name: "index_invites_on_trip_id"
   end
 
   create_table "itineraries", force: :cascade do |t|
@@ -148,7 +149,7 @@ ActiveRecord::Schema.define(version: 2019_02_01_072634) do
   end
 
   add_foreign_key "attractions", "cities"
-  add_foreign_key "invites", "user_trips"
+  add_foreign_key "invites", "trips"
   add_foreign_key "itineraries", "trips"
   add_foreign_key "itinerary_items", "attractions"
   add_foreign_key "itinerary_items", "itineraries"
