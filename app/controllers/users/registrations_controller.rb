@@ -7,22 +7,18 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # GET /resource/sign_up
   def new
     super
-    @token = params[:invite_token]
   end
 
   # POST /resource
   def create
-    @token = params[:invite_token]
     build_resource(sign_up_params)
 
     resource.save
     yield resource if block_given?
     if resource.persisted?
-      if @token.present?
-        redirect_to '/cities/2'
-        # @invite =  Invite.find_by_token(@token)
-        # trip = @invite.trip_id
-        # UserTrip.create({user_id: @newUser, trip_id: trip, role: 'contributor'})
+      if resource.invite_token.present?
+        @trip =  Invite.find_by_token(resource.invite_token).trip_id
+        UserTrip.create({user_id: resource.id, trip_id: @trip, role: 'contributor'})
       end
       if resource.active_for_authentication?
         set_flash_message! :notice, :signed_up
@@ -85,17 +81,5 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
-
-  private
-
-  def user_params
-    params.require(:user).permit(
-      :first_name,
-      :last_name,
-      :email,
-      :profile_pic,
-      :password,
-      :password_confirmation
-    )
-  end
+  
 end
