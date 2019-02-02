@@ -1,5 +1,7 @@
-class InviteMailer < ApplicationMailer
+require 'sendgrid-ruby'
+include SendGrid
 
+class InviteMailer < ApplicationMailer
   default from: 'no-reply@go-tripper.com'
 
   def register_invite(invite)

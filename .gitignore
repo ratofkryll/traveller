@@ -6,7 +6,6 @@
 
 .env
 .DS_Store
-.secrets
 
 # Ignore bundler config.
 /.bundle
@@ -39,3 +38,4 @@
 yarn-debug.log*
 .yarn-integrity
 sendgrid.env
+secrets.env

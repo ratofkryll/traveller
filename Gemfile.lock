@@ -89,6 +89,10 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    dotenv (2.6.0)
+    dotenv-rails (2.6.0)
+      dotenv (= 2.6.0)
+      railties (>= 3.2, < 6.0)
     erubi (1.8.0)
     execjs (2.7.0)
     faker (1.9.1)
@@ -244,6 +248,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise
+  dotenv-rails (~> 2.2)
   faker
   font-awesome-rails
   formtastic
