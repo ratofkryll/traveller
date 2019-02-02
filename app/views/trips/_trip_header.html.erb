@@ -10,15 +10,41 @@
         <div class="user-pics">
           <% @trip.users.each do |user| %>
             <% if user.profile_pic != nil %>
+            <a href="<%= user_trips_path(user) %>" title="<%= user.first_name %>">
               <%= image_tag user.profile_pic, class: 'rounded-circle' %>
+            </a>
             <% else %>
               <a href="<%= user_trips_path(user) %>">
                 <i class="user-icon fas fa-user-circle" title="<%= user.first_name %>"></i>
               </a>
             <% end %>
           <% end %>
+        <button type="button" class="rounded-circle" data-toggle="modal" data-target="#newInviteModal">
+          <i class="invite-button fas fa-user-plus"></i>
+        </button>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+
+
+<div class="modal fade" id="newInviteModal" tabindex="-1" role="dialog" aria-labelledby="newItineraryModal" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="newInviteModalLabel">Invite your friend to collaborate</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <%= render Invite.new %>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-link btn-danger" data-dismiss="modal">Cancel</button>
+    </div>
+  </div>
+</div>
 </div>

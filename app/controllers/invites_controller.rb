@@ -3,20 +3,22 @@ class InvitesController < ApplicationController
   def create
     @invite = Invite.new(invite_params)
     if @invite.save
+      redirect_to trip_path(@invite.trip_id)
       if @invite.recipient != nil
         InviteMailer.existing_user_invite(@invite).deliver
-        trip = User_trip.find_by_id(@invite.user_trip_id)
-        User_trip.create({user_id: @invite.recipient, trip_id: trip.trip_id, role: 'contributor'})
+        UserTrip.create({user_id: @invite.recipient, trip_id: @invite.trip_id, role: 'contributor'})
       else 
-        InviteMailer.register_invite(@invite, new_user_registration_path(invite_token: @invite.token)).deliver
+        InviteMailer.register_invite(@invite).deliver
       end
     else
        # oh no, creating an new invitation failed
     end
+
   end
 
   def new
     @invite = Invite.new
+    @trip = Trip.find_by_id(params[:id])
   end 
 
   def show
@@ -26,9 +28,11 @@ class InvitesController < ApplicationController
 
   def invite_params
     params.require(:invite).permit(
+      :recipient,
       :email,
       :message,
-      :user_trip_id,
+      :trip_id,
+      :sender,
       :token
     )
   end
