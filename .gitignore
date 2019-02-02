@@ -10,6 +10,9 @@
 # Ignore bundler config.
 /.bundle
 
+.DS_Store
+.env
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -37,3 +40,4 @@
 /node_modules
 yarn-debug.log*
 .yarn-integrity
+
