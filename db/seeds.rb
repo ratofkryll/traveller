@@ -37,7 +37,7 @@ puts "Finding or creating cities..."
 city1 = City.create!({
   name: "Vancouver",
   country: "Canada",
-  description: Faker::Lovecraft.paragraph(3),
+  description: "Vancouver, a bustling west coast seaport in British Columbia, is among Canada’s densest, most ethnically diverse cities. A popular filming location, it’s surrounded by mountains, and also has thriving art, theatre and music scenes. Vancouver Art Gallery is known for its works by regional artists, while the Museum of Anthropology houses preeminent First Nations collections.",
   language: "English",
   currency: "CAD",
   transit: "https://www.translink.ca/",
@@ -49,7 +49,7 @@ city1 = City.create!({
 city2 = City.create!({
   name: "Montreal",
   country: "Canada",
-  description: Faker::Lovecraft.paragraph(3),
+  description: "Montréal is the largest city in Canada's Québec province. It’s set on an island in the Saint Lawrence River and named after Mt. Royal, the triple-peaked hill at its heart. Its boroughs, many of which were once independent cities, include neighbourhoods ranging from cobblestoned, French colonial Vieux-Montréal – with the Gothic Revival Notre-Dame Basilica at its centre – to bohemian Plateau.",
   language: "French/English",
   currency: "CAD",
   transit: "http://www.stm.info/en",
@@ -61,7 +61,7 @@ city2 = City.create!({
 city3 = City.create!({
   name: "London",
   country: "England",
-  description: Faker::Lovecraft.paragraph(3),
+  description: "London, the capital of England and the United Kingdom, is a 21st-century city with history stretching back to Roman times. At its centre stand the imposing Houses of Parliament, the iconic ‘Big Ben’ clock tower and Westminster Abbey, site of British monarch coronations. Across the Thames River, the London Eye observation wheel provides panoramic views of the South Bank cultural complex, and the entire city.",
   language: "English",
   currency: "GBP",
   transit: "http://www.londontransit.ca/",

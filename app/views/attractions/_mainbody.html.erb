@@ -43,6 +43,11 @@
         <br >
 
         <div class="card form-col pull-right mt-4 p-2">
+        <article class="city-info">
+          <div class="all-city-info">
+          <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=<%= @attraction.google_place %>&key=AlzaSyAx_8LPmdGIKHmxHyJIvq9AdhgvOvU8mcc" allowfullscreen></iframe> 
+          </div>
+        </article>
           <div class="media-area">
             <%= render 'review_form' %>
           </div>
@@ -54,3 +59,4 @@
     </div>
   </article>
 </main>
+
