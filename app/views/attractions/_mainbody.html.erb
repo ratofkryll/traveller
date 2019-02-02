@@ -3,6 +3,13 @@
   <article class="city-info">
     <div class="all-city-info">
 
+      <h5><strong>Location:</strong></h5>
+        <iframe width="320em" height="320em" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:<%= @attraction.google_place %>&key=AIzaSyBDcggkzB1785ezH_uDTz2fxBqREluv_ac" allowfullscreen>
+        </iframe>
+
+        <br >
+        <br >
+
       <h5><strong>Opening Hours:</strong></h5>
         <p><strong>Monday: </strong><%= @attraction.monday_hours %></p>
         <p><strong>Tuesday: </strong><%= @attraction.tuesday_hours %></p>
@@ -13,17 +20,7 @@
         <p><strong>Sunday: </strong><%= @attraction.sunday_hours %></p>
         
         <br >
-        <br >
-        
-      <h5><strong>Address:</strong></h5>
-        <p><%= @attraction.address %></p>
-        <p><%= @attraction.address_city %></p>
-        <p><%= @attraction.address_postcode %></p>
-        <p>
-          <a target="_blank" href="http://www.stm.info/en">
-            <button class="btn btn-sm transit-button"><i class="fas fa-subway"></i> Plan your trip</button>
-          </a>
-        </p>
+
     </div>
   </article>
 
@@ -54,3 +51,4 @@
     </div>
   </article>
 </main>
+

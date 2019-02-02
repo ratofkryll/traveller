@@ -37,19 +37,19 @@ puts "Finding or creating cities..."
 city1 = City.create!({
   name: "Vancouver",
   country: "Canada",
-  description: Faker::Lovecraft.paragraph(3),
+  description: "Vancouver, a bustling west coast seaport in British Columbia, is among Canada’s densest, most ethnically diverse cities. A popular filming location, it’s surrounded by mountains, and also has thriving art, theatre and music scenes. Vancouver Art Gallery is known for its works by regional artists, while the Museum of Anthropology houses preeminent First Nations collections.",
   language: "English",
   currency: "CAD",
   transit: "https://www.translink.ca/",
   emergency_phone: "911",
   time_zone: "PST (UTC-8h)",
   tipping_custom: "15-18%",
-  image: "cities/city_vancouver.jpg"
+  image: "cities/city_vancouver1.jpg"
 })
 city2 = City.create!({
   name: "Montreal",
   country: "Canada",
-  description: Faker::Lovecraft.paragraph(3),
+  description: "Montréal is the largest city in Canada's Québec province. It’s set on an island in the Saint Lawrence River and named after Mt. Royal, the triple-peaked hill at its heart. Its boroughs, many of which were once independent cities, include neighbourhoods ranging from cobblestoned, French colonial Vieux-Montréal – with the Gothic Revival Notre-Dame Basilica at its centre – to bohemian Plateau.",
   language: "French/English",
   currency: "CAD",
   transit: "http://www.stm.info/en",
@@ -60,15 +60,51 @@ city2 = City.create!({
 })
 city3 = City.create!({
   name: "London",
-  country: "England",
-  description: Faker::Lovecraft.paragraph(3),
+  country: "United Kingdom",
+  description: "London, the capital of England and the United Kingdom, is a 21st-century city with history stretching back to Roman times. At its centre stand the imposing Houses of Parliament, the iconic ‘Big Ben’ clock tower and Westminster Abbey, site of British monarch coronations. Across the Thames River, the London Eye observation wheel provides panoramic views of the South Bank cultural complex, and the entire city.",
   language: "English",
   currency: "GBP",
-  transit: "http://www.londontransit.ca/",
+  transit: "https://tfl.gov.uk/",
   emergency_phone: "999",
   time_zone: "GMT (UTC+0h)",
   tipping_custom: "Usually 12.75% added to your bill.",
   image: "cities/city_london.jpg"
+})
+city4 = City.create!({
+  name: "New York",
+  country: "United States",
+  description: "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.",
+  language: "English",
+  currency: "USD",
+  transit: "http://www.mta.info/nyct",
+  emergency_phone: "911",
+  time_zone: "EST (UTC-5h)",
+  tipping_custom: "15-20%",
+  image: "cities/city_newyork.jpg"
+})
+city5 = City.create!({
+  name: "Los Angeles",
+  country: "United States",
+  description: "Los Angeles is a sprawling Southern California city and the center of the nation’s film and television industry. Near its iconic Hollywood sign, studios such as Paramount Pictures, Universal and Warner Brothers offer behind-the-scenes tours. On Hollywood Boulevard, TCL Chinese Theatre displays celebrities’ hand- and footprints, the Walk of Fame honors thousands of luminaries and vendors sell maps to stars’ homes.",
+  language: "English",
+  currency: "USD",
+  transit: "https://www.metro.net/",
+  emergency_phone: "911",
+  time_zone: "EST (UTC-8h)",
+  tipping_custom: "15-20%",
+  image: "cities/city_losangeles.jpg"
+})
+city6 = City.create!({
+  name: "Toronto",
+  country: "Canada",
+  description: "Toronto, the capital of the province of Ontario, is a major Canadian city along Lake Ontario’s northwestern shore. It's a dynamic metropolis with a core of soaring skyscrapers, all dwarfed by the iconic, free-standing CN Tower. Toronto also has many green spaces, from the orderly oval of Queen’s Park to 400-acre High Park and its trails, sports facilities and zoo.",
+  language: "English",
+  currency: "CAD",
+  transit: "http://www.ttc.ca/",
+  emergency_phone: "911",
+  time_zone: "EST (UTC-5h)",
+  tipping_custom: "15-18%",
+  image: "cities/city_toronto.jpg"
 })
 
 # ATTRACTIONS

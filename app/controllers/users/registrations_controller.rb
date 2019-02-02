@@ -19,9 +19,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     yield resource if block_given?
     if resource.persisted?
       if @token.present?
-        @invite =  Invite.find_by_token(@token)
-        trip = @invite.trip_id
-        UserTrip.create({user_id: @newUser, trip_id: trip, role: 'contributor'})
+        redirect_to '/cities/2'
+        # @invite =  Invite.find_by_token(@token)
+        # trip = @invite.trip_id
+        # UserTrip.create({user_id: @newUser, trip_id: trip, role: 'contributor'})
       end
       if resource.active_for_authentication?
         set_flash_message! :notice, :signed_up
