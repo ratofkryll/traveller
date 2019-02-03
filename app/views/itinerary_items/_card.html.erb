@@ -8,8 +8,9 @@
       </div>
       <div class="col-md-7">
       <div class="pull-right">
-        <%= link_to "Edit", itinerary_item_path(itinerary_item.id), class: "text-primary edit-link" %> | <%= link_to "Delete", itinerary_item, method: :delete, class: "text-danger delete-link" %>
-        </div>
+        <button class="btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#editItineraryModal"><i class="far fa-edit"></i></button>
+        <a class="btn btn-danger btn-neutral btn-sm btn-round" data-confirm="Are you sure?" data-method="delete" href="itinerary_item/_card" rel="nofollow"><i class="far fa-trash-alt"></i></a> 
+      </div>
         <h6 class="category text-info"><i class="far fa-clock"></i> <%= itinerary_item.start_time.strftime("%I:%M%p") %> - <%= itinerary_item.end_time.strftime("%I:%M%p") %>
         </h6>
           <h3 class="card-title">
@@ -46,7 +47,7 @@
       </button>
     </div>
     <div class="modal-body">
-      <%= render 'edit_form' %>
+      <%= render 'itinerary_items/edit_form' %>
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-link btn-danger" data-dismiss="modal">Cancel</button>

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :todos
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: 'cities#index'
 
   get '/login' => 'sessions#new'

@@ -4,8 +4,6 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-.env
-.DS_Store
 
 # Ignore bundler config.
 /.bundle
@@ -40,4 +38,5 @@
 /node_modules
 yarn-debug.log*
 .yarn-integrity
-
+sendgrid.env
+secrets.env
