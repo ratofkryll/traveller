@@ -17,17 +17,22 @@ class ItinerariesController < ApplicationController
   end
 
   def edit
+    @itinerary = Itinerary.find(params[:id])
   end
 
   def update
+    @itinerary = Itinerary.find(params[:id])
+    @itinerary.update(itinerary_params)
+    redirect_to trip_url(@itinerary.trip_id)
   end
 
   def destroy
     @itinerary = Itinerary.find(params[:id])
+    trip = @itinerary.trip_id
     @itinerary.destroy!
 
     if @itinerary.destroy
-      redirect_back fallback_location: user_trips_path(current_user.id)
+      redirect_back fallback_location: trip_path(trip)
     else
       flash[:notice] = 'Woops. Looks like we couldn\'t delete your trip.'
     end
@@ -35,8 +40,6 @@ class ItinerariesController < ApplicationController
   end
 
   def show
-    # @itinerary = Itinerary.find params[:itinerary_id]
-    # @itinerary_items = @itinerary.itinerary_items
   end
 
   private
