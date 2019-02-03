@@ -6,7 +6,7 @@ $ ->
       id: id
       },
       append: (element, item) ->
-        console.log(element, item)
+        console.log("Appending", item, " to " ,element)
         element.appendChild(item)
 
       appendSorted: (element, item) ->
@@ -23,10 +23,11 @@ $ ->
 
       received: (data) ->
         obj_id = data[event]
-        console.log(data[id])
+        console.log("Received Event", obj_id, data)
         return unless obj_id
         $.ajax(url.replace("$%7B%7D",obj_id)).done (data) =>
           div = document.createElement("div")
+          console.log("Recieved Data", data, "Action", action)
           div.innerHTML = data
           # action is append, appendSorted, update, destroy
-          @[action](element, div.firstChild)
+          @[action](element, div)

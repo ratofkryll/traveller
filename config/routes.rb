@@ -22,7 +22,7 @@ Rails.application.routes.draw do
     resources :itinerary_items, only: [:show]
   end
 
-  resources :itinerary_items, except: [:show]
+  resources :itinerary_items
 
   resources :cities, only: [:show, :index]
 

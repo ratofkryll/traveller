@@ -1,12 +1,12 @@
 class ItineraryItemsController < ApplicationController
-  
+
   def new
     if params[:attraction_id]
       @attraction = Attraction.find params[:attraction_id]
     end
     @itinerary_item = ItineraryItem.new
   end
-  
+
   def create
     @itinerary_item = ItineraryItem.new(itinerary_params)
 
@@ -30,7 +30,7 @@ class ItineraryItemsController < ApplicationController
   end
 
   def show
-    @itinerary_items = ItineraryItem.find_by(itinerary_id: params[:id])
+    @itinerary_item = ItineraryItem.find params[:id]
   end
 
   def destroy

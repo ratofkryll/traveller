@@ -5,7 +5,7 @@
       <h3 class="text-primary"><%= itinerary.date ? itinerary.date.to_formatted_s(:long) : "" %></h3>
     </div>
   </div>
-  <ul class="itinerary-item-append">
+  <div class="container itinerary-item-container" data-channel="ItineraryChannel" data-id="<%= itinerary.id %>" data-event="created_itinerary_item" data-action="append" data-url="<%= itinerary_item_path('${}', format: :cable) %>">
     <%= render partial: 'itinerary_items/card', collection: itinerary.itinerary_items, as: :itinerary_item %>
-  </ul>
+  </div>
 </div>
