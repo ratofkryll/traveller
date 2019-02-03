@@ -26,7 +26,8 @@ class ItineraryItemsController < ApplicationController
 
   def update
     @itinerary_item = ItineraryItem.find(params[:id])
-    @itinerary_item.update({itinerary_id: params[:itinerary_id], name: params[:name], notes: params[:notes], start_time: params[:start_time], end_time: params[:end_time]})
+    @itinerary_item.update(itinerary_params)
+    redirect_to trip_url(@itinerary_item.itinerary.trip_id)
   end
 
   def show
@@ -37,8 +38,9 @@ class ItineraryItemsController < ApplicationController
   def destroy
     @itinerary_item = ItineraryItem.find(params[:id])
     itinerary = @itinerary_item.itinerary
+    trip = Trip.find_by_id(itinerary.trip_id)
     @itinerary_item.destroy!
-    redirect_to itinerary_path(itinerary)
+    redirect_back fallback_location: trip_path(trip)
   end
 
   private
