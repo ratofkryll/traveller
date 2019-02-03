@@ -1,4 +1,8 @@
 <div class="card card-plain card-blog border-bottom">
+  <div class="edit-delete-button">
+  <button class="btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#editItemModal"><i class="far fa-edit"></i></button>
+    <a class="btn btn-danger btn-neutral btn-sm btn-round" data-confirm="Are you sure?" data-method="delete" href="itinerary_item/_card" rel="nofollow"><i class="far fa-trash-alt"></i></a> 
+  </div>
   <div class="row">
     <% if itinerary_item.attraction_id %>
       <div class="col-md-5">
@@ -7,10 +11,6 @@
         </div>
       </div>
       <div class="col-md-7">
-      <div class="pull-right">
-        <button class="btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#editItineraryModal"><i class="far fa-edit"></i></button>
-        <a class="btn btn-danger btn-neutral btn-sm btn-round" data-confirm="Are you sure?" data-method="delete" href="itinerary_item/_card" rel="nofollow"><i class="far fa-trash-alt"></i></a> 
-      </div>
         <h6 class="category text-info"><i class="far fa-clock"></i> <%= itinerary_item.start_time.strftime("%I:%M%p") %> - <%= itinerary_item.end_time.strftime("%I:%M%p") %>
         </h6>
           <h3 class="card-title">
@@ -24,6 +24,7 @@
       <div class="col-md-7">
         <h6 class="category text-info"><i class="far fa-clock"></i> <%= itinerary_item.start_time.strftime("%I:%M%p") %> - <%= itinerary_item.end_time.strftime("%I:%M%p") %>
         </h6>
+
         <h3 class="card-title">
           <a href="#pablo"><%= itinerary_item.name %></a>
         </h3>
@@ -37,17 +38,16 @@
 
 <!-- Edit Itinerary Item Modal -->
 
-<div class="modal fade" id="editItineraryModal" tabindex="-1" role="dialog" aria-labelledby="editItineraryModal" aria-hidden="true">
+<div class="modal fade" id="editItemModal" tabindex="-1" role="dialog" aria-labelledby="editItemModal" aria-hidden="true">
 <div class="modal-dialog" role="document">
   <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title" id="editItineraryModal">Edit your itinerary: </h5>
+      <h5 class="modal-title" id="editItemModal">Edit your itinerary: </h5>
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
     <div class="modal-body">
-      <%= render 'itinerary_items/edit_form' %>
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-link btn-danger" data-dismiss="modal">Cancel</button>

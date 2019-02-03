@@ -1,5 +1,5 @@
 
-<%= form_for @itinerary, html: { method: :put } do |form| %>
+<%= form_for @itinerary_item do |form| %>
   <% if form.object.errors.any? %>
     <div class="alert alert-danger">
       <strong>The following errors prevented saving:</strong>
@@ -10,10 +10,8 @@
         </ul>
     </div>
   <% end %>
-
+ 
   <%= form.hidden_field :attraction_id, value: params[:attraction_id] %>
-  <% @itinerary = @itinerary_item.itinerary %>
-  <%= itinerary_path(@itinerary.id) %>
   
   <div class="form-group">
     <%= form.label :name %>

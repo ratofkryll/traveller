@@ -26,7 +26,8 @@ class ItineraryItemsController < ApplicationController
 
   def update
     @itinerary_item = ItineraryItem.find(params[:id])
-    @itinerary_item.update({itinerary_id: params[:itinerary_id], name: params[:name], notes: params[:notes], start_time: params[:start_time], end_time: params[:end_time]})
+    @itinerary_item.update(itinerary_params)
+    redirect_to trip_url(@itinerary_item.itinerary.trip_id)
   end
 
   def show
