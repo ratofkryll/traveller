@@ -6,6 +6,7 @@ $ ->
       id: id
       },
       append: (element, item) ->
+        console.log(element, item)
         element.appendChild(item)
 
       appendSorted: (element, item) ->
@@ -22,6 +23,7 @@ $ ->
 
       received: (data) ->
         obj_id = data[event]
+        console.log(data[id])
         return unless obj_id
         $.ajax(url.replace("$%7B%7D",obj_id)).done (data) =>
           div = document.createElement("div")

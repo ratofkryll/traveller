@@ -2,8 +2,10 @@
 <div class="container">
   <div class="card">
     <div class="card-header">
-      <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="orange">
+      <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="orange" data-channel="TripChannel" data-id="<%= @trip.id %>" data-event="created_itinerary" data-action="append" data-url="<%= itinerary_path('${}', format: :cable) %>">
         <%= render partial: 'itineraries/tab_header', collection: @trip.itineraries.order(:date), as: :itinerary %>
+      </ul>
+      <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="orange">
         <li class="nav-item">
         <button type="button" class="nav-link" data-toggle="modal" data-target="#newItineraryModal">
           <i class="fas fa-plus-circle"></i>
@@ -37,4 +39,3 @@
     </div>
   </div>
 </div>
-<div class="trip-listener" data-trip-id="<%= @trip.id %>"></div>
