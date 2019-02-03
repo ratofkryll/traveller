@@ -2,17 +2,22 @@
   <%= f.hidden_field :trip_id, value: params[:id] %>
   <%= f.hidden_field :sender, value: current_user.id %>
 
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+  
+    <%= f.label :email %>
+    <%= f.email_field :email, class: 'form-control' %>
+  
 
   <br />
   <br />
+  
+    <%= f.label :message %>
+    <%= f.text_area :message, class: 'form-control' %>
+  
 
-  <%= f.label :message %>
-  <%= f.text_area :message %>
   <br />
   <br />
-
-  <%= f.submit 'Send invite' %>
+  
+    <%= f.submit 'Send invite', class: 'btn btn-primary btn-round' %>
+  
 
 <% end %>

@@ -14,14 +14,16 @@
               <%= image_tag user.profile_pic, class: 'rounded-circle' %>
             </a>
             <% else %>
-              <a href="<%= user_trips_path(user) %>">
-                <i class="user-icon fas fa-user-circle" title="<%= user.first_name %>"></i>
+              <a href="<%= user_trips_path(user) %>" title="<%= user.first_name %>">
+              <%= image_tag image_path('img/no-user-image.png'), class: 'rounded-circle' %>
               </a>
             <% end %>
           <% end %>
-        <button type="button" class="rounded-circle" data-toggle="modal" data-target="#newInviteModal">
-          <i class="invite-button fas fa-user-plus"></i>
-        </button>
+          <div class="pull-right pt-5">
+          <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#newInviteModal">
+            <i class="fas fa-envelope"></i> Invite your friends
+          </button>
+          </div>
         </div>
       </div>
     </div>
@@ -48,3 +50,4 @@
   </div>
 </div>
 </div>
+
