@@ -1,2 +1,57 @@
-<h1>ItineraryItems#edit</h1>
-<p>Find me in app/views/itinerary_items/edit.html.erb</p>
+
+<%= form_for @itinerary, html: { method: :put } do |form| %>
+  <% if form.object.errors.any? %>
+    <div class="alert alert-danger">
+      <strong>The following errors prevented saving:</strong>
+        <ul>
+          <% form.object.errors.full_messages.each do |error| %>
+            <li><%= error %></li>
+          <% end %>
+        </ul>
+    </div>
+  <% end %>
+
+  <%= form.hidden_field :attraction_id, value: params[:attraction_id] %>
+  <% @itinerary = @itinerary_item.itinerary %>
+  <%= itinerary_path(@itinerary.id) %>
+  
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label 'Item Notes' %>
+    <%= form.text_field :notes, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label 'Start time' %>
+    <%= form.text_field :start_time, class:"form-control timepicker" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label 'End time' %>
+    <%= form.text_field :end_time, class:"form-control timepicker" %>
+  </div>
+  
+  <div class="datepicker-container">
+    <div class="form-group">
+      <%= form.label 'Trip' %>
+      <% current_user.trips.each do |trip| %>
+        <div class="trip">
+          <%= trip.name %>
+          <% itinerary = Itinerary.where(trip_id: trip.id) %>
+          <% itinerary.each do |i| %>
+            <p>
+              <%= form.radio_button :itinerary_id, i.id %><%= i.name %> 
+            <br />
+            </p>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+    <%= form.submit 'Looks Good!', class: 'btn btn-primary' %>
+  </div>
+<% end %>
+</div>

@@ -20,13 +20,18 @@ class ItineraryItemsController < ApplicationController
   end
 
   def edit
+    @itinerary_item = ItineraryItem.find(params[:id])
+    @itinerary = ItineraryItem.find_by(itinerary_id: @itinerary_item.itinerary_id)
   end
 
   def update
+    @itinerary_item = ItineraryItem.find(params[:id])
+    @itinerary_item.update({itinerary_id: params[:itinerary_id], name: params[:name], notes: params[:notes], start_time: params[:start_time], end_time: params[:end_time]})
   end
 
   def show
-    @itinerary_items = ItineraryItem.find_by(itinerary_id: params[:id])
+    @itinerary_item = ItineraryItem.find_by(id: params[:id])
+    @itinerary = ItineraryItem.find_by(itinerary_id: @itinerary_item.itinerary_id)
   end
 
   def destroy
