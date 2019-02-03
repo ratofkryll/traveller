@@ -2,7 +2,8 @@
   <div class="itinerary-header-container">
     <div class="d-flex justify-content-between align-items-baseline">
       <h2><%= itinerary.name %>
-      <button class="btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#editItineraryModal"><i class="far fa-edit"></i></button>
+      <button class="btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#addItemModal"><i class="fas fa-plus-circle"></i></button>
+      <button class="edit-button btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#editItineraryModal"><i class="far fa-edit"></i></button>
       <a class="del-button btn btn-neutral btn-danger btn-sm del-button" rel="nofollow" data-method="delete" href="/itinerary/<%= itinerary.id %>"><i class="far fa-trash-alt"></i></a>
       </h2>
       <h3 class="text-primary"><%= itinerary.date ? itinerary.date.to_formatted_s(:long) : "" %></h3>
@@ -65,6 +66,74 @@
         </div>
         
         <%= form.submit 'Update', class: 'btn btn-primary' %>
+
+        <% end %>
+      
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-link btn-danger" data-dismiss="modal">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="addItemModal" tabindex="-1" role="dialog" aria-labelledby="addItemModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addItemModal">Add an item to your day: </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+
+        <%= form_for @itinerary_item do |form| %>
+          <% if form.object.errors.any? %>
+            <div class="alert alert-danger">
+              <strong>The following errors prevented saving:</strong>
+              <ul>
+                <% form.object.errors.full_messages.each do |error| %>
+                  <li><%= error %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+        <%= form.hidden_field :attraction_id, value: params[:attraction_id] %>
+        
+        <div class="form-group">
+          <%= form.label :name %>
+          <%= form.text_field :name, class: 'form-control', placeholder: 'Flight' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label 'Item Notes' %>
+          <%= form.text_field :notes, class: 'form-control', placeholder:'Flight number: BA085' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label 'Start time' %>
+          <%= form.text_field :start_time, class:"form-control timepicker" %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label 'End time' %>
+          <%= form.text_field :end_time, class:"form-control timepicker" %>
+        </div>
+        
+          <div class="form-group">
+            <%= form.label 'Trip' %>
+            <div class="trip">
+              <%= @trip.name %>
+              <p><%= form.radio_button :itinerary_id, itinerary.id %><%= itinerary.name %></p>
+            </div>
+          </div>
+
+          <%= form.submit 'Looks Good!', class: 'btn btn-primary' %>
 
         <% end %>
       

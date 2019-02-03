@@ -40,6 +40,7 @@ class ItinerariesController < ApplicationController
   end
 
   def show
+    @itinerary_item = ItineraryItem.new
   end
 
   private

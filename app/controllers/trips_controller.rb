@@ -40,13 +40,13 @@ class TripsController < ApplicationController
 
   def show
     @trip = Trip.includes(itineraries: :itinerary_items).find params[:id]
+    @itinerary_item = ItineraryItem.new
     @selected_itinerary = @trip.itineraries.find_by(id: params[:selected_itinerary_id])
     @selected_itinerary ||= @trip.itineraries.first
     @invite = Invite.new
     respond_to do |format|
       format.cable { render layout: false }
     end
-
   end
 
   private

@@ -19,11 +19,15 @@
               </a>
             <% end %>
           <% end %>
-          <div class="pull-right pt-5">
-          <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#newInviteModal">
-            <i class="fas fa-envelope"></i> Invite your friends
-          </button>
-          </div>
+          <% UserTrip.where(trip_id: @trip.id).each do |trip| %>
+            <% if trip.user_id === current_user.id %>
+              <div class="pull-right pt-5">
+              <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#newInviteModal">
+                <i class="fas fa-envelope"></i> Invite your friends
+              </button>
+              </div>
+            <% end %>
+          <% end %>
         </div>
       </div>
     </div>
