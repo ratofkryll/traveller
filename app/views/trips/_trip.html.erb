@@ -2,10 +2,8 @@
   <div class="card-body">
     
     <div class="pull-right text-right">
-    <% UserTrip.where(trip_id: trip.id).each do |indTrip| %>
-      <% if indTrip.user_id === current_user.id %>
-        <%= link_to "Edit", trip_path(trip.id), class: "text-primary edit-link" %> | <%= link_to "Delete", trip, method: :delete, class: "text-danger delete-link" %>
-      <% end %>
+    <% if trip.users.include?(current_user) %>
+      <%= link_to "Edit", trip_path(trip.id), class: "text-primary edit-link" %> | <%= link_to "Delete", trip, method: :delete, class: "text-danger delete-link" %>
     <% end %>
     </div>
     <%= link_to trip do %>
@@ -24,7 +22,4 @@
     </table>
   </div>
 </div>
-
-
-<!-- Edit Itinerary Modal -->
 

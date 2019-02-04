@@ -19,15 +19,13 @@
               </a>
             <% end %>
           <% end %>
-          <% UserTrip.where(trip_id: @trip.id).each do |trip| %>
-            <% if trip.user_id === current_user.id %>
+            <% if @trip.users.include?(current_user) %>
               <div class="pull-right pt-4">
               <button type="button" class="btn btn-primary btn-round invite-button" data-toggle="modal" data-target="#newInviteModal">
                 <i class="fas fa-envelope"></i> Invite your friends
               </button>
               </div>
             <% end %>
-          <% end %>
         </div>
       </div>
     </div>
@@ -36,7 +34,7 @@
 
 
 
-<div class="modal fade" id="newInviteModal" tabindex="-1" role="dialog" aria-labelledby="newItineraryModal" aria-hidden="true">
+<div class="modal fade" id="newInviteModal" tabindex="-1" role="dialog" aria-labelledby="newInviteModal" aria-hidden="true">
 <div class="modal-dialog" role="document">
   <div class="modal-content">
     <div class="modal-header">

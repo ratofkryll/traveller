@@ -2,12 +2,10 @@
   <div class="itinerary-header-container">
     <div class="d-flex justify-content-between align-items-baseline">
       <h2><%= itinerary.name %>
-      <% UserTrip.where(trip_id: @trip.id).each do |trip| %>
-        <% if trip.user_id === current_user.id %>
-          <button class="btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#addItemModal"><i class="fas fa-plus-circle"></i></button>
-          <button class="edit-button btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#editItineraryModal"><i class="far fa-edit"></i></button>
-          <a class="del-button btn btn-neutral btn-danger btn-sm del-button" rel="nofollow" data-method="delete" href="/itinerary/<%= itinerary.id %>"><i class="far fa-trash-alt"></i></a>
-        <% end %>
+      <% if @trip.users.include?(current_user) %>
+        <button class="btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#addItemModal"><i class="fas fa-plus-circle"></i></button>
+        <button class="edit-button btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#editItineraryModal"><i class="far fa-edit"></i></button>
+        <a class="del-button btn btn-neutral btn-danger btn-sm del-button" rel="nofollow" data-method="delete" href="/itinerary/<%= itinerary.id %>"><i class="far fa-trash-alt"></i></a>
       <% end %>
       </h2>
       <h3 class="text-primary"><%= itinerary.date ? itinerary.date.to_formatted_s(:long) : "" %></h3>
