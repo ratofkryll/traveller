@@ -9,6 +9,8 @@ $ ->
         element.appendChild(item)
 
       appendSorted: (element, item) ->
+        element.children().each (index, element) ->
+          console.log($(element).data("sort"))
         # - Search through the list of elements
         # - Compare sort parameter (start_date (trip), date (itinerary) or start_time (itinerary_item)) to each element
         # - Insert element when its sort parameter is greater than the element's
