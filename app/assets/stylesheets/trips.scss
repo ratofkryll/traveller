@@ -90,3 +90,10 @@ a.delete-link:hover {
 .invite-button {
   margin-top: -0.5em;
 }
+
+.profile-pic {
+  width: 6em;
+  height: 6em;
+  object-fit: cover;
+  border-radius: 3em;
+}

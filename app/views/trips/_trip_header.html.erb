@@ -7,15 +7,15 @@
         <% if @trip.start_date && @trip.end_date %>
           <p><%= @trip.start_date.to_formatted_s(:long) %> - <%= @trip.end_date.to_formatted_s(:long) %></p>
         <% end %>
-        <div class="user-pics">
+        <div>
           <% @trip.users.each do |user| %>
-            <% if user.profile_pic != nil %>
+            <% if user.profile_pic.attachment != nil %>
             <a href="<%= user_trips_path(user) %>" title="<%= user.first_name %>">
-              <%= image_tag user.profile_pic, class: 'rounded-circle' %>
+              <%= image_tag user.profile_pic, class: 'profile-pic' %>
             </a>
             <% else %>
               <a href="<%= user_trips_path(user) %>" title="<%= user.first_name %>">
-              <%= image_tag image_path('img/no-user-image.png'), class: 'rounded-circle' %>
+              <%= image_tag image_path('img/no-user-image.png'), class: 'profile-pic' %>
               </a>
             <% end %>
           <% end %>
