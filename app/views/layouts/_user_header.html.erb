@@ -4,9 +4,11 @@
       <div class="page-header-image" data-parallax="false" style="background-image: url('<%= image_path('img/bg5.jpg') %>'); transform: translate3d(0px, 0px, 0px);">
       </div>
       <div class="content-center user-header-info">
-        <div class="photo-container">
-          <%= image_tag("img/ryan.jpg") %>
-        </div>
+        <% if @user.profile_pic.attachment != nil %>
+          <%= image_tag @user.profile_pic, class: 'profile-pic' %>
+        <% else %>
+          <%= image_tag image_path('img/no-user-image.png'), class: 'profile-pic' %>
+        <% end %>
         <h3 class="category text-white"><%= @user.first_name %> <%= @user.last_name %></h3>
         <div class="content">
           <div class="social-description">
