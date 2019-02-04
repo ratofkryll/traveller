@@ -239,7 +239,6 @@ User.create({
   email: 'email@email.com',
   password: 'password',
   password_confirmation: 'password',
-  profile_pic: 'https://static.tvtropes.org/pmwiki/pub/images/rsz_superheroes2.png'
   })
 
 # REVIEWS
