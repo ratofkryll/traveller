@@ -72,7 +72,7 @@ city3 = City.create!({
 })
 city4 = City.create!({
   name: "New York",
-  country: "United States",
+  country: "United States of America",
   description: "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.",
   language: "English",
   currency: "USD",
@@ -84,7 +84,7 @@ city4 = City.create!({
 })
 city5 = City.create!({
   name: "Los Angeles",
-  country: "United States",
+  country: "United States of America",
   description: "Los Angeles is a sprawling Southern California city and the center of the nation’s film and television industry. Near its iconic Hollywood sign, studios such as Paramount Pictures, Universal and Warner Brothers offer behind-the-scenes tours. On Hollywood Boulevard, TCL Chinese Theatre displays celebrities’ hand- and footprints, the Walk of Fame honors thousands of luminaries and vendors sell maps to stars’ homes.",
   language: "English",
   currency: "USD",
@@ -105,6 +105,42 @@ city6 = City.create!({
   time_zone: "EST (UTC-5h)",
   tipping_custom: "15-18%",
   image: "cities/city_toronto.jpg"
+})
+city7 = City.create!({
+  name: "Chicago",
+  country: "United States of America",
+  description: "Chicago, on Lake Michigan in Illinois, is among the largest cities in the U.S. Famed for its bold architecture, it has a skyline punctuated by skyscrapers such as the iconic John Hancock Center, 1,451-ft. Willis Tower (formerly the Sears Tower) and the neo-Gothic Tribune Tower. The city is also renowned for its museums, including the Art Institute of Chicago with its noted Impressionist and Post-Impressionist works.",
+  language: "English",
+  currency: "USD",
+  transit: "https://www.transitchicago.com/",
+  emergency_phone: "911",
+  time_zone: "EST (UTC-6h)",
+  tipping_custom: "15-20%",
+  image: "cities/city_chicago.jpg"
+})
+city8 = City.create!({
+  name: "Paris",
+  country: "France",
+  description: "Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture and designer boutiques along the Rue du Faubourg Saint-Honoré.",
+  language: "French",
+  currency: "EUR",
+  transit: "https://www.ratp.fr/en",
+  emergency_phone: "112",
+  time_zone: "CEST (UTC+1h)",
+  tipping_custom: "Suggested 10-15%",
+  image: "cities/city_paris.jpg"
+})
+city9 = City.create!({
+  name: "Sydney",
+  country: "Australia",
+  description: "Sydney, capital of New South Wales and one of Australia's largest cities, is best known for its harbourfront Sydney Opera House, with a distinctive sail-like design. Massive Darling Harbour and the smaller Circular Quay port are hubs of waterside life, with the arched Harbour Bridge and esteemed Royal Botanic Garden nearby. Sydney Tower’s outdoor platform, the Skywalk, offers 360-degree views of the city and suburbs.",
+  language: "English",
+  currency: "AUD",
+  transit: "https://transportnsw.info/",
+  emergency_phone: "000",
+  time_zone: "AET (UTC+11h)",
+  tipping_custom: "Suggested 10-15%",
+  image: "cities/city_sydney.jpg"
 })
 
 # ATTRACTIONS
