@@ -27,4 +27,4 @@ $ ->
           div = document.createElement("div")
           div.innerHTML = data
           # action is append, appendSorted, update, destroy
-          @[action](element, div.firstChild)
+          @[action](element, div)

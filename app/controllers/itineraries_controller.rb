@@ -7,7 +7,7 @@ class ItinerariesController < ApplicationController
     @itinerary = Itinerary.new(itinerary_params)
     respond_to do |format|
       if @itinerary.save
-        format.html { redirect_to @itinerary, notice: 'Todo was successfully created.' }
+        format.html { redirect_to user_trips_path(current_user.id), notice: 'Itinerary was successfully created.' }
         format.json { render :show, status: :created, location: @itinerary }
       else
         format.html { render :new }
@@ -40,7 +40,7 @@ class ItinerariesController < ApplicationController
     end
 
     if @itinerary.destroy
-      redirect_back fallback_location: trip_path(trip)
+      redirect_to user_trips_path(current_user.id)
     else
       flash[:notice] = 'Woops. Looks like we couldn\'t delete your trip.'
     end
@@ -49,6 +49,7 @@ class ItinerariesController < ApplicationController
 
   def show
     @itinerary_item = ItineraryItem.new
+    @itinerary = Itinerary.find params[:id]
   end
 
   private
