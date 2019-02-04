@@ -27,27 +27,29 @@
   <!-- Attraction Descritption -->
   <article>
     <div class="container">
+
       <div class="card pl-5 pr-5">
         <div class="col-md-12 ml-auto mr-auto pb-4">
           <h3 class="title"><%= @attraction.name %></h3>
-            <div class="attractions-all-cards">
-              <p><%= @attraction.description %></p>
-            </div>
+          <div class="attractions-all-cards">
+            <p><%= @attraction.description %></p>
+          </div>
         </div>
       </div>
 
         <br >
         <br >
 
-        <div class="card form-col pull-right mt-4 p-2">
-          <div class="media-area">
-            <%= render 'review_form' %>
-          </div>
+      <div class="card form-col pull-right mt-4 p-2">
+        <div class="media-area">
+          <%= render 'review_form' %>
         </div>
+      </div>
         
-        <div class="card reviews-col mt-3 ml-2, mr-2 pl-5 pr-5">
-          <%= render 'reviews' %>
-        </div>
+      <div class="card reviews-col mt-3 ml-2, mr-2 pl-5 pr-5">
+        <%= render 'reviews' %>
+      </div>
+      
     </div>
   </article>
 </main>

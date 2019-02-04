@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
 
-  before_action :authenticate_user
+  before_action :authenticate_user!
 
   def new
     @review = Review.new
@@ -8,7 +8,6 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    @review.attaraction_id = params[:attraction_id]
     @review.user = current_user
 
     if @review.save!
@@ -31,7 +30,8 @@ class ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(
       :review,
-      :rating
+      :rating,
+      :attraction_id
     )
   end
 

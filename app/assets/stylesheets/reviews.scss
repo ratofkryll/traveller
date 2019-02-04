@@ -1,3 +1,28 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-review-pic {
+  height: 2em;
+  width: 2em;
+  border-radius: 2em;
+  object-fit: cover;
+  margin-right: 0.5em;
+}
+
+.review-header {
+  margin-left: 0.5em;
+  font-size: 2em;
+}
+
+.review-container {
+  margin-left: 1em;
+}
+
+.review-pic {
+  height: 4em;
+  width: 4em;
+  border-radius: 2em;
+  object-fit: cover;
+  margin-right: 0.5em;
+}
