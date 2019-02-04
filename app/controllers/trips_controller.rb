@@ -26,7 +26,7 @@ class TripsController < ApplicationController
     usertrip.each do |indTrip|
       if indTrip.user_id === current_user.id
         @trip.destroy!
-      else 
+      else
         flash[:notice] = 'Woops. Looks like you do not own that itinerary.'
       end
     end
@@ -42,7 +42,7 @@ class TripsController < ApplicationController
   def index
     @user = User.find params[:user_id]
     @trips = @user.trips
-    @trip_new = Trip.new
+    @trip = Trip.new
   end
 
 
