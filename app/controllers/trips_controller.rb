@@ -21,7 +21,15 @@ class TripsController < ApplicationController
   def destroy
     tripId = params[:id]
     @trip = Trip.find(params[:id])
-    @trip.destroy!
+    usertrip = UserTrip.where(trip_id: @trip)
+
+    usertrip.each do |indTrip|
+      if indTrip.user_id === current_user.id
+        @trip.destroy!
+      else 
+        flash[:notice] = 'Woops. Looks like you do not own that itinerary.'
+      end
+    end
 
     if @trip.destroy
       redirect_back fallback_location: user_trips_path(current_user.id)

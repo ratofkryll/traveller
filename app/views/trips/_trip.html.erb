@@ -2,7 +2,11 @@
   <div class="card-body">
     
     <div class="pull-right text-right">
-    <%= link_to "Edit", trip_path(trip.id), class: "text-primary edit-link" %> | <%= link_to "Delete", trip, method: :delete, class: "text-danger delete-link" %>
+    <% UserTrip.where(trip_id: trip.id).each do |indTrip| %>
+      <% if indTrip.user_id === current_user.id %>
+        <%= link_to "Edit", trip_path(trip.id), class: "text-primary edit-link" %> | <%= link_to "Delete", trip, method: :delete, class: "text-danger delete-link" %>
+      <% end %>
+    <% end %>
     </div>
     <%= link_to trip do %>
     <h5 class="card-title"><%= trip.name %></a></h5>

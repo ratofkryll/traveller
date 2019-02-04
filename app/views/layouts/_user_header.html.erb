@@ -23,17 +23,22 @@
     <div class="section">
       <div class="container">
         <div class="button-container">
+        <% if params[:user_id] === current_user.id.to_s %>
           <button type="button" class="btn btn-primary btn-lg btn-round" data-toggle="modal" data-target="#newTripModal">
             New Trip
           </button>
+        <% end %>
           <%= link_to "My Trips", user_trips_path(@user[:id]), class: "btn btn-primary btn-round btn-lg" %>
           <a href="#button" class="btn btn-primary btn-round btn-lg">Shared Trips</a>
+        <% if params[:user_id] === current_user.id.to_s %>
           <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary btn-round btn-lg" %>
-        </div>
+        <% end %>
+         </div>
       </div>
     </div>
   </div>
 </div>
+
 
 <!-- New Trip Modal -->
 <div class="modal fade" id="newTripModal" tabindex="-1" role="dialog" aria-labelledby="newTripModal" aria-hidden="true">
