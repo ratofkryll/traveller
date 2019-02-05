@@ -42,3 +42,19 @@
 .review-delete {
 padding-left: 26em;
 }
+
+.card-attraction-description {
+  max-height: 10em;
+  overflow: scroll;
+}
+
+.card-body h5 {
+  font-size: 1.4em;
+  max-height: 2em;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+h5::-webkit-scrollbar {
+  height: 1px;
+}

@@ -5,7 +5,7 @@
 
   <div class="media pb-5">
     <a href="<%= user_trips_path(item.user.id) %>" title="<%= item.user.first_name %>">
-      <% if current_user.profile_pic.attachment != nil %>
+      <% if item.user.profile_pic.attachment != nil %>
         <%= image_tag item.user.profile_pic, class: 'review-pic' %>
       <% else %>
         <%= image_tag image_path('img/no-user-image.png'), class: 'review-pic' %>
