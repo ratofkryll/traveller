@@ -72,7 +72,7 @@ city3 = City.create!({
 })
 city4 = City.create!({
   name: "New York",
-  country: "United States of America",
+  country: "U.S.A.",
   description: "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.",
   language: "English",
   currency: "USD",
@@ -84,7 +84,7 @@ city4 = City.create!({
 })
 city5 = City.create!({
   name: "Los Angeles",
-  country: "United States of America",
+  country: "U.S.A.",
   description: "Los Angeles is a sprawling Southern California city and the center of the nation’s film and television industry. Near its iconic Hollywood sign, studios such as Paramount Pictures, Universal and Warner Brothers offer behind-the-scenes tours. On Hollywood Boulevard, TCL Chinese Theatre displays celebrities’ hand- and footprints, the Walk of Fame honors thousands of luminaries and vendors sell maps to stars’ homes.",
   language: "English",
   currency: "USD",
@@ -108,7 +108,7 @@ city6 = City.create!({
 })
 city7 = City.create!({
   name: "Chicago",
-  country: "United States of America",
+  country: "U.S.A.",
   description: "Chicago, on Lake Michigan in Illinois, is among the largest cities in the U.S. Famed for its bold architecture, it has a skyline punctuated by skyscrapers such as the iconic John Hancock Center, 1,451-ft. Willis Tower (formerly the Sears Tower) and the neo-Gothic Tribune Tower. The city is also renowned for its museums, including the Art Institute of Chicago with its noted Impressionist and Post-Impressionist works.",
   language: "English",
   currency: "USD",
@@ -232,7 +232,7 @@ city1.attractions.create!({
   twitter: "https://twitter.com/vandusengdn",
   description: "
   View across one of the ponds, to the mountains north of Vancouver
-  
+
   Autumn colours at VanDusen Botanical Garden, 2011
   In 1970 the Vancouver Foundation, the British Columbia provincial government, and the city of Vancouver signed an agreement to provide the funding to develop a public garden on part of the old Shaughnessy Golf Course.",
   monday_hours: "10am - 3pm",
@@ -587,7 +587,7 @@ city2.attractions.create!({
   featured: true
 })
 
-## London Attraction Data 
+## London Attraction Data
 
 city3.attractions.create!({
   name: "Big Ben",
@@ -861,7 +861,7 @@ puts "Linking trips to test user..."
 
 5.times do |i|
   UserTrip.create({
-    user_id: 21,
+    user_id: 61,
     trip_id: rand(1..5),
     role: 'creator'
   })
