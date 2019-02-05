@@ -1,0 +1,31 @@
+<div class="tab-pane" id="<%= category %>" role="tabpanel">
+  <div class="attractions-all-cards">
+    <% @attractions.each do |attraction| %>
+      <% if attraction.categories.include?(category) %>
+        <div class="attraction-card">
+          <div class="card">
+          
+            <div class="card-img">
+              <%= link_to attraction_path(attraction.id) do %>
+                <img class="card-img-top" src=<%= image_path(attraction.image) %> >
+              <% end %>
+            </div>
+
+            <div class="card-body">
+              <%= link_to attraction_path(attraction.id) do %>
+                <h5><%= attraction.name %></h5>
+              <% end %>
+              <p class="card-attraction-description"><%= attraction.description %></p>
+              <div class="button-wrapper">
+                <%= link_to attraction_path(attraction.id) do %>
+                  <button class="btn btn-sm attraction-btn">Find out more</button>
+                <% end %>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>	
+</div>
