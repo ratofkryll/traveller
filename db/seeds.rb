@@ -238,7 +238,7 @@ User.create({
   last_name: 'R',
   email: 'email@email.com',
   password: 'password',
-  password_confirmation: 'password',
+  password_confirmation: 'password'
   })
 
 # REVIEWS
