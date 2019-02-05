@@ -17,6 +17,7 @@ $ ->
             inserted = true
         if !inserted
           element.appendChild(item)
+          
       update: (element, item) ->
         # replace the element with item
 

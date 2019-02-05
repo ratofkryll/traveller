@@ -52,6 +52,12 @@ class ItinerariesController < ApplicationController
     @itinerary = Itinerary.find params[:id]
   end
 
+  def details
+    @itinerary_item = ItineraryItem.new
+    @itinerary = Itinerary.find params[:id]
+    @trip = @itinerary.trip
+  end
+
   private
 
   def itinerary_params

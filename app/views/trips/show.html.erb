@@ -14,7 +14,7 @@
       </ul>
 
       <div class="card-body">
-        <div class="tab-content">
+        <div class="tab-content" data-channel="TripChannel" data-id="<%= @trip.id %>" data-event="created_itinerary" data-action="append" data-url="<%= itinerary_details_path('${}', format: :cable) %>">
           <%= render partial: 'itineraries/tab_content', collection: @trip.itineraries.order(:date), as: :itinerary %>
         </div>
       </div>

@@ -13,6 +13,7 @@
  *= require_self
  *= require bootstrap.min
  *= require now-ui-kit
+ *= require font-awesome
  *= require attractions
  *= require cities
  *= require itineraries
@@ -21,6 +22,8 @@
  *= require trips
  *= require users
  *= require footer
- *= require font-awesome
+ *= require navbar
+
+ * NOTE: Any custom css with !important is used to override !imporant tags used by Now-UI-Kit or Bootstrap 4.
 
  */
