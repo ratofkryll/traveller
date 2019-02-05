@@ -1,15 +1,13 @@
-# Tripper
+# Traveller
 ### By DGN
 
 * Create PostgreSQL database manually
 
 ## Dependencies
+  * Ruby 2.6.0
+  * Rails 5.2.2
   * PostgreSQL
-  * Webpacker
-  * React-Rails
   * Faker
-  * Ruby
-  * Rails
   * JQuery Rails
   * Sass
   * Uglifier
