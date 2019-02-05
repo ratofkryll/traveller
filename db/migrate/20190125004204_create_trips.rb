@@ -4,8 +4,8 @@ class CreateTrips < ActiveRecord::Migration[5.2]
       t.string :name, null: false
       t.date :start_date, null: false
       t.date :end_date, null: false
-      t.boolean :public, null: false
-      t.boolean :featured, null: false
+      t.boolean :public, null: false, default: false
+      t.boolean :featured, null: false, default: false
 
       t.timestamps
     end

@@ -1,5 +1,5 @@
 <% trip = @trip %>
-<div class="card" data-sort="<%= trip.start_date %>">
+<div class="card" data-sort="<%= trip.start_date.iso8601 %>">
   <div class="card-body">
     <div class="pull-right text-right">
     <%= link_to "Edit", trip_path(trip.id), class: "text-primary edit-link" %> | <%= link_to "Delete", trip, method: :delete, class: "text-danger delete-link" %>

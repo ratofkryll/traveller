@@ -95,8 +95,8 @@ ActiveRecord::Schema.define(version: 2019_02_04_152951) do
     t.string "name", null: false
     t.date "date", null: false
     t.string "notes", default: "", null: false
-    t.boolean "public", null: false
-    t.boolean "featured", null: false
+    t.boolean "public", default: false, null: false
+    t.boolean "featured", default: false, null: false
     t.bigint "trip_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -137,8 +137,8 @@ ActiveRecord::Schema.define(version: 2019_02_04_152951) do
     t.string "name", null: false
     t.date "start_date", null: false
     t.date "end_date", null: false
-    t.boolean "public", null: false
-    t.boolean "featured", null: false
+    t.boolean "public", default: false, null: false
+    t.boolean "featured", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -146,7 +146,7 @@ ActiveRecord::Schema.define(version: 2019_02_04_152951) do
   create_table "user_trips", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "trip_id", null: false
-    t.string "role", null: false
+    t.string "role", default: "creator", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["trip_id"], name: "index_user_trips_on_trip_id"
