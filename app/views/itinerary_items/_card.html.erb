@@ -18,7 +18,7 @@
         <h6 class="category text-info"><i class="far fa-clock"></i> <%= itinerary_item.start_time.strftime("%I:%M%p") %> - <%= itinerary_item.end_time.strftime("%I:%M%p") %>
         </h6>
         <h3 class="card-title">
-          <a href="#pablo"><%= itinerary_item.attraction.name %></a>
+          <a href="<%= attraction_path(itinerary_item.attraction) %>"><%= itinerary_item.attraction.name %></a>
         </h3>
         <p class="card-description">
           <%= itinerary_item.attraction.description %>
@@ -29,7 +29,7 @@
         <h6 class="category text-info"><i class="far fa-clock"></i> <%= itinerary_item.start_time.strftime("%I:%M%p") %> - <%= itinerary_item.end_time.strftime("%I:%M%p") %>
         </h6>
         <h3 class="card-title">
-          <a href="#pablo"><%= itinerary_item.name %></a>
+          <%= itinerary_item.name %>
         </h3>
         <p class="card-description">
           <%= itinerary_item.notes %>
