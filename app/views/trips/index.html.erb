@@ -4,7 +4,7 @@
     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newTripModal">
       New Trip
     </button>
-    <div data-channel="UserChannel" data-id="<%= current_user.id %>" data-event="created_trip" data-action="append" data-url="<%= trip_path('${}', format: :cable) %>">
+    <div data-channel="UserChannel">
       <%= render @user.trips.order(start_date: :desc) %>
     </div>
   </div>

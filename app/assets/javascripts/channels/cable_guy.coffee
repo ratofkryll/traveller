@@ -9,10 +9,15 @@ $ ->
         element.appendChild(item)
 
       appendSorted: (element, item) ->
-        # - Search through the list of elements
-        # - Compare sort parameter (start_date (trip), date (itinerary) or start_time (itinerary_item)) to each element
-        # - Insert element when its sort parameter is greater than the element's
-
+        inserted = false
+        $(element).children().each (index, child) =>
+          console.log("item", $(item).data("sort"), "child", $(child).data("sort"))
+          if $(item).data("sort") <= $(child).data("sort") && !inserted
+            child.before(item)
+            inserted = true
+        if !inserted
+          element.appendChild(item)
+          
       update: (element, item) ->
         # replace the element with item
 
@@ -27,4 +32,4 @@ $ ->
           div = document.createElement("div")
           div.innerHTML = data
           # action is append, appendSorted, update, destroy
-          @[action](element, div)
+          @[action](element, div.firstChild)

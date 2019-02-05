@@ -1,0 +1,18 @@
+<% itinerary = @itinerary %>
+<div class="tab-pane" id="<%= itinerary.id %>" role="tabpanel">
+  <div class="itinerary-header-container">
+    <div class="d-flex justify-content-between align-items-baseline">
+      <h2><%= itinerary.name %>
+      <% if @trip.users.include?(current_user) %>
+        <button class="btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#addItemModal"><i class="fas fa-plus-circle"></i></button>
+        <button class="edit-button btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#editItineraryModal"><i class="far fa-edit"></i></button>
+        <a class="del-button btn btn-neutral btn-danger btn-sm del-button" rel="nofollow" data-method="delete" href="/itinerary/<%= itinerary.id %>"><i class="far fa-trash-alt"></i></a>
+      <% end %>
+      </h2>
+      <h3 class="text-primary"><%= itinerary.date ? itinerary.date.to_formatted_s(:long) : "" %></h3>
+    </div>
+  </div>
+  <div class="container itinerary-item-container" data-channel="ItineraryChannel" data-id="<%= itinerary.id %>" data-event="created_itinerary_item" data-action="appendSorted" data-url="<%= itinerary_item_path('${}', format: :cable) %>">
+    <%= render partial: 'itinerary_items/card', collection: itinerary.itinerary_items, as: :itinerary_item %>
+  </div>
+</div>

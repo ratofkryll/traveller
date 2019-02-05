@@ -1,11 +1,11 @@
 class CreateTrips < ActiveRecord::Migration[5.2]
   def change
     create_table :trips do |t|
-      t.string :name
-      t.date :start_date
-      t.date :end_date
-      t.boolean :public
-      t.boolean :featured
+      t.string :name, null: false
+      t.date :start_date, null: false
+      t.date :end_date, null: false
+      t.boolean :public, null: false, default: false
+      t.boolean :featured, null: false, default: false
 
       t.timestamps
     end

@@ -1,6 +1,5 @@
 <% itinerary_item = @itinerary_item %>
-
-<div class="card card-plain card-blog border-bottom">
+<div class="card card-plain card-blog border-bottom" data-sort="<%= itinerary_item.start_time %>">
   <div class="row">
     <% if itinerary_item.attraction_id %>
       <div class="col-md-5">

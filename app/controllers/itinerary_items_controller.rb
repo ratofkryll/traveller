@@ -31,8 +31,8 @@ class ItineraryItemsController < ApplicationController
   end
 
   def show
-    @itinerary = ItineraryItem.find_by(itinerary_id: @itinerary_item.itinerary_id)
     @itinerary_item = ItineraryItem.find params[:id]
+    @itinerary = ItineraryItem.find_by(itinerary_id: @itinerary_item.itinerary_id)
   end
 
   def destroy

@@ -18,6 +18,9 @@ Rails.application.routes.draw do
     resources :itineraries, only: [:new, :create, :destroy]
   end
 
+  get 'itinerary_details/:id', to: 'itineraries#details', as: :itinerary_details
+
+
   resources :itineraries, except: [:index] do
     resources :itinerary_items, only: [:show]
   end

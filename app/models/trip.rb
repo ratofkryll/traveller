@@ -6,12 +6,9 @@ class Trip < ApplicationRecord
 
   validates_presence_of :start_date, :end_date
 
-  attr_accessor :selected_itinerary
+  default_scope { order(start_date: :desc) }
 
-  after_create -> {
-    users.each{ |u| UserChannel.broadcast_to(u, {created_trip: self.id}) }
-    TripChannel.broadcast_to(self, {created: self.id})
-  }
+  attr_accessor :selected_itinerary
 
   after_update -> { TripChannel.broadcast_to(self, {updated: self.id}) }
   after_destroy -> { TripChannel.broadcast_to(self, {destroyed: self.id}) }

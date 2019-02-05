@@ -1,12 +1,12 @@
 class CreateItineraryItems < ActiveRecord::Migration[5.2]
   def change
     create_table :itinerary_items do |t|
-      t.references :itinerary, foreign_key: true
+      t.references :itinerary, foreign_key: true, null: false
       t.references :attraction, foreign_key: true
-      t.string :name
-      t.text :notes
-      t.time :start_time
-      t.time :end_time
+      t.string :name, null: false, default: ""
+      t.text :notes, null: false, default: ""
+      t.time :start_time, null: false
+      t.time :end_time, null: false
 
       t.timestamps
     end
