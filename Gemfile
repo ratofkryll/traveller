@@ -49,10 +49,9 @@ gem 'faker'
 
 # AWS S3 asset hosting
 gem 'aws-sdk', '~> 2'
-gem 'formtastic'
 
-# React
-# gem 'react-rails'
+# Formtastic form helpers
+gem 'formtastic'
 
 # Sendgrid for sending invite emails
 gem 'sendgrid-ruby'
@@ -61,6 +60,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'dotenv-rails', '~> 2.2'
+  gem 'rspec-rails', '~> 3.8'
 end
 
 group :development do

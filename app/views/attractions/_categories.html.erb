@@ -17,7 +17,7 @@
 
 			<div class="tab-pane active" id="all" role="tabpanel">
 				<div class="attractions-all-cards">
-					<% @attractions.each do |attraction| %>
+					<% @attractions.order(:name).each do |attraction| %>
 						<%= render 'attractions/category_all', attraction: attraction %>
 					<% end %>
 				</div>	
