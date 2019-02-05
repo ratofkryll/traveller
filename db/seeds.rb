@@ -167,7 +167,7 @@ city1.attractions.create!({
   saturday_hours: "9am - 6pm",
   sunday_hours: "9am - 6pm",
   image: "attractions/vancouver-capilano.jpg",
-  categories: ["nature, child-friendly"],
+  categories: ["nature", "child-friendly"],
   google_place: "EjZDYXBpbGFubyBTdXNwZW5zaW9uIEJyaWRnZSwgV2VzdCBWYW5jb3V2ZXIsIEJDLCBDYW5hZGEiLiosChQKEgk1aGXkzW-GVBEPrirpurG0mxIUChIJ03ztPxVuhlQRleuQB-vSjUY",
   public: true,
   featured: true
@@ -191,7 +191,7 @@ city1.attractions.create!({
   saturday_hours: "10am - 5pm",
   sunday_hours: "10am - 5pm",
   image: "attractions/vancouver-aqua.jpg",
-  categories: ["nature, child-friendly"],
+  categories: ["nature", "child-friendly"],
   google_place: "ChIJp2zKeo1xhlQRWOMOmCcWJV8",
   public: true,
   featured: true
@@ -215,7 +215,7 @@ city1.attractions.create!({
   saturday_hours: "9am - 10pm",
   sunday_hours: "9am - 10pm",
   image: "attractions/vancouver-grouse.jpg",
-  categories: ["nature, child-friendly, viewpoint"],
+  categories: ["nature", "child-friendly", "viewpoint"],
   google_place: "ChIJNz7rZoVvhlQR9kZL6IxEY00",
   public: true,
   featured: true
@@ -243,7 +243,7 @@ city1.attractions.create!({
   saturday_hours: "10am - 3pm",
   sunday_hours: "10am - 3pm",
   image: "attractions/vancouver-vandusen.jpg",
-  categories: ["nature, child-friendly, garden"],
+  categories: ["nature", "child-friendly", "garden"],
   google_place: "ChIJwW3HeIZzhlQRVxJgWI8VjAg",
   public: true,
   featured: true
@@ -315,7 +315,7 @@ city1.attractions.create!({
   saturday_hours: "10am - 4:30pm",
   sunday_hours: "10am - 4:30pm",
   image: "attractions/vancouver-sun-yet.jpg",
-  categories: ["child-friendly, garden"],
+  categories: ["child-friendly", "garden"],
   google_place: "ChIJ8ToMkXpxhlQRYqJG8pg7rQI",
   public: true,
   featured: true
@@ -461,7 +461,7 @@ city2.attractions.create!({
   saturday_hours: "N/A",
   sunday_hours: "N/A",
   image: "attractions/montreal-st-joesephs.jpg",
-  categories: ["historical, museum"],
+  categories: ["historical", "museum"],
   google_place: "ChIJad-yd_oZyUwRQ20Rv84PQ0o",
   public: true,
   featured: true
@@ -485,7 +485,7 @@ city2.attractions.create!({
   saturday_hours: "10am - 5pm",
   sunday_hours: "10am - 5pm",
   image: "attractions/montreal-biosphere.jpg",
-  categories: ["museum, garden"],
+  categories: ["museum", "garden"],
   google_place: "ChIJscEBsAgbyUwRKVqf-G_mDi0",
   public: true,
   featured: true
@@ -607,7 +607,7 @@ city3.attractions.create!({
   saturday_hours: "N/A",
   sunday_hours: "N/A",
   image: "attractions/London-BigBen.jpg",
-  categories: ["historical, monument, child-friendly"],
+  categories: ["historical", "monument", "child-friendly"],
   google_place: "ChIJ2dGMjMMEdkgRqVqkuXQkj7c",
   public: true,
   featured: true
@@ -631,7 +631,7 @@ city3.attractions.create!({
   saturday_hours: "9am - 7.30pm",
   sunday_hours: "9am - 7.30pm",
   image: "attractions/london-buck-palace.jpg",
-  categories: ["historical, child-friendly"],
+  categories: ["historical", "child-friendly"],
   google_place: "ChIJtV5bzSAFdkgRpwLZFPWrJgo",
   public: true,
   featured: true
@@ -655,7 +655,7 @@ city3.attractions.create!({
   saturday_hours: "10am - 7.30pm",
   sunday_hours: "10am - 7.30pm",
   image: "attractions/london-eye.jpg",
-  categories: ["viewpoint, child-friendly"],
+  categories: ["viewpoint", "child-friendly"],
   google_place: "ChIJc2nSALkEdkgRkuoJJBfzkUI",
   public: true,
   featured: true
@@ -679,7 +679,7 @@ city3.attractions.create!({
   saturday_hours: "9am - 4:30pm",
   sunday_hours: "10am - 4:30pm",
   image: "attractions/london-tower-of-london.jpg",
-  categories: ["historical, child-friendly"],
+  categories: ["historical", "child-friendly"],
   google_place: "ChIJ3TgfM0kDdkgRZ2TV4d1Jv6g",
   public: true,
   featured: true
@@ -703,7 +703,7 @@ city3.attractions.create!({
   saturday_hours: "9am - 5pm",
   sunday_hours: "10am - 4:30pm",
   image: "attractions/london-tower-bridge.jpg",
-  categories: ["historical, viewpoint, child-friendly"],
+  categories: ["historical", "viewpoint", "child-friendly"],
   google_place: "EhxUb3dlciBCcmlkZ2UsIFVuaXRlZCBLaW5nZG9tIi4qLAoUChIJi2vtr0gDdkgR9VZELRbHdpoSFAoSCamRx0IRO1oCEXoliDJDoPjE",
   public: true,
   featured: true
@@ -727,7 +727,7 @@ city3.attractions.create!({
   saturday_hours: "10am - 5:30pm",
   sunday_hours: "10am - 5:30pm",
   image: "attractions/london-british-musuem.jpg",
-  categories: ["historical, child-friendly, museum"],
+  categories: ["historical", "child-friendly", "museum"],
   google_place: "ChIJB9OTMDIbdkgRp0JWbQGZsS8",
   public: true,
   featured: true
@@ -751,7 +751,7 @@ city3.attractions.create!({
   saturday_hours: "9am - 1:30pm",
   sunday_hours: "Closed",
   image: "attractions/london-westminster-abbey.jpg",
-  categories: ["historical, child-friendly"],
+  categories: ["historical", "child-friendly"],
   google_place: "ChIJRUeRWcMEdkgRAO7ZzLCgDXA",
   public: true,
   featured: true
@@ -775,7 +775,7 @@ city3.attractions.create!({
   saturday_hours: "8:30am - 4:30pm",
   sunday_hours: "Closed",
   image: "attractions/london-st-pauls.jpg",
-  categories: ["historical, viewpoint, child-friendly, monument"],
+  categories: ["historical", "viewpoint", "child-friendly", "monument"],
   google_place: "ChIJh7wHoqwEdkgR3l-vqQE1HTo",
   public: true,
   featured: true
@@ -799,7 +799,7 @@ city3.attractions.create!({
   saturday_hours: "10am - 10pm",
   sunday_hours: "10am - 8pm",
   image: "attractions/london-the-shard.jpg",
-  categories: ["viewpoint, child-friendly"],
+  categories: ["viewpoint", "child-friendly"],
   google_place: "ChIJ03GSCloDdkgRe_s-p2vyvQA",
   public: true,
   featured: true

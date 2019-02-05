@@ -10,7 +10,7 @@ class CitiesController < ApplicationController
   end
 
   def categories(attractions)
-    allCategories = ['gallery', 'garden', 'historical', 'kids', 'museum', 'nature', 'shopping']
+    allCategories = ['child-friendly', 'gallery', 'garden', 'historical', 'museum', 'nature', 'shopping', 'viewpoint']
     categories = []
     allCategories.each do |category|
       attractions.each do |attraction|
