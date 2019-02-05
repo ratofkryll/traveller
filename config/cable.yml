@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  url: redis://redistogo:acca05f3cce8b4932b94fbd091744a4e@tarpon.redistogo.com:10054/
   channel_prefix: tripper_production
