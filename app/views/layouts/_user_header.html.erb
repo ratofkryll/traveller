@@ -9,6 +9,8 @@
         <% else %>
           <%= image_tag image_path('img/no-user-image.png'), class: 'profile-pic' %>
         <% end %>
+        <br />
+        <br />
         <h3 class="category text-white"><%= @user.first_name %> <%= @user.last_name %></h3>
         <div class="content">
           <div class="social-description">
@@ -25,38 +27,12 @@
     <div class="section">
       <div class="container">
         <div class="button-container">
-        <% if params[:user_id] === current_user.id.to_s %>
-          <button type="button" class="btn btn-primary btn-lg btn-round" data-toggle="modal" data-target="#newTripModal">
-            New Trip
-          </button>
-        <% end %>
           <%= link_to "My Trips", user_trips_path(@user[:id]), class: "btn btn-primary btn-round btn-lg" %>
           <a href="#button" class="btn btn-primary btn-round btn-lg">Shared Trips</a>
-        <% if params[:user_id] === current_user.id.to_s %>
+        <% if params[:user_id] == current_user.id.to_s || @user.id == current_user.id %>
           <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary btn-round btn-lg" %>
         <% end %>
          </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- New Trip Modal -->
-<div class="modal fade" id="newTripModal" tabindex="-1" role="dialog" aria-labelledby="newTripModal" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="newTripModalLabel">New Trip</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <%= render "new_trip" %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-link btn-danger" data-dismiss="modal">Cancel</button>
       </div>
     </div>
   </div>

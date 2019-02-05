@@ -4,8 +4,7 @@
     <div class="all-city-info">
 
       <h5><strong>Location:</strong></h5>
-        <iframe width="320em" height="320em" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:<%= @attraction.google_place %>&key=ENV['google_api']" allowfullscreen>
-        </iframe>
+        <iframe width="320em" height="320em" frameborder="0" style="border:0" src='https://www.google.com/maps/embed/v1/place?q=place_id:<%= @attraction.google_place %>&key=<%=ENV["AIzaSyBDo649L91I33L0BgT0t0xCjlxiJimBeNc"] %>' allowfullscreen></iframe>
 
         <br >
         <br >

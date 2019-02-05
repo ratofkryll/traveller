@@ -4,10 +4,8 @@
     <%= image_tag image_path(city.image, alt: city.name, class: 'img rounded img-raised') %>
   </div>
   <div class="card-body">
-    <h5 class="card-title"><%= city.name %></a></h5>
+    <h5 class="card-title"><%= city.name %>, <%= city.country %></a></h5>
     <% end %>
     <p class="card-description"><%= city.description %></p>
   </div>
 </div>
-
-
