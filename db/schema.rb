@@ -37,79 +37,79 @@ ActiveRecord::Schema.define(version: 2019_02_04_152951) do
   end
 
   create_table "attractions", force: :cascade do |t|
-    t.string "name"
-    t.string "address"
-    t.string "address_city"
-    t.string "address_postcode"
-    t.string "website"
-    t.string "facebook"
-    t.string "instagram"
-    t.string "twitter"
-    t.text "description"
-    t.string "monday_hours"
-    t.string "tuesday_hours"
-    t.string "wednesday_hours"
-    t.string "thursday_hours"
-    t.string "friday_hours"
-    t.string "saturday_hours"
-    t.string "sunday_hours"
-    t.string "image"
-    t.string "categories"
-    t.string "google_place"
-    t.bigint "city_id"
-    t.boolean "public"
-    t.boolean "featured"
+    t.string "name", null: false
+    t.string "address", default: "", null: false
+    t.string "address_city", null: false
+    t.string "address_postcode", default: "", null: false
+    t.string "website", default: "", null: false
+    t.string "facebook", default: "", null: false
+    t.string "instagram", default: "", null: false
+    t.string "twitter", default: "", null: false
+    t.text "description", null: false
+    t.string "monday_hours", default: "", null: false
+    t.string "tuesday_hours", default: "", null: false
+    t.string "wednesday_hours", default: "", null: false
+    t.string "thursday_hours", default: "", null: false
+    t.string "friday_hours", default: "", null: false
+    t.string "saturday_hours", default: "", null: false
+    t.string "sunday_hours", default: "", null: false
+    t.string "image", null: false
+    t.string "categories", default: "", null: false
+    t.string "google_place", default: "", null: false
+    t.bigint "city_id", null: false
+    t.boolean "public", default: false, null: false
+    t.boolean "featured", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["city_id"], name: "index_attractions_on_city_id"
   end
 
   create_table "cities", force: :cascade do |t|
-    t.string "name"
-    t.string "country"
-    t.text "description"
-    t.string "language"
-    t.string "currency"
-    t.string "transit"
-    t.string "emergency_phone"
-    t.string "time_zone"
-    t.string "tipping_custom"
-    t.string "image"
+    t.string "name", null: false
+    t.string "country", null: false
+    t.text "description", null: false
+    t.string "language", null: false
+    t.string "currency", null: false
+    t.string "transit", default: "", null: false
+    t.string "emergency_phone", null: false
+    t.string "time_zone", null: false
+    t.string "tipping_custom", default: "", null: false
+    t.string "image", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "invites", force: :cascade do |t|
-    t.integer "recipient"
-    t.string "email"
-    t.text "message"
-    t.string "token"
+    t.integer "recipient", null: false
+    t.string "email", null: false
+    t.text "message", null: false
+    t.string "token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "trip_id"
-    t.integer "sender"
+    t.bigint "trip_id", null: false
+    t.integer "sender", null: false
     t.index ["trip_id"], name: "index_invites_on_trip_id"
   end
 
   create_table "itineraries", force: :cascade do |t|
-    t.string "name"
-    t.date "date"
-    t.string "notes"
-    t.boolean "public"
-    t.boolean "featured"
-    t.bigint "trip_id"
+    t.string "name", null: false
+    t.date "date", null: false
+    t.string "notes", default: "", null: false
+    t.boolean "public", null: false
+    t.boolean "featured", null: false
+    t.bigint "trip_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["trip_id"], name: "index_itineraries_on_trip_id"
   end
 
   create_table "itinerary_items", force: :cascade do |t|
-    t.bigint "itinerary_id"
-    t.bigint "attraction_id"
-    t.string "name"
-    t.text "notes"
-    t.time "start_time"
-    t.time "end_time"
+    t.bigint "itinerary_id", null: false
+    t.bigint "attraction_id", null: false
+    t.string "name", default: "", null: false
+    t.text "notes", default: "", null: false
+    t.time "start_time", null: false
+    t.time "end_time", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["attraction_id"], name: "index_itinerary_items_on_attraction_id"
@@ -117,10 +117,10 @@ ActiveRecord::Schema.define(version: 2019_02_04_152951) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "attraction_id"
-    t.text "review"
-    t.integer "rating"
+    t.bigint "user_id", null: false
+    t.bigint "attraction_id", null: false
+    t.text "review", null: false
+    t.integer "rating", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["attraction_id"], name: "index_reviews_on_attraction_id"
@@ -128,25 +128,25 @@ ActiveRecord::Schema.define(version: 2019_02_04_152951) do
   end
 
   create_table "todos", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "trips", force: :cascade do |t|
-    t.string "name"
-    t.date "start_date"
-    t.date "end_date"
-    t.boolean "public"
-    t.boolean "featured"
+    t.string "name", null: false
+    t.date "start_date", null: false
+    t.date "end_date", null: false
+    t.boolean "public", null: false
+    t.boolean "featured", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "user_trips", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "trip_id"
-    t.string "role"
+    t.bigint "user_id", null: false
+    t.bigint "trip_id", null: false
+    t.string "role", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["trip_id"], name: "index_user_trips_on_trip_id"
@@ -154,11 +154,10 @@ ActiveRecord::Schema.define(version: 2019_02_04_152951) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
     t.string "email", default: "", null: false
-    t.string "password_digest"
-    t.string "profile_pic"
+    t.string "profile_pic", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "encrypted_password", default: "", null: false
