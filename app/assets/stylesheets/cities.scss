@@ -35,7 +35,21 @@ main {
   background-color: $primary-color;
   max-width: 25em;
   color: $white-color;
-  padding: 3em;
+  padding-top: 8em;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.attraction-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary-color;
+  max-width: 25em;
+  color: $white-color;
+  padding-top: 2em;
+  padding-left: 3em;
+  padding-right: 3em;
 }
 
 .transit-button {
