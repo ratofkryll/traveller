@@ -105,7 +105,7 @@ ActiveRecord::Schema.define(version: 2019_02_04_152951) do
 
   create_table "itinerary_items", force: :cascade do |t|
     t.bigint "itinerary_id", null: false
-    t.bigint "attraction_id", null: false
+    t.bigint "attraction_id"
     t.string "name", default: "", null: false
     t.text "notes", default: "", null: false
     t.time "start_time", null: false

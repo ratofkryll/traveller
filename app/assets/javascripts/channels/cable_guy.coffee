@@ -11,7 +11,8 @@ $ ->
       appendSorted: (element, item) ->
         inserted = false
         $(element).children().each (index, child) =>
-          if $(item).data("sort") >= $(child).data("sort") && !inserted
+          console.log("item", $(item).data("sort"), "child", $(child).data("sort"))
+          if $(item).data("sort") <= $(child).data("sort") && !inserted
             child.before(item)
             inserted = true
         if !inserted
