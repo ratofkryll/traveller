@@ -40,3 +40,5 @@ yarn-debug.log*
 .yarn-integrity
 sendgrid.env
 secrets.env
+
+config/local_env.yml
