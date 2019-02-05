@@ -1,0 +1,79 @@
+<div class="card" id="attraction-category-card">
+	<div class="card-header">
+		<ul class="nav nav-tabs justify-content-center" role="tablist">
+			<li class="nav-item">
+				<a class="nav-link active" data-toggle="tab" href="#all" role="tab">All</a>
+			</li>
+			<% @categories.each do |category| %>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#<%= category %>" role="tab"><%= category.capitalize %></a>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+	<div class="card-body">
+		<!-- Tab panes -->
+		<div class="tab-content text-center">
+
+			<div class="tab-pane active" id="all" role="tabpanel">
+				<div class="attractions-all-cards">
+					<% @attractions.each do |attraction| %>
+						<div class="attraction-card">
+							<div class="card">
+								<div class="card-img">
+									<img class="card-img-top" src=<%= image_path(attraction.image) %> >
+								</div>
+
+								<div class="card-body">
+									<h5><%= attraction.name %></h5>
+									<p><%= attraction.description %></p>
+									<div class="button-wrapper">
+										<%= link_to attraction_path(attraction.id) do %>
+											<button class="btn btn-sm attraction-btn">Find out more</button>
+										<% end %>
+										<%= link_to new_attraction_itinerary_item_path(attraction.id) do %>
+											<button class="btn btn-sm attraction-btn">Add to itinerary</button>
+										<% end %>
+									</div>
+								</div>
+							</div>
+						</div>
+					<% end %>
+				</div>	
+			</div>
+			
+			<% @categories.each do |category| %>
+				<div class="tab-pane" id="<%= category %>" role="tabpanel">
+					<div class="attractions-all-cards">
+						<% @attractions.each do |attraction| %>
+							<% if attraction.categories.include?(category) %>
+								<div class="attraction-card">
+									<div class="card">
+										<div class="card-img">
+											<img class="card-img-top" src=<%= image_path(attraction.image) %> >
+										</div>
+
+										<div class="card-body">
+											<h5><%= attraction.name %></h5>
+											<p><%= attraction.description %></p>
+											<div class="button-wrapper">
+												<%= link_to attraction_path(attraction.id) do %>
+													<button class="btn btn-sm attraction-btn">Find out more</button>
+												<% end %>
+												<%= link_to new_attraction_itinerary_item_path(attraction.id) do %>
+													<button class="btn btn-sm attraction-btn">Add to itinerary</button>
+												<% end %>
+											</div>
+										</div>
+									</div>
+								</div>
+							<% end %>
+						<% end %>
+					</div>	
+				</div>
+			<% end %>
+
+		</div>
+
+	</div>
+</div>
