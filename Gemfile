@@ -47,8 +47,9 @@ gem 'devise'
 # Db seed helpers
 gem 'faker'
 
-# AWS S3 asset hosting
+# Asset hosting
 gem 'aws-sdk', '~> 2'
+gem 'google-cloud-storage'
 
 # Formtastic form helpers
 gem 'formtastic'
