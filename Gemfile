@@ -49,10 +49,9 @@ gem 'faker'
 
 # AWS S3 asset hosting
 gem 'aws-sdk', '~> 2'
-gem 'formtastic'
 
-# React
-# gem 'react-rails'
+# Formtastic form helpers
+gem 'formtastic'
 
 # Sendgrid for sending invite emails
 gem 'sendgrid-ruby'
