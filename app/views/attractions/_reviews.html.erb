@@ -12,24 +12,38 @@
       <% end %>
     </a> 
 
+    
     <div class="media-body">
       <h5 class="media-heading">
-        <%= item.user.first_name %>
-        <small class="text-muted pull-right">
-          Post date: <%= (item.created_at).to_formatted_s(:long)  %> <br >
-          Rating: <%= item.rating %> <br >
+        <%= item.user.first_name %> 
+        <br >
+        <small class="text-muted">
+        
+          <%= (item.created_at).to_formatted_s(:short) %> -
+          <% rating = item.rating.to_i %>
+          <% rating.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+
+          <% blank = 5 - rating %>
+          <% blank.times do %>
+            <i class="far fa-star"></i>
+          <% end %>
+          <% if item.user == current_user %>
+      
+        <%= link_to review_path(item.id), class: 'btn btn-danger btn-neutral btn-sm', method: :delete, :data => {:confirm => 'Are you sure?'} do %>
+          <i class="far fa-trash-alt review-delete"></i>
+        <% end %>
+      
+    <% end %>
         </small>
       </h5>
+
+      <br >
+
         
       <p> <%= item.review %> </p>
     </div>
-
-    <% if item.user == current_user %>
-      <div class="card-text">
-        <%= link_to 'Delete', review_path(item.id), class: 'btn btn-primary btn-sm', method: :delete, :data => {:confirm => 'Are you sure?'} %>
-      </div>
-    <% end %>
   </div>
-
   <% end %>
 </div>
