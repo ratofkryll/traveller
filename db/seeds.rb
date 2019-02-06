@@ -71,16 +71,16 @@ city3 = City.create!({
   image: "cities/city_london.jpg"
 })
 city4 = City.create!({
-  name: "New York",
+  name: "Boston",
   country: "U.S.A.",
-  description: "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.",
+  description: "Boston is Massachusetts’ capital and largest city. Founded in 1630, it’s one of the oldest cities in the U.S. The key role it played in the American Revolution is highlighted on the Freedom Trail, a 2.5-mile walking route of historic sites that tells the story of the nation’s founding. One stop, former meeting house Faneuil Hall, is a popular marketplace.",
   language: "English",
   currency: "USD",
-  transit: "http://www.mta.info/nyct",
+  transit: "https://www.mbta.com/",
   emergency_phone: "911",
   time_zone: "EST (UTC-5h)",
   tipping_custom: "15-20%",
-  image: "cities/city_newyork.jpg"
+  image: "cities/city_boston.jpg"
 })
 city5 = City.create!({
   name: "Los Angeles",
