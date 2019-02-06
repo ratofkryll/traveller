@@ -5,9 +5,9 @@
       </div>
       <div class="content-center user-header-info">
         <% if @user.profile_pic.attachment != nil %>
-          <%= image_tag @user.profile_pic, class: 'profile-pic' %>
+          <%= image_tag @user.profile_pic, class: 'profile-profile-pic' %>
         <% else %>
-          <%= image_tag image_path('img/no-user-image.png'), class: 'profile-pic' %>
+          <%= image_tag image_path('img/no-user-image.png'), class: 'profile-profile-pic' %>
         <% end %>
         <br />
         <br />

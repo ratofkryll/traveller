@@ -4,7 +4,7 @@
       <h2><%= itinerary.name %>
       <% if @trip.users.include?(current_user) %>
         <button class="btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#addItemModal"><i class="fas fa-plus-circle"></i></button>
-        <button class="edit-button btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#editItineraryModal"><i class="far fa-edit"></i></button>
+        <button class="edit-button btn btn-neutral btn-sm btn-round" data-id="<%= itinerary.id %>" data-toggle="modal" data-target="#editItineraryModal"><i class="far fa-edit"></i></button>
         <a class="del-button btn btn-neutral btn-danger btn-sm del-button" rel="nofollow" data-method="delete" href="/itineraries/<%= itinerary.id %>"><i class="far fa-trash-alt"></i></a>
       <% end %>
       </h2>
@@ -20,63 +20,7 @@
 
 <div class="modal fade" id="editItineraryModal" tabindex="-1" role="dialog" aria-labelledby="editItineraryModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="editItineraryModal">Update your itinerary: </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-
-      <div class="modal-body">
-
-        <%= form_for itinerary do |form| %>
-
-          <% if form.object.errors.any? %>
-          <div class="alert alert-danger">
-            <strong>The following errors prevented saving:</strong>
-            <ul>
-              <% form.object.errors.full_messages.each do |error| %>
-                <li><%= error %></li>
-              <% end %>
-            </ul>
-          </div>
-        <% end %>
-
-        <%= form.hidden_field :trip_id, value: params[:id] %>
-
-        <div class="form-group">
-          <%= form.label :name %>
-          <%= form.text_field :name, class: 'form-control', placeholder: 'Day 1 - Aloha!' %>
-        </div>
-
-        <div class="datepicker-container">
-          <div class="form-group">
-            <%= form.label 'Date' %>
-            <%= form.text_field :date, class: 'form-control datepicker', data: { date_format: 'YYYY/MM/DD' } %>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <%= form.label 'Notes' %>
-          <%= form.text_field :notes, class: 'form-control', placeholder:'Arrive and relax' %>
-        </div>
-
-        <div class="form-group">
-          <%= form.label 'Public?' %>
-          <%= form.check_box :public %>
-        </div>
-
-        <%= form.submit 'Update', class: 'btn btn-primary' %>
-
-        <% end %>
-
-      </div>
-    </div>
-
-    <div class="modal-footer">
-      <button type="button" class="btn btn-link btn-danger" data-dismiss="modal">Cancel</button>
-    </div>
+    <%= render "/itineraries/edit_itin_modal", itinerary: itinerary %>
   </div>
 </div>
 
@@ -131,7 +75,10 @@
             <%= form.label 'Trip' %>
             <div class="trip">
               <%= @trip.name %>
-              <p><%= form.radio_button :itinerary_id, itinerary.id %><%= itinerary.name %></p>
+              <% @itinerary = Itinerary.where(trip_id: @trip.id) %>
+              <% @itinerary.each do |itin| %>
+                <p><%= form.radio_button :itinerary_id, itin.id %><%= itin.name %></p>
+              <% end %>
             </div>
           </div>
 

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Trip, type: :model do
   before :each do 
-    @user = User.new(
+    @user = User.create(
       first_name: 'first',
       last_name: 'last',
       email: 'test@test.com',
@@ -10,7 +10,7 @@ RSpec.describe Trip, type: :model do
       password_confirmation: 'somepassword'
     )
 
-    @trip = Trip.new(
+    @trip = Trip.create(
       name: 'sometrip',
       start_date: Time.now + 1,
       end_date: Time.now + 3,
@@ -18,7 +18,7 @@ RSpec.describe Trip, type: :model do
       featured: 't'
     )
 
-    @user_trip = UserTrip.new(
+    @user_trip = UserTrip.create(
       user_id: @user.id,
       trip_id: @trip.id,
       role: ''
@@ -31,12 +31,9 @@ RSpec.describe Trip, type: :model do
       expect(@trip).to be_valid
     end
 
-  end
-
-  describe 'User trip:Validations' do
-
-    it "is valid with valid fields" do
-      expect(@user_trip).to be_valid
+    it "is not valid without a trip name" do
+      @trip.name = nil
+      expect(@trip).to_not be_valid
     end
 
   end

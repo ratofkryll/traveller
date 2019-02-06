@@ -4,7 +4,7 @@ class Trip < ApplicationRecord
   has_many :itineraries, dependent: :destroy
   has_many :invites, dependent: :delete_all
 
-  validates_presence_of :start_date, :end_date
+  validates_presence_of :start_date, :end_date, :name
 
   default_scope { order(start_date: :desc) }
 
