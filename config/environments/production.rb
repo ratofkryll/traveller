@@ -77,7 +77,7 @@ Rails.application.configure do
   ActionMailer::Base.smtp_settings = {
   user_name: 'apikey',
   password: ENV['SENDGRID_API_KEY'],
-  domain: 'localhost:3000',
+  domain: 'https://traveller-lhl.herokuapp.com',
   server: 'smtp.sendgrid.net',
   port: 587
   }
