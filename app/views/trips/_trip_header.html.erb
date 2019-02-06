@@ -5,7 +5,7 @@
       <div class="container">
         <h1 class="title"><%= @trip.name %></h1>
         <% if @trip.start_date && @trip.end_date %>
-          <p><%= @trip.start_date.to_formatted_s(:long) %> - <%= @trip.end_date.to_formatted_s(:long) %></p>
+          <p class="header-text"><%= @trip.start_date.to_formatted_s(:long) %> - <%= @trip.end_date.to_formatted_s(:long) %></p>
         <% end %>
         <div>
           <% @trip.users.each do |user| %>
@@ -19,13 +19,13 @@
               </a>
             <% end %>
           <% end %>
-            <% if @trip.users.include?(current_user) %>
-              <div class="pull-right pt-4">
-              <button type="button" class="btn btn-primary btn-round invite-button" data-toggle="modal" data-target="#newInviteModal">
-                <i class="fas fa-envelope"></i> Invite your friends
-              </button>
-              </div>
-            <% end %>
+        </div>
+        <div class="mt-4">
+          <% if @trip.users.include?(current_user) %>
+            <button type="button" class="btn btn-primary btn-round invite-button" data-toggle="modal" data-target="#newInviteModal">
+              <i class="fas fa-envelope"></i> Invite your friends
+            </button>
+          <% end %>
         </div>
       </div>
     </div>
@@ -52,4 +52,3 @@
   </div>
 </div>
 </div>
-

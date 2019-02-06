@@ -1,4 +1,4 @@
-<div class="card" id="attraction-category-card">
+<div id="attraction-category-card" class="card">
 	<div class="card-header">
 		<ul class="nav nav-tabs justify-content-center" role="tablist">
 			<li class="nav-item">
@@ -20,9 +20,9 @@
 					<% @attractions.order(:name).each do |attraction| %>
 						<%= render 'attractions/category_all', attraction: attraction %>
 					<% end %>
-				</div>	
+				</div>
 			</div>
-			
+
 			<% @categories.each do |category| %>
 				<%= render 'attractions/category_specific', category: category %>
 			<% end %>
@@ -31,4 +31,3 @@
 
 	</div>
 </div>
-
