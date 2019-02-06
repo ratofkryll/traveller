@@ -9,6 +9,7 @@ class ItineraryItemsController < ApplicationController
 
   def create
     @itinerary_item = ItineraryItem.new(itinerary_params)
+    @trips = Trip.where("end_date > ?", 1.day.ago)
 
     if @itinerary_item.save
       flash[:notice] = 'Added to itinerary'
