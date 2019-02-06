@@ -1,0 +1,57 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="editItineraryModal<%= itinerary.id%>">Update your itinerary: </h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+
+    <%= form_for itinerary do |form| %>
+
+      <% if form.object.errors.any? %>
+      <div class="alert alert-danger">
+        <strong>The following errors prevented saving:</strong>
+        <ul>
+          <% form.object.errors.full_messages.each do |error| %>
+            <li><%= error %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= form.hidden_field :trip_id, value: params[:id] %>
+
+    <div class="form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: 'form-control', placeholder: 'Day 1 - Aloha!' %>
+    </div>
+
+    <div class="datepicker-container">
+      <div class="form-group">
+        <%= form.label 'Date' %>
+        <%= form.text_field :date, class: 'form-control datepicker', data: { date_format: 'YYYY/MM/DD' } %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= form.label 'Notes' %>
+      <%= form.text_field :notes, class: 'form-control', placeholder:'Arrive and relax' %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label 'Public?' %>
+      <%= form.check_box :public %>
+    </div>
+
+    <%= form.submit 'Update', class: 'btn btn-primary' %>
+
+    <% end %>
+
+  </div>
+  <div class="modal-footer">
+  <button type="button" class="btn btn-link btn-danger" data-dismiss="modal">Cancel</button>
+  </div>
+  </div>
+
