@@ -1,5 +1,10 @@
 <% itinerary_item = @itinerary_item %>
 <div class="card card-plain card-blog border-bottom" data-sort="<%= itinerary_item.start_time %>">
+  <div class="edit-delete-button">
+    <button class="edit-button btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#editItemModal<%= itinerary_item.id %>"><i class="far fa-edit"></i></button>
+    <a class="btn btn-neutral btn-sm btn-round btn-danger del-button" rel="nofollow" data-method="delete" href="/itinerary_items/<%= itinerary_item.id %>"><i class="btn btn-neutral btn-danger btn-sm btn-round far fa-trash-alt"></i></a>
+  </div>
+
   <div class="row">
     <% if itinerary_item.attraction_id %>
       <div class="col-md-5">
@@ -8,18 +13,15 @@
         </div>
       </div>
       <div class="col-md-7">
-      <div class="pull-right">
-        <%= link_to "Edit", itinerary_item_path(itinerary_item.id), class: "text-primary edit-link" %> | <%= link_to "Delete", itinerary_item, method: :delete, class: "text-danger delete-link" %>
-        </div>
         <h6 class="category text-info"><i class="far fa-clock"></i> <%= itinerary_item.start_time.strftime("%I:%M%p") %> - <%= itinerary_item.end_time.strftime("%I:%M%p") %>
         </h6>
-          <h3 class="card-title">
-            <a href="<%= attraction_path(itinerary_item.attraction) %>"><%= itinerary_item.attraction.name %></a>
-          </h3>
-          <p class="card-description">
-            <%= itinerary_item.attraction.description %>
-          </p>
-        </div>
+        <h3 class="card-title">
+          <a href="<%= attraction_path(itinerary_item.attraction) %>"><%= itinerary_item.attraction.name %></a>
+        </h3>
+        <p class="card-description">
+          <%= itinerary_item.attraction.description %>
+        </p>
+      </div>
     <% else %>
       <div class="col-md-7">
         <h6 class="category text-info"><i class="far fa-clock"></i> <%= itinerary_item.start_time.strftime("%I:%M%p") %> - <%= itinerary_item.end_time.strftime("%I:%M%p") %>
@@ -32,5 +34,84 @@
         </p>
       </div>
     <% end %>
+  </div>
+</div>
+
+<!-- Edit Itinerary Item Modal -->
+
+<div class="modal fade" id="editItemModal<%= itinerary_item.id %>" tabindex="-1" role="dialog" aria-labelledby="editItemModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editItemModal<%= itinerary_item.id %>">Edit <%= itinerary_item.name %>: </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+
+
+
+        <%= form_for itinerary_item do |form| %>
+
+          <% if form.object.errors.any? %>
+            <div class="alert alert-danger">
+              <strong>The following errors prevented saving:</strong>
+                <ul>
+                  <% form.object.errors.full_messages.each do |error| %>
+                    <li><%= error %></li>
+                  <% end %>
+                </ul>
+            </div>
+          <% end %>
+
+          <% if itinerary_item.attraction_id %>
+            <% attraction = Attraction.find_by_id(itinerary_item.attraction_id) %>
+              <div class="attraction-item">
+                <div class="attraction-card-itinerary">
+                  <div class="attraction-image">
+                    <%= image_tag attraction.image %>
+                  </div>
+                  <div class="attraction-description">
+                    <p class="name"><%= attraction.name %></p>
+                  </div>
+                </div>
+              </div>
+          <% end %>
+
+          <%= form.hidden_field :attraction_id, value: itinerary_item.attraction_id %>
+          <%= form.hidden_field :itinerary_id, value: itinerary_item.itinerary_id %>
+
+          <div class="form-group">
+            <%= form.label :name %>
+            <%= form.text_field :name, class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= form.label 'Item Notes' %>
+            <%= form.text_area :notes, class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= form.label 'Start time' %>
+            <%= form.text_field :start_time, class: "form-control timepicker" %>
+          </div>
+
+          <div class="form-group">
+            <%= form.label 'End time' %>
+            <%= form.text_field :end_time, class: "form-control timepicker", value: itinerary_item.end_time %>
+          </div>
+
+          <div class="datepicker-container">
+            <%= form.submit 'Looks Good!', class: 'btn btn-primary' %>
+          </div>
+        <% end %>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-link btn-danger" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
   </div>
 </div>
