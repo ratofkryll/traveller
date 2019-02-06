@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-between align-items-baseline">
       <h2><%= itinerary.name %>
       <% if @trip.users.include?(current_user) %>
-        <button class="btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#addItemModal"><i class="fas fa-plus-circle"></i></button>
+        <button class="btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#addItemModal<%= itinerary.id %>"><i class="fas fa-plus"></i></button>
         <button class="edit-button btn btn-neutral btn-sm btn-round" data-id="<%= itinerary.id %>" data-toggle="modal" data-target="#editItineraryModal<%= itinerary.id%>"><i class="far fa-edit"></i></button>
         <a class="del-button btn btn-neutral btn-danger btn-sm del-button" rel="nofollow" data-method="delete" href="/itineraries/<%= itinerary.id %>"><i class="far fa-trash-alt"></i></a>
       <% end %>
@@ -25,11 +25,11 @@
 </div>
 
 
-<div class="modal fade" id="addItemModal" tabindex="-1" role="dialog" aria-labelledby="addItemModal" aria-hidden="true">
+<div class="modal fade" id="addItemModal<%= itinerary.id %>" tabindex="-1" role="dialog" aria-labelledby="addItemModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="addItemModal">Add an item to your day: </h5>
+        <h5 class="modal-title" id="addItemModal">Add an item to <%= itinerary.name%>: </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
         </button>
@@ -50,6 +50,7 @@
           <% end %>
 
         <%= form.hidden_field :attraction_id, value: params[:attraction_id] %>
+        <%= form.hidden_field :itinerary_id, value: itinerary.id %>
 
         <div class="form-group">
           <%= form.label :name %>
@@ -70,17 +71,6 @@
           <%= form.label 'End time' %>
           <%= form.text_field :end_time, class:"form-control timepicker" %>
         </div>
-
-          <div class="form-group">
-            <%= form.label 'Trip' %>
-            <div class="trip">
-              <%= @trip.name %>
-              <% @itinerary = Itinerary.where(trip_id: @trip.id) %>
-              <% @itinerary.each do |itin| %>
-                <p><%= form.radio_button :itinerary_id, itin.id %><%= itin.name %></p>
-              <% end %>
-            </div>
-          </div>
 
           <%= form.submit 'Looks Good!', class: 'btn btn-primary' %>
 
