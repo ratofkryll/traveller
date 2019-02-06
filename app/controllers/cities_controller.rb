@@ -6,7 +6,7 @@ class CitiesController < ApplicationController
   end
  
   def index
-    @cities = City.all.order(name: :desc)
+    @cities = City.all.order(:name)
   end
 
   def categories(attractions)
