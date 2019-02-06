@@ -16,8 +16,8 @@ $ ->
             child.before(item)
             inserted = true
         if !inserted
-          element.appendChild(item)
-          
+          $(element).children(":last").before(item)
+
       update: (element, item) ->
         # replace the element with item
 
