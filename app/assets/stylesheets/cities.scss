@@ -29,6 +29,7 @@ h4.carousel-description {
 
 main {
   display: flex;
+  align-items: flex-start;
   width: 100%;
 }
 
@@ -113,11 +114,12 @@ main {
   box-shadow: none !important;
 }
 
-#attraction-category-card {
+div#attraction-category-card.card {
   margin-top: -1.6em;
   outline: none;
   border: none !important;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   box-shadow: none !important;
+  border-radius: 0 !important;
 }
