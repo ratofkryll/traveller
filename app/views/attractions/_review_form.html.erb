@@ -15,13 +15,13 @@
         <div class="media-body pt-2">
           <br>
           <%= f.hidden_field :attraction_id, value: params[:id] %>
-          <%= f.select :rating, options_for_select([["Rating", ""], 1, 2, 3, 4, 5]), class: 'genForm_dropBox' %>
-          <div class="text-muted pt-4">
-            <%= f.label 'Tell us what you thought...' %>
+          <%= f.select :rating, options_for_select([["Rating", ""], 1, 2, 3, 4, 5]), class: 'form-control' %>
+          <div class="text-muted pt-4 mt-1">
+            <%= f.label 'Tell us what you thought:' %>
           </div>
-          <%= f.text_area :review, class: "form-control" %>
+          <%= f.text_area :review, class: "form-control ml-4 mr-4 mt-3" %>
           <div class="media-footer">
-            <%= f.submit 'Post Review', class: 'btn btn-primary pull-right' %>
+            <%= f.submit 'Post Review', class: 'btn btn-primary pull-right ml-4 mr-4 mt-5' %>
           </div>
         </div>
       </div>
