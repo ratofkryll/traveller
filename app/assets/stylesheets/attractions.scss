@@ -24,6 +24,10 @@
   max-width: 31%;
 }
 
+.review-select {
+  background-color: #fff !important;
+}
+
 .attraction-info {
   display: flex;
   flex-direction: column;
@@ -70,4 +74,8 @@ padding-left: 26em;
 
 h5::-webkit-scrollbar {
   height: 1px;
+}
+
+.social-media {
+  padding-left: 39% !important;
 }
