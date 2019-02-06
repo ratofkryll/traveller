@@ -1,7 +1,7 @@
 <div class="card card-plain card-blog border-bottom" data-sort="<%= itinerary_item.start_time %>">
   <% if @trip.users.include?(current_user) %>
     <div class="edit-delete-button">
-    <button class="edit-button btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#editItemModal"><i class="far fa-edit"></i></button>
+    <button class="edit-button btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#editItemModal<%= itinerary_item.id %>"><i class="far fa-edit"></i></button>
     <a class="btn btn-neutral btn-sm btn-round btn-danger del-button" rel="nofollow" data-method="delete" href="/itinerary_items/<%= itinerary_item.id %>"><i class="btn btn-neutral btn-danger btn-sm btn-round far fa-trash-alt"></i></a>
     </div>
   <% end %>
@@ -40,11 +40,11 @@
 
 <!-- Edit Itinerary Item Modal -->
 
-<div class="modal fade" id="editItemModal" tabindex="-1" role="dialog" aria-labelledby="editItemModal" aria-hidden="true">
+<div class="modal fade" id="editItemModal<%= itinerary_item.id %>" tabindex="-1" role="dialog" aria-labelledby="editItemModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="editItemModal">Edit your day: </h5>
+        <h5 class="modal-title" id="editItemModal<%= itinerary_item.id %>">Edit your day: </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
         </button>
@@ -67,7 +67,21 @@
             </div>
           <% end %>
 
-          <%= form.hidden_field :attraction_id, value: params[:attraction_id] %>
+          <% if itinerary_item.attraction_id %>
+            <% attraction = Attraction.find_by_id(itinerary_item.attraction_id) %>
+              <div class="attraction-item">
+                <div class="attraction-card-itinerary">
+                  <div class="attraction-image">
+                    <%= image_tag attraction.image %>
+                  </div>
+                  <div class="attraction-description">
+                    <p class="name"><%= attraction.name %></p>
+                  </div>
+                </div>
+              </div>
+          <% end %>
+
+          <%= form.hidden_field :attraction_id, value: itinerary_item.attraction_id %>
 
           <div class="form-group">
             <%= form.label :name %>

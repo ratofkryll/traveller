@@ -4,7 +4,7 @@
       <h2><%= itinerary.name %>
       <% if @trip.users.include?(current_user) %>
         <button class="btn btn-neutral btn-sm btn-round" data-toggle="modal" data-target="#addItemModal"><i class="fas fa-plus-circle"></i></button>
-        <button class="edit-button btn btn-neutral btn-sm btn-round" data-id="<%= itinerary.id %>" data-toggle="modal" data-target="#editItineraryModal"><i class="far fa-edit"></i></button>
+        <button class="edit-button btn btn-neutral btn-sm btn-round" data-id="<%= itinerary.id %>" data-toggle="modal" data-target="#editItineraryModal<%= itinerary.id%>"><i class="far fa-edit"></i></button>
         <a class="del-button btn btn-neutral btn-danger btn-sm del-button" rel="nofollow" data-method="delete" href="/itineraries/<%= itinerary.id %>"><i class="far fa-trash-alt"></i></a>
       <% end %>
       </h2>
@@ -18,7 +18,7 @@
 
 
 
-<div class="modal fade" id="editItineraryModal" tabindex="-1" role="dialog" aria-labelledby="editItineraryModal" aria-hidden="true">
+<div class="modal fade" id="editItineraryModal<%= itinerary.id%>" tabindex="-1" role="dialog" aria-labelledby="editItineraryModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <%= render "/itineraries/edit_itin_modal", itinerary: itinerary %>
   </div>
