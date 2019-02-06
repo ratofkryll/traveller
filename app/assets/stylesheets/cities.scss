@@ -106,6 +106,12 @@ main {
   margin-right: 1em;
 }
 
+.attraction-btn:hover {
+  background-color: $primary-color !important;
+  color: $white-color !important;
+  box-shadow: none !important;
+}
+
 #attraction-category-card {
   margin-top: -1.6em;
   outline: none;

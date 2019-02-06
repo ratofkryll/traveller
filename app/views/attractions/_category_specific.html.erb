@@ -4,7 +4,7 @@
       <% if attraction.categories.include?(category) %>
         <div class="attraction-card">
           <div class="card">
-          
+
             <div class="card-img">
               <%= link_to attraction_path(attraction.id) do %>
                 <img class="card-img-top" src=<%= image_path(attraction.image) %> >
@@ -17,9 +17,7 @@
               <% end %>
               <p class="card-attraction-description"><%= attraction.description %></p>
               <div class="button-wrapper">
-                <%= link_to attraction_path(attraction.id) do %>
-                  <button class="btn btn-sm attraction-btn">Find out more</button>
-                <% end %>
+                <%= link_to "Find out more", attraction_path(attraction.id), class: "btn btn-sm attraction-btn" %>
               </div>
 
             </div>
@@ -27,5 +25,5 @@
         </div>
       <% end %>
     <% end %>
-  </div>	
+  </div>
 </div>

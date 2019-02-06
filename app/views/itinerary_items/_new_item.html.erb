@@ -4,8 +4,8 @@
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
         <i class="now-ui-icons ui-1_simple-remove"></i>
-      </button> 
-      <h6 class="modal-title" id="newItineraryItem">Add an item to your itinerary</h6>
+      </button>
+      <h6 class="modal-title" id="newItineraryItem">&nbsp;</h6>
     </div>
 
     <div class="modal-body">
@@ -23,11 +23,12 @@
                   </div>
                 </div>
               </div>
+              <br />
             <% end %>
 
             <div class="new-item-container">
-              <%= form_for @itinerary_item do |form| %>
-                
+              <%= semantic_form_for @itinerary_item do |form| %>
+
                 <% if form.object.errors.any? %>
                   <div class="alert alert-danger">
                     <strong>The following errors prevented saving:</strong>
@@ -48,7 +49,7 @@
 
                 <div class="form-group">
                   <%= form.label 'Item Notes' %>
-                  <%= form.text_field :notes, class: 'form-control', placeholder:'Flight number: BA085' %>
+                  <%= form.text_area :notes, class: 'form-control', placeholder:'Flight number: BA085' %>
                 </div>
 
                 <div class="form-group">
@@ -63,14 +64,14 @@
 
                 <div class="datepicker-container">
                   <div class="form-group">
-                    <%= form.label 'Trip' %>
-                    <% current_user.trips.each do |trip| %>
+                    <%= form.label 'Select Trip' %>
+                    <% current_user.trips.where("end_date >= ?", Time.now).each do |trip| %>
                       <div class="trip">
                         <%= trip.name %>
                         <% itinerary = Itinerary.where(trip_id: trip.id) %>
                         <% itinerary.each do |i| %>
                           <p>
-                            <%= form.radio_button :itinerary_id, i.id %><%= i.name %>
+                            <%= form.radio_button :itinerary_id, i.id, class: "form-check-label" %> <%= i.name %>
                             <br />
                           </p>
                         <% end %>

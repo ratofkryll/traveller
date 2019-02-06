@@ -12,9 +12,7 @@
       <% end %>
       <p class="card-attraction-description"><%= attraction.description %></p>
       <div class="button-wrapper">
-        <%= link_to attraction_path(attraction.id) do %>
-          <button class="btn btn-sm attraction-btn">Find out more</button>
-        <% end %>
+        <%= link_to "Find out more", attraction_path(attraction.id), class: "btn btn-sm attraction-btn" %>
       </div>
     </div>
   </div>
