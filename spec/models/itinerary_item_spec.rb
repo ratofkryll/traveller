@@ -117,6 +117,17 @@ RSpec.describe ItineraryItem, type: :model do
       expect(@itinerary_item).to_not be_valid
     end
 
+    it "is not valid with no itinerary" do
+      @itinerary_item.itinerary_id = nil
+      expect(@itinerary_item).to_not be_valid
+    end
+
+    it "is not valid if end time is before start time" do
+      @itinerary_item.start_time = "15:25:00"
+      @itinerary_item.end_time = "14:25:00"
+      expect(@itinerary_item).to_not be_valid
+    end
+
   end
 
 end
