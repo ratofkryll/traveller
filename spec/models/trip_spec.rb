@@ -10,19 +10,16 @@ RSpec.describe Trip, type: :model do
       password_confirmation: 'somepassword'
     )
 
+    current_user = @user
+
     @trip = Trip.create(
       name: 'sometrip',
-      start_date: Time.now + 1,
-      end_date: Time.now + 3,
+      start_date: Time.now + 1.days,
+      end_date: Time.now + 3.days,
       public: 't',
       featured: 't'
     )
 
-    @user_trip = UserTrip.create(
-      user_id: @user.id,
-      trip_id: @trip.id,
-      role: ''
-    )
   end
 
   describe 'Trip:Validations' do
@@ -33,6 +30,22 @@ RSpec.describe Trip, type: :model do
 
     it "is not valid without a trip name" do
       @trip.name = nil
+      expect(@trip).to_not be_valid
+    end
+
+    it "is not valid without a start date" do
+      @trip.start_date = nil
+      expect(@trip).to_not be_valid
+    end
+
+    it "is not valid without a end date" do
+      @trip.end_date = nil
+      expect(@trip).to_not be_valid
+    end
+
+    it "is not valid if start date is later than end date" do
+      @trip.end_date = Time.now
+      @trip.start_date = Time.now + 3.days
       expect(@trip).to_not be_valid
     end
 

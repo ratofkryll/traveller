@@ -2,6 +2,8 @@ class ItineraryItem < ApplicationRecord
   belongs_to :itinerary
   belongs_to :attraction, optional: true
 
+  validates_presence_of :start_time, :end_time
+
   after_create -> {
     ItineraryChannel.broadcast_to(self.itinerary, {created_itinerary_item: self.id})
     ItineraryItemChannel.broadcast_to(self, {created: self.id})

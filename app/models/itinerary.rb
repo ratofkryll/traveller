@@ -2,6 +2,8 @@ class Itinerary < ApplicationRecord
   belongs_to :trip
   has_many :itinerary_items, -> { order(:start_time) }, dependent: :delete_all
 
+  validates_presence_of :name
+
   attr_accessor :selected_item
 
 
