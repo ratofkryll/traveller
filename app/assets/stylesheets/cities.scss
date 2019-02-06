@@ -45,19 +45,6 @@ main {
   padding-right: 3em;
 }
 
-.attraction-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: $primary-color;
-  max-width: 25em;
-  min-height: 40em;
-  color: $white-color;
-  padding-top: 2em;
-  padding-left: 3em;
-  padding-right: 3em;
-}
-
 .transit-button {
   background-color: $white-color;
   color: $primary-color;

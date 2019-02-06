@@ -27,7 +27,7 @@
   <article>
     <div class="container pl-4 pr-4">
 
-      <div class="card pl-5 pr-5">
+      <div class="card pl-5 pr-5 mb-0">
         <div class="col-md-12 ml-auto mr-auto pb-4">
           <h3 class="title"><%= @attraction.name %></h3>
           <div class="attractions-all-cards">
@@ -40,7 +40,7 @@
         <%= render 'reviews' %>
       </div>
 
-      <div class="card form-col pl-2 pr-2">
+      <div class="card form-col pl-2 pb-0 pr-2">
         <div class="media-area">
           <%= render 'review_form' %>
         </div>
@@ -49,3 +49,4 @@
     </div>
   </article>
 </main>
+
