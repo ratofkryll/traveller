@@ -40,7 +40,7 @@ class ItinerariesController < ApplicationController
     end
 
     if @itinerary.destroy
-      redirect_to user_trips_path(current_user.id)
+      redirect_to trip_path(trip)
     else
       flash[:notice] = 'Woops. Looks like we couldn\'t delete your trip.'
     end
