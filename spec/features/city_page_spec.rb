@@ -1,10 +1,9 @@
 require 'rails_helper'
 
-RSpec.feature "Visitor navigates to homepage", type: :feature, js: true do
+RSpec.feature "CityPages", type: :feature, js: true do
 
   before :each do
-    10.times do |n|
-      City.create!(
+    @city = City.create(
         name: Faker::HarryPotter.location,
         country: Faker::HarryPotter.location,
         description: Faker::HarryPotter.quote,
@@ -16,12 +15,12 @@ RSpec.feature "Visitor navigates to homepage", type: :feature, js: true do
         tipping_custom: '18%',
         image: 'cities/city_vancouver1.jpg'
       )
-    end
   end
 
-  scenario "They see all cities" do
+  scenario "they see information about the city and attraactions" do
     visit root_path
-    expect(page).to have_css 'div.city-card', count: 10
+    first('div.city-card').click
+    expect(find('.all-city-info')).to have_content(@city.country)
   end
 
 end
