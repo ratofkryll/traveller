@@ -833,8 +833,8 @@ puts "Creating reviews..."
 
 100.times do |i|
   Review.create({
-    user_id: rand(1..21),
-    attraction_id: rand(1..60),
+    user_id: rand(1..61),
+    attraction_id: rand(1..27),
     review: Faker::VentureBros.quote,
     rating: rand(1..5)
   })

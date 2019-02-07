@@ -6,7 +6,6 @@ class Itinerary < ApplicationRecord
 
   attr_accessor :selected_item
 
-
     after_create -> {
       TripChannel.broadcast_to(self.trip, {created_itinerary: self.id})
       ItineraryChannel.broadcast_to(self, {created: self.id})
