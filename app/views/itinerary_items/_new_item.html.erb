@@ -41,16 +41,8 @@
                 <% end %>
 
                 <%= form.hidden_field :attraction_id, value: params[:id] %>
-
-                <div class="form-group">
-                  <%= form.label :name %>
-                  <%= form.text_field :name, class: 'form-control', placeholder: 'Flight' %>
-                </div>
-
-                <div class="form-group">
-                  <%= form.label 'Item Notes' %>
-                  <%= form.text_area :notes, class: 'form-control', placeholder:'Flight number: BA085' %>
-                </div>
+                <%= form.hidden_field :name, value: "" %>
+                <%= form.hidden_field :notes, value: "" %>
 
                 <div class="form-group">
                   <%= form.label 'Start time' %>
