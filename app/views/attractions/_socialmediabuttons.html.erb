@@ -2,32 +2,32 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <div class="button-container">
-
-        <%= link_to @attraction.website, target: '_blank' do %>
-        <button class="btn btn-icon btn-lg btn-primary btn-round" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-animation="true" data-original-title="Visit <%= @attraction.name%>'s Website"<%= @attraction.website %>>
-          <i class="fas fa-globe-europe social-button"></i>
-        </button>
-        <% end %>
-        <%= link_to @attraction.twitter, target: '_blank' do %>
-        <button class="btn btn-icon btn-lg btn-twitter btn-round" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-animation="true" data-original-title="Visit <%= @attraction.name%>'s Twitter Page"<%= @attraction.twitter %>>
-          <i class="fab fa-twitter social-button"></i>
-        </button>
-        <% end %>
-        <%= link_to @attraction.facebook, target: '_blank' do %>
-        <button class="btn btn-icon btn-lg btn-facebook btn-round" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-animation="true" data-original-title="Visit <%= @attraction.name%>'s Facebook Page"<%= @attraction.facebook %>>
-          <i class="fab fa-facebook-f social-button"></i>
-        </button>
-        <% end %>
-        <%= link_to @attraction.instagram, target: '_blank' do %>
-        <button class="btn btn-icon btn-lg btn-google btn-round" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-animation="true" data-original-title="Visit <%= @attraction.name%>'s Instagram Page"<%= @attraction.instagram %>>
-          <i class="fab fa-instagram social-button"></i>
-        </button>
-        <% end %>
-
+      <div class="button-container d-flex justify-content-between social-media">
+        <div>
+          <%= link_to @attraction.website, target: '_blank' do %>
+          <button class="btn btn-icon btn-lg btn-primary btn-round" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-animation="true" data-original-title="Visit <%= @attraction.name%>'s Website"<%= @attraction.website %>>
+            <i class="fas fa-globe-europe social-button"></i>
+          </button>
+          <% end %>
+          <%= link_to @attraction.twitter, target: '_blank' do %>
+          <button class="btn btn-icon btn-lg btn-twitter btn-round" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-animation="true" data-original-title="Visit <%= @attraction.name%>'s Twitter Page"<%= @attraction.twitter %>>
+            <i class="fab fa-twitter social-button"></i>
+          </button>
+          <% end %>
+          <%= link_to @attraction.facebook, target: '_blank' do %>
+          <button class="btn btn-icon btn-lg btn-facebook btn-round" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-animation="true" data-original-title="Visit <%= @attraction.name%>'s Facebook Page"<%= @attraction.facebook %>>
+            <i class="fab fa-facebook-f social-button"></i>
+          </button>
+          <% end %>
+          <%= link_to @attraction.instagram, target: '_blank' do %>
+          <button class="btn btn-icon btn-lg btn-google btn-round" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-animation="true" data-original-title="Visit <%= @attraction.name%>'s Instagram Page"<%= @attraction.instagram %>>
+            <i class="fab fa-instagram social-button"></i>
+          </button>
+          <% end %>
+        </div>
         <% if current_user %>
           <button class="btn btn-primary btn-icon btn-lg btn-round pull-right" data-toggle="modal" data-target="#newItineraryItem">
-            <i class="fas fa-plus social-button"></i>
+            <i class="fas fa-plus social-button" data-toggle="tooltip" data-placement="bottom" title="" data-container="body" data-animation="true" data-original-title="Add <%= @attraction.name %> to my trip"></i>
           </button>
         <% end %>
 

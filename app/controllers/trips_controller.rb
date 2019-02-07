@@ -11,6 +11,7 @@ class TripsController < ApplicationController
     @trip = Trip.new(trip_params)
     @trip.users << current_user
     if @trip.save
+      create_itineraries(@trip)
       redirect_to trip_url(@trip.id)
     else
       render new_trip_path
@@ -58,6 +59,19 @@ class TripsController < ApplicationController
   end
 
   private
+
+  def create_itineraries(trip)
+    (trip.start_date..trip.end_date).each do |date|
+      Itinerary.create(
+        name: "Day #{trip.itineraries.count + 1}",
+        date: date,
+        notes: "",
+        trip_id: trip.id,
+        public: false,
+        featured: false
+      )
+    end
+  end
 
   def trip_params
     params.require(:trip).permit(
