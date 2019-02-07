@@ -5,7 +5,12 @@ By Daniel Amiri-Fear, Gioanna Rheumer & Negar Amiri
 Traveller is a collaborative trip-planning web application. It allows users to create trips, invite their friends to join and dynamically add itineraries and then attractions or notes to each itinerary. Users can also amend and delete intineraries or trips too.
 
 ## Screenshots
+Invite a friend to collaborate on your trip:
+If they're already a user, they will be automatically added and sent an email. Otherwise, they'll receive an email to tell them to join.
+!["Invite a friend"](https://github.com/ratofkryll/tripper/blob/master/public/invite-friend.gif?raw=true)
 
+Add an item to the itinerary and it will be automatically visible to anyone who's on the trip
+!["Add an itinerary item"](https://github.com/ratofkryll/tripper/blob/master/public/add-item-to-trip.gif?raw=true)
 
 ## Getting Started
 
